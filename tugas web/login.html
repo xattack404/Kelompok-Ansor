@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+</head>
+<body class="simba3">
+      
+  <!-- Daftar -->
+  <form action="" id="daftar" class="input-box">
+    <h1>Daftar</h1>
+
+    <div class="input">
+      <label for="username">masukan username</label>
+      <input class="" id="username" type="text" placeholder="masukan username">
+    </div>
+
+    <div class="input">
+      <label for="password">masukan email</label>
+      <input class="" id="password" type="email" placeholder="masukan email">
+    </div>
+
+    <div class="input">
+      <label for="password-daftar">masukan password 
+        <i id="toggle2" class="fa fa-eye-slash" aria-hidden="true"></i>
+      </label>
+      <input class="" id="password-daftar" type="password" placeholder="masukan password">
+      <script>
+        $(document).ready(function(){
+            $('#toggle2').on('click', function(){
+              if($(this).attr('class')=='fa fa-eye-slash'){
+                $(this).addClass('fa-eye')
+                $(this).removeClass('fa-eye-slash')
+                $('#password-daftar').attr('type', 'text')
+              }else{
+                $(this).removeClass('fa-eye')
+                $(this).addClass('fa-eye-slash')
+                $('#password-daftar').attr('type', 'password')
+              }
+            })
+        });
+      </script>
+    </div> 
+    
+    <button type="submit" style="width: 100px;">daftar</button>
+    <a href="#login"><button type="button" style="width: 100px;">Login</button></a>
+    <a href="navbar.html">kembali ke halaman awal</a>
+  </form>
+  <!-- akhir Daftar -->
+  
+  <!-- Login -->
+    <form action="" id="login" class="input-box">
+      <h1>login</h1>
+
+      <div class="input">
+        <label for="username">username</label>
+        <input class="" id="username" type="text" placeholder="masukan username">
+      </div>
+
+      <div class="input">
+        <label>password 
+          <i id="toggle" class="fa fa-eye-slash" aria-hidden="true"></i>
+        </label>
+        <input class="" id="password-login" type="password" placeholder="masukan password">
+          <!-- <script>
+            const pass_field =document.querySelector("input");
+            const show_btn =document.querySelector("i");
+
+            show_btn.addEventListener("click", function(){
+              if(pass_field.type === "password"){
+                pass_field.type = "text";
+              } else{
+                pass_field.type = "password";
+              }
+            });
+          </script> -->
+          <!-- <script>
+            const pass_field = document.getElementById('password');
+            const show_btn = document.getElementById('toggle');
+            
+            function showhide(){
+              if (pass_field.type === 'password'){
+                pass_field.type = 'text';
+                show_btn.classList.add('fa-eye')
+                show_btn.classList.remove('fa-eye-slash')
+              }else{
+                pass_field.type = 'password';
+                show_btn.classList.remove('fa-eye')
+                show_btn.classList.add('fa-eye-slash')
+              }
+            }
+          </script> -->
+          <script>
+            $(document).ready(function(){
+                $('#toggle').on('click', function(){
+                  if($(this).attr('class')=='fa fa-eye-slash'){
+                    $(this).addClass('fa-eye')
+                    $(this).removeClass('fa-eye-slash')
+                    $('#password-login').attr('type', 'text')
+                  }else{
+                    $(this).removeClass('fa-eye')
+                    $(this).addClass('fa-eye-slash')
+                    $('#password-login').attr('type', 'password')
+                  }
+                })
+            });
+          </script>
+      </div>
+
+      <button type="submit" style="width: 100px;">Login</button> 
+      <a href="#daftar"><button type="button" style="width: 100px;">daftar</button></a>
+      <a href="navbar.html">kembali ke halaman awal</a>
+    </form>
+    <!-- akhir Login -->
+    
+</body>
+</html>
