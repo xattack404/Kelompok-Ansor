@@ -21,10 +21,11 @@
                 <li><a class="page-scroll" href="#home">Home</a></li>
                 <li><a class="page-scroll" href="#konten">Last Event</a></li>
                 <li>
-                    <a href="#">Kategori
+                    <h5 href="#">
+                        Kategori
                         <i class="fas fa-caret-down"></i>
                         <i class="fas fa-sort-up"></i>
-                    </a>
+                    </h5>
                     <ul class="dropdown" id="dropdown">
                         <li><a href="">Fotografi</a></li>
                         <li><a href="">Logo</a></li>
@@ -43,7 +44,7 @@
     <div class="search-form" id="search-form">
         <form action="">
             <input id="" type="search" placeholder="Search and Enter...">
-            <button type="submit" title="reset"><i class="fas fa-search"></i></button>
+            <button type="submit" title="cari"><i class="fas fa-search"></i></button>
         </form>
     </div>
     <div class="search-icon">
