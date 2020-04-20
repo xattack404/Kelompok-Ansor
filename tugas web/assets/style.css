@@ -340,7 +340,7 @@ ul li:hover #dropdown{
 }
 .search-form form .fa-search{
     position: absolute;
-    right: 20px;
+    left: 20px;
     top: 15px;
     font-size: 15px;
     color: #9DA0A7;
@@ -718,7 +718,7 @@ footer .copyright h4, footer .copyright i{
         height: 50%;
     }
     .search-form form .fa-search{
-        right: 12px;
+        left: 12px;
         top: 10px;
         font-size: 13px;
         color: #9DA0A7;

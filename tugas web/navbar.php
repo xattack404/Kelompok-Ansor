@@ -44,7 +44,7 @@
     <div class="search-form" id="search-form">
         <form action="">
             <input id="" type="search" placeholder="Search and Enter...">
-            <!-- <button type="submit" title="cari"><i class="fas fa-search"></i></button> -->
+            <button type="submit" title="cari"><i class="fas fa-search"></i></button>
         </form>
     </div>
     <div class="search-icon">
