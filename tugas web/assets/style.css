@@ -509,6 +509,7 @@ ul li:hover #dropdown{
     bottom: 50px;
     display: flex;
     align-items: center;
+    font-family: lato;
     text-align: center;
     font-size: 25px;
     text-transform: uppercase;
