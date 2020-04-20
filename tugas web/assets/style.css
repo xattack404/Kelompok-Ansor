@@ -356,7 +356,7 @@ ul li:hover #dropdown{
 
 /* ====================Jumbotron====================*/
 .jumbotron{
-    background: url(img/balon.jpg) center no-repeat;
+    background: url(IMG/balon.jpg) center no-repeat;
     background-attachment: fixed;
     background-size: cover;
     position: relative;
