@@ -452,6 +452,7 @@ ul li:hover #dropdown{
     width: 100%;
     cursor: pointer;
     border: 5px solid #323232;
+    padding: 2.5px;
     box-sizing: border-box;
     max-height: 400px;
     overflow: hidden;
