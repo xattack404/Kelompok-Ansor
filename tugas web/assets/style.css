@@ -436,16 +436,14 @@ ul li:hover #dropdown{
 }
 .content .katalog{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
     position: relative;
     width: 80%;
     margin: auto;
     padding-bottom: 150px;
     border-bottom: 5px solid #DD5B4E;
     box-sizing: border-box;
-}
-.item-katalog{
-    margin: 15px;
+    grid-gap: 15px;
 }
 .item-katalog .item{    
     position: relative;
@@ -752,10 +750,8 @@ footer .copyright h4, footer .copyright i{
     }
     .content .katalog{
         grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-    }
-    .item-katalog{
-        margin: 2.5px;
+        grid-gap: 2.5px;
+        width: 95%;
     }
     .item-katalog .item{
         max-height: 200px;
