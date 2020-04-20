@@ -388,15 +388,14 @@ ul li:hover #dropdown{
 }
 .jumbotron-content h1{
     position: relative;
-    top: 399px;
     font-size: 40px;
     color: white;
     font-family: lato;
     text-align: center;
+    margin-top: 300px;
 }
 .jumbotron-content p{
     position: relative;
-    top: 400px;
     color: white;
     font-family: lato;
     font-size: 18px;
