@@ -254,7 +254,7 @@ nav .menu{
     -o-transition: .3s;
 }
 ul li:hover #dropdown{ 
-    max-height: 10em;
+    max-height: 1000em;
     opacity: 1;
 }
 
