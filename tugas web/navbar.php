@@ -13,13 +13,13 @@
 <!-- navbar -->
 <nav id="nav">
     <!-- logo-->
-    <div class="logo"><a href="#">SIMBA</a> </div>
+    <div class="logo"><a href="#">LOGO</a> </div>
     <!-- menu -->
     <div class="menu" id="menu">
         <ul>        
             <div class="close"><a href="#nav" title="close"><i class="fas fa-times white"></i></a> </div>
                 <li><a class="page-scroll" href="#home">Home</a></li>
-                <li><a class="page-scroll" href="#konten">Event</a></li>
+                <li><a class="page-scroll" href="#konten">Last Event</a></li>
                 <li>
                     <a href="#">Kategori
                         <i class="fas fa-caret-down"></i>
@@ -30,10 +30,10 @@
                         <li><a href="">Logo</a></li>
                         <li><a href="">Video</a></li>
                         <li><a href="">Olimpiade</a></li>
-                        <li><a href="">Game</a></li>
+                        <li><a href="">Olahraga</a></li>
                     </ul>
                 </li>
-                <li><a class="page-scroll" href="login.html">Login</a></li>
+                <li><a class="page-scroll" href="#">Registrasi</a></li>
         </ul>               
     </div>
     <div class="menu-toggle">
@@ -52,22 +52,6 @@
     </div>
 </nav>
 <!-- akhir navbar -->
-
-<div class="jumbotron">
-    <div class="jumbotron-content">
-        
-    </div>
-</div>
-<div class="content" id="konten">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod illo obcaecati accusantium quam id asperiores reiciendis dignissimos quas corporis nulla quidem odio, earum, vel pariatur provident est illum harum nisi.
-</div>
-
-<footer>
-    <div class="copyright">
-        <h4><a href="#">Sistem Informasi Lomba</a></h4>
-        <i class="fa fa-copyright" aria-hidden="true"> Template by: <a href="#">Tahajjudin Fajri</a></i>
-    </div>
-</footer>
 
 <script src="assets/js/style.js"></script>
 </body>

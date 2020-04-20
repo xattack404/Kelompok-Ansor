@@ -4,7 +4,7 @@
 */
 
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -61,7 +61,7 @@ table {
 /* ====================================================================================== */
 @font-face{
     font-family: lato;
-    src: url(../assets/font/Lato-Bold.ttf);
+    src: url(../assets/font/Lato-Regular.ttf);
 }
 @font-face{
     font-family: viga;
@@ -222,6 +222,9 @@ nav .menu{
     float: left;
     margin-left: 20px;
 }
+.menu ul li a{
+    text-transform: uppercase;
+}
 .menu ul li a .fa-sort-up{
     display: none;
 }
@@ -350,16 +353,11 @@ ul li:hover #dropdown{
 /* ====================MENU AKHIR====================*/
 
 
-
-
-
-
-
-
-
-
 /* ====================Jumbotron====================*/
 .jumbotron{
+    background: url(img/balon.jpg) center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -367,43 +365,213 @@ ul li:hover #dropdown{
     overflow: hidden;
     
 }
-.jumbotron-content{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.content{
-    position: relative;
+.jumbotron::after{
+    content: '';
+    display: block;
+    background-color: #323232;
+    opacity: 0.5;
     width: 100%;
     min-height: 100vh;
+}
+.jumbotron-content{
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    z-index: 2;
+}
+.jumbotron-content h1{
+    position: relative;
+    top: 399px;
+    font-size: 40px;
+    color: white;
+    font-family: lato;
+    text-align: center;
+}
+.jumbotron-content p{
+    position: relative;
+    top: 400px;
+    color: white;
+    font-family: lato;
+    font-size: 18px;
+    text-align: center;
 }
 
 /* ====================Jumbotron Akhir====================*/
 
+/* ====================konten====================*/
+.content{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+}
+.judul-konten{
+    height: 135px;
+    width: 100%;
+    background-color: #323232;
+    border-top: 5px solid #DD5B4E ;
+    border-bottom: 5px solid #DD5B4E;
+    box-sizing: border-box;
+    padding: 25px;
+    margin-bottom: 60px;
+}
+.judul-konten h1{
+    position: relative;
+    font-size: 40px;
+    font-weight: 10;
+    color: white;
+    font-family: lato;
+    color: #DD5B4E;
+    margin-bottom: 0;
+}
+.judul-konten p{
+    text-align: center;
+    font-size: 15px;
+}
+.content .katalog{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 150px;
+    border-bottom: 5px solid #DD5B4E;
+    box-sizing: border-box;
+}
+.item-katalog{
+    margin: 15px;
+}
+.item-katalog .item{    
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    border: 5px solid #323232;
+    box-sizing: border-box;
+    max-height: 400px;
+    overflow: hidden;
 
-
-
-
-
-
-
-
-
-/* ====================Login====================*/
-
-/* ====================login AKHIR====================*/
-
-
-
-
-
-
-
-
+}
+.item-katalog img{
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+}
+.item-katalog label{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(50, 50, 50, 0.9);
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+    -webkit-transform: .3s;
+    -moz-transform: .3s;
+    -ms-transform: .3s;
+    -o-transform: .3s;
+}
+.item-katalog label a{
+    color: white;
+    font-family: lato;
+    font-size: 15px;
+    text-align: center;
+    transition: .3s;
+    -webkit-transform: .3s;
+    -moz-transform: .3s;
+    -ms-transform: .3s;
+    -o-transform: .3s;
+}
+.item-katalog .item:hover label{
+    background-color: white;
+}
+.item-katalog .item:hover label a{
+    color: rgba(50, 50, 50, 1);
+}
+.content .more{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.content .more a, .content .more i{  
+    color: #323232;
+}
+.content .more:hover i{
+    animation: more .8s ease-in-out infinite;
+    -webkit-animation: more .8s ease-in-out infinite;
+}
+@keyframes more{
+    0%{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -o-transform: scale(1.5);
+    }
+}
+.kontak{
+    margin: auto;
+    width: 300px;
+    height: 80px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.kontak a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    color: #323232;
+    border: 5px solid #DD5B4E;
+    text-align: center;
+    line-height: 80px;
+    font-family: lato;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 100;
+    border-radius:50px ;
+    -webkit-border-radius:50px ;
+    -moz-border-radius:50px ;
+    -ms-border-radius:50px ;
+    -o-border-radius:50px ;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+.kontak a:hover{
+    background: #323232;
+    color: white;
+    border: 5px solid rgba(50,50, 50, .5);
+}
+/* ====================konten akhir====================*/
 
 
 /* ====================footer====================*/
@@ -524,6 +692,14 @@ footer .copyright h4, footer .copyright i{
         height: 40px;
     }
     /* ==================== MENU AKHIR ====================*/
+    
+    
+    /* ====================konten====================*/
+    .content .katalog{
+        width: 95%;
+    }
+    /* ====================akhir konten====================*/
+    
 }
 
 
@@ -558,5 +734,38 @@ footer .copyright h4, footer .copyright i{
         margin-left: 10px;
         display: inline-block;
     }
-    /* ====================MENU====================*/
+    /* ====================Akhir MENU====================*/
+    /* ====================Jumbotron====================*/
+    .jumbotron-content h1{
+        font-size: 25px;
+    }
+    .jumbotron-content p{
+        font-size: 12px;
+    }
+    /* ====================Akhir Jumbotron====================*/
+
+    /* ====================konten====================*/
+    .judul-konten{
+        margin-bottom: 30px;
+    }
+    .content .katalog{
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+    .item-katalog{
+        margin: 2.5px;
+    }
+    .item-katalog .item{
+        max-height: 200px;
+    }
+    .kontak{
+        height: 54px;
+        width: 220px;
+    }
+    .kontak a{
+        font-size: 20px;
+        line-height: 54px;
+
+    }
+    /* ====================Akhir konten====================*/
 }
