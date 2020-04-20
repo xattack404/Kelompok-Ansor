@@ -21,7 +21,7 @@
                 <li><a class="page-scroll" href="#home">Home</a></li>
                 <li><a class="page-scroll" href="#konten">Last Event</a></li>
                 <li>
-                    <h5 href="#">
+                    <h5>
                         Kategori
                         <i class="fas fa-caret-down"></i>
                         <i class="fas fa-sort-up"></i>
