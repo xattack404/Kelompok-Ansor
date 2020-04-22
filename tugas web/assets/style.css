@@ -94,13 +94,13 @@ h1{font-size: 30px; text-transform: uppercase; font-family: viga; text-align: ce
 
 button{
     height: 40px;
-    border-radius: 30px;
+    border-radius: 8px;
     text-transform: uppercase;
     color: #DD5B4E;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
     box-sizing: border-box;
     transition: ease-in .3s;
     -webkit-transition: ease-in .3s;
@@ -110,7 +110,6 @@ button{
     cursor: pointer;
     border: none;
     background-color: #F0F1EC;
-    
 }
 button:focus{   
     border: none;
@@ -127,11 +126,11 @@ input{
     background-color: rgba(0, 0, 0, 0);
     color: #F0F1EC;
     fill: transparent;
-    border-radius: 40px;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    -ms-border-radius: 40px;
-    -o-border-radius: 40px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
     transition: ease-in .3s;
     -webkit-transition: ease-in .3s;
     -moz-transition: ease-in .3s;
@@ -574,6 +573,157 @@ ul li:hover #dropdown{
 /* ====================konten akhir====================*/
 
 
+/* ====================Login====================*/
+.input-box,#login ,#daftar{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-50%);
+    -webkit-transform: translateX(-50%)translateY(-50%);
+    -moz-transform: translateX(-50%)translateY(-50%);
+    -ms-transform: translateX(-50%)translateY(-50%);
+    -o-transform: translateX(-50%)translateY(-50%);
+    width: 280px;
+    height: 400px;
+    text-align: center;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 28px;
+    border: 2px solid #F0F1EC;
+    overflow: hidden;
+    background-color: #323232;
+    transition: .6s;
+    -webkit-transition: .6s;
+    -moz-transition: .6s;
+    -ms-transition: .6s;
+    -o-transition: .6s;
+}
+.input-box input{
+    width: 100%;
+}
+
+.input-box h1{
+    color: #DD5B4E;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.input-box a:hover{
+    color: #F0F1EC;
+}
+.input-box #toggle, .input-box #toggle2{
+    position: absolute;
+    cursor: pointer;
+    
+    margin-left: 8px;
+}
+/* ====================Login Akhir====================*/
+
+/* ====================Registrasi====================*/
+.box-register{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 735px;
+    height: 623px;
+    transform: translateX(-50%)translateY(-50%);
+    -webkit-transform: translateX(-50%)translateY(-50%);
+    -moz-transform: translateX(-50%)translateY(-50%);
+    -ms-transform: translateX(-50%)translateY(-50%);
+    -o-transform: translateX(-50%)translateY(-50%);
+    overflow: hidden;
+    border-radius: 28px;
+    border: 2px solid #F0F1EC;
+    overflow: hidden;
+    background-color: #323232;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding: 0 50px 0 50px;
+    box-sizing: border-box;
+}
+.box{
+    margin-top: 96px;
+}
+.box-register h1{
+    position: absolute;
+    margin-top: 38px;
+    margin-bottom: 13px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    color: #DD5B4E;
+}
+.box-register .input, .box-register .input2{
+    width: 300px;
+}
+.box-register .input label{
+    font-size: 18px;
+}
+.box-register .input input{
+    width: 100%;
+}
+.box-register .input textarea{
+    width: 100%;
+    height: 160px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #F0F1EC;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    box-sizing: border-box;
+    color: white;
+    padding: 5px;
+    resize: none;
+    margin-top: 10px;
+}
+.box-register .box button{
+    float: right;
+    margin-top: 26px;
+    margin-bottom: 40px;
+}
+.box-register .input2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 17px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+.box-register .input2 .inp{
+    box-sizing: border-box;
+}
+.box-register .input2 .inp .jenis-kelamin{
+    display: flex;
+    align-items: center;
+}
+.box-register .input2 .inp .jenis-kelamin input{
+    padding: 0;
+    margin: 0;
+}
+.box-register .input2 .inp .jenis-kelamin label{
+    margin-right: 10px;
+}
+.jlpria, .jlwanita{
+    font-size: 12px;
+    font-family: lato;
+    margin-left: 5px;
+    color: #9DA0A7;
+}
+.box-register .input2 .inp2 input{
+    height: 24px;
+    width: 100%;
+    color: #9DA0A7;
+}
+/* ====================Registrasi Akhir====================*/
+
+
 /* ====================footer====================*/
 footer{
     position: relative;
@@ -699,6 +849,8 @@ footer .copyright h4, footer .copyright i{
         width: 95%;
     }
     /* ====================akhir konten====================*/
+
+    
     
 }
 
@@ -766,4 +918,38 @@ footer .copyright h4, footer .copyright i{
 
     }
     /* ====================Akhir konten====================*/
+
+
+    /* ====================Registrasi====================*/
+    .box-register{
+        display: flex;
+        grid-template-columns: none;
+        width: 80%;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        left: 0;
+        position: relative;
+        margin: 50px auto 50px auto;
+    }
+    .box-register h1{
+        position: relative;
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        left: 0;
+    }
+    .box-register .box{
+        margin: 0;
+    }
+    
+    /* ====================Registrasi AKhir====================*/
 }
