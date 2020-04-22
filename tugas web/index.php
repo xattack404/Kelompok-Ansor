@@ -31,7 +31,7 @@
                 <div class="item">
                     <img src="assets/IMGLomba/sampel.jpg" alt="">
                     <label for="">
-                    <a href="">Piala walikota Bekasi</a></label>
+                    <a href="lomba.php">Piala walikota Bekasi</a></label>
                 </div>
             </div>
             <div class="item-katalog">
