@@ -854,6 +854,40 @@ footer .copyright h4, footer .copyright i{
     
 }
 
+@media screen and (max-width: 750px){
+     /* ====================Registrasi====================*/
+     .box-register{
+        display: flex;
+        grid-template-columns: none;
+        width: 70%;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        left: 0;
+        position: relative;
+        margin: 50px auto 50px auto;
+    }
+    .box-register h1{
+        position: relative;
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        left: 0;
+    }
+    .box-register .box{
+        margin: 0;
+    }
+    
+    /* ====================Registrasi AKhir====================*/
+}
 
 
 
@@ -953,3 +987,5 @@ footer .copyright h4, footer .copyright i{
     
     /* ====================Registrasi AKhir====================*/
 }
+
+
