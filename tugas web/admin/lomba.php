@@ -13,7 +13,11 @@
 <?php include 'sidebar.php'; ?>   
 <!-- konten -->
 <div class="content-box">
-    <div class="" id="konten">
+    <div class="content" id="konten">
+        <h1>Lomba</h1>
+        <!-- isi konten di sini -->
+
+
     </div>
 </div>
 <!-- konten -->
