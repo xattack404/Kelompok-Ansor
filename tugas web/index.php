@@ -29,44 +29,50 @@
     <div class="katalog">
             <div class="item-katalog">
                 <div class="item">
-                    <img src="assets/IMGLomba/sampel.jpg" alt="">
-                    <label for="">
-                    <a href="lomba.php">Piala walikota Bekasi</a></label>
+                    <a href="lomba.php">
+                        <img src="assets/IMGLomba/sampel.jpg" alt="">
+                        <label for="">Piala walikota Bekasi</label>
+                    </a>
                 </div>
             </div>
             <div class="item-katalog">
                 <div class="item">
-                    <img src="assets/IMGLomba/sampel2.jpeg" alt="">
-                    <label for=""><a href="">PIALA WALIKOTA SOLO 6 - ROAD RACE
-                    </a></label>
+                    <a href="">
+                        <img src="assets/IMGLomba/sampel2.jpeg" alt="">
+                        <label for="">PIALA WALIKOTA SOLO 6 - ROAD RACE</label>
+                    </a>
                 </div>
             </div>
             <div class="item-katalog">
                 <div class="item">
-                    <img src="assets/IMGLomba/sampel5.jpg" alt="">
-                    <label for=""><a href="">JATENG OPEN 2018 HOCKEY</a>
-                    </label>
-                    </div>
-            </div>
-            <div class="item-katalog">
-                <div class="item">
-                    <img src="assets/IMGLomba/sampel3.jpeg" alt="">
-                    <label for=""><a href="">Jakarta Open 2019</a>
-                    </label>
+                    <a href="">
+                        <img src="assets/IMGLomba/sampel5.jpg" alt="">
+                        <label for="">JATENG OPEN 2018 HOCKEY</label>
+                    </a>
                 </div>
             </div>
             <div class="item-katalog">
                 <div class="item">
-                    <img src="assets/IMGLomba/sampel4.jpg" alt="">
-                    <label for=""><a href="">Jakarta Open 2019</a>
-                    </label>
+                    <a href="">
+                        <img src="assets/IMGLomba/sampel3.jpeg" alt="">
+                        <label for="">Jakarta Open 2019</label>
+                    </a>
                 </div>
             </div>
             <div class="item-katalog">
                 <div class="item">
-                    <img src="assets/IMGLomba/sampel6.jpg" alt="">
-                    <label for=""><a href="">Piala Menpora 2018</a>
-                    </label>
+                    <a href="">
+                        <img src="assets/IMGLomba/sampel4.jpg" alt="">
+                        <label for="">Jakarta Open 2019</label>
+                    </a>
+                </div>
+            </div>
+            <div class="item-katalog">
+                <div class="item">
+                    <a href="">
+                        <img src="assets/IMGLomba/sampel6.jpg" alt="">
+                        <label for="">Piala Menpora 2018</label>
+                    </a>
                 </div>
             </div>
     </div>
