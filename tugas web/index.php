@@ -91,6 +91,22 @@
 </div>
 <!-- Button kontak akhir -->
 
+
+ <!-- top -->
+ <top id="top">
+    <a href="#home" class="page-scroll">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</top>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var top = document.querySelector("top");
+            top.classList.toggle("totop", window.scrollY > 0);
+        })
+    </script>
+ <!-- top akhir -->
+
+
 <footer>
     <div class="copyright">
         <h4><a href="#">Sistem Informasi Lomba</a></h4>

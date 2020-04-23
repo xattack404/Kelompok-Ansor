@@ -561,6 +561,15 @@ ul li:hover #dropdown{
     color: white;
     border: 5px solid rgba(50,50, 50, .5);
 }
+.totop{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;   
+    display: block;
+    z-index: 999;
+    text-align: center;
+    font-size: 30px;
+}
 /* ====================konten akhir====================*/
 
 
