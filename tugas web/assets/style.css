@@ -563,12 +563,26 @@ ul li:hover #dropdown{
 }
 .totop{
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
     right: 20px;
-    bottom: 20px;   
+    bottom: 20px;
     display: block;
     z-index: 999;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
+    color: #323232;
+    background-color: #666666;
+    box-sizing: border-box;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 /* ====================konten akhir====================*/
 
