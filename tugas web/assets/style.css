@@ -717,18 +717,34 @@ ul li:hover #dropdown{
 
 /* ====================Lomba====================*/
 .box-lomba{
-    margin: 70px auto 0 auto;
-    min-height: 100vh;
+    margin: 0 auto 0 auto;
+    min-height: 70vh;
     width: 80%;
-    padding-top: 100px;
+    padding-top: 200px;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
     grid-gap: 25px;
     margin-bottom: 50px;
 }
+.info-lomba{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    width: 500px;
+}
+.info-lomba h1{  
+    font-family: lato;
+    font-weight: bold;
+    font-size: 30px;
+    color: #DD5B4E;
+}
 .box-lomba .img{
     position: relative;
-    min-height: 10em;
 }
 .box-lomba .img img{
     width: 300px;
@@ -738,6 +754,7 @@ ul li:hover #dropdown{
 
 .box-lomba .konten-lomba{
     position: relative;
+    padding: 10px;
 }
 .konten-lomba h3{
     font-size: 20px;
@@ -749,6 +766,15 @@ ul li:hover #dropdown{
     font-size: 18px;
     font-family: lato;
     color: #323232;
+}
+.box-lomba .konten-lomba button{
+    position: relative;
+    background-color: #DD5B4E;
+    width: 120px;
+    height: 37px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
 }
 /* ====================Lomba AKhir====================*/
 
@@ -917,17 +943,14 @@ footer .copyright h4, footer .copyright i{
 }
 @media screen and (max-width: 800px){
 /* ====================Lomba====================*/
-.box-lomba .img img{
-    width: 300px;
-    position: absolute;
-    float: none;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-}
+    .box-lomba .img{
+        display: flex;
+        justify-content: center;
+    }
+    .box-lomba .img img{
+        margin: auto;
+        float: none;
+    }
 /* ====================Lomba Akhir====================*/
 }
 
@@ -1031,16 +1054,13 @@ footer .copyright h4, footer .copyright i{
     .box-lomba .konten-lomba{
         margin-top: 20px;
     }
+    .box-lomba .img{
+        display: flex;
+        justify-content: center;
+    }
     .box-lomba .img img{
-        width: 300px;
-        position: absolute;
+        margin: auto;       
         float: none;
-        left: 50%;
-        transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
     }
     /* ====================Lomba AKhir====================*/
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Utama</title>
+    <title>Lomba</title>
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <!-- jquery -->
@@ -12,7 +12,10 @@
 <body>
 <?php include 'navbar.php'; ?>
 <!-- konten-->
-<div class="box-lomba">
+<form class="box-lomba">
+    <div class="info-lomba">
+        <h1>Lomba tidak Tersedia</h1>
+    </div>
     <div class="img">
         <img src="assets/IMGLomba/sampel.jpg" alt="">    
     </div>
@@ -29,9 +32,12 @@
             Contact:
             Edi: 081918606060
             Danu: 081290193141
-            Participant: 297 Athlete. 31 Club.</p>
+            Participant: 297 Athlete. 31 Club.
+        </p>
+        <a href=""><button type="button">Panduan Lomba</button></a>
+        <button type="submit">Registrasi</button>
     </div>
-</div>
+</form>
 <!-- Akhir konten-->
 
 

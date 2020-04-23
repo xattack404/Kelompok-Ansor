@@ -18,7 +18,7 @@
     <div class="menu" id="menu">
         <ul>        
             <div class="close"><a href="#nav" title="close"><i class="fas fa-times white"></i></a> </div>
-                <li><a class="page-scroll" href="#home">Home</a></li>
+                <li><a class="page-scroll" href="index.php">Home</a></li>
                 <li><a class="page-scroll" href="#konten">Last Event</a></li>
                 <li>
                     <h5>
