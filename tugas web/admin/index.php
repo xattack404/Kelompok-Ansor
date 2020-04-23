@@ -17,7 +17,6 @@
         <h1>selamat datang</h1>
         <!-- isi konten di sini -->
 
-
     </div>
 </div>
 <!-- konten -->
