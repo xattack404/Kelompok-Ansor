@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin</title>
+    <title>sidebar</title>
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <!-- jquery -->
@@ -21,11 +21,17 @@
     <div class="toggle-side">
         <a href="#sidebar"><i class="fas fa-times white" aria-hidden="true"></i></a>
     </div>
+    <div class="profile-admin">
+        <img id="profil" src="assets/ico/logo.jpg" alt="profil">
+        <p id="about">Super admin</p>
+    </div>
     <div class="menu">
         <ul>
-            <li><a href="#">menu</a></li>
-            <li><a href="#">user</a></li>
-            <li>
+            <li><a href="index.php" >dashboard</a></li>
+            <li><a href="user.php" >user</a></li>
+            <li><a href="lomba.php" >lomba</a></li>
+            <li><a href="transaksi.php" >transaksi</a></li>
+            <!-- <li>
                 <input type="checkbox" id="lomba">
                 <label for="lomba">kategori lomba
                     <i class="fas fa-caret-down"></i>
@@ -36,18 +42,14 @@
                     <li><a href="#">Mewarnai</a></li>
                     <li><a href="#">Melukis</a></li>
                 </ul>
-            </li>
-            <li><a href="#">transaksi</a></li>
+            </li> -->
+            <li><a href="laporan.php" >laporan</a></li>
+            <li><a href="adminpanel.php" >admin panel</a></li>
         </ul>
     </div>
-</div>
-<!-- konten -->
-<div class="content-box">
-    <div class="content">
-
+    <div class="logout">
+        <a href=""><i class="fas fa-sign-out-alt"></i>Logout</a>
     </div>
 </div>
-<!-- footer -->
-<footer></footer>
 </body>
 </html>
