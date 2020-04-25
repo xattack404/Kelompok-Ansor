@@ -35,7 +35,7 @@
             Participant: 297 Athlete. 31 Club.
         </p>
         <a href=""><button type="button">Panduan Lomba</button></a>
-        <button type="submit">Registrasi</button>
+        <a href="registrasi.php"><button type="button">Registrasi</button></a>
     </div>
 </form>
 <!-- Akhir konten-->

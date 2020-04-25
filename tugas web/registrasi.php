@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <script src="assets/js/jquery-3.4.1.min.js"></script>
 </head>
-<body style="background-color: #323232;">
+<body>
       
-  <!-- Login -->
     <form action="" id="" class="box-register">
       <h1>REGISTRASI</h1>
       <div class="box">
@@ -92,12 +91,13 @@
       <!-- alamat -->
       <div class="input">
         <label for="alamat">alamat</label>
-        <textarea name="" id="" cols="30" rows="10" placeholder="masukan alamat"></textarea>
+        <textarea name="" id="" cols="30" rows="10" placeholder="MASUKAN ALAMAT"></textarea>
       </div>
       <!-- alamat akhir-->
 
       <!-- button -->
-      <button type="submit">REGISTRASI</button>
+      <a href="lomba.php"><button type="button">BACK</button></a>
+      <a href="registrasikelompok.php"><button type="button">NEXT</button></a>
       <!-- button akhir-->
       </div>
 
@@ -105,7 +105,6 @@
 
 
     </form>
-    <!-- akhir Login -->
     
 </body>
 </html>
