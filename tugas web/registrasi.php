@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Utama</title>
+    <title>Registrasi</title>
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <!-- jquery -->
@@ -12,24 +12,61 @@
 <body>
 <?php include 'navbar.php'; ?>
 <div class="all-boxregister">
-<!-- ====== button registrasi===== -->
-<div class="box">
-    <a href="#registrasi">registrasi</a>
-    <a href="#registrasikomunitas">komunitas</a>
-</div>
-<!-- ====== button registrasi===== -->
+
 <!-- ====== form registrasi komunitas====== -->
     <form class="box-registrasi2" action="" id="registrasikomunitas">
+        <?php ?>
         <div class="box">            
             <div class="input">
-                <label for="nik">nik</label>
-                <input type="text" id="nik" placeholder="masukan NIK">
+                <label for="namapen">nama penanggung jawab</label>
+                <input type="text" id="namapen" placeholder="masukan nama penanggung jawab">
             </div>            
             <div class="input">
-                <label for="nik">nik</label>
-                <input type="text" id="nik" placeholder="masukan NIK">
+                <label for="namakom">nama komunitas</label>
+                <input type="text" id="namakom" placeholder="masukan nama komunitas anda">
+            </div>                        
+            <div class="input">
+                <label for="jumlahanggota">jummlah anggota</label>
+                <input type="number" id="jumlahanggota" placeholder="masukan jumlah anggota komunitas">
+            </div>                        
+            <div class="input">
+                <label for="">Status kewarganegaraan</label>
+                <select name="" id="">
+                    <option value="">--pilih--</option>
+                    <option value="">Warga negara indonesia</option>
+                    <option value="">Warga negara asing</option>
+                </select>
             </div>
         </div>
+        <?php ?>
+        <?php for ($i = 0; $i < 4; $i++){ ?>
+        <div class="box">            
+            <div class="input">
+                <label for="namaanggota">nama anggota</label>
+                <input type="text" id="namaanggota" placeholder="masukan nama anggota komunitas">
+            </div>            
+            <div class="input">
+                <label for="namakom">Tanggal lahir</label>
+                <input type="date" id="namakom">
+            </div>                          
+            <div class="input">
+                <label for="">jenis kelamin</label>
+                <select name="" id="">
+                    <option value="">--pilih--</option>
+                    <option value="">laki - laki</option>
+                    <option value="">perempuan</option>
+                </select>
+            </div>                          
+            <div class="input">
+                <label for="">Status kewarganegaraan</label>
+                <select name="" id="">
+                    <option value="">--pilih--</option>
+                    <option value="">Warga negara indonesia</option>
+                    <option value="">Warga negara asing</option>
+                </select>
+            </div>
+        </div>
+        <?php }?>
     </form>
 <!-- ====== form registrasi komunitas akhir ====== -->
 
@@ -93,6 +130,13 @@
         </div>
     </form>
 <!-- ====== form registrasi akhir ====== -->
+
+<!-- ====== button registrasi===== -->
+<div class="box2">
+    <a href="#registrasi">registrasi</a>
+    <a href="#registrasikomunitas">komunitas</a>
+</div>
+<!-- ====== button registrasi===== -->
 </div>
 <script src="assets/js/style.js"></script>
 </body>
