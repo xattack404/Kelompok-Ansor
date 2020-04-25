@@ -117,17 +117,17 @@ button{
 button:focus{   
     border: none;
 }
-input{
+input, select{
     margin: 10px auto;
     width: auto;
     height: 30px;
-    text-align: center;
-    text-transform: none;
+    text-align: left;
+    text-transform: capitalize;
     border: 1px solid #323232;
     box-sizing: border-box;
     outline: none;
     background-color: rgba(0, 0, 0, 0);
-    color: #F0F1EC;
+    color: #323232;
     fill: transparent;
     border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -139,6 +139,7 @@ input{
     -moz-transition: ease-in .3s;
     -ms-transition: ease-in .3s;
     -o-transition: ease-in .3s;
+    padding: 5px;
 }
 input:focus{
     text-transform: none;
@@ -147,6 +148,8 @@ input:focus{
 input::placeholder, textarea::placeholder{
     color:#323232;
     font-size: 12px;
+    text-transform: capitalize;
+    text-align: left;
 }
 .neomorpishm{
     box-shadow:  5px 5px 10px #c0c1bd, 
@@ -218,7 +221,7 @@ nav .menu{
 }
 .menu ul li{    
     position: relative;
-    font-size: 20px;
+    font-size: 16px;
     font-family: lato;
     display: inline-block;
     width: auto;
@@ -268,14 +271,14 @@ ul li:hover #dropdown{
 }
 .search-icon{
     position: absolute;
-    top: 20%;
+    top: 15%;
     right: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50px;
     height: 50px;
-    font-size: 24px;
+    font-size: 16px;
 }
 .search-icon a:nth-child(2){
     display: none;
@@ -320,7 +323,7 @@ ul li:hover #dropdown{
     border: 3px solid #9DA0A7;
     box-sizing: border-box;
     color: #F0F1EC;
-    font-size: 18px;
+    font-size: 12px;
     background-color: transparent;
     border-radius: 50px;
     -webkit-border-radius: 50px;
@@ -329,6 +332,11 @@ ul li:hover #dropdown{
     -o-border-radius: 50px;
     font-family: lato;
     text-transform: none;
+    padding: 0 50px 0 50px;
+}
+.search-form form input::placeholder{
+    color: #F0F1EC;
+    text-align: center;
 }
 .search-form form input:focus{
     border: 3px solid rgb(255, 255, 255);
@@ -707,6 +715,58 @@ ul li:hover #dropdown{
 }
 /* ====================Lomba AKhir====================*/
 
+
+/* ====================Registrasi====================*/
+.box-registrasi{
+    width: 750px;
+    min-height: 40em;
+    margin: 120px auto 50px auto;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    box-sizing: border-box;
+    
+}
+.box-registrasi .box{
+
+}
+.box-registrasi .box .input{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.box-registrasi .box .input label{
+    font-size: 12px;
+    font-family: lato;
+    color: #323232;
+}
+.box-registrasi .box .input input, .box-registrasi .box .input select{
+    width: 100%;
+    margin-top: 10px;
+    height: 30px;
+    outline: none;
+    color: #323232;
+}
+.box-registrasi .box .input textarea{
+    width: 100%;
+    height: 180px;
+    margin-top: 10px;
+    resize: none;
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid #323232;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0);
+}
+/* ====================Registrasi Akhir====================*/
+
+
+
 /* ====================footer====================*/
 footer{
     position: relative;
@@ -836,7 +896,19 @@ footer .copyright h4, footer .copyright i{
 }
 
 @media screen and (max-width: 750px){
-     
+/* ====================Regidtrasi====================*/
+    .box-registrasi{
+        width: 70%;        
+        display: flex;
+        flex-wrap: wrap;
+        grid-template-columns:none;
+        grid-gap: none;
+        justify-content: center;
+    }
+    .box-registrasi .box .input{
+        width: 300px;
+    }
+/* ====================Regidtrasi Akhir====================*/
 }
 @media screen and (max-width: 800px){
 /* ====================Lomba====================*/
@@ -926,6 +998,13 @@ footer .copyright h4, footer .copyright i{
         float: none;
     }
     /* ====================Lomba AKhir====================*/
+    
+/* ====================Registrasi====================*/
+    .box-registrasi{
+        width: 80%;
+        
+    }
+/* ====================Registrasi Akhir====================*/
    
 }
 
