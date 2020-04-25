@@ -25,14 +25,14 @@
               </div>
             <div class="input2">
                 <label for="jmlanggota">Jumlah anggota komunitas</label>
-                <input class="" id="jmlanggota" type="number" placeholder="MASUKAN JUMLAH ANGGOTA ANDA">
+                <input type="number" name="" id="">
             </div>             
         </div>
 
 
         <!-- repeat box -->
-        
-        <div class="box-klompok">
+      <?php for ($i = 0; $i < 4; $i++){ ?>
+      <div class="box-klompok">
             
             <div class="input2">
               <label for="namaanggota">Nama</label>
@@ -56,13 +56,11 @@
                 
             </div>   
 
-            <div class="input2">
-                <label for="nama">Tanggal Lahir</label>
-                <input class="" id="nama" type="date">
-            </div>
-
-        </div>
-        <!-- repeat box end-->
+      </div>
+      <?php } ?>
+     <a href="registrasi.php"><button type="button">BACK</button></a>
+      <a href="konfirmasi.php"><button type="button">konfirmasi</button></a>
+      <!-- button akhir-->
       </div>
     </form>
     

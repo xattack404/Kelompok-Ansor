@@ -31,7 +31,7 @@
         <!-- email -->
           <div class="input">
             <label for="email">EMAIL</label>
-            <input class="" id="email" type="email" placeholder="MASUKAN EMAIL">
+            <input class="" id="email" type="email" placeholder="MASUKAN EMAIL AKTIF">
           </div>
         <!-- email akhir-->
 
