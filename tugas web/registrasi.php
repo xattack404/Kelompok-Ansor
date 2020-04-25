@@ -39,7 +39,7 @@
             </div>
         </div>
         <?php ?>
-        <?php for ($i = 0; $i < 4; $i++){ ?>
+        <?php for ($i = 0; $i < 2; $i++){ ?>
         <div class="box">            
             <div class="input">
                 <label for="namaanggota">nama anggota</label>
