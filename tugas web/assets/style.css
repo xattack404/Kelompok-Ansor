@@ -728,26 +728,26 @@ ul li:hover #dropdown{
     box-sizing: border-box;
     
 }
-.box-registrasi .box{
-
+.box{
+    width: 100%;
 }
-.box-registrasi .box .input{
+.box .input{
     width: 100%;
     margin-bottom: 10px;
 }
-.box-registrasi .box .input label{
+.box .input label{
     font-size: 12px;
     font-family: lato;
     color: #323232;
 }
-.box-registrasi .box .input input, .box-registrasi .box .input select{
+.box .input input, .box .input select{
     width: 100%;
     margin-top: 10px;
     height: 30px;
     outline: none;
     color: #323232;
 }
-.box-registrasi .box .input textarea{
+.box .input textarea{
     width: 100%;
     height: 180px;
     margin-top: 10px;
@@ -881,6 +881,7 @@ footer .copyright h4, footer .copyright i{
         right: 10px;
         width: 40px;
         height: 40px;
+        top: 25%;
     }
     /* ==================== MENU AKHIR ====================*/
     
@@ -904,9 +905,6 @@ footer .copyright h4, footer .copyright i{
         grid-template-columns:none;
         grid-gap: none;
         justify-content: center;
-    }
-    .box-registrasi .box .input{
-        width: 300px;
     }
 /* ====================Regidtrasi Akhir====================*/
 }
