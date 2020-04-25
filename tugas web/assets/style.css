@@ -811,7 +811,7 @@ ul li:hover #dropdown{
     text-transform: uppercase;
     background-color: rgba(0, 0, 0, 0);
     color: #323232;
-    */font-size: 12px;
+    font-size: 12px;
     font-family: lato;
     border: 2px solid #323232;
     border-radius: 15px;
@@ -826,6 +826,10 @@ ul li:hover #dropdown{
     -ms-transition: .3s;
     -o-transition: .3s;
 }
+.box2 a:nth-child(1){
+    background-color: #323232;    
+    color: #F0F1EC;
+}
 #registrasi:target ~ .box2 a:nth-child(1){
     background-color: #323232;    
     color: #F0F1EC;
@@ -833,6 +837,10 @@ ul li:hover #dropdown{
 #registrasikomunitas:target ~ .box2 a:nth-child(2){
     background-color: #323232;    
     color: #F0F1EC;
+}
+#registrasikomunitas:target ~ .box2 a:nth-child(1){
+    background-color: rgba(0, 0, 0, 0);   
+    color: #323232;
 }
 .box .input{
     width: 100%;
