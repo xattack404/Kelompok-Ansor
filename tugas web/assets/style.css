@@ -860,7 +860,6 @@ ul li:hover #dropdown{
 }
 .box .input textarea{
     width: 100%;
-    height: 180px;
     margin-top: 10px;
     resize: none;
     padding: 5px;

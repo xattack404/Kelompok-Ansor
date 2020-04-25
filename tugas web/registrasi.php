@@ -132,10 +132,10 @@
 <!-- ====== form registrasi akhir ====== -->
 
 <!-- ====== button registrasi===== -->
-<div class="box2">
-    <a href="#registrasi">registrasi</a>
-    <a href="#registrasikomunitas">komunitas</a>
-</div>
+    <div class="box2">
+        <a href="#registrasi">registrasi</a>
+        <a href="#registrasikomunitas">komunitas</a>
+    </div>
 <!-- ====== button registrasi===== -->
 </div>
 <script src="assets/js/style.js"></script>
