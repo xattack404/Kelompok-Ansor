@@ -717,19 +717,82 @@ ul li:hover #dropdown{
 
 
 /* ====================Registrasi====================*/
-.box-registrasi{
-    width: 750px;
-    min-height: 40em;
+.all-boxregister{
+    position: relative;
+    width: 750px;      
     margin: 120px auto 50px auto;
+    box-sizing: border-box;
+    padding: 0;
+}
+.box-registrasi, #registrasi{
+    position: relative;
+    width: 100%;
+    min-height: 10em;
     padding: 5px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     box-sizing: border-box;
-    
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    margin: 0;
+    overflow: hidden;
+    animation: grid .3s;
+    -webkit-animation: grid .3s;
+}
+.box-registrasi2, #registrasikomunitas{
+    position: relative;
+    width: 100%;
+    min-height: 10em;
+    padding: 5px;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    box-sizing: border-box; 
+    overflow: hidden;
+    animation: flex .3s;
+    -webkit-animation: flex .3s;
+}
+@keyframes flex{
+    0%{
+        display: flex;
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+@keyframes grid{
+    0%{
+        display: grid;
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+#registrasikomunitas:target{
+    display: flex;
+}
+#registrasikomunitas:target ~ #registrasi{
+    display: none;
 }
 .box{
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .box .input{
     width: 100%;
@@ -898,13 +961,17 @@ footer .copyright h4, footer .copyright i{
 
 @media screen and (max-width: 750px){
 /* ====================Regidtrasi====================*/
-    .box-registrasi{
-        width: 70%;        
+    .all-boxregister{       
+        width: 70%;
+    }
+    .box-registrasi, #registrasi{        
         display: flex;
         flex-wrap: wrap;
         grid-template-columns:none;
         grid-gap: none;
-        justify-content: center;
+        justify-content: center;       
+        animation: flex .3s;
+        -webkit-animation: flex .3s;
     }
 /* ====================Regidtrasi Akhir====================*/
 }

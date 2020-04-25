@@ -11,8 +11,30 @@
 </head>
 <body>
 <?php include 'navbar.php'; ?>
+<div class="all-boxregister">
+<!-- ====== button registrasi===== -->
+<div class="box">
+    <a href="#registrasi">registrasi</a>
+    <a href="#registrasikomunitas">komunitas</a>
+</div>
+<!-- ====== button registrasi===== -->
+<!-- ====== form registrasi komunitas====== -->
+    <form class="box-registrasi2" action="" id="registrasikomunitas">
+        <div class="box">            
+            <div class="input">
+                <label for="nik">nik</label>
+                <input type="text" id="nik" placeholder="masukan NIK">
+            </div>            
+            <div class="input">
+                <label for="nik">nik</label>
+                <input type="text" id="nik" placeholder="masukan NIK">
+            </div>
+        </div>
+    </form>
+<!-- ====== form registrasi komunitas akhir ====== -->
+
 <!-- ====== form registrasi ====== -->
-    <form class="box-registrasi" action="" id="">
+    <form class="box-registrasi" action="" id="registrasi">
         <div class="box">
             <div class="input">
                 <label for="nik">nik</label>
@@ -71,6 +93,7 @@
         </div>
     </form>
 <!-- ====== form registrasi akhir ====== -->
+</div>
 <script src="assets/js/style.js"></script>
 </body>
 </html>
