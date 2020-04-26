@@ -29,7 +29,7 @@
     <div class="katalog">
             <div class="item-katalog">
                 <div class="item">
-                    <a href="lomba.php">
+                    <a href="<?= base_url('/'); ?>lomba.php">
                         <img src="assets/IMGLomba/sampel.jpg" alt="">
                         <label for="">Piala walikota Bekasi</label>
                     </a>
