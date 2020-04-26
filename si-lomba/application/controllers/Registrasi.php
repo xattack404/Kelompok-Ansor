@@ -1,11 +1,11 @@
 <?php
-defined('BASEPATH') or exit('No direct script access allowed');
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Registrasi extends CI_Controller
-{
+class Registrasi extends CI_Controller {
 
-	public function index()
+	public function registrasi()
 	{
 		$this->load->view('home/registrasi');
+		
 	}
 }
