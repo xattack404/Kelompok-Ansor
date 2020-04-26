@@ -29,6 +29,9 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 /* html{overflow-y: scroll;scroll-behavior: smooth;} */
+body, html{
+    scroll-behavior: smooth;
+}
 body {
 	line-height: 1;
 }
