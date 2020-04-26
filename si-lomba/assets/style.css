@@ -599,14 +599,19 @@ ul li:hover #dropdown{
     z-index: 999;
     text-align: center;
     font-size: 20px;
-    color: #323232;
-    background-color: #666666;
+    color: #DD5B4E;
+    background-color: white;
+    box-shadow: #323232 0px 0px 3px;
     box-sizing: border-box;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+}
+.totop a i{
+    color: #DD5B4E;
+
 }
 /* ====================konten akhir====================*/
 
