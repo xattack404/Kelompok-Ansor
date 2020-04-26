@@ -10,7 +10,7 @@
     <script src="assets/js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-<?php include 'navbar.php'; ?>
+<?php include 'template/navbar.php'; ?>
 <div class="all-boxregister">
 
 <!-- ====== form registrasi komunitas====== -->
