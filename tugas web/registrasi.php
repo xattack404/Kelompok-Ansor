@@ -16,19 +16,26 @@
 <!-- ====== form registrasi komunitas====== -->
     <form class="box-registrasi2" action="" id="registrasikomunitas">
         <?php ?>
-        <div class="box">            
+        <div class="box">
+        <!-- input nama penanggung jawab  -->
             <div class="input">
                 <label for="namapen">nama penanggung jawab</label>
                 <input type="text" id="namapen" placeholder="masukan nama penanggung jawab">
-            </div>            
+            </div>
+
+        <!-- input nama komunitas  -->            
             <div class="input">
                 <label for="namakom">nama komunitas</label>
                 <input type="text" id="namakom" placeholder="masukan nama komunitas anda">
-            </div>                        
+            </div>
+
+        <!-- input jumlah anggota  -->                            
             <div class="input">
                 <label for="jumlahanggota">jummlah anggota</label>
                 <input type="number" id="jumlahanggota" placeholder="masukan jumlah anggota komunitas">
-            </div>                        
+            </div>
+
+        <!-- input kewarganegaraan -->                        
             <div class="input">
                 <label for="">Status kewarganegaraan</label>
                 <select name="" id="">
@@ -39,16 +46,20 @@
             </div>
         </div>
         <?php ?>
+        <!--======== input anggotan =========--> 
         <?php for ($i = 0; $i < 3; $i++){ ?>
-        <div class="box">            
+        <div class="box"> 
+        <!-- nama anggota -->            
             <div class="input">
                 <label for="namaanggota">nama anggota</label>
                 <input type="text" id="namaanggota" placeholder="masukan nama anggota komunitas">
-            </div>            
+            </div>
+        <!-- input tanggal lahir -->             
             <div class="input">
-                <label for="namakom">Tanggal lahir</label>
-                <input type="date" id="namakom">
-            </div>                          
+                <label for="">Tanggal lahir</label>
+                <input type="date" id="">
+            </div>
+        <!-- jenis kelamin -->                           
             <div class="input">
                 <label for="">jenis kelamin</label>
                 <select name="" id="">
@@ -56,7 +67,8 @@
                     <option value="">laki - laki</option>
                     <option value="">perempuan</option>
                 </select>
-            </div>                          
+            </div>
+        <!-- input kewarganegaraan -->                           
             <div class="input">
                 <label for="">Status kewarganegaraan</label>
                 <select name="" id="">
