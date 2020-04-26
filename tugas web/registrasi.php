@@ -39,7 +39,7 @@
             </div>
         </div>
         <?php ?>
-        <?php for ($i = 0; $i < 2; $i++){ ?>
+        <?php for ($i = 0; $i < 3; $i++){ ?>
         <div class="box">            
             <div class="input">
                 <label for="namaanggota">nama anggota</label>
@@ -67,6 +67,10 @@
             </div>
         </div>
         <?php }?>
+            <div class="box-btn">
+                <a href=""><button type="button" class="red">back</button></a>
+                <button type="submit" class="blue">Registrasi</button>   
+            </div>
     </form>
 <!-- ====== form registrasi komunitas akhir ====== -->
 
@@ -126,6 +130,11 @@
             <div class="input">
                 <label for="">alamat</label>
                 <textarea name="" id="" cols="30" rows="10" placeholder="isi alamat rumah anda"></textarea>    
+            </div>
+
+            <div class="box-btn">
+                    <a href=""><button type="button" class="red">back</button></a>
+                    <button type="submit" class="blue">Registrasi</button>   
             </div>   
         </div>
     </form>

@@ -59,6 +59,15 @@ table {
 
 
 /* ====================================================================================== */
+.blue{
+    background-color: #2980b9;
+}
+.red{
+    background-color: #e74c3c;
+}
+.yellow{
+    background-color: #f1c40f;
+}
 @font-face{
     font-family: lato;
     src: url(../assets/font/Lato-Regular.ttf);
@@ -885,6 +894,22 @@ ul li:hover #dropdown{
 .box-registrasi2 .box .input{
     width: 350px;
     padding: 5px;
+}
+.box-btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.box-btn button{
+    /*background-color: #DD5B4E;
+    */color: #F0F1EC;
+    width: 120px;
+    font-size: 12px;
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
 }
 /* ====================Registrasi Akhir====================*/
 
