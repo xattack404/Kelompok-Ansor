@@ -18,7 +18,7 @@
         <div class="menu" id="menu">
             <ul>
                 <div class="close"><a href="#nav" title="close"><i class="fas fa-times white"></i></a> </div>
-                <li><a class="page-scroll" href="index.php">Home</a></li>
+                <li><a class="page-scroll" href="<?= base_url(); ?>">Home</a></li>
                 <li><a class="page-scroll" href="#konten">Last Event</a></li>
                 <li>
                     <h5>
@@ -54,7 +54,7 @@
     </nav>
     <!-- akhir navbar -->
 
-    <script src="assets/js/style.js"></script>
+    <script src="<?= base_url('/'); ?>assets/js/style.js"></script>
 </body>
 
 </html>
