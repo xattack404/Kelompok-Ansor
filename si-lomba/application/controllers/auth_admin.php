@@ -14,7 +14,7 @@ public function __construct()
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
 
         if ($this->form_validation->run() == false) {
-            $this->load->view('admin/login');
+            $this->load->view('admin/loginadmin');
             $this->load->view('admin/footer');
         } else {
             $this->_login();
