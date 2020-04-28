@@ -15,7 +15,7 @@ public function __construct()
 
         if ($this->form_validation->run() == false) {
             $this->load->view('admin/loginadmin');
-            $this->load->view('admin/footer');
+            
         } else {
             $this->_login();
         }
