@@ -26,7 +26,7 @@
         <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
       </div>
 
-      <button type="submit" style="width: 100px;">Login</button> 
+      <button type="submit">Login</button> 
     </form>
     <!-- akhir Login -->
     
