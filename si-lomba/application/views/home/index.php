@@ -106,4 +106,10 @@
     </script>
  <!-- top akhir -->
 
+ <!-- footer -->
+ <?php include 'footer.php'; ?>
+<!-- footer akhir-->
 
+<script src="<?= base_url('/'); ?>assets/js/style.js"></script>
+</body>
+</html>
