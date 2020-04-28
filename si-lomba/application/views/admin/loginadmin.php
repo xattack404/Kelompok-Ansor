@@ -21,7 +21,7 @@
         <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
       </div>
       <div class="input">
-        <label>password </label>
+        <label for="password-login">password </label>
         <input class="" id="password-login" type="password" placeholder="">
         <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
       </div>
