@@ -10,7 +10,7 @@
     <script src="assets/js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-    <form class="user" method="post" action="<?= base_url('auth_admin/index') ?>>
+    <form class="user" method="post" action="<?= base_url('auth_admin/index') ?>">
         <h1>login admin</h1>
         <div class="input">
             <label for="username">Username</label>
