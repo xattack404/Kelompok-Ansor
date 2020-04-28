@@ -17,12 +17,12 @@
 
       <div class="input">
         <label for="username">username</label>
-        <input class="" id="username" type="text" placeholder="masukan username">
+        <input class="" id="username" type="text" placeholder="">
         <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
       </div>
       <div class="input">
         <label>password </label>
-        <input class="" id="password-login" type="password" placeholder="masukan password">
+        <input class="" id="password-login" type="password" placeholder="">
         <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
       </div>
 
