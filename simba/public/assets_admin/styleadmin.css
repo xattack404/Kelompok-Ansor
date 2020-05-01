@@ -67,7 +67,7 @@ table {
     src: url(../assets/font/Viga-Regular.ttf);
 }
 body{
-    color: #666666;
+    color: #000000;
     background-color: #F0F1EC;
     font-family: lato;
 }
@@ -110,7 +110,7 @@ nav .toggle-nav{
     height: 100%;
     left: -22.8%;
     z-index: 99999;
-    background-color: #424040;
+    background-color: #1f1f1f;
     transition: .2s ease-in;
     -webkit-transition: .2s ease-in;
     -moz-transition: .2s ease-in;
@@ -145,6 +145,13 @@ nav .toggle-nav{
     margin-bottom: 20px;
     border-bottom: 1px solid #707070;
     padding-bottom: 8px;
+}
+.sidebar .menu ul .aktif a{
+    border-bottom: none;
+    color: white !important;
+}
+.sidebar .menu ul li a:hover{
+    color: white;
 }
 .sidebar .menu ul li label{
     color: #9DA0A7;
@@ -243,6 +250,8 @@ nav .toggle-nav{
     margin-right: 5px;
 }
 /*------AKHIR SIDEBAR--------- */
+
+/*------konten admin--------- */
 .content-box{
     position: relative;
     width: 100%;
@@ -262,8 +271,66 @@ nav .toggle-nav{
     color: #323232;
     font-family: lato;
     text-align: center;
+    margin-bottom: 50px;
 }
-
+.btn-admin{
+    display: inline-block;
+    height: 40px;
+    width: 120px;
+    font-size: 15px;
+    background-color: #323232;
+    color: #F0F1EC;
+    font-family: lato;
+    text-align: center;
+    line-height: 36px;
+    padding: 2px;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+/* halaman kategori admin */
+.content .box-kategori{
+    width: 75%;   
+    margin: auto;
+}
+.box-kategori table{
+    width:100%;
+}
+.box-kategori table tr:nth-child(1) th:nth-child(1){
+    width: 20px;
+}
+.box-form{
+    width: 350px;
+    margin: auto;
+}
+.box-form .input-kategori{
+    width: 100%;
+    box-sizing: border-box;
+}
+.box-form .input-kategori input{
+    width: 100%;
+    outline: none;
+    margin: 0;
+    padding: 0%;
+    height: 30px;
+    margin-bottom: 20px;
+    border: 1px solid #323232;
+    background-color: rgba(0, 0, 0, 0);
+    color: #323232;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+/*------akhir konten admin--------- */
 footer{
     position: relative;
     width: 100%;
@@ -381,4 +448,10 @@ margin-bottom: 30px;
         width: 100%;
         left: -100%;
     }
+/* halaman kategori admin */
+    .content .box-kategori{    
+        width: 100%;   
+        margin: auto;
+    }
+/*------akhir konten admin--------- */
 }
