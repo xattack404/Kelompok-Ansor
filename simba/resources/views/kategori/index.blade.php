@@ -1,7 +1,6 @@
 @extends('layouts.admin')  
 @section('content')
-<div class="content-box">
-    <div class="content" id="konten">
+    <h1>admin pannel</h1>
     <a href="{{ route('kategori.create') }}">Tambah Kategori Baru</a>
       <table border="1" cellspacing="0" cellpadding="5" class="">
         <thead>
@@ -22,12 +21,10 @@
                   <td>{{ $kategori->harga }}</td>
                @empty
                   <td>
-                    
+
                   </td>
                 </tr>
                 @endforelse       
         </tbody>
     </table>
-    </div>
-  </div>
 @endsection

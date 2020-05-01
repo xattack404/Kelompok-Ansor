@@ -14,7 +14,7 @@
 <!-- konten -->
 <div class="content-box">
     <div class="content" id="konten">
-        <h1>admin pannel</h1>
+        
         <!-- isi konten di sini -->        
         @yield('content')
 
