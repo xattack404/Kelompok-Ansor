@@ -243,6 +243,8 @@ nav .toggle-nav{
     margin-right: 5px;
 }
 /*------AKHIR SIDEBAR--------- */
+
+/*------konten admin--------- */
 .content-box{
     position: relative;
     width: 100%;
@@ -262,8 +264,40 @@ nav .toggle-nav{
     color: #323232;
     font-family: lato;
     text-align: center;
+    margin-bottom: 50px;
 }
-
+.btn-admin{
+    display: block;
+    height: 40px;
+    width: 120px;
+    font-size: 15px;
+    background-color: #323232;
+    color: #F0F1EC;
+    font-family: lato;
+    text-align: center;
+    line-height: 36px;
+    padding: 2px;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+/* halaman kategori admin */
+.content .box-kategori{;    
+    width: 75%;   
+    margin: auto;
+}
+.box-kategori table{
+    width:100%;
+}
+.box-kategori table tr:nth-child(1) th:nth-child(1){
+    width: 20px;
+}
+/*------akhir konten admin--------- */
 footer{
     position: relative;
     width: 100%;
@@ -381,4 +415,10 @@ margin-bottom: 30px;
         width: 100%;
         left: -100%;
     }
+/* halaman kategori admin */
+    .content .box-kategori{;    
+        width: 100%;   
+        margin: auto;
+    }
+/*------akhir konten admin--------- */
 }
