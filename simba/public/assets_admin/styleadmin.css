@@ -267,7 +267,7 @@ nav .toggle-nav{
     margin-bottom: 50px;
 }
 .btn-admin{
-    display: block;
+    display: inline-block;
     height: 40px;
     width: 120px;
     font-size: 15px;
@@ -296,6 +296,32 @@ nav .toggle-nav{
 }
 .box-kategori table tr:nth-child(1) th:nth-child(1){
     width: 20px;
+}
+.box-form{
+    width: 350px;
+    margin: auto;
+}
+.box-form .input-kategori{
+    width: 100%;
+    box-sizing: border-box;
+}
+.box-form .input-kategori input{
+    width: 100%;
+    outline: none;
+    margin: 0;
+    padding: 0%;
+    height: 30px;
+    margin-bottom: 20px;
+    border: 1px solid #323232;
+    background-color: rgba(0, 0, 0, 0);
+    color: #323232;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 /*------akhir konten admin--------- */
 footer{
