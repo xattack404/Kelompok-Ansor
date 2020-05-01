@@ -287,7 +287,7 @@ nav .toggle-nav{
     -o-border-radius: 8px;
 }
 /* halaman kategori admin */
-.content .box-kategori{;    
+.content .box-kategori{
     width: 75%;   
     margin: auto;
 }
@@ -416,7 +416,7 @@ margin-bottom: 30px;
         left: -100%;
     }
 /* halaman kategori admin */
-    .content .box-kategori{;    
+    .content .box-kategori{    
         width: 100%;   
         margin: auto;
     }
