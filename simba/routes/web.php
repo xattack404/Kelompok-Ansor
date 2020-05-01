@@ -21,3 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('panel/kategori', ['as' => 'kategori.index', 'uses' => 'KategoriController@index']);
 Route::get('panel/kategori/create', ['as' => 'kategori.create', 'uses' => 'KategoriController@create']);
 Route::post('panel/kategori/create', ['as' => 'kategori.store', 'uses' => 'KategoriController@store']);
+
+Route::get('panel/subkategori', ['as' => 'subkategori.index', 'uses' => 'SubkategoriController@index']);
+Route::get('panel/subkategori/create', ['as' => 'subkategori.create', 'uses' => 'SubkategoriController@create']);
+Route::post('panel/subkategori/create', ['as' => 'subkategori.store', 'uses' => 'SubkategoriController@store']);
