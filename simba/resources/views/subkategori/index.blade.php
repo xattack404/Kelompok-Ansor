@@ -1,4 +1,4 @@
-@extends('layouts.admin')  
+@extends('layouts.adminmain')  
 @section('content')
 <div class="box-body table-responsive padding">
 <a href="{{ route('subkategori.create') }}">Tambah Sub Kategori</a>

@@ -14,7 +14,7 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        $data = Kategori::all();
+        $data = Kategori::paginate(10);
         return view('kategori.index',compact('data'));
     }
 
@@ -62,7 +62,8 @@ class KategoriController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Kategori::find($id);
+        return view('kategori.edit',compact('data'));
     }
 
     /**
@@ -74,7 +75,9 @@ class KategoriController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Kategori::whereId($id)->update(['nama_kategori'=> $request->nama_kategori,
+        'harga'=> $request->harga]);
+        return redirect()->route('kategori.index');
     }
 
     /**
@@ -83,8 +86,10 @@ class KategoriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        Kategori::whereId($id)->delete();
+        return redirect()->route('kategori.index');
     }
+    
 }
