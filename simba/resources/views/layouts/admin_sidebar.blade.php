@@ -18,7 +18,7 @@
             <li><a href="index.php" >dashboard</a></li>
             <li><a href="{{ route('kategori.index') }}" >Kategori</a></li>
             <li><a href="{{ route('subkategori.index') }}" >Sub Kategori</a></li>
-            <li><a href="lomba.php" >lomba</a></li>
+            <li><a href="lomba.php" >lomba </a></li>
             <li><a href="transaksi.php" >transaksi</a></li>
         
             <li><a href="laporan.php" >laporan</a></li>
