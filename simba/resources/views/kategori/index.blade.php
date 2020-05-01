@@ -3,7 +3,7 @@
 <section class="section">
   
   <div class="section-header">
-    <h1>Jurusan</h1>
+    <h1>Kategori</h1>
   </div>
 
   <div class="section-body">
@@ -31,7 +31,6 @@
             <table class="table table-bordered">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
                   <th scope="col">Nama Kategori</th>
                   <th scope="col">Harga</th>
                   <th scope="col">Action</th>
@@ -40,7 +39,6 @@
               <tbody>
                @forelse($data as $kategori)
                 <tr>
-                  <td></td>
                   <td>{{ $kategori->nama_kategori }}</td>
                   <td>{{ $kategori->harga}}</td>
                   <td>
