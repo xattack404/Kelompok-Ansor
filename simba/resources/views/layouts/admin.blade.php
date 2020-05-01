@@ -21,6 +21,9 @@
     </div>
 </div>
 <!-- konten -->
+<footer>
+    
+</footer>
 </body>
 <script src="{{ asset('assets_admin/js/jquery-3.4.1.min.js') }}"></script>
 
