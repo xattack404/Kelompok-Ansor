@@ -7,6 +7,7 @@ public function __construct()
     {
         parent::__construct();
         $this->load->library('form_validation');
+        $this->load->model('m_userlog');
     }
     public function index()
     {
@@ -24,39 +25,14 @@ public function __construct()
 
     private function _login()
     {
+        if(isset($_POST['submit'])){
         $username = $this->input->post('username');
         $password = $this->input->post('password');
-
-        $login = $this->db->get_where('login', ['username' => $username])->row_array();
-        if ($login) {
-            if ($login['aktif'] == 1) {
-                if (password_verify($password, $login['password'])) {
-                    $data = [
-                        'username' => $login['username'],
-                        'posisi' => $login['posisi']
-                    ];
-                    $this->session->set_userdata('$data');
-                    redirect(base_url('user'));
-                } else {
-
-                    $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-                  Maaf Password Yang Dimasukan Salah!
-                  </div>');
-                    redirect('auth');
-                }
-            } else {
-
-                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-                Akun Belum Di Aprov!
-              </div>');
-                redirect('auth');
-            }
-        } else {
-
-            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-                Maaf Username Tidak Ditemukan!
-              </div>');
-            redirect('auth');
+        $hasil = $this->m_userlog->_login($username,$password);
+        echo $hasil;
+        }else{
+            $this->load->view('admin/loginadmin');
         }
+        
     }
 }

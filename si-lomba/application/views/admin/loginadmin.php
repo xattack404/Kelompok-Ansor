@@ -12,7 +12,7 @@
 <body>
       
   <!-- Login -->
-    <form  method="post" action="<?= base_url('auth_admin/index') ?>" id="login" class="login-box">
+    <form  method="post" action="<?= base_url('auth_admin/_login') ?>" id="login" class="login-box">
       <h1>login admin</h1>
 
       <div class="input">
