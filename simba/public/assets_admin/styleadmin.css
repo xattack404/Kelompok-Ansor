@@ -146,6 +146,10 @@ nav .toggle-nav{
     border-bottom: 1px solid #707070;
     padding-bottom: 8px;
 }
+.sidebar .menu ul .aktif a{
+    border-bottom: none;
+    color: white !important;
+}
 .sidebar .menu ul li a:hover{
     color: white;
 }
