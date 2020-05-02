@@ -86,5 +86,7 @@ class SubkategoriController extends Controller
     public function delete($id)
     {
         Subkategori::whereId($id)->delete();
-        return redirect()->route('subkategori.index');    }
+        return redirect()->route('subkategori.index');  
+    
+      }
 }
