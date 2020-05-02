@@ -13,7 +13,7 @@ class SubkategoriController extends Controller
      */
     public function index()
     {
-        $data = Subkategori::all();
+        $data = Subkategori::paginate(10);
         return view('subkategori.index',compact('data'));    }
 
     /**
@@ -23,7 +23,7 @@ class SubkategoriController extends Controller
      */
     public function create()
     {
-        //
+        return view('subkategori.create');
     }
 
     /**
@@ -34,7 +34,11 @@ class SubkategoriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'nama_subkat' => 'required|unique:sub_kategori|max:50'
+            ]);
+        Subkategori::create(['kategori_id' => $request->kategori_id,'nama_subkat' => $request->nama_subkat]);          
+        return redirect()->route('subkategori.index');
     }
 
     /**
@@ -56,7 +60,8 @@ class SubkategoriController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Subkategori::find($id);
+        return view('subkategori.edit',compact('data'));
     }
 
     /**
@@ -68,8 +73,9 @@ class SubkategoriController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-    }
+        Subkategori::whereId($id)->update(['kategori_id'=> $request->kategori_id,
+        'nama_subkat'=> $request->nama_subkat]);
+        return redirect()->route('subkategori.index');    }
 
     /**
      * Remove the specified resource from storage.
@@ -77,8 +83,8 @@ class SubkategoriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
-    }
+        Subkategori::whereId($id)->delete();
+        return redirect()->route('subkategori.index');    }
 }
