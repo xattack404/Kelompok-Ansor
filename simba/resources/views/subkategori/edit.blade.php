@@ -20,14 +20,18 @@
           </a>
           </div>
           <div class="card-body">
-            <form action="{{ route('subkategori.update', ['id' => $data->id]) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('subkategori.update', ['id' => $data['sub_kategori']->id]) }}" method="POST" enctype="multipart/form-data">
               <input type="hidden" name="_method" value="PUT">
               @csrf
               <div class="form-group">
-                <label>ID Kategori</label>
-                <input type="text" name="kategori_id" class="form-control" value="{{ $data->kategori_id }}">
+                <label>Nama Kategori</label>
+                <select required name="kategori_id" class="form-control" data-live-search="true">
+                @foreach($data['kategori'] as $kategori)
+                <option value="{{ $kategori->id }}" {{ ($data['sub_kategori']->kategori_id == $kategori->id) ? 'selected' : '' }}>{{ $kategori->nama_kategori }} </option>
+                @endforeach
+                </select>
                 <label>Nama Sub Kategori</label>
-                <input type="text" name="nama_subkat" class="form-control" value="{{ $data->nama_subkat }}">
+                <input type="text" name="nama_subkat" class="form-control" value="{{ $data['sub_kategori']->nama_subkat }}">
               </div>
               <div class="form-group">
                 <button type="submit" class="btn btn-primary">SAVE</button>

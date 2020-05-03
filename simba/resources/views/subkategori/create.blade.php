@@ -20,8 +20,12 @@
             <form action="{{ route('subkategori.store') }}" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="form-group">
-                <label>ID Kategori</label>
-                <input type="text" name="kategori_id" class="form-control">
+                <label>Nama Kategori</label>
+                <select required name="kategori_id" class="form-control" data-live-search="true">
+                @foreach($data['kategori'] as $kategori)
+                <option value="{{ $kategori->id }}">{{ $kategori->nama_kategori }} </option>
+                @endforeach
+                </select>
                 <label>Nama Sub Kategori</label>
                 <input type="text" name="nama_subkat" class="form-control">
               </div>

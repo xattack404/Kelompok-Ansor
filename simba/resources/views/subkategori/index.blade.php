@@ -39,7 +39,7 @@
               <tbody>
                @forelse($data as $subkat)
                 <tr>
-                  <td>{{ $subkat->kategori_id }}</td>
+                  <td>{{ $subkat->relasiKategori->nama_kategori }}</td>
                   <td>{{ $subkat->nama_subkat}}</td>
                   <td>
                     <a href="{{ route('subkategori.edit', ['id' => $subkat->id]) }}">

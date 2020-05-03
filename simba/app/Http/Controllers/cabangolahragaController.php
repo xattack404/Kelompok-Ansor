@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Subkategori;
-use App\Kategori;
-class SubkategoriController extends Controller
+use App\Cabangolahraga;
+class cabangolahragaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,8 @@ class SubkategoriController extends Controller
      */
     public function index()
     {
-        $data = Subkategori::paginate(10);
-        return view('subkategori.index',compact('data'));    }
+        return view('cabangolahraga.index',compact('data'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -24,8 +23,7 @@ class SubkategoriController extends Controller
      */
     public function create()
     {
-        $data['kategori'] = Kategori::all();
-        return view('subkategori.create',compact('data'));
+        //
     }
 
     /**
@@ -36,11 +34,7 @@ class SubkategoriController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'nama_subkat' => 'required|unique:sub_kategori|max:50'
-            ]);
-        Subkategori::create(['kategori_id' => $request->kategori_id,'nama_subkat' => $request->nama_subkat]);          
-        return redirect()->route('subkategori.index');
+        //
     }
 
     /**
@@ -62,9 +56,7 @@ class SubkategoriController extends Controller
      */
     public function edit($id)
     {
-        $data['kategori'] = Kategori::all();
-        $data['sub_kategori'] = Subkategori::find($id);
-        return view('subkategori.edit',compact('data'));
+        //
     }
 
     /**
@@ -76,12 +68,7 @@ class SubkategoriController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Subkategori::whereId($id)->update([
-            'kategori_id'=> $request->kategori_id,
-            'nama_subkat'=> $request->nama_subkat
-            ]);
-        return redirect()->route('subkategori.index'); 
-
+        //
     }
 
     /**
@@ -90,10 +77,8 @@ class SubkategoriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function delete($id)
+    public function destroy($id)
     {
-        Subkategori::whereId($id)->delete();
-        return redirect()->route('subkategori.index');  
-    
-      }
+        //
+    }
 }
