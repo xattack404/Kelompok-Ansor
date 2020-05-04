@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cabangolahraga;
+use App\Kategori;
 class cabangolahragaController extends Controller
 {
     /**
@@ -13,7 +14,8 @@ class cabangolahragaController extends Controller
      */
     public function index()
     {
-        return view('cabangolahraga.index',compact('data'));
+        $data = Cabangolahraga::paginate(10);
+        return view('cabangolahraga.index',compact('data'));  
     }
 
     /**
@@ -23,7 +25,9 @@ class cabangolahragaController extends Controller
      */
     public function create()
     {
-        //
+        $data['kategori'] = Kategori::all();
+        return view('cabangolahraga.create',compact('data'));
+
     }
 
     /**
@@ -34,7 +38,21 @@ class cabangolahragaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'nama_or' => 'required|max:50',
+            'deskripsi' => 'required|max:200'
+        ]);
+        $fileName = 'lomba-'.date('Ymdhis').'.'.$request->foto->getClientOriginalExtension();    
+        $request->foto->move('image/', $fileName);
+
+        Cabangolahraga::create([
+            'nama_or' => $request->nama_or,
+            'deskripsi' => $request->deskripsi,
+            'kategori' => $request->kategori,
+            'tanggal_pelaksanaan' => $request->tanggal_pelaksanaan,
+            'foto' =>  $fileName
+        ]);
+        return redirect()->route('cabangolahraga.index');
     }
 
     /**

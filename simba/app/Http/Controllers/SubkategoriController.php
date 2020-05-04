@@ -15,7 +15,8 @@ class SubkategoriController extends Controller
     public function index()
     {
         $data = Subkategori::paginate(10);
-        return view('subkategori.index',compact('data'));    }
+        return view('subkategori.index',compact('data'));    
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -39,7 +40,10 @@ class SubkategoriController extends Controller
         $validatedData = $request->validate([
             'nama_subkat' => 'required|unique:sub_kategori|max:50'
             ]);
-        Subkategori::create(['kategori_id' => $request->kategori_id,'nama_subkat' => $request->nama_subkat]);          
+        Subkategori::create([
+            'kategori_id' => $request->kategori_id,
+            'nama_subkat' => $request->nama_subkat
+            ]);          
         return redirect()->route('subkategori.index');
     }
 
