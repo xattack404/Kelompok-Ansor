@@ -17,20 +17,27 @@
           </a>
           </div>
           <div class="card-body">
-            <form action="{{ route('cabangolahraga.store') }}" method="POST" enctype="multipart/form-data">
-              @csrf
+            <form action="{{ route('cabangolahraga.update', ['id' => $data['cabang_olahraga']->id]) }}" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_method" value="PUT">  
+            @csrf
               <div class="form-group">
                 <label>Name Olahraga</label>
-                <input type="text" name="nama_or" class="form-control" required>
+                <input type="text" name="nama_or" class="form-control" required value="{{ $data['cabang_olahraga']->nama_or }}">
                 <div class="form-group"><label>Deskripsi Lomba</label>
-            <textarea class="form-control" rows="10" id="deskripsi" name="deskripsi"></textarea>
+                <textarea class="form-control" rows="10" id="deskripsi" name="deskripsi" >{{ $data['cabang_olahraga']->deskripsi }}
+                </textarea>
+                <label> Kategori </label>
                 <select required name="kategori" class="form-control" data-live-search="true">
                 @foreach($data['kategori'] as $kategori)
-                <option value="{{ $kategori->id }}">{{ $kategori->nama_kategori }} </option>
+                <option value="{{ $kategori->id }}" {{ ($data['cabang_olahraga']->kategori== $kategori->id) ? 'selected' : '' }}>{{ $kategori->nama_kategori }} </option>
                 @endforeach
                 </select>
                 <label>Tanggal Pelaksanaan</label>
-                <input type="date" name="tanggal_pelaksanaan" class="form-control" required>
+                <input type="date" name="tanggal_pelaksanaan" class="form-control" required value="{{ $data['cabang_olahraga']->tanggal_pelaksanaan }}">
+                <div class="form-group"><label>Gambar Sebelumnya</label>
+                <br />
+                <img src='image/{{ $data['cabang_olahraga']->foto }}' width='150' height='150'>
+                </div>
                 <div class="form-group"><label>* Foto Baru</label><br />
             <input type="file" name="foto" id="foto" onchange="tampilkanPreview(this,'preview')" required />
             </div>  

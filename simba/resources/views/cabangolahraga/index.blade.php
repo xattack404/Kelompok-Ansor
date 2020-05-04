@@ -44,16 +44,16 @@
                @forelse($data as $cabangolahraga)
                 <tr>
                   <td>{{ $cabangolahraga->nama_or }}</td>
-                  <td>{{ $cabangolahraga->judul_seo}}</td>
+                  <td>{{ $cabangolahraga->judul_seo }}</td>
                   <td>{{ $cabangolahraga->deskripsi }}</td>
-                  <td>{{ $cabangolahraga->kategori}}</td>
+                  <td>{{ $cabangolahraga->relasiKategori->nama_kategori }}</td>
                   <td>{{ $cabangolahraga->tanggal_pelaksanaan }}</td>
-                  <td>{{ $cabangolahraga->foto}}</td>
+                  <td>{{ $cabangolahraga->foto }}</td>
                   <td>
-                    <a href="#">
+                  <a href="{{ route('cabangolahraga.edit', ['id' => $cabangolahraga->id]) }}">
                       <button type="button" class="btn btn-sm btn-info">Edit</button>
                     </a>
-                   <a href="#"
+                   <a href="{{ route('cabangolahraga.delete', ['id' => $cabangolahraga->id]) }}"
                     onclick="return confirm('Delete data?');" 
                     >
                       <button type="button" class="btn btn-sm btn-danger">Hapus</button>

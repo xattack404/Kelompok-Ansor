@@ -37,6 +37,6 @@ Route::get('panel/subkategori/delete/{id}', ['as' => 'subkategori.delete', 'uses
 Route::get('panel/cabangolahraga', ['as' => 'cabangolahraga.index', 'uses' => 'cabangolahragaController@index']);
 Route::get('panel/cabangolahraga/create', ['as' => 'cabangolahraga.create', 'uses' => 'cabangolahragaController@create']);
 Route::post('panel/cabangolahraga/create', ['as' => 'cabangolahraga.store', 'uses' => 'cabangolahragaController@store']);
-// Route::get('panel/cabangolahraga/edit/{id}', ['as' => 'cabangolahraga.edit', 'uses' => 'cabangolahragaController@edit']);
-// Route::put('panel/cabangolahraga/edit/{id}', ['as' => 'cabangolahraga.update', 'uses' => 'cabangolahragaController@update']);
-// Route::get('panel/cabangolahraga/delete/{id}', ['as' => 'cabangolahraga.delete', 'uses' => 'cabangolahragaController@delete']);
+Route::get('panel/cabangolahraga/edit/{id}', ['as' => 'cabangolahraga.edit', 'uses' => 'cabangolahragaController@edit']);
+Route::put('panel/cabangolahraga/edit/{id}', ['as' => 'cabangolahraga.update', 'uses' => 'cabangolahragaController@update']);
+Route::get('panel/cabangolahraga/delete/{id}', ['as' => 'cabangolahraga.delete', 'uses' => 'cabangolahragaController@delete']);

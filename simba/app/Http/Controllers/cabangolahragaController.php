@@ -74,7 +74,9 @@ class cabangolahragaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['kategori'] = Kategori::all();
+        $data['cabang_olahraga'] = Cabangolahraga::find($id);
+        return view('cabangolahraga.edit',compact('data'));
     }
 
     /**
@@ -86,7 +88,17 @@ class cabangolahragaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $fileName = 'lomba-'.date('Ymdhis').'.'.$request->foto->getClientOriginalExtension();    
+        $request->foto->move('image/', $fileName);
+        Cabangolahraga::whereId($id)->update([
+            'nama_or' => $request->nama_or,
+            'deskripsi' => $request->deskripsi,
+            'kategori' => $request->kategori,
+            'tanggal_pelaksanaan' => $request->tanggal_pelaksanaan,
+            'foto' => $fileName
+        ]);
+        return redirect()->route('cabangolahraga.index');
+
     }
 
     /**
