@@ -41,5 +41,6 @@ class LoginController extends Controller
 
         return view('auth.loginadmin'); 
     }
+    
 
 }

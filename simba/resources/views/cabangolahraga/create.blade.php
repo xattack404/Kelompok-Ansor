@@ -27,6 +27,7 @@
                   </div>
                   
                   <div class="form-group">
+                  <label>Kategori</label>
                     <select required name="kategori" class="form-control" data-live-search="true">
                     @foreach($data['kategori'] as $kategori)
                     <option value="{{ $kategori->id }}">{{ $kategori->nama_kategori }} </option>
@@ -59,14 +60,11 @@
               <div class="form-group">
                 <label>Deskripsi Lomba</label>
                   <div id="editor" style="min-height: 700px">
-                        <h1>TULIS KETERANGAN</h1>
                   </div> 
                   <script>
                       initSample();
                   </script>
-                  <!-- <textarea class="form-control" rows="10" id="deskripsi" name="deskripsi" style="min-height: 300px"></textarea> -->
               </div>
-
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">SAVE</button>
                 </div>

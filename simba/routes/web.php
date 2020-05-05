@@ -16,8 +16,11 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-//Route untuk menu kategori
+
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('panel/profile', ['as' => 'profile.index', 'uses' => 'profileController@index']);
+
+//Route untuk menu kategori
 Route::get('panel/kategori', ['as' => 'kategori.index', 'uses' => 'KategoriController@index']);
 Route::get('panel/kategori/create', ['as' => 'kategori.create', 'uses' => 'KategoriController@create']);
 Route::post('panel/kategori/create', ['as' => 'kategori.store', 'uses' => 'KategoriController@store']);
