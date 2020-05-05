@@ -10,7 +10,7 @@
     @csrf
     <div class="row" style=" display:grid; grid-template-columns: repeat(auto-fit,minmax(300px, 1fr)); grid-gap: 15px;">
     <!-- halaman1 -->
-      <div class="" style="width: ">
+      <div class="" style="">
           <div class="card">
             <div class="card-header">
               <a href="{{ route('cabangolahraga.index') }}"> 
@@ -53,7 +53,7 @@
           </div>             
       </div>
       <!-- halaman 2 -->
-      <div class="" style="width: "> 
+      <div class="" style=""> 
           <div class="card">
             <div class="card-body">
 
