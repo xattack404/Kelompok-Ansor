@@ -46,7 +46,7 @@
 
                   <div class="form-group">
                     <b>Preview Gambar</><br>
-                    <img id="preview" src="" alt="" width="35%" />
+                    <img id="preview" src="" alt="" width="35%"/>
                   </div> 
             </div>
           </div>             
@@ -58,16 +58,14 @@
 
               <div class="form-group">
                 <label>Deskripsi Lomba</label>
-                  <div class="">
-                      <div id="editor" style="min-height: 700px">
+                  <div id="editor" style="min-height: 700px">
                         <h1>TULIS KETERANGAN</h1>
-                      </div>    
-			            </div>
+                  </div> 
                   <script>
                       initSample();
                   </script>
                   <!-- <textarea class="form-control" rows="10" id="deskripsi" name="deskripsi" style="min-height: 300px"></textarea> -->
-                </div>
+              </div>
 
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">SAVE</button>
