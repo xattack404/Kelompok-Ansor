@@ -10,7 +10,7 @@
     @csrf
     <div class="row" style=" display:grid; grid-template-columns: repeat(auto-fit,minmax(300px, 1fr)); grid-gap: 15px;">
     <!-- halaman1 -->
-      <div class="" style="width: ">
+      <div class="" style="">
           <div class="card">
             <div class="card-header">
               <a href="{{ route('cabangolahraga.index') }}"> 
@@ -53,7 +53,7 @@
           </div>             
       </div>
       <!-- halaman 2 -->
-      <div class="" style="width: "> 
+      <div class="" style=""> 
           <div class="card">
             <div class="card-body">
 
@@ -61,48 +61,48 @@
                 <label>Deskripsi Lomba</label>
                   <div id="editor" style="min-height: 700px">
                   <textarea class="form-control" rows="10" id="deskripsi" name="deskripsi" > </textarea>
-                  </div> 
-                  
+                  </div>   
               </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">SAVE</button>
                 </div>
+              </div>
             </div>
           </div>
       </div>
     </div>
 </form>
 
-  <script>
-function tampilkanPreview(foto,idpreview)
-{ //membuat objek gambar
-  var gb = foto.files;
-  //loop untuk merender gambar
-  for (var i = 0; i < gb.length; i++)
-  { //bikin variabel
-    var gbPreview = gb[i];
-    var imageType = /image.*/;
-    var preview=document.getElementById(idpreview);            
-    var reader = new FileReader();
-    if (gbPreview.type.match(imageType)) 
-    { //jika tipe data sesuai
-      preview.file = gbPreview;
-      reader.onload = (function(element) 
-      {
-        return function(e) 
+<script>
+  function tampilkanPreview(foto,idpreview)
+  { //membuat objek gambar
+    var gb = foto.files;
+    //loop untuk merender gambar
+    for (var i = 0; i < gb.length; i++)
+    { //bikin variabel
+      var gbPreview = gb[i];
+      var imageType = /image.*/;
+      var preview=document.getElementById(idpreview);            
+      var reader = new FileReader();
+      if (gbPreview.type.match(imageType)) 
+      { //jika tipe data sesuai
+        preview.file = gbPreview;
+        reader.onload = (function(element) 
         {
-          element.src = e.target.result;
-        };
-      })(preview);
-      //membaca data URL gambar
-      reader.readAsDataURL(gbPreview);
-    }
-      else
-      { //jika tipe data tidak sesuai
-        alert("Tipe file tidak sesuai. Gambar harus bertipe .png, .gif atau .jpg.");
+          return function(e) 
+          {
+            element.src = e.target.result;
+          };
+        })(preview);
+        //membaca data URL gambar
+        reader.readAsDataURL(gbPreview);
       }
-  }    
-}
+        else
+        { //jika tipe data tidak sesuai
+          alert("Tipe file tidak sesuai. Gambar harus bertipe .png, .gif atau .jpg.");
+        }
+    }    
+  }
 </script>
 </section>
 @endsection()
