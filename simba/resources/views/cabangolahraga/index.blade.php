@@ -48,7 +48,7 @@
                   <td>{{ $cabangolahraga->deskripsi }}</td>
                   <td>{{ $cabangolahraga->relasiKategori->nama_kategori }}</td>
                   <td>{{ $cabangolahraga->tanggal_pelaksanaan }}</td>
-                  <td>{{ $cabangolahraga->foto }}</td>
+                  <td><img src="{{ asset('image/'. $cabangolahraga->foto) }}" width='75' height='75'></td>
                   <td>
                   <a href="{{ route('cabangolahraga.edit', ['id' => $cabangolahraga->id]) }}">
                       <button type="button" class="btn btn-sm btn-info">Edit</button>
