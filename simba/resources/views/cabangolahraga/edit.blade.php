@@ -36,7 +36,7 @@
                 <input type="date" name="tanggal_pelaksanaan" class="form-control" required value="{{ $data['cabang_olahraga']->tanggal_pelaksanaan }}">
                 <div class="form-group"><label>Gambar Sebelumnya</label>
                 <br />
-                <img src='image/{{ $data['cabang_olahraga']->foto }}' width='150' height='150'>
+                <img src="{{ asset('image/'. $data['cabang_olahraga']->foto) }}" width='150' height='150'>
                 </div>
                 <div class="form-group"><label>* Foto Baru</label><br />
             <input type="file" name="foto" id="foto" onchange="tampilkanPreview(this,'preview')" required />

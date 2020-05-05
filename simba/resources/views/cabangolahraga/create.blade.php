@@ -60,10 +60,9 @@
               <div class="form-group">
                 <label>Deskripsi Lomba</label>
                   <div id="editor" style="min-height: 700px">
+                  <textarea class="form-control" rows="10" id="deskripsi" name="deskripsi" > </textarea>
                   </div> 
-                  <script>
-                      initSample();
-                  </script>
+                  
               </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">SAVE</button>
