@@ -81,7 +81,11 @@
               <div class="col-12 col-md-12 col-lg-5">
                     <div class="card">
                       <div class="card-body">
-                        <img alt="image" src="../assets/img/avatar/avatar-1.png" class=" profile-widget-picture" style="width:100%;">
+                        <img alt="image" src="../assets/img/avatar/avatar-1.png" class=" profile-widget-picture" style="width:100%;" id="preview">
+                        <div class="form-group">
+                          <label>* Foto Baru</label> <br>
+                          <input type="file" name="foto" id="foto" onchange="tampilkanPreview(this,'preview')" required />
+                      </div> 
                       </div>
                     </div>
               </div>
