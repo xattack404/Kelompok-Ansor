@@ -64,10 +64,11 @@
                   <script>
                       initSample();
                   </script>
-              </div>
+                  
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">SAVE</button>
                 </div>
+              </div>
             </div>
           </div>
       </div>
