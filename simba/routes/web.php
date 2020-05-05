@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('panel/profile', ['as' => 'profile.index', 'uses' => 'profileController@index']);
+Route::get('panel/signout', ['as' => 'signout', 'uses' => 'Auth\LoginController@signout']);
 
 //Route untuk menu kategori
 Route::get('panel/kategori', ['as' => 'kategori.index', 'uses' => 'KategoriController@index']);
