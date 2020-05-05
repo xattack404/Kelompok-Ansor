@@ -38,7 +38,6 @@ class cabangolahragaController extends Controller
      */
     public function store(Request $request)
     {
-        
         $validatedData = $request->validate([
             'nama_or' => 'required|max:50',
             'deskripsi' => 'required|max:200'
@@ -110,12 +109,6 @@ class cabangolahragaController extends Controller
      */
     public function delete($id)
     {
-        $data = Cabangolahraga::find($id);
-        if(\File::exists(public_path('image/'.$data->foto))){
-
-            \File::delete(public_path('image/'.$data->foto));
-        
-          }
         Cabangolahraga::whereId($id)->delete();
         return redirect()->route('cabangolahraga.index');
     }
