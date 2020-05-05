@@ -60,7 +60,7 @@
               <div class="form-group">
                 <label>Deskripsi Lomba</label>
                   <textarea name="" id="editor" cols="30" rows="10" style="min-height: 700px"></textarea>
-                  </div> 
+              </div> 
                   <script>
                       initSample();
                   </script>                 
