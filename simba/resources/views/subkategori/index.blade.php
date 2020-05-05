@@ -27,7 +27,7 @@
               <button type="button" class="btn btn-primary">Tambah Data</button>
             </a>
           </div>
-          <div class="card-body">
+          <div class="card-body" style="overflow: scroll">
             <table class="table table-bordered">
               <thead>
                 <tr>
