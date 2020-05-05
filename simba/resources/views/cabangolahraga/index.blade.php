@@ -27,8 +27,8 @@
               <button type="button" class="btn btn-primary">Tambah Data</button>
             </a>
           </div>
-          <div class="card-body">
-            <table class="table table-bordered">
+          <div class="card-body" style="overflow: scroll">
+            <table class="table table-bordered" >
               <thead>
                 <tr>
                   <th scope="col">Nama Olahraga</th>
