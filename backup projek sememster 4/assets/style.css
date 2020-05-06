@@ -157,7 +157,6 @@ input:focus{
 input::placeholder, textarea::placeholder{
     color:#323232;
     font-size: 12px;
-    text-transform: capitalize;
     text-align: left;
 }
 .neomorpishm{
@@ -441,7 +440,16 @@ ul li:hover #dropdown{
     padding: 25px;
     margin-bottom: 60px;
 }
-.judul-konten h1{
+
+.judul-konten2{
+    height: 135px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px;
+    margin-top: 106px;
+    margin-bottom: 60px;
+}
+.judul-konten h1, .judul-konten2 h1{
     position: relative;
     font-size: 40px;
     font-weight: 10;
@@ -454,7 +462,7 @@ ul li:hover #dropdown{
     text-align: center;
     font-size: 15px;
 }
-.content .katalog{
+.content .katalog, .content .katalog2{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
     position: relative;
@@ -464,6 +472,9 @@ ul li:hover #dropdown{
     border-bottom: 5px solid #DD5B4E;
     box-sizing: border-box;
     grid-gap: 15px;
+}
+.content .katalog2{
+    border-bottom: none;
 }
 .item-katalog .item{    
     position: relative;
@@ -596,14 +607,16 @@ ul li:hover #dropdown{
     z-index: 999;
     text-align: center;
     font-size: 20px;
-    color: #323232;
-    background-color: #666666;
+    background-color: #DD5B4E;
     box-sizing: border-box;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+}
+.totop a{
+    color: white;
 }
 /* ====================konten akhir====================*/
 
@@ -803,6 +816,15 @@ ul li:hover #dropdown{
     align-items: center;
     flex-wrap: wrap;
 }
+.box .keterangan{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+.box .keterangan h1{
+    font-size: 22px;
+    font-family: lato;
+}
 .box2{
     display: flex;
     width: 100%;
@@ -930,9 +952,9 @@ footer .copyright{
     width: 100%;
     text-align: center;
 }
-footer .copyright h4, footer .copyright i{
+footer .copyright h4, footer{
     text-align: center;
-    font-family: default;
+    font-family: lato;
 
 }
 /* ====================footer AKHIR====================*/
@@ -1154,6 +1176,7 @@ footer .copyright h4, footer .copyright i{
         width: 80%;
         
     }
+    
 /* ====================Registrasi Akhir====================*/
    
 }
