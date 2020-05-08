@@ -13,6 +13,7 @@
 
 //Route Front End
 Route::get('/', ['as' => 'frontend/home.index', 'uses' => 'FrontendController@index']);
+// Route::get('/', ['as' => 'frontend/home.event', 'uses' => 'EventController@index']);
 
 
 
