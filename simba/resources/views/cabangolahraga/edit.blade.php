@@ -43,7 +43,7 @@
             </div>  
             <br><b>Preview Gambar</b><br>
             <img id="preview" src="" alt="" width="35%" />
-                      </div>
+            </div>
               <div class="form-group">
                 <button type="submit" class="btn btn-primary">SAVE</button>
               </div>

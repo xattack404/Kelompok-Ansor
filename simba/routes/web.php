@@ -44,3 +44,11 @@ Route::post('panel/cabangolahraga/create', ['as' => 'cabangolahraga.store', 'use
 Route::get('panel/cabangolahraga/edit/{id}', ['as' => 'cabangolahraga.edit', 'uses' => 'cabangolahragaController@edit']);
 Route::put('panel/cabangolahraga/edit/{id}', ['as' => 'cabangolahraga.update', 'uses' => 'cabangolahragaController@update']);
 Route::get('panel/cabangolahraga/delete/{id}', ['as' => 'cabangolahraga.delete', 'uses' => 'cabangolahragaController@delete']);
+
+//Route untuk menu Manejemen Login
+Route::get('panel/manejemenlogin', ['as' => 'manejemenlogin.index', 'uses' => 'manejemenlogincontroller@index']);
+Route::get('panel/manejemenlogin/create', ['as' => 'manejemenlogin.create', 'uses' => 'ManejemenLoginController@create']);
+Route::post('panel/manejemenlogin/create', ['as' => 'manejemenlogin.store', 'uses' => 'ManejemenLoginController@store']);
+Route::get('panel/manejemenlogin/edit/{id}', ['as' => 'manejemenlogin.edit', 'uses' => 'ManejemenLoginController@edit']);
+Route::put('panel/manejemenlogin/edit/{id}', ['as' => 'manejemenlogin.update', 'uses' => 'ManejemenLoginController@update']);
+Route::get('panel/manejemenlogin/delete/{id}', ['as' => 'manejemenlogin.delete', 'uses' => 'ManejemenLoginController@delete']);

@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Profile;
-class profileController extends Controller
+use App\User;
+class ManejemenLoginController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +13,8 @@ class profileController extends Controller
      */
     public function index()
     {
-        $data = Profile::All();
-        return view('profile.index',compact('data')); 
+        $data = User::paginate(10);
+        return view('manejemenlogin.index',compact('data')); 
     }
 
     /**

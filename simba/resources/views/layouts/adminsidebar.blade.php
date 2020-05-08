@@ -21,7 +21,7 @@
                   <a class="nav-link" href="{{ route('cabangolahraga.index') }}"><i class="fas fa-running"></i> <span>Cabang Olahraga</span></a>
                 </li>
                 <li class="">
-                  <a class="nav-link" href="#"><i class="fas fa-users-cog"></i> <span>Manejemen Login</span></a>
+                  <a class="nav-link" href="{{ route('manejemenlogin.index') }}"><i class="fas fa-users-cog"></i> <span>Manejemen Login</span></a>
                 </li>
                 <li class="menu-header">Transaksi</li>
                 <li class="">

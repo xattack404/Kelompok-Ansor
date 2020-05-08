@@ -10,9 +10,9 @@
           </div>
 
           <div class="section-body">
-            <h2 class="section-title">Hi, Tahaj</h2>
+            <h2 class="section-title">Hi, Admin</h2>
             <p class="section-lead">
-              aelole asek asek joss
+              Kelola Profile Data Diri
             </p>
 
             <div class="row">
@@ -25,51 +25,41 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
-                          <div class="form-group col-md-6 col-12">
-                            <label>Nama Pertama</label>
-                            <input type="text" class="form-control" value="Ujang" required="">
+                          <div class="form-group col-md-8 col-12">
+                            <label>Nama Lengkap</label>
+                            <input type="text" class="form-control" name="nama" required="">
                             <div class="invalid-feedback">
                               Please fill in the first name
                             </div>
                           </div>
-                          <div class="form-group col-md-6 col-12">
-                            <label>Nama Terakhir</label>
-                            <input type="text" class="form-control" value="Maman" required="">
-                            <div class="invalid-feedback">
-                              Please fill in the last name
-                            </div>
                           </div>
-                        </div>
                         <div class="row">
                           <div class="form-group col-md-7 col-12">
                             <label>Email</label>
-                            <input type="email" class="form-control" value="ujang@maman.com" required="">
+                            <input type="email" class="form-control" name="email" required="">
                             <div class="invalid-feedback">
                               Please fill in the email
                             </div>
                           </div>
-                          <div class="form-group col-md-5 col-12">
+                          </div>
+                          <div class="row">
+                          <div class="form-group col-md-7 col-12">
                             <label>Telepon</label>
-                            <input type="tel" class="form-control" value="">
+                            <input type="number" name="no_hp" class="form-control" value="">
                           </div>
                         </div>
                         <div class="row">
-                          <div class="form-group col-12">
-                            <label>Bio</label>
-                            <textarea class="form-control summernote-simple" style="min-height: 300px">Ujang maman is a superhero name in <b>Indonesia</b>, especially in my family. He is not a fictional character but an original hero in my family, a hero for his children and for his wife. So, I use the name as a user in this template. Not a tribute, I'm just bored with <b>'John Doe'</b>.</textarea>
+                          <div class="form-group col-md-7 col-12">
+                            <label>Password</label>
+                            <input type="password" name="password" class="form-control" value="">
                           </div>
                         </div>
-                        <!-- <div class="row">
-                          <div class="form-group mb-0 col-12">
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" name="remember" class="custom-control-input" id="newsletter">
-                              <label class="custom-control-label" for="newsletter">Subscribe to newsletter</label>
-                              <div class="text-muted form-text">
-                                You will get new information about products, offers and promotions
-                              </div>
-                            </div>
+                        <div class="row">
+                          <div class="form-group col-md-7 col-12">
+                            <label>Konfirmasi Password</label>
+                            <input type="password" name="password2" class="form-control" value="">
                           </div>
-                        </div> -->
+                        </div>
                     </div>
                     <div class="card-footer text-right">
                       <button class="btn btn-primary">Save Changes</button>
@@ -82,10 +72,8 @@
                     <div class="card">
                       <div class="card-body">
                         <img alt="image" src="../assets/img/avatar/avatar-1.png" class=" profile-widget-picture" style="width:100%;" id="preview">
-                        <div class="form-group">
-                          <label>* Foto Baru</label> <br>
-                          <input type="file" name="foto" id="foto" onchange="tampilkanPreview(this,'preview')" required />
-                      </div> 
+                        </div>
+                      </div>
                       </div>
                     </div>
               </div>
