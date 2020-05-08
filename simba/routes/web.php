@@ -11,12 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route Front End
+Route::get('/', ['as' => 'frontend/home.index', 'uses' => 'FrontendController@index']);
 
+
+
+//Route Back End
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('panel/profile', ['as' => 'profile.index', 'uses' => 'profileController@index']);
 Route::get('panel/signout', ['as' => 'signout', 'uses' => 'Auth\LoginController@signout']);
