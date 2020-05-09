@@ -464,7 +464,7 @@ ul li:hover #dropdown{
 }
 .content .katalog, .content .katalog2{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    grid-template-columns: repeat(3,minmax(300px, 500px));
     position: relative;
     width: 80%;
     margin: auto;
