@@ -27,7 +27,7 @@
         <p>semua lomba terbaru hari ini</p>
     </div>
     <div class="katalog">
-    @forelse($data as $event)
+            @forelse($data as $event)
             <div class="item-katalog">
                 <div class="item">
                     <a href="{{ route('frontend.event.detailevent', ['url' => $event->url]) }}">
@@ -36,7 +36,6 @@
                     </a>
                 </div>
                 @empty 
-                <label> event kosong</label>
             </div>
             @endforelse
     </div>
