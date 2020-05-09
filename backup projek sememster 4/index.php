@@ -27,6 +27,7 @@
         <p>semua lomba terbaru hari ini</p>
     </div>
     <div class="katalog">
+        <?php for ($i = 0; $i < 10; $i++){ ?>
             <div class="item-katalog">
                 <div class="item">
                     <a href="lomba.php">
@@ -35,46 +36,7 @@
                     </a>
                 </div>
             </div>
-            <div class="item-katalog">
-                <div class="item">
-                    <a href="">
-                        <img src="assets/IMGLomba/sampel2.jpeg" alt="">
-                        <label for="">PIALA WALIKOTA SOLO 6 - ROAD RACE</label>
-                    </a>
-                </div>
-            </div>
-            <div class="item-katalog">
-                <div class="item">
-                    <a href="">
-                        <img src="assets/IMGLomba/sampel5.jpg" alt="">
-                        <label for="">JATENG OPEN 2018 HOCKEY</label>
-                    </a>
-                </div>
-            </div>
-            <div class="item-katalog">
-                <div class="item">
-                    <a href="">
-                        <img src="assets/IMGLomba/sampel3.jpeg" alt="">
-                        <label for="">Jakarta Open 2019</label>
-                    </a>
-                </div>
-            </div>
-            <div class="item-katalog">
-                <div class="item">
-                    <a href="">
-                        <img src="assets/IMGLomba/sampel4.jpg" alt="">
-                        <label for="">Jakarta Open 2019</label>
-                    </a>
-                </div>
-            </div>
-            <div class="item-katalog">
-                <div class="item">
-                    <a href="">
-                        <img src="assets/IMGLomba/sampel6.jpg" alt="">
-                        <label for="">Piala Menpora 2018</label>
-                    </a>
-                </div>
-            </div>
+        <?php } ?>   
     </div>
     <div class="more">
         <a href="semualomba.php">
