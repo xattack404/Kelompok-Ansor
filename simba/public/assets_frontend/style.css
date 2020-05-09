@@ -70,11 +70,11 @@ table {
 }
 @font-face{
     font-family: lato;
-    src: url(../assets/font/Lato-Regular.ttf);
+    src: url(font/Lato-Regular.ttf);
 }
 @font-face{
     font-family: viga;
-    src: url(../assets/font/Viga-Regular.ttf);
+    src: url(font/Viga-Regular.ttf);
 }
 *{
     font-family: lato;
