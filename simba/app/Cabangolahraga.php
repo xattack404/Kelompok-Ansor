@@ -10,6 +10,7 @@ protected $table = 'cabang_olahraga';
     protected $fillable = [
         'kategori',
         'nama_or',
+        'url',
         'deskripsi',
         'tanggal_pelaksanaan',
         'foto',

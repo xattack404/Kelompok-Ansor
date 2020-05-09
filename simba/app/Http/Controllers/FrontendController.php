@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Frontend;
+use App\Cabangolahraga;
 use Illuminate\Http\Request;
-
 class FrontendController extends Controller
 {
     /**
@@ -14,7 +13,8 @@ class FrontendController extends Controller
      */
     public function index()
     {
-        return view('frontend/home.index');
+        $data = Cabangolahraga::paginate(6);
+        return view('frontend/home.index',compact('data'));
     }
 
     /**

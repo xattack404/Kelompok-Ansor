@@ -15,6 +15,7 @@
 Route::get('/', ['as' => 'frontend/home.index', 'uses' => 'FrontendController@index']);
 Route::get('event/index', ['as' => 'frontend/event.index', 'uses' => 'EventController@index']);
 Route::get('registrasi/index', ['as' => 'frontend/registrasi.index', 'uses' => 'RegistrasiController@index']);
+Route::get('event/detailevent/{url}', ['as' => 'frontend/event.detailevent', 'uses' => 'KategoriController@edit']);
 
 
 

@@ -48,6 +48,7 @@ class cabangolahragaController extends Controller
 
         Cabangolahraga::create([
             'nama_or' => $request->nama_or,
+            'url' => strtolower( str_replace(" ","-",$request->nama_or)),
             'deskripsi' => $request->deskripsi,
             'kategori' => $request->kategori,
             'tanggal_pelaksanaan' => $request->tanggal_pelaksanaan,

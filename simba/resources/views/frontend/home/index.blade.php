@@ -27,55 +27,18 @@
         <p>semua lomba terbaru hari ini</p>
     </div>
     <div class="katalog">
+    @forelse($data as $event)
             <div class="item-katalog">
                 <div class="item">
                     <a href="lomba.php">
-                        <img src="{{ asset('assets_frontend/IMGLomba/sampel.jpg') }}" alt="">
-                        <label for="">Piala walikota Bekasi</label>
+                        <img src="{{ asset('image/'. $event->foto) }}" alt="">
+                        <label for="">{{ $event->nama_or }}</label>
                     </a>
                 </div>
+                @empty 
+                <label> event kosong</label>
             </div>
-            <div class="item-katalog">
-                <div class="item">
-                    <a href="">
-                        <img src="{{ asset('assets_frontend/IMGLomba/sampel2.jpeg') }}" alt="">
-                        <label for="">PIALA WALIKOTA SOLO 6 - ROAD RACE</label>
-                    </a>
-                </div>
-            </div>
-            <div class="item-katalog">
-                <div class="item">
-                    <a href="">
-                        <img src="{{ asset('assets_frontend/IMGLomba/sampel5.jpg') }}" alt="">
-                        <label for="">JATENG OPEN 2018 HOCKEY</label>
-                    </a>
-                </div>
-            </div>
-            <div class="item-katalog">
-                <div class="item">
-                    <a href="">
-                        <img src="{{ asset('assets_frontend/IMGLomba/sampel3.jpeg') }}" alt="">
-                        <label for="">Jakarta Open 2019</label>
-                    </a>
-                </div>
-            </div>
-            <div class="item-katalog">
-                <div class="item">
-                    <a href="">
-                        <img src="{{ asset('assets_frontend/IMGLomba/sampel4.jpg') }}" alt="">
-                        <label for="">Jakarta Open 2019</label>
-                    </a>
-                </div>
-            </div>
-            <div class="item-katalog">
-                <div class="item">
-                    <a href="">
-                        <img src="{{ asset('assets_frontend/IMGLomba/sampel6.jpg') }}" alt="">
-                        <label for="">Piala Menpora 2018</label>
-                    </a>
-                </div>
-            </div>
-    </div>
+            @endforelse
     <div class="more">
         <a href="{{ route('frontend/event.index') }}">
             More event <br> <i class="fas fa-ellipsis-h"></i>
