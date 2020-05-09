@@ -23,21 +23,32 @@
               <div class="form-group">
                 <label>Name Olahraga</label>
                 <input type="text" name="nama_or" class="form-control" required value="{{ $data['cabang_olahraga']->nama_or }}">
+              </div>
+              <div class="form-group">
+                <label>Deskripsi Lomba</label>
+                <textarea class="form-control" rows="10" id="deskripsi" name="deskripsi" >{{ $data['cabang_olahraga']->deskripsi }}
+                </textarea>
+              </div>
+              <div class="form-group">
                 <label> Kategori </label>
                 <select required name="kategori" class="form-control" data-live-search="true">
                 @foreach($data['kategori'] as $kategori)
                 <option value="{{ $kategori->id }}" {{ ($data['cabang_olahraga']->kategori== $kategori->id) ? 'selected' : '' }}>{{ $kategori->nama_kategori }} </option>
                 @endforeach
                 </select>
+              </div>
+              <div class="form-group">
                 <label>Tanggal Pelaksanaan</label>
                 <input type="date" name="tanggal_pelaksanaan" class="form-control" required value="{{ $data['cabang_olahraga']->tanggal_pelaksanaan }}">
-                <div class="form-group"><label>Gambar Sebelumnya</label>
-                <br />
-                <img src="{{ asset('image/'. $data['cabang_olahraga']->foto) }}" width='150' height='150'>
+              </div>
+                <div class="form-group">
+                  <label>Gambar Sebelumnya</label><br />
+                  <img src="{{ asset('image/'. $data['cabang_olahraga']->foto) }}" width='150' height='150'>
                 </div>
                 <div class="form-group"><label>* Foto Baru</label><br />
             <input type="file" name="foto" id="foto" onchange="tampilkanPreview(this,'preview')"  />
             </div>  
+
             <br><b>Preview Gambar</b><br>
             <img id="preview" src="" alt="" width="35%" />
             </div>
