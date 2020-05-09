@@ -13,7 +13,8 @@
 @include('layouts.frontendnavbar')
 <!-- konten-->
 <form class="box-lomba">
-    <div class="info-lomba">        
+    <div class="info-lomba">    
+        <h1>Lomba tidak Tersedia</h1>    
     </div>
     <div class="img">
         <img src="{{ asset('image/'. $data['cabang_olahraga']->foto) }}" alt="">    
@@ -26,8 +27,6 @@
         <p><label for="">KETERANGAN : <br> <br></label>
         {{ $data['cabang_olahraga']->deskripsi }}
         </p>
-        
-        <h1>Lomba tidak Tersedia</h1>
         
         <a href=""><button type="button">Panduan Lomba</button></a>
         <a href="registrasi.php"><button type="button">Registrasi</button></a>
