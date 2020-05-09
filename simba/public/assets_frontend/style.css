@@ -84,14 +84,14 @@ body{
     background-color: #F0F1EC;
 }
 .simba3{    
-    background: url(../assets/IMG/simba5.png) center no-repeat;
+    background: url(../assets_frontend/IMG/simba5.png) center no-repeat;
     background-size: 150px 70px;
     background-position:  top;
     background-position-y: 80px;
     background-color: #323232;
 }
 .simba3:hover{    
-    background: url(../assets/IMG/simba6.png) center no-repeat;
+    background: url(../assets_frontend/IMG/simba6.png) center no-repeat;
     background-size: 150px 70px;
     background-position:  top;
     background-position-y: 80px;

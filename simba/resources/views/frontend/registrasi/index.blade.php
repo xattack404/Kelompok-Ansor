@@ -10,7 +10,7 @@
     <script src="assets/js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-<?php include 'navbar.php'; ?>
+@include('layouts.frontendnavbar')
 <div class="all-boxregister">
 
 <!-- ====== form registrasi komunitas====== -->
@@ -149,6 +149,6 @@
     </div>
 <!-- ====== button registrasi===== -->
 </div>
-<script src="assets/js/style.js"></script>
+<script src="{{ asset('assets_frontend/js/style.js') }}"></script>
 </body>
 </html>

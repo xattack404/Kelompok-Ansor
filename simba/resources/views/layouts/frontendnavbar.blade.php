@@ -18,23 +18,11 @@
     <div class="menu" id="menu">
         <ul>        
             <div class="close"><a href="#nav" title="close"><i class="fas fa-times white"></i></a> </div>
-                <li><a class="page-scroll" href="index.php">Home</a></li>
-                <li><a class="page-scroll" href="#konten">Last Event</a></li>
-                <li>
-                    <h5>
-                        Kategori
-                        <i class="fas fa-caret-down"></i>
-                        <i class="fas fa-sort-up"></i>
-                    </h5>
-                    <ul class="dropdown" id="dropdown">
-                        <li><a href="">Fotografi</a></li>
-                        <li><a href="">Logo</a></li>
-                        <li><a href="">Video</a></li>
-                        <li><a href="">Olimpiade</a></li>
-                        <li><a href="">Olahraga</a></li>
-                    </ul>
-                </li>
-                <li><a class="page-scroll" href="registrasi.php">Registrasi</a></li>
+                <li><a class="page-scroll" href="{{ route('frontend/home.index')}}">Home</a></li>
+                <li><a class="page-scroll" href="#konten">Event</a></li>
+                <li><a class="page-scroll" href="#">Atlet Aktif</a></li>
+                <li><a class="page-scroll" href="#">More Info</a></li>
+                <li><a class="page-scroll" href="{{ route('frontend/registrasi.index')}}">Registrasi</a></li>
         </ul>               
     </div>
     <div class="menu-toggle">

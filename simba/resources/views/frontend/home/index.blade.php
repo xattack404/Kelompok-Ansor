@@ -77,7 +77,7 @@
             </div>
     </div>
     <div class="more">
-        <a href="#">
+        <a href="{{ route('frontend/event.index') }}">
             More event <br> <i class="fas fa-ellipsis-h"></i>
         </a>
     </div>
