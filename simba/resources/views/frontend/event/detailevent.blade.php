@@ -13,24 +13,22 @@
 @include('layouts.frontendnavbar')
 <!-- konten-->
 <form class="box-lomba">
-    <div class="info-lomba">
-    @forelse($data as $event)
-        
+    <div class="info-lomba">        
     </div>
     <div class="img">
-        <img src="{{ asset('image/'. $event->foto) }}" alt="">    
+        <img src="{{ asset('image/'. $data['cabang_olahraga']->foto) }}" alt="">    
     </div>
     <div class="konten-lomba">
-        <h3>{{ $event->nama_or }}<</h3>
+        <h3>{{ $data['cabang_olahraga']->nama_or }}</h3>
         <p><label for="">KATEGORI :</label> Olahraga</p>
         <p><label for="">UMUR :</label> 20-25</p>
         <p><label for="">TINGKAT :</label> Umum</p>
         <p><label for="">KETERANGAN : <br> <br></label>
-        {{ $event->deskripsi }}<
+        {{ $data['cabang_olahraga']->deskripsi }}
         </p>
-        @empty
+        
         <h1>Lomba tidak Tersedia</h1>
-        @endforelse
+        
         <a href=""><button type="button">Panduan Lomba</button></a>
         <a href="registrasi.php"><button type="button">Registrasi</button></a>
     </div>
