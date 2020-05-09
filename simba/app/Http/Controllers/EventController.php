@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Event;
+use App\Cabangolahraga;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -15,6 +15,7 @@ class EventController extends Controller
     public function index()
     {
         return view('frontend/event.index');
+
     }
 
     /**
@@ -44,9 +45,10 @@ class EventController extends Controller
      * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function show(Event $event)
+    public function show($url)
     {
-        //
+        $data['cabang_olahraga'] = Cabangolahraga::where('url',$url)->first();
+        return view('frontend.event.detailevent',compact ('data'));
     }
 
     /**

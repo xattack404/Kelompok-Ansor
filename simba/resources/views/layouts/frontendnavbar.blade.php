@@ -18,11 +18,11 @@
     <div class="menu" id="menu">
         <ul>        
             <div class="close"><a href="#nav" title="close"><i class="fas fa-times white"></i></a> </div>
-                <li><a class="page-scroll" href="{{ route('frontend/home.index')}}">Home</a></li>
+                <li><a class="page-scroll" href="{{ route('frontend.home.index')}}">Home</a></li>
                 <li><a class="page-scroll" href="#konten">Event</a></li>
                 <li><a class="page-scroll" href="#">Atlet Aktif</a></li>
                 <li><a class="page-scroll" href="#">More Info</a></li>
-                <li><a class="page-scroll" href="{{ route('frontend/registrasi.index')}}">Registrasi</a></li>
+                <li><a class="page-scroll" href="{{ route('frontend.registrasi.index')}}">Registrasi</a></li>
         </ul>               
     </div>
     <div class="menu-toggle">

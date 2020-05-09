@@ -30,7 +30,7 @@
     @forelse($data as $event)
             <div class="item-katalog">
                 <div class="item">
-                    <a href="lomba.php">
+                    <a href="{{ route('frontend.event.detailevent', ['url' => $event->url]) }}">
                         <img src="{{ asset('image/'. $event->foto) }}" alt="">
                         <label for="">{{ $event->nama_or }}</label>
                     </a>
@@ -40,7 +40,7 @@
             </div>
             @endforelse
     <div class="more">
-        <a href="{{ route('frontend/event.index') }}">
+        <a href="{{ route('frontend.event.index') }}">
             More event <br> <i class="fas fa-ellipsis-h"></i>
         </a>
     </div>
