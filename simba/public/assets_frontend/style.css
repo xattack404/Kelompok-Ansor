@@ -70,11 +70,11 @@ table {
 }
 @font-face{
     font-family: lato;
-    src: url(font/Lato-Regular.ttf);
+    src: url(../assets/font/Lato-Regular.ttf);
 }
 @font-face{
     font-family: viga;
-    src: url(font/Viga-Regular.ttf);
+    src: url(../assets/font/Viga-Regular.ttf);
 }
 *{
     font-family: lato;
@@ -84,14 +84,14 @@ body{
     background-color: #F0F1EC;
 }
 .simba3{    
-    background: url(../assets_frontend/IMG/simba5.png) center no-repeat;
+    background: url(../assets/IMG/simba5.png) center no-repeat;
     background-size: 150px 70px;
     background-position:  top;
     background-position-y: 80px;
     background-color: #323232;
 }
 .simba3:hover{    
-    background: url(../assets_frontend/IMG/simba6.png) center no-repeat;
+    background: url(../assets/IMG/simba6.png) center no-repeat;
     background-size: 150px 70px;
     background-position:  top;
     background-position-y: 80px;
@@ -429,6 +429,7 @@ ul li:hover #dropdown{
     width: 100%;
     margin: auto;
     box-sizing: border-box;
+    background-color: blueviolet;
 }
 .judul-konten{
     height: 135px;
@@ -464,9 +465,8 @@ ul li:hover #dropdown{
 }
 .content .katalog, .content .katalog2{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     position: relative;
-    width: 80%;
     margin: auto;
     padding-bottom: 150px;
     border-bottom: 5px solid #DD5B4E;

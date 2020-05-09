@@ -429,6 +429,7 @@ ul li:hover #dropdown{
     width: 100%;
     margin: auto;
     box-sizing: border-box;
+    background-color: brown;
 }
 .judul-konten{
     height: 135px;
@@ -464,7 +465,7 @@ ul li:hover #dropdown{
 }
 .content .katalog, .content .katalog2{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     position: relative;
     width: 80%;
     margin: auto;

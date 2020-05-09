@@ -28,39 +28,38 @@
     </div>
     <div class="katalog">
     @forelse($data as $event)
-            <div class="item-katalog">
-                <div class="item">
+        <div class="item-katalog">
+            <div class="item">
                     <a href="lomba.php">
                         <img src="{{ asset('image/'. $event->foto) }}" alt="">
                         <label for="">{{ $event->nama_or }}</label>
                     </a>
-                </div>
-                @empty 
-                <label> event kosong</label>
             </div>
-            @endforelse
-    <div class="more">
-        <a href="{{ route('frontend/event.index') }}">
-            More event <br> <i class="fas fa-ellipsis-h"></i>
-        </a>
+                @empty 
+        </div>
+    @endforelse  
     </div>
-    
+    <div class="more">
+            <a href="{{ route('frontend/event.index') }}">
+                More event <br> <i class="fas fa-ellipsis-h"></i>
+            </a>
+    </div>
 </div>
 <!-- Akhir Konten -->
 
 <!-- Button Kontak -->
-<div class="kontak">
-    <a href="">Contact</a>
-</div>
+    <div class="kontak">
+        <a href="">Contact</a>
+    </div>
 <!-- Button kontak akhir -->
 
 
  <!-- top -->
- <top id="top">
-    <a href="#home" class="page-scroll">
+    <top id="top">
+        <a href="#home" class="page-scroll">
         <i class="fas fa-arrow-up"></i>
-    </a>
-</top>
+        </a>
+    </top>
     <script type="text/javascript">
         window.addEventListener("scroll", function(){
             var top = document.querySelector("top");
