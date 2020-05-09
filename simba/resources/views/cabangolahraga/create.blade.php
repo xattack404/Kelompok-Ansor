@@ -3,7 +3,7 @@
 <section class="section" >
   
   <div class="section-header">
-    <h1>Cabang Olahraga <small>Tambah Data</small></h1>
+    <h1>Cabang Olahragaa <small>Edit Data</small></h1>
   </div>
 
   <form class="section-body container" action="{{ route('cabangolahraga.store') }}" method="POST" enctype="multipart/form-data">
@@ -69,7 +69,7 @@
                 </div>  
               </div>
               </div>
-            </div>
+        </div>
           </div>
       </div>
     </div>
