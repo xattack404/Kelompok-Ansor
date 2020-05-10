@@ -14,7 +14,7 @@ class FrontendController extends Controller
     public function index()
     {
         $data = Cabangolahraga::paginate(6);
-        return view('frontend/home.index',compact('data'));
+        return view('frontend.home.index',compact('data'));
     }
 
     /**
