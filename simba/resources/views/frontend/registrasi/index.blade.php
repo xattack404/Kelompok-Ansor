@@ -40,7 +40,7 @@
             </div>
         </div>
         <?php ?>
-        <?php for ($i = 1; $i < 3; $i++){ ?>
+        <?php for ($i = 1; $i < 5; $i++){ ?>
         <div class="box">
         <div class="keterangan"><h1>Identitas Anggota <?php echo $i; ?> </h1></div>                       
             <div class="input">
