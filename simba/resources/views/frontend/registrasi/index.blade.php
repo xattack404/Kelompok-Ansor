@@ -69,11 +69,11 @@
             </div>
         </div>
         <?php }?>
-            <div class="box-btn" >
+            <!-- <div class="box-btn" >
                 <a href=""><button type="button" class="red">selanjutnya</button></a>
-            </div>
-        <div class="box-keterangan">
-            <div class="judul-keterangan"><a href=""><h1>ringkasan total pembayaran</h1> </a> </div>
+            </div> -->
+        <div class="box-keterangan" id="konfirmasi">
+            <div class="judul-keterangan"><a href="#konfirmasi"><h1>ringkasan total pembayaran</h1> </a> </div>
             <div class="keterangan-konten">
                 <table border="1" cellpadding="5" cellspacing="0">
                     <tr>
@@ -92,6 +92,25 @@
                         <td>Rp. 913000</td>
                     </tr>
                 </table>
+
+                <h2>total yang harus di bayar</h2>
+                <div class="total">
+                    <h3>Rp. 913000</h3>
+                </div>
+
+                <div class="ikut-serta">
+                    <h1>konfirmasi</h1>
+                    <p>Dengan menekan tombol Konfirmasi Pemesanan dibawah ini saya menyatakan bahwa semua data yang saya berikan dalam formulir ini adalah benar dan saya setuju untuk mematuhi semua peraturan dan ketentuan yang ditetapkan oleh penyelenggara. Selanjutnya, saya menyatakan bahwa saya dalam keadaan sehat dan membebaskan penyelenggara dan pihak lain yang terlibat dalam penyelenggaraan kegiatan IT SPORT Online dari segala tanggung jawab atas segala cedera, kehilangan, atau kerusakan pada diri saya atau harta benda saya dalam hubungannya dengan kegiatan tersebut. Saat saya mengikuti kegiatan ini, maka saya telah menyetujui deklarasi ini</p>
+                    <div class="persetujuan">
+                        <label for="">* Saya setuju dengan pernyataan di atas</label>
+                        <select name="" id="">
+                            <option value="">--pilih--</option>
+                            <option value="">IYA</option>
+                            <option value="">TIDAK</option>
+                        </select>
+                    </div>
+                    <button type="submit">KONFIRMASI</button>
+                </div>
             </div>
         </div>
     </form>
