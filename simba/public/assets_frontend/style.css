@@ -997,6 +997,7 @@ ul li:hover #dropdown{
     width: 95%;
     box-sizing: border-box;
     margin: auto;
+    margin-top: 10px;
 }
 .keterangan-konten h2{
     text-align: center;
