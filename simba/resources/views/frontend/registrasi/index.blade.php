@@ -69,12 +69,42 @@
             </div>
         </div>
         <?php }?>
-            <div class="box-btn">
-                <a href=""><button type="button" class="red">back</button></a>
-                <button type="submit" class="blue">Registrasi</button>   
+            <div class="box-btn" >
+                <a href=""><button type="button" class="red">selanjutnya</button></a>
             </div>
+        <div class="box-keterangan">
+            <div class="judul-keterangan"><a href=""><h1>ringkasan total pembayaran</h1> </a> </div>
+            <div class="keterangan-konten">
+                <table border="1" cellpadding="5" cellspacing="0">
+                    <tr>
+                        <th>Ringkasan</th>
+                        <th>Harga</th>
+                        <th>Jumlah</th>
+                    </tr>
+                    <tr>
+                        <td>kode unik simulasi</td>
+                        <td>Harga</td>
+                        <td>Rp. 913000</td>
+                    </tr>
+                    <tr>
+                        <td>Total keseluruhan</td>
+                        <td>Harga</td>
+                        <td>Rp. 913000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </form>
 <!-- ====== form registrasi komunitas akhir ====== -->
+
+
+
+
+
+
+
+
+
 
 <!-- ====== form registrasi Individu/Atlet ====== -->
     <form class="box-registrasi" action="" id="registrasi">
@@ -138,14 +168,16 @@
                     <option value="">--pilih kecamatan--</option>
                 </select>    
             </div>
+
+            <div class="input">
+                <label for="nama">Kelas</label>
+                <input type="text" name="kelas" id="nama" readonly>    
+            </div>
+
             <div class="input">
                 <label for="">alamat</label>
                 <textarea name="alamat" id="" cols="30" rows="10" placeholder="isi alamat rumah anda" required>
                 </textarea>    
-            </div>
-            <div class="input">
-                <label for="nama">Kelas</label>
-                <input type="text" name="kelas" id="nama" readonly>    
             </div>
 
             <div class="box-btn">
