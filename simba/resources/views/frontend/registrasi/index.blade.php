@@ -40,7 +40,7 @@
             </div>
         </div>
         <?php ?>
-        <?php for ($i = 1; $i < 5; $i++){ ?>
+        <?php for ($i = 1; $i < 3; $i++){ ?>
         <div class="box">
         <div class="keterangan"><h1>Identitas Anggota <?php echo $i; ?> </h1></div>                       
             <div class="input">
@@ -72,8 +72,9 @@
             <!-- <div class="box-btn" >
                 <a href=""><button type="button" class="red">selanjutnya</button></a>
             </div> -->
+        <input class="bayar" type="checkbox" name="bayar" id="bayar" style="display: none">
         <div class="box-keterangan" id="konfirmasi">
-            <div class="judul-keterangan"><a href="#konfirmasi"><h1>ringkasan total pembayaran</h1> </a> </div>
+            <div class="judul-keterangan"><label for="bayar">ringkasan total pembayaran</label></div>
             <div class="keterangan-konten">
                 <table border="1" cellpadding="5" cellspacing="0">
                     <tr>
@@ -206,14 +207,17 @@
         </div>
     </form>
 <!-- ====== form registrasi akhir ====== -->
-
+    
 <!-- ====== button registrasi===== -->
     <div class="box2">
         <a href="#registrasi">registrasi</a>
         <a href="#registrasikomunitas">komunitas</a>
     </div>
 <!-- ====== button registrasi===== -->
+
+
 </div>
+
 <script src="{{ asset('assets_frontend/js/style.js') }}"></script>
 </body>
 </html>
