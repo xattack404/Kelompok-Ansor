@@ -160,6 +160,9 @@ input, select{
     -o-transition: ease-in .3s;
     padding: 5px;
 }
+select{
+    -webkit-appearance: button;
+}
 input:focus{
     text-transform: none;
     border: 1px solid #DD5B4E;
@@ -1046,6 +1049,9 @@ ul li:hover #dropdown{
     width: 90%;
     color: black;
     border: 1px solid black;
+}
+.ikut-serta button{
+    color: white;
 }
 /* ====================Registrasi Akhir====================*/
 
