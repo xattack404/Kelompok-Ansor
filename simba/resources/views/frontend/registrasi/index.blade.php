@@ -73,6 +73,7 @@
                 <a href=""><button type="button" class="red">selanjutnya</button></a>
             </div> -->
         <input class="bayar" type="checkbox" name="bayar" id="bayar" style="display: none">
+        <!------------ konfirmasi ------------>
         <div class="box-keterangan" id="konfirmasi">
             <div class="judul-keterangan"><label for="bayar">ringkasan total pembayaran</label></div>
             <div class="keterangan-konten">
@@ -114,6 +115,7 @@
                 </div>
             </div>
         </div>
+         <!------------ konfirmasi akhir ------------>
     </form>
 <!-- ====== form registrasi komunitas akhir ====== -->
 
