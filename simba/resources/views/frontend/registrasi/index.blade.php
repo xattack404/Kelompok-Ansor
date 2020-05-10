@@ -109,7 +109,7 @@
             </div>  
             <div class="input">
             <label>Nama Kategori</label>
-                <select name="kategori_id" class="form-control" data-live-search="true" required>
+                <select name="kategori_id" id="kategori_id" class="form-control" data-live-search="true" required>
                 <option value="">--pilih--</option>
                 @foreach($data['kategori'] as $kategori)
                 <option value="{{ $kategori->id }}">{{ $kategori->nama_kategori }} </option>
@@ -145,7 +145,7 @@
             </div>
             <div class="input">
                 <label for="nama">Kelas</label>
-                <input type="text" name="kelas" id="nama" readonly>    
+                <input type="text" name="kelas" id="kelas" readonly>    
             </div>
 
             <div class="box-btn">
@@ -166,3 +166,21 @@
 <script src="{{ asset('assets_frontend/js/style.js') }}"></script>
 </body>
 </html>
+<script type="text/javascript">
+$(document).ready(function(){
+      //apabila terjadi event onchange terhadap object <select id=kategori_id>
+      $("#kategori_id").change(function(){
+        var subkat = $("#kategori_id").val();
+        $.ajax({
+            url: "{{ route('frontend.registrasi.subkat', ['id' => $kategori->id]) }}",
+            data: "kategori_id="+subkat,
+            cache: false,
+            success: function(msg){
+                //jika data sukses diambil dari server kita tampilkan
+                //di <select id=kelas>
+                $("#kelas").html(msg);
+            }
+        });
+      });
+}
+</script>

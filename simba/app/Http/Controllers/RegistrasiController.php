@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Registrasi;
 use App\Kategori;
+use App\Subkategori;
 use Illuminate\Http\Request;
 
 class RegistrasiController extends Controller
@@ -46,9 +47,10 @@ class RegistrasiController extends Controller
      * @param  \App\Registrasi  $registrasi
      * @return \Illuminate\Http\Response
      */
-    public function show(Registrasi $registrasi)
+    public function show($id)
     {
-        //
+        $data['sub_kategori'] = Subkategori::where('id',$id)->get();
+        return view('frontend.registrasi.index',compact ('data'));
     }
 
     /**
