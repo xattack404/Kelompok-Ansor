@@ -109,7 +109,7 @@
                             <option value="">TIDAK</option>
                         </select>
                     </div>
-                    <button type="submit">KONFIRMASI</button>
+                    <button type="submit">konfirmasi</button>
                 </div>
             </div>
         </div>

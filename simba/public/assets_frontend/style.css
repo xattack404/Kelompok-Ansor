@@ -949,7 +949,7 @@ ul li:hover #dropdown{
     display: block;
     width: 100%;
     /*height: 100%;
-    */height: 30px;
+    */height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     overflow: hidden;
     bottom: 0;
@@ -1013,18 +1013,18 @@ ul li:hover #dropdown{
 }
 .keterangan-konten .ikut-serta{ 
     width: 100%;
-    background-color: rgb(236, 99, 99);
+    background-color: #F0F1EC;
     margin-top: 20px;
     padding: 10px;
-    color: white;
-    border-top: 2px solid white;
+    color: black;
+    border-top: 2px solid black;
     box-sizing: border-box;
 }
 .ikut-serta h1{
     font-family: lato;
     font-size: 3vmin;
     line-height: 30px;
-    color: white;
+    color: black;
 }
 .persetujuan{
     width: 100%;
