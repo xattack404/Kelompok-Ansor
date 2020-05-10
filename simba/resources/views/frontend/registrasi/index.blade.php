@@ -76,28 +76,28 @@
     </form>
 <!-- ====== form registrasi komunitas akhir ====== -->
 
-<!-- ====== form registrasi ====== -->
+<!-- ====== form registrasi Individu/Atlet ====== -->
     <form class="box-registrasi" action="" id="registrasi">
         <div class="box">
             <div class="input">
                 <label for="nik">nik</label>
-                <input type="text" id="nik" placeholder="masukan NIK">
+                <input type="text" name="nik" id="nik" placeholder="masukan NIK" required>
             </div>
             <div class="input">
                 <label for="nama">nama</label>
-                <input type="text" id="nama" placeholder="masukan nama anda">    
+                <input type="text" name="nama" id="nama" placeholder="masukan nama anda" required>    
             </div>  
             <div class="input">
                 <label for="email">email</label>
-                <input type="email" id="email" placeholder="masukan email aktif">
+                <input type="email" name="email" id="email" placeholder="masukan email aktif" required>
             </div>
             <div class="input">
                 <label for="telp">no telepon</label>
-                <input type="tel" id="telp" placeholder="masukan no teleopn aktif">    
+                <input type="tel" name="no_hp" id="telp" placeholder="masukan no teleopn aktif" required>    
             </div>  
             <div class="input">
                 <label for="jkel">jenis kelamin</label>
-                <select name="" id="jkel">
+                <select name="jenis_kelamin" id="jkel"required>
                     <option value="">--pilih--</option>
                     <option value="">laki-laki</option>
                     <option value="">wanita</option>
@@ -105,33 +105,47 @@
             </div>
             <div class="input">
                 <label for="tglhr">tanggal lahir</label>
-                <input type="date" id="tglhr">    
-            </div>   
-        </div>
+                <input type="date" name="tgl_lahir" id="tglhr" required>    
+            </div>  
+            <div class="input">
+            <label>Nama Kategori</label>
+                <select name="kategori_id" class="form-control" data-live-search="true" required>
+                <option value="">--pilih--</option>
+                @foreach($data['kategori'] as $kategori)
+                <option value="{{ $kategori->id }}">{{ $kategori->nama_kategori }} </option>
+                @endforeach
+                </select> 
+            </div>
+          </div>
 
 
         <div class="box">
             <div class="input">
                 <label for="">provinsi</label>
-                <select name="" id="">
+                <select name="provinsi" id="" required>
                     <option value="">--pilih provinsi--</option>
                 </select>
             </div>
             <div class="input">
-                <label for="">kota</label>
-                <select name="" id="">
+                <label for="">Kabupaten_kota</label>
+                <select name="kabupaten_kota" id="" required>
                     <option value="">--pilih kota--</option>
                 </select>    
             </div>
             <div class="input">
                 <label for="">kecamatan</label>
-                <select name="" id="">
+                <select name="kecamatan" id="" required>
                     <option value="">--pilih kecamatan--</option>
                 </select>    
             </div>
             <div class="input">
                 <label for="">alamat</label>
-                <textarea name="" id="" cols="30" rows="10" placeholder="isi alamat rumah anda"></textarea>    
+                <textarea name="alamat" id="" cols="30" rows="10" placeholder="isi alamat rumah anda" required>
+                </textarea>    
+            </div>
+            <div class="input">
+                <label for="nama">Kelas</label>
+                <input type="text" name="kelas" id="nama" readonly>    
             </div>
 
             <div class="box-btn">

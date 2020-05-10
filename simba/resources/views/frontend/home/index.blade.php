@@ -35,10 +35,11 @@
                         <label for="">{{ $event->nama_or }}</label>
                     </a>
                 </div>
-                @empty 
-            </div>
-            @endforelse
+               </div>
+               @empty
+    <h2> Belum Ada Event </h2>
     </div>
+    @endforelse
     <div class="more">
         <a href="{{ route('frontend.event.index') }}">
             More event <br> <i class="fas fa-ellipsis-h"></i>

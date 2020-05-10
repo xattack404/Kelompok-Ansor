@@ -7,7 +7,11 @@ use App\Kategori;
 class Subkategori extends Model
 {
     protected $table = 'sub_kategori';    
-    protected $fillable = ['kategori_id','nama_subkat'];
+    protected $fillable = [
+                        'kategori_id',
+                        'nama_subkat',
+                        'umur'
+                        ];
     public $timestamps = false;
 
     

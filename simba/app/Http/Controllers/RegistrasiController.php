@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Registrasi;
+use App\Kategori;
 use Illuminate\Http\Request;
 
 class RegistrasiController extends Controller
@@ -14,7 +15,8 @@ class RegistrasiController extends Controller
      */
     public function index()
     {
-        return view('frontend/registrasi.index');
+        $data['kategori'] = Kategori::all();
+        return view('frontend.registrasi.index', compact('data'));
     }
 
     /**

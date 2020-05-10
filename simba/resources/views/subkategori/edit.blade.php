@@ -32,6 +32,8 @@
                 </select>
                 <label>Nama Sub Kategori</label>
                 <input type="text" name="nama_subkat" class="form-control" value="{{ $data['sub_kategori']->nama_subkat }}">
+                <label>Kategori Umur/Tahun</label>
+                <input type="number" name="umur" class="form-control" value="{{ $data['sub_kategori']->umur }}">
               </div>
               <div class="form-group">
                 <button type="submit" class="btn btn-primary">SAVE</button>

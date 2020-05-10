@@ -21,15 +21,14 @@
     </div>
     <div class="konten-lomba">
         <h3>{{ $data['cabang_olahraga']->nama_or }}</h3>
-        <p><label for="">KATEGORI :</label> Olahraga</p>
-        <p><label for="">UMUR :</label> 20-25</p>
-        <p><label for="">TINGKAT :</label> Umum</p>
+        <p><label for="">KATEGORI :</label> {{ $data['cabang_olahraga']->relasiKategori->nama_kategori }}</p>
+        <p><label for="">TANGGAL :</label> {{ $data['cabang_olahraga']->tanggal_pelaksanaan }}</p>
+        <p><label for="">Contact :</label> -- </p>
         <p><label for="">KETERANGAN : <br> <br></label>
         {{ $data['cabang_olahraga']->deskripsi }}
         </p>
         
-        <a href=""><button type="button">Panduan Lomba</button></a>
-        <a href="registrasi.php"><button type="button">Registrasi</button></a>
+        <a href="{{ route('frontend.registrasi.index')}}"><button type="button">Registrasi</button></a>
     </div>
 </form>
 <!-- Akhir konten-->

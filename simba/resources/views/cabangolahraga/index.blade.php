@@ -44,7 +44,7 @@
                @forelse($data as $cabangolahraga)
                 <tr>
                   <td>{{ $cabangolahraga->nama_or }}</td>
-                  <td>{{ $cabangolahraga->judul_seo }}</td>
+                  <td>{{ $cabangolahraga->url }}</td>
                   <td>{{ $cabangolahraga->deskripsi }}</td>
                   <td>{{ $cabangolahraga->relasiKategori->nama_kategori }}</td>
                   <td>{{ $cabangolahraga->tanggal_pelaksanaan }}</td>

@@ -42,7 +42,8 @@ class SubkategoriController extends Controller
             ]);
         Subkategori::create([
             'kategori_id' => $request->kategori_id,
-            'nama_subkat' => $request->nama_subkat
+            'nama_subkat' => $request->nama_subkat,
+            'umur' => $request->umur
             ]);          
         return redirect()->route('subkategori.index');
     }
@@ -82,7 +83,9 @@ class SubkategoriController extends Controller
     {
         Subkategori::whereId($id)->update([
             'kategori_id'=> $request->kategori_id,
-            'nama_subkat'=> $request->nama_subkat
+            'nama_subkat'=> $request->nama_subkat,
+            'umur' => $request->umur
+
             ]);
         return redirect()->route('subkategori.index'); 
 
