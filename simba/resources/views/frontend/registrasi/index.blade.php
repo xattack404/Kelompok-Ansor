@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrasi</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('assets_frontend/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets_frontend/fontawesome/css/all.min.css') }}">
     <!-- jquery -->
-    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="{{ asset('assets_frontend/js/jquery-3.4.1.min.js') }}"></script>
 </head>
 <body>
 @include('layouts.frontendnavbar')
@@ -28,7 +28,7 @@
             </div>                        
             <div class="input">
                 <label for="jumlahanggota">jummlah anggota</label>
-                <input value="" type="number" id="jumlahanggota" placeholder="masukan jumlah anggota komunitas">
+                <input value="" type="number" id="jumlahanggota" name="jumlahanggota" placeholder="masukan jumlah anggota komunitas">
             </div>                        
             <div class="input">
                 <label for="">Status kewarganegaraan</label>
@@ -40,35 +40,8 @@
             </div>
         </div>
         <?php ?>
-        <?php for ($i = 1; $i < 5; $i++){ ?>
-        <div class="box">
-        <div class="keterangan"><h1>Identitas Anggota <?php echo $i; ?> </h1></div>                       
-            <div class="input">
-                <label for="namaanggota">nama anggota</label>
-                <input type="text" id="namaanggota" placeholder="masukan nama anggota komunitas">
-            </div>            
-            <div class="input">
-                <label for="namakom">Tanggal lahir</label>
-                <input type="date" id="namakom">
-            </div>                          
-            <div class="input">
-                <label for="">jenis kelamin</label>
-                <select name="" id="">
-                    <option value="">--pilih--</option>
-                    <option value="">laki - laki</option>
-                    <option value="">perempuan</option>
-                </select>
-            </div>                          
-            <div class="input">
-                <label for="">Status kewarganegaraan</label>
-                <select name="" id="">
-                    <option value="">--pilih--</option>
-                    <option value="">Warga negara indonesia</option>
-                    <option value="">Warga negara asing</option>
-                </select>
-            </div>
-        </div>
-        <?php }?>
+       <div id="form"> 
+       </div>
             <!-- <div class="box-btn" >
                 <a href=""><button type="button" class="red">selanjutnya</button></a>
             </div> -->
@@ -192,14 +165,18 @@
             </div>
 
             <div class="input">
-                <label for="nama">Kelas</label>
-                <input type="text" name="kelas" id="nama" readonly>    
-            </div>
-
-            <div class="input">
                 <label for="">alamat</label>
                 <textarea name="alamat" id="" cols="30" rows="10" placeholder="isi alamat rumah anda" required>
                 </textarea>    
+            </div>
+            <div class="form-group">
+                <label for="title">Kelas</label>
+                <select name="subkat" class="form-control" style="width:350px">
+                </select>
+            </div>
+            <div class="input">
+                <label for="nama">Kelas</label>
+                <input type="text" name="subkat" id="subkat" readonly>    
             </div>
 
             <div class="box-btn">
@@ -221,5 +198,49 @@
 </div>
 
 <script src="{{ asset('assets_frontend/js/style.js') }}"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('select[name="kategori_id"]').on('change', function() {
+            var kategoriID = $(this).val();
+            if(kategoriID) {
+                $.ajax({
+                    url: "{{ url('ajax') }}/"+kategoriID,
+                    type: "GET",
+                    dataType: "json",
+                    success:function(data) {
+
+                        
+                        $('select[name="subkat"]').empty();
+                        $.each(data, function(key,value) {
+                            $('select[name="subkat"]').append('<option value="'+ value.id +'">'+ value.nama_subkat +'</option>');
+                        });
+
+
+                    }
+                });
+            }else{
+                $('select[name="subkat"]').empty();
+            }
+        });
+    });
+    
+    $('input[name="jumlahanggota"]').on('change', function() {
+            var kategoriID = $(this).val();
+            if(kategoriID) {
+                $.ajax({
+                    url: "{{ url('form') }}/"+kategoriID,
+                    type: "GET",
+                    success:function(data) {
+                    $('#form').append(data);
+                       
+                    }
+                });
+            }else{
+                $('select[name="subkat"]').empty();
+            }
+        });
+</script>
+
 </body>
 </html>
