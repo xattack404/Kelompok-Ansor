@@ -174,7 +174,7 @@
             </div> 
             <div class="input">
                 <label for="">alamat</label>
-                <textarea name="alamat" id="" placeholder="" required>isi alamat rumah anda
+                <textarea name="alamat" id="" placeholder="" required>Isi alamat rumah anda
                 </textarea>    
             </div>
         </div>
