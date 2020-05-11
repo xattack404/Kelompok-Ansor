@@ -163,23 +163,25 @@
                     <option value="">--pilih kecamatan--</option>
                 </select>    
             </div>
-
+            <div class="input">
+                <label for="title">Kelas</label>
+                <select name="subkat" class="">
+                    <option value="">--pilih--</option>
+                    <option value="">Senior</option>
+                    <option value="">Dewasa</option>
+                    <option value="">Bocah</option>
+                </select>
+            </div> 
             <div class="input">
                 <label for="">alamat</label>
                 <textarea name="alamat" id="" cols="30" rows="10" placeholder="isi alamat rumah anda" required>
                 </textarea>    
             </div>
-            <div class="form-group">
-                <label for="title">Kelas</label>
-                <select name="subkat" class="form-control" style="width:350px">
-                </select>
-            </div>
-
-            <div class="box-btn">
+        </div>
+        <div class="box-btn">
                     <a href=""><button type="button" class="red">back</button></a>
                     <button type="submit" class="blue">Registrasi</button>   
-            </div>   
-        </div>
+        </div>  
     </form>
 <!-- ====== form registrasi akhir ====== -->
     

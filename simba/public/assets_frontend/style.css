@@ -795,7 +795,6 @@ ul li:hover #dropdown{
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     box-sizing: border-box; 
-    overflow: hidden;
     animation: flex .3s;
     -webkit-animation: flex .3s;
 }
@@ -829,7 +828,6 @@ ul li:hover #dropdown{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 50px;
 }
 .box .keterangan{
     margin-top: 15px;
@@ -933,9 +931,9 @@ ul li:hover #dropdown{
     padding: 5px;
 }
 .box-btn{
-    width: 100%;
+    width: 200%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .box-btn button{
     /*background-color: #DD5B4E;
@@ -947,6 +945,8 @@ ul li:hover #dropdown{
     -moz-border-radius: 13px;
     -ms-border-radius: 13px;
     -o-border-radius: 13px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .box-keterangan{
     position: absolute;
