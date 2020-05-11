@@ -174,10 +174,6 @@
                 <select name="subkat" class="form-control" style="width:350px">
                 </select>
             </div>
-            <div class="input">
-                <label for="nama">Kelas</label>
-                <input type="text" name="subkat" id="subkat" readonly>    
-            </div>
 
             <div class="box-btn">
                     <a href=""><button type="button" class="red">back</button></a>
