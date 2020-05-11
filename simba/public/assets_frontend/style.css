@@ -967,6 +967,7 @@ ul li:hover #dropdown{
 }
 .bayar:checked ~ .box-keterangan{
     height: 100%;
+    overflow: initial;
 }
 .box-keterangan .judul-keterangan{
     position: relative;
