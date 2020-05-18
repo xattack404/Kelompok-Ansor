@@ -145,6 +145,13 @@
 
 
         <div class="box">
+            
+            <div class="input">
+                <label for="title">Kelas</label>
+                <select name="subkat" class="">
+
+                </select>
+            </div> 
             <div class="input">
                 <label for="">provinsi</label>
                 <input type="text" name="prov" id="prov" placeholder="masukan nama Provinsi" required>    
@@ -159,15 +166,9 @@
             </div>
             <div class="input">
                 <label for="">alamat</label>
-                <textarea name="alamat" id="" placeholder="" required>Isi alamat rumah anda
+                <textarea name="alamat" id="" placeholder="" required style="height: 200px">Isi alamat rumah anda
                 </textarea>    
             </div>
-            <div class="input">
-                <label for="title">Kelas</label>
-                <select name="subkat" class="">
-
-                </select>
-            </div> 
         </div>
         <div class="box-btn">
                     <a href=""><button type="button" class="red">back</button></a>
