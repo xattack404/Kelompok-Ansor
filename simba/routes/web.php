@@ -21,6 +21,7 @@ Route::get('event/detailevent/{url}', ['as' => 'frontend.event.detailevent', 'us
 
 
 
+
 //Route Back End
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
@@ -34,6 +35,9 @@ Route::post('panel/kategori/create', ['as' => 'kategori.store', 'uses' => 'Kateg
 Route::get('panel/kategori/edit/{id}', ['as' => 'kategori.edit', 'uses' => 'KategoriController@edit']);
 Route::put('panel/kategori/edit/{id}', ['as' => 'kategori.update', 'uses' => 'KategoriController@update']);
 Route::get('panel/kategori/delete/{id}', ['as' => 'kategori.delete', 'uses' => 'KategoriController@delete']);
+
+//Route Informasi Web
+Route::get('panel/infoweb', ['as' => 'infoweb.index', 'uses' => 'InfowebController@index']);
 
 //Route untuk menu subkategori
 Route::get('panel/subkategori', ['as' => 'subkategori.index', 'uses' => 'SubkategoriController@index']);

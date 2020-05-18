@@ -23,6 +23,9 @@
                 <li class="">
                   <a class="nav-link" href="{{ route('manejemenlogin.index') }}"><i class="fas fa-users-cog"></i> <span>Manejemen Login</span></a>
                 </li>
+                <li class="">
+                  <a class="nav-link" href="{{ route('infoweb.index') }}"><i class="fas fa-info-circle"></i> <span>Informasi Web</span></a>
+                </li>
                 <li class="menu-header">Transaksi</li>
                 <li class="">
                   <a class="nav-link" href="#"><i class="fas fa-money-check-alt"></i> <span>Manejemen Pembayaran</span></a>

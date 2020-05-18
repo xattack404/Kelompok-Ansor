@@ -106,7 +106,7 @@
         <div class="box">
             <div class="input">
                 <label for="nik">nik</label>
-                <input type="text" name="nik" id="nik" placeholder="masukan NIK" required>
+                <input type="number" name="nik" id="nik" placeholder="masukan NIK" required>
             </div>
             <div class="input">
                 <label for="nama">nama</label>
@@ -147,36 +147,27 @@
         <div class="box">
             <div class="input">
                 <label for="">provinsi</label>
-                <select name="provinsi" id="" required>
-                    <option value="">--pilih provinsi--</option>
-                </select>
+                <input type="text" name="prov" id="prov" placeholder="masukan nama Provinsi" required>    
             </div>
             <div class="input">
                 <label for="">Kabupaten_kota</label>
-                <select name="kabupaten_kota" id="" required>
-                    <option value="">--pilih kota--</option>
-                </select>    
+                <input type="text" name="kabkot" id="kabkot" placeholder="masukan nama Kabupaten/Kota" required>      
             </div>
             <div class="input">
                 <label for="">kecamatan</label>
-                <select name="kecamatan" id="" required>
-                    <option value="">--pilih kecamatan--</option>
-                </select>    
+                <input type="text" name="kec" id="kec" placeholder="masukan nama Kecamatan" required>    
             </div>
-            <div class="input">
-                <label for="title">Kelas</label>
-                <select name="subkat" class="">
-                    <option value="">--pilih--</option>
-                    <option value="">Senior</option>
-                    <option value="">Dewasa</option>
-                    <option value="">Bocah</option>
-                </select>
-            </div> 
             <div class="input">
                 <label for="">alamat</label>
                 <textarea name="alamat" id="" placeholder="" required>Isi alamat rumah anda
                 </textarea>    
             </div>
+            <div class="input">
+                <label for="title">Kelas</label>
+                <select name="subkat" class="">
+
+                </select>
+            </div> 
         </div>
         <div class="box-btn">
                     <a href=""><button type="button" class="red">back</button></a>
