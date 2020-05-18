@@ -222,10 +222,10 @@
     });
     
     $('input[name="jumlahanggota"]').on('change', function() {
-            var kategoriID = $(this).val();
-            if(kategoriID) {
+            var jumlah = $(this).val();
+            if(jumlah) {
                 $.ajax({
-                    url: "{{ url('form') }}/"+kategoriID,
+                    url: "{{ url('form') }}/"+jumlah,
                     type: "GET",
                     success:function(data) {
                     $('#form').append(data);
@@ -233,7 +233,12 @@
                     }
                 });
             }else{
-                $('select[name="subkat"]').empty();
+                for (var i = 1; i <= data.target.value; i++){
+				get_paragraph()
+			}
+            function remove_paragraph(){
+			$('#form p:last-child').remove();
+		}
             }
         });
 </script>

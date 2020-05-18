@@ -1,6 +1,5 @@
-<?php for ($i = 1; $i <= $jumlah ; $i++){ ?>
         <div class="box">
-        <div class="keterangan"><h1>Identitas Anggota <?php echo $i; ?> </h1></div>                       
+        <div class="keterangan"><h1>Identitas Anggota  </h1></div>                       
             <div class="input">
                 <label for="namaanggota">nama anggota</label>
                 <input type="text" id="namaanggota" placeholder="masukan nama anggota komunitas">
@@ -26,5 +25,3 @@
                 </select>
             </div>
         </div>
-        <?php }?>
-       
