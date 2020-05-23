@@ -94,13 +94,6 @@
 
 
 
-
-
-
-
-
-
-
 <!-- ====== form registrasi Individu/Atlet ====== -->
     <form class="box-registrasi" action="" id="registrasi">
         <div class="box">
@@ -144,14 +137,7 @@
           </div>
 
 
-        <div class="box">
-            
-            <div class="input">
-                <label for="title">Kelas</label>
-                <select name="subkat" class="">
-
-                </select>
-            </div> 
+        <div class="box"> 
             <div class="input">
                 <label for="">provinsi</label>
                 <input type="text" name="prov" id="prov" placeholder="masukan nama Provinsi" required>    
@@ -168,6 +154,12 @@
                 <label for="">alamat</label>
                 <textarea name="alamat" id="" placeholder="" required style="height: 200px">Isi alamat rumah anda
                 </textarea>    
+            </div>
+            <div class="input">
+                <label for="title">Kelas</label>
+                <select name="subkat" class="">
+
+                </select>
             </div>
         </div>
         <div class="box-btn">
@@ -215,14 +207,14 @@
         });
     });
     
-    $('input[name="jumlahanggota"]').on('change', function() {
+    $('input[name="jumlahanggota"]').keyup('change', function() {
             var jumlah = $(this).val();
             if(jumlah) {
                 $.ajax({
                     url: "{{ url('form') }}/"+jumlah,
                     type: "GET",
                     success:function(data) {
-                    $('#form').append(data);
+                    $('#form').html(data);
                        
                     }
                 });
