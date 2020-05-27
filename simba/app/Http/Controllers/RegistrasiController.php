@@ -38,7 +38,26 @@ class RegistrasiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'nik_id' => 'trim|required|unique:atlet'
+            ]);
+            Registrasi::create([
+                
+                            'nik_id'            => $request->nik_id,
+                            'nama'              => $request->nama,
+                            'tgl_lahir'         => $request->tgl_lahir,
+                            'jenis_kelamin'     => $request->jenis_kelamin,
+                            'alamat'            => $request->alamat,
+                            'kecamatan'         => $request->kec,
+                            'kabupaten_kota'    => $request->kabkot,
+                            'provinsi'          => $request->prov,
+                            'warga_negara'      => $request->warga_negara,
+                            'email'             => $request->email,
+                            'no_hp'             => $request->no_hp
+
+                        ]); 
+                                 
+        return redirect()->route('frontend.registrasi.index');
     }
 
     /**
@@ -51,7 +70,16 @@ class RegistrasiController extends Controller
     {
         $subkat = Subkategori::where('kategori_id',$id)
                                             ->get();
+             
         return json_encode($subkat);
+    }
+
+    public function showkat($id)
+    {
+        $kat = Kategori::where('id',$id)
+                                ->get();
+             
+        return json_encode($kat);
     }
 
     public function form($jumlah){

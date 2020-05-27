@@ -95,11 +95,11 @@
 
 
 <!-- ====== form registrasi Individu/Atlet ====== -->
-    <form class="box-registrasi" action="" id="registrasi">
+    <form class="box-registrasi" action="{{ route('registrasi.store') }}" id="registrasi">
         <div class="box">
             <div class="input">
                 <label for="nik">nik</label>
-                <input type="number" name="nik" id="nik" placeholder="masukan NIK" required>
+                <input type="number" name="nik" id="nik_id" placeholder="masukan NIK" required>
             </div>
             <div class="input">
                 <label for="nama">nama</label>
@@ -117,8 +117,8 @@
                 <label for="jkel">jenis kelamin</label>
                 <select name="jenis_kelamin" id="jkel"required>
                     <option value="">--pilih--</option>
-                    <option value="">laki-laki</option>
-                    <option value="">wanita</option>
+                    <option value="L">laki-laki</option>
+                    <option value="P">wanita</option>
                 </select>
             </div>
             <div class="input">
@@ -138,6 +138,14 @@
 
 
         <div class="box"> 
+        <div class="input">
+                <label for="">Status kewarganegaraan</label>
+                <select name="warga_negara" id="">
+                    <option value="">--pilih--</option>
+                    <option value="WNI">Warga negara indonesia</option>
+                    <option value="WNA">Warga negara asing</option>
+                </select>
+            </div>
             <div class="input">
                 <label for="">provinsi</label>
                 <input type="text" name="prov" id="prov" placeholder="masukan nama Provinsi" required>    
@@ -152,7 +160,7 @@
             </div>
             <div class="input">
                 <label for="">alamat</label>
-                <textarea name="alamat" id="" placeholder="" required style="height: 200px">Isi alamat rumah anda
+                <textarea name="alamat" id="alamat" placeholder="Max 50 karakter" required style="height: 200px">Isi alamat rumah anda
                 </textarea>    
             </div>
             <div class="input">
@@ -160,6 +168,10 @@
                 <select name="subkat" class="">
 
                 </select>
+            </div>
+            <div class="input">
+                <label for="">Biaya Daftar</label>
+                <input type="text" name="biaya" id="biaya"  readonly>    
             </div>
         </div>
         <div class="box-btn">
@@ -195,7 +207,7 @@
                         
                         $('select[name="subkat"]').empty();
                         $.each(data, function(key,value) {
-                            $('select[name="subkat"]').append('<option value="'+ value.id +'">'+ value.nama_subkat +'</option>');
+                        $('select[name="subkat"]').append('<option value="'+ value.id +'">'+ value.nama_subkat +'</option>');
                         });
 
 
@@ -207,6 +219,32 @@
         });
     });
     
+    $(document).ready(function() {
+        $('select[name="kategori_id"]').on('change', function() {
+            var kategoriID = $(this).val();
+            if(kategoriID) {
+                $.ajax({
+                    url: "{{ url('ajaxkat') }}/"+kategoriID,
+                    type: "GET",
+                    dataType: "json",
+                    success:function(data) {
+
+                        
+                        $('input[name="biaya"]').empty();
+                        $.each(data, function(key,value) {
+                            $('input[name="biaya"]').val(''+ value.harga +'');
+
+                        });
+
+
+                    }
+                });
+            }else{
+                $('select[name="subkat"]').empty();
+            }
+        });
+    });
+
     $('input[name="jumlahanggota"]').keyup('change', function() {
             var jumlah = $(this).val();
             if(jumlah) {
