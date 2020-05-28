@@ -8,15 +8,15 @@ class Cabangolahraga extends Model
 {
 protected $table = 'cabang_olahraga';    
     protected $fillable = [
-        'kategori',
-        'nama_or',
-        'url',
-        'deskripsi',
-        'tanggal_pelaksanaan',
-        'foto',
-        'created_at',
-        'updated_at'
-    ];
+                            'kategori',
+                            'nama_or',
+                            'url',
+                            'deskripsi',
+                            'tanggal_pelaksanaan',
+                            'foto',
+                            'created_at',
+                            'updated_at'
+                        ];
     public $timestamps = true;
 
 

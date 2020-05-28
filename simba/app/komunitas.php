@@ -4,12 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Registrasi extends Model
+class komunitas extends Model
 {
-    protected $table = 'atlet';    
+    protected $table = '';    
     protected $fillable = [
-                            'nik_id',
-                            'nama',
+                            'nama_komunitas',
+                            'nama_koordinator',
                             'tgl_lahir',
                             'jenis_kelamin',
                             'alamat',

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Registrasi;
+use App\Atlet;
 use App\Kategori;
 use App\Subkategori;
 use Illuminate\Http\Request;
@@ -41,7 +41,7 @@ class RegistrasiController extends Controller
         $validatedData = $request->validate([
             'nik_id' => 'trim|required|unique:atlet'
             ]);
-            Registrasi::create([
+            Atlet::create([
                 
                             'nik_id'            => $request->nik_id,
                             'nama'              => $request->nama,

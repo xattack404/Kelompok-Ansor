@@ -95,7 +95,7 @@
 
 
 <!-- ====== form registrasi Individu/Atlet ====== -->
-    <form class="box-registrasi" action="{{ route('registrasi.store') }}" id="registrasi">
+    <form class="box-registrasi" action="{{ route('frontend.registrasi.store') }}" method="POST" enctype="multipart/form-data">
         <div class="box">
             <div class="input">
                 <label for="nik">nik</label>
