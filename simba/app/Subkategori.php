@@ -10,7 +10,6 @@ class Subkategori extends Model
     protected $fillable = [
                         'kategori_id',
                         'nama_subkat',
-                        'umur'
                         ];
     public $timestamps = false;
 

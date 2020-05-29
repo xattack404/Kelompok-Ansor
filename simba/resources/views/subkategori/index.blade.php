@@ -33,7 +33,6 @@
                 <tr>
                   <th scope="col">Nama Kategori</th>
                   <th scope="col">Nama SUB Kategori</th>
-                  <th scope="col">Kategori Umur/Tahun </th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
@@ -42,8 +41,7 @@
                 <tr>
                   <td>{{ $subkat->relasiKategori->nama_kategori }}</td>
                   <td>{{ $subkat->nama_subkat }}</td>
-                  <td>{{ $subkat->umur }}</td>
-
+                  
                   <td>
                     <a href="{{ route('subkategori.edit', ['id' => $subkat->id]) }}">
                       <button type="button" class="btn btn-sm btn-info">Edit</button>

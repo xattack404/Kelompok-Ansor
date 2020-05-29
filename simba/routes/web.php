@@ -17,7 +17,7 @@ Route::get('event/index', ['as' => 'frontend.event.index', 'uses' => 'EventContr
 Route::get('ajax/{id}', ['as' => 'frontend.registrasi.ajax', 'uses' => 'RegistrasiController@show']);
 Route::get('ajaxkat/{id}', ['as' => 'frontend.registrasi.ajax', 'uses' => 'RegistrasiController@showkat']);
 Route::get('registrasi/index', ['as' => 'frontend.registrasi.index', 'uses' => 'RegistrasiController@index']);
-Route::post('registrasi/index', ['as' => 'frontend.registrasi.store', 'uses' => 'RegistrasiController@store']);
+Route::post('registrasi/simpan', ['as' => 'frontend.registrasi.store', 'uses' => 'RegistrasiController@store']);
 Route::get('form/{jumlah}', ['as' => 'frontend.registrasi.form', 'uses' => 'RegistrasiController@form']);
 Route::get('event/detailevent/{url}', ['as' => 'frontend.event.detailevent', 'uses' => 'EventController@show']);
 

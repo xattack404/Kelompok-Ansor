@@ -28,8 +28,6 @@
                 </select>
                 <label>Nama Sub Kategori</label>
                 <input type="text" name="nama_subkat" class="form-control">
-                <label>Kategori Umur/Tahun</label>
-                <input type="number" name="umur" class="form-control">
               </div>
               <div class="form-group">
                 <button type="submit" class="btn btn-primary">SAVE</button>

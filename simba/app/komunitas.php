@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class komunitas extends Model
+class Komunitas extends Model
 {
     protected $table = '';    
     protected $fillable = [

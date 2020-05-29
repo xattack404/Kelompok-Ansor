@@ -171,7 +171,7 @@
             </div>
             <div class="input">
                 <label for="">Biaya Daftar</label>
-                <input type="text" name="biaya" id="biaya"  readonly>    
+                <input type="text" name="harga" id="harga"  readonly>    
             </div>
         </div>
         <div class="box-btn">
@@ -230,9 +230,9 @@
                     success:function(data) {
 
                         
-                        $('input[name="biaya"]').empty();
+                        $('input[name="harga"]').empty();
                         $.each(data, function(key,value) {
-                            $('input[name="biaya"]').val(''+ value.harga +'');
+                            $('input[name="harga"]').val(''+ value.harga +'');
 
                         });
 
