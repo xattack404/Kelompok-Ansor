@@ -99,7 +99,7 @@
 
 
         <!-- ====== form registrasi Individu/Atlet ====== -->
-        <form class="box-registrasi" action="{{ route('frontend.registrasi.store') }}" method="POST" enctype="multipart/form-data">
+        <form class="box-registrasi" id="registrasi" action="{{ route('frontend.registrasi.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="box">
                 <div class="input">
@@ -160,15 +160,6 @@
                     <input type="text" name="kabkot" id="kabkot" placeholder="masukan nama Kabupaten/Kota" required>
                 </div>
                 <div class="input">
-                    <label for="">kecamatan</label>
-                    <input type="text" name="kec" id="kec" placeholder="masukan nama Kecamatan" required>
-                </div>
-                <div class="input">
-                    <label for="">alamat</label>
-                    <textarea name="alamat" id="alamat" placeholder="Max 50 karakter" required style="height: 200px">Isi alamat rumah anda
-                </textarea>
-                </div>
-                <div class="input">
                     <label for="title">Kelas</label>
                     <select name="subkat" class="">
 
@@ -177,6 +168,15 @@
                 <div class="input">
                     <label for="">Biaya Daftar</label>
                     <input type="text" name="harga" id="harga" readonly>
+                </div>
+                <div class="input">
+                    <label for="">kecamatan</label>
+                    <input type="text" name="kec" id="kec" placeholder="masukan nama Kecamatan" required>
+                </div>
+                <div class="input">
+                    <label for="">alamat</label>
+                    <textarea name="alamat" id="alamat" placeholder="Max 50 karakter" required style="height: 200px">Isi alamat rumah anda
+                </textarea>
                 </div>
             </div>
             <div class="box-btn">
