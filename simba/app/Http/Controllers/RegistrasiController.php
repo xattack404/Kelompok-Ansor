@@ -84,6 +84,7 @@ class RegistrasiController extends Controller
             'nik_id'                 => $request->nik_id,
             'koordinasi_id'          => 1,
             'pendaftaran_status_id'  => 1
+
         ]);
 
         return redirect()->route('frontend.registrasi.index');

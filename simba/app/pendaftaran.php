@@ -13,6 +13,7 @@ class Pendaftaran extends Model
     'nik_id',
     'koordinasi_id',
     'pendaftaran_status_id'
+
   ];
 
   public $timestamps = false;
