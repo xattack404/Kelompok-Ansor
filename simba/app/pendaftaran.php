@@ -6,14 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pendaftaran extends Model
 {
-    protected $table = '';    
-    protected $fillable = [
-                            'kode_pendaftaran',
-                            'koordinator_id',
-                            'nik_id',
-                            'kordinasi_id',
-                            'pendaftaran_status_id'
-                          ];
+  protected $table = 'pendaftaran';
+  protected $fillable = [
+    'kode_pendaftaran',
+    'koordinator_id',
+    'nik_id',
+    'koordinasi_id',
+    'pendaftaran_status_id'
+  ];
 
-    public $timestamps = false;
+  public $timestamps = false;
 }
