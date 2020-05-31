@@ -78,7 +78,7 @@ class RegistrasiController extends Controller
         ]);
 
         //membuat kode pendaftaran unik
-        $kode_pendaftaran = 'REG-' . $request->nik_id . date('Ymdhis');
+        $kode_pendaftaran = 'REG-' . $request->nik_id . '-' . date('Ymdhis');
         Pendaftaran::create([
             'kode_pendaftaran'       => $kode_pendaftaran,
             'nik_id'                 => $request->nik_id,
@@ -87,7 +87,7 @@ class RegistrasiController extends Controller
 
         ]);
 
-        return redirect()->route('frontend.registrasi.index');
+        return redirect()->route('frontend.registrasi.index')->with('succes', 'Registrasi Berhasil.');
     }
 
     /**

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
@@ -23,11 +24,12 @@
     <div class="main-wrapper">
       <div class="navbar-bg"></div>
       @include('layouts.adminnavbar')
-      
+
       @include('layouts.adminsidebar')
 
       <!-- Main Content -->
       <div class="main-content">
+
         @yield('content')
       </div>
       <footer class="main-footer">
@@ -49,7 +51,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="{{ asset('assets/js/stisla.js') }}"></script>
 
-  
+
 
   <!-- Template JS File -->
   <script src="{{ asset('assets/js/scripts.js') }}"></script>
@@ -58,4 +60,5 @@
   <!-- Page Specific JS File -->
   <script src="{{ asset('assets/js/page/index') }}.js"></script>
 </body>
+
 </html>

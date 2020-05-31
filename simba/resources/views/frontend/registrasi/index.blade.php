@@ -189,6 +189,7 @@
 
         <!-- ====== button registrasi===== -->
         <div class="box2">
+            @include('layouts.partials.alert')
             <a href="#registrasi">registrasi</a>
             <a href="#registrasikomunitas">komunitas</a>
         </div>
