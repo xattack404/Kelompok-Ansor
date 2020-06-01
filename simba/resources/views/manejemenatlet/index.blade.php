@@ -6,7 +6,7 @@
         <h1>Manejemen Data Atlet</h1>
     </div>
 
-    <div class="section-body">
+    <div class="section-body" id="index">
         <div class="col-12 col-md-12 col-lg-12">
             <div class="card">
                 <div class="card-header">
@@ -73,5 +73,5 @@
     <div class="content">
             isi di sini
     </div>
-    <a href="" class="close">close</a>
+    <a href="#index" class="close">close</a>
 </div>
