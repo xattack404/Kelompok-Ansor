@@ -208,7 +208,6 @@
     </div>
 
     <script src="{{ asset('assets_frontend/js/style.js') }}"></script>
-
     <script type="text/javascript">
         $(document).ready(function() {
             $('select[name="kategori_id"]').on('change', function() {
@@ -219,14 +218,10 @@
                         type: "GET",
                         dataType: "json",
                         success: function(data) {
-
-
                             $('select[name="subkat"]').empty();
                             $.each(data, function(key, value) {
                                 $('select[name="subkat"]').append('<option value="' + value.id + '">' + value.nama_subkat + '</option>');
                             });
-
-
                         }
                     });
                 } else {
@@ -244,15 +239,10 @@
                         type: "GET",
                         dataType: "json",
                         success: function(data) {
-
-
                             $('input[name="harga"]').empty();
                             $.each(data, function(key, value) {
                                 $('input[name="harga"]').val('' + value.harga + '');
-
                             });
-
-
                         }
                     });
                 } else {
@@ -269,7 +259,6 @@
                     type: "GET",
                     success: function(data) {
                         $('#form').html(data);
-
                     }
                 });
             } else {

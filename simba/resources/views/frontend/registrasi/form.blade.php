@@ -48,12 +48,49 @@
     </div>
     <div class="input">
         <label for="email">email</label>
-        <input type="email" name="email" id="email" placeholder="masukan email aktif" required>
+        <input type="email" name="email[]" id="email" placeholder="masukan email aktif" required>
     </div>
     <div class="input">
         <label for="telp">no telepon</label>
         <input type="tel" name="no_hp" id="telp" placeholder="masukan no teleopn aktif" required>
     </div>
-
+    <div class="input">
+        <label>Nama Kategori</label>
+        <select name="kategori_id" class="form-control" data-live-search="true" required>
+            <option value="">--pilih--</option>
+            @foreach($data['kategori'] as $kategori)
+            <option value="{{ $kategori->id }}">{{ $kategori->nama_kategori }} </option>
+            @endforeach
+        </select>
     </div>
+    <div class="input">
+        <label for="">Biaya Daftar</label>
+        <input type="text" name="harga" id="harga" readonly>
+    </div>
+    </div>
+    <script src="{{ asset('assets_frontend/js/style.js') }}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('select[name="kategori_id"]').on('change', function() {
+                var kategoriID = $(this).val();
+                if (kategoriID) {
+                    $.ajax({
+                        url: "{{ url('ajaxkat') }}/" + kategoriID,
+                        type: "GET",
+                        dataType: "json",
+                        success: function(data) {
+                            $('input[name="harga"]').empty();
+                            $.each(data, function(key, value) {
+                                for ($j = 0; $j >= 1; $j++) {
+                                    $('input[name="harga"]').val('' + value.harga + '');
+                                }
+                            });
+                        }
+                    });
+                } else {
+                    $('select[name="subkat"]').empty();
+                }
+            });
+        });
+    </script>
     @endfor
