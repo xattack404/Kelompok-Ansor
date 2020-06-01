@@ -54,22 +54,6 @@
                         <option value="">Warga negara asing</option>
                     </select>
                 </div>
-                <div class="input">
-                    <label for="">provinsi</label>
-                    <input type="text" name="prov" id="prov" placeholder="masukan nama Provinsi" required>
-                </div>
-                <div class="input">
-                    <label for="">Kabupaten_kota</label>
-                    <input type="text" name="kabkot" id="kabkot" placeholder="masukan nama Kabupaten/Kota" required>
-                </div>
-                <div class="input">
-                    <label for="">kecamatan</label>
-                    <input type="text" name="kec" id="kec" placeholder="masukan nama Kecamatan" required>
-                </div>
-                <div class="input">
-                    <label for="">alamat</label>
-                    <textarea name="alamat" id="alamat" placeholder="Max 50 karakter" required style="height: 200px"></textarea>
-                </div>
             </div>
             <div id="form">
             </div>
