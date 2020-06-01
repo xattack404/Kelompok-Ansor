@@ -39,7 +39,7 @@
                                 <td>{{ $manejemenatlet->email }}</td>
                                 <td>{{ $manejemenatlet->no_hp }}</td>
                                 <td>
-                                    <a href="#">
+                                    <a href="#popup">
                                         <button type="button" class="btn btn-sm btn-success">Detail</button>
                                     </a>
                                     <a href="{{ route('manejemenatlet.delete', ['nik_id' => $manejemenatlet->nik_id]) }}" onclick="return confirm('Delete data?');">
@@ -68,3 +68,10 @@
 
 </section>
 @endsection()
+
+<div class="popup" id="popup">
+    <div class="content">
+            isi di sini
+    </div>
+    <a href="" class="close">close</a>
+</div>
