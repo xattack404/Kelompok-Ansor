@@ -2994,6 +2994,7 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  z-index: 99999999999999;
 }
 .popup .close{
   display: block;
