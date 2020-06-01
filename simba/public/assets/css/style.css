@@ -2996,10 +2996,10 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
   -o-border-radius: 10px;
   z-index: 99999999999999;
 }
-.popup .close{
+.popup .content{
   display: block;
 }
-.popup .close{
+.popup .closee{
   display: flex;
   align-items: center;
   justify-content: center;

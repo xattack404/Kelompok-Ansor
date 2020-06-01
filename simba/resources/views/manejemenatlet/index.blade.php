@@ -73,5 +73,5 @@
     <div class="content">
             isi di sini
     </div>
-    <a href="#index" class="close">close</a>
+    <a href="#index" class="closee">close</a>
 </div>
