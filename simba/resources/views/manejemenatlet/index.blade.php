@@ -17,10 +17,12 @@
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Search</button>
                         </div>
+                        <div class="form-group">
+                            <a href="{{ route('manejemenatlet.index') }}" class="pull-right">
+                            <button type="button" class="btn btn-info">Semua Data</button>
+                            </a>
+                        </div>
                     </form>
-                    <a href="{{ route('manejemenatlet.index') }}" class="pull-right">
-                        <button type="button" class="btn btn-info">Semua Data</button>
-                    </a>
                 </div>
                 <div class="card-body" style="overflow: scroll">
                     <table class="table table-bordered">
