@@ -166,10 +166,19 @@
                         @endforeach
                     </select>
                 </div>
+                <div class="input">
+                    <label for="title">Kelas</label>
+                    <select name="subkat" class="">
+                    </select>
+                </div>
             </div>
 
 
             <div class="box">
+                <div class="input">
+                    <label for="">Biaya Daftar</label>
+                    <input type="text" name="harga" id="harga" readonly>
+                </div>
                 <div class="input">
                     <label for="">Status kewarganegaraan</label>
                     <select name="warga_negara" id="">
@@ -185,16 +194,6 @@
                 <div class="input">
                     <label for="">Kabupaten_kota</label>
                     <input type="text" name="kabkot" id="kabkot" placeholder="masukan nama Kabupaten/Kota" required>
-                </div>
-                <div class="input">
-                    <label for="title">Kelas</label>
-                    <select name="subkat" class="">
-
-                    </select>
-                </div>
-                <div class="input">
-                    <label for="">Biaya Daftar</label>
-                    <input type="text" name="harga" id="harga" readonly>
                 </div>
                 <div class="input">
                     <label for="">kecamatan</label>
