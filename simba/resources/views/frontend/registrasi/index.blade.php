@@ -23,12 +23,24 @@
                     <h1>Penanggung Jawab</h1>
                 </div>
                 <div class="input">
-                    <label for="namapen">nama penanggung jawab</label>
-                    <input type="text" id="namapen" placeholder="masukan nama penanggung jawab">
+                    <label for="namapen">Nama penanggung jawab</label>
+                    <input type="text" id="nama_koordinator" name="nama_koordinator" placeholder="masukan nama penanggung jawab">
+                </div>
+                <div class="input">
+                    <label for="tglhr">tanggal lahir</label>
+                    <input type="date" name="tgl_lahir" id="tglhr" required>
+                </div>
+                <div class="input">
+                    <label for="jkel">jenis kelamin</label>
+                    <select name="jenis_kelamin" id="jkel" required>
+                        <option value="">--pilih--</option>
+                        <option value="L">laki-laki</option>
+                        <option value="P">wanita</option>
+                    </select>
                 </div>
                 <div class="input">
                     <label for="namakom">nama komunitas</label>
-                    <input type="text" id="namakom" placeholder="masukan nama komunitas anda">
+                    <input type="text" id="nama_komunitas" name="nama_komunitas" placeholder="masukan nama komunitas anda">
                 </div>
                 <div class="input">
                     <label for="jumlahanggota">jummlah anggota</label>
@@ -42,8 +54,23 @@
                         <option value="">Warga negara asing</option>
                     </select>
                 </div>
+                <div class="input">
+                    <label for="">provinsi</label>
+                    <input type="text" name="prov" id="prov" placeholder="masukan nama Provinsi" required>
+                </div>
+                <div class="input">
+                    <label for="">Kabupaten_kota</label>
+                    <input type="text" name="kabkot" id="kabkot" placeholder="masukan nama Kabupaten/Kota" required>
+                </div>
+                <div class="input">
+                    <label for="">kecamatan</label>
+                    <input type="text" name="kec" id="kec" placeholder="masukan nama Kecamatan" required>
+                </div>
+                <div class="input">
+                    <label for="">alamat</label>
+                    <textarea name="alamat" id="alamat" placeholder="Max 50 karakter" required style="height: 200px"></textarea>
+                </div>
             </div>
-            <?php ?>
             <div id="form">
             </div>
             <!-- <div class="box-btn" >
@@ -175,8 +202,7 @@
                 </div>
                 <div class="input">
                     <label for="">alamat</label>
-                    <textarea name="alamat" id="alamat" placeholder="Max 50 karakter" required style="height: 200px">Isi alamat rumah anda
-                </textarea>
+                    <textarea name="alamat" id="alamat" placeholder="Max 50 karakter" required style="height: 200px"></textarea>
                 </div>
             </div>
             <div class="box-btn">

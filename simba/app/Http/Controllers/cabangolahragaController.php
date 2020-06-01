@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Cabangolahraga;
 use App\Kategori;
+
 class cabangolahragaController extends Controller
 {
     /**
@@ -15,7 +16,7 @@ class cabangolahragaController extends Controller
     public function index()
     {
         $data = Cabangolahraga::paginate(10);
-        return view('cabangolahraga.index',compact('data'));  
+        return view('cabangolahraga.index', compact('data'));
     }
 
     /**
@@ -26,8 +27,7 @@ class cabangolahragaController extends Controller
     public function create()
     {
         $data['kategori'] = Kategori::all();
-        return view('cabangolahraga.create',compact('data'));
-
+        return view('cabangolahraga.create', compact('data'));
     }
 
     /**
@@ -38,17 +38,17 @@ class cabangolahragaController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $validatedData = $request->validate([
             'nama_or' => 'required|max:50',
             'deskripsi' => 'required|max:200'
         ]);
-        $fileName = 'lomba-'.date('Ymdhis').'.'.$request->foto->getClientOriginalExtension();    
+        $fileName = 'lomba-' . date('Ymdhis') . '.' . $request->foto->getClientOriginalExtension();
         $request->foto->move('image/', $fileName);
 
         Cabangolahraga::create([
             'nama_or' => $request->nama_or,
-            'url' => strtolower( str_replace(" ","-",$request->nama_or)),
+            'url' => strtolower(str_replace(" ", "-", $request->nama_or)),
             'deskripsi' => $request->deskripsi,
             'kategori' => $request->kategori,
             'tanggal_pelaksanaan' => $request->tanggal_pelaksanaan,
@@ -78,7 +78,7 @@ class cabangolahragaController extends Controller
     {
         $data['kategori'] = Kategori::all();
         $data['cabang_olahraga'] = Cabangolahraga::find($id);
-        return view('cabangolahraga.edit',compact('data'));
+        return view('cabangolahraga.edit', compact('data'));
     }
 
     /**
@@ -90,17 +90,17 @@ class cabangolahragaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $fileName = 'lomba-'.date('Ymdhis').'.'.$request->foto->getClientOriginalExtension();    
+        $fileName = 'lomba-' . date('Ymdhis') . '.' . $request->foto->getClientOriginalExtension();
         $request->foto->move('image/', $fileName);
         Cabangolahraga::whereId($id)->update([
             'nama_or' => $request->nama_or,
+            'url' => strtolower(str_replace(" ", "-", $request->nama_or)),
             'deskripsi' => $request->deskripsi,
             'kategori' => $request->kategori,
             'tanggal_pelaksanaan' => $request->tanggal_pelaksanaan,
             'foto' => $fileName
         ]);
         return redirect()->route('cabangolahraga.index');
-
     }
 
     /**
@@ -112,11 +112,10 @@ class cabangolahragaController extends Controller
     public function delete($id)
     {
         $data = Cabangolahraga::find($id);
-        if(\File::exists(public_path('image/'.$data->foto))){
+        if (\File::exists(public_path('image/' . $data->foto))) {
 
-            \File::delete(public_path('image/'.$data->foto));
-        
-          }
+            \File::delete(public_path('image/' . $data->foto));
+        }
         Cabangolahraga::whereId($id)->delete();
         return redirect()->route('cabangolahraga.index');
     }

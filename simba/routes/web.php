@@ -64,3 +64,7 @@ Route::post('panel/manejemenlogin/create', ['as' => 'manejemenlogin.store', 'use
 Route::get('panel/manejemenlogin/edit/{id}', ['as' => 'manejemenlogin.edit', 'uses' => 'ManejemenLoginController@edit']);
 Route::put('panel/manejemenlogin/edit/{id}', ['as' => 'manejemenlogin.update', 'uses' => 'ManejemenLoginController@update']);
 Route::get('panel/manejemenlogin/delete/{id}', ['as' => 'manejemenlogin.delete', 'uses' => 'ManejemenLoginController@delete']);
+
+//Route Untuk Manejeme Atlet
+Route::get('panel/manejemenatlet', ['as' => 'manejemenatlet.index', 'uses' => 'ManejemenAtletController@index']);
+Route::get('panel/manejemenatlet/delete/{id}', ['as' => 'manejemenatlet.delete', 'uses' => 'ManejemenAtletController@delete']);
