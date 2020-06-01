@@ -68,7 +68,7 @@
                 </div>
                 <div class="input">
                     <label for="">alamat</label>
-                    <textarea name="alamat" id="alamat" placeholder="Max 50 karakter" required style="height: 200px"></textarea>
+                    <textarea name="alamat" id="alamat" placeholder="Max 50 karakter" required style="height: 80px"></textarea>
                 </div>
             </div>
             <div id="form">
