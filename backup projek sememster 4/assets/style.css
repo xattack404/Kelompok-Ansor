@@ -59,7 +59,7 @@ table {
 
 /* ====================================================================================== */
 .blue{
-    background-color: #2980b9;
+    background-color: #2980b9; 
 }
 .red{
     background-color: #e74c3c;
@@ -1002,6 +1002,10 @@ ul li:hover #dropdown{
     -ms-border-radius: 0px;
     -o-border-radius: 0px;
 }
+.box-pembayaran .serach-box a{
+    display: block;
+    color: white;
+}
 .bg-popup, #poppembayaran{
     position: absolute;
     width: 0%;
@@ -1049,7 +1053,7 @@ ul li:hover #dropdown{
     margin-bottom: 10px;
     color: black;
     font-family: lato;
-    background-color: #F0F1EC;
+    background-color: rgb(255, 255, 255);
 
 }
 .popup-pembayaran .input label{
@@ -1074,7 +1078,7 @@ ul li:hover #dropdown{
     font-size: 12px;
     font-family: lato;
     text-align: left;
-    background-color: #F0F1EC;
+    background-color: rgb(255, 255, 255);
 }
 .input-boxpopup, .input-boxpopup2{
     width: 100%;
@@ -1118,15 +1122,7 @@ ul li:hover #dropdown{
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-}
-button a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    outline: none;
-    margin: 0;
+    color: white;
 }
 /* ====================Konfirmasi Pembayaran Akhir====================*/
 
