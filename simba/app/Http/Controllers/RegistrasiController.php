@@ -115,7 +115,6 @@ class RegistrasiController extends Controller
     public function form($jumlah)
     {
         $data['kategori'] = Kategori::all();
-
         return view('frontend.registrasi.form', compact('jumlah', 'data'));
     }
 
