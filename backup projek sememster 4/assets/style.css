@@ -11,7 +11,6 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
@@ -935,9 +934,204 @@ ul li:hover #dropdown{
 }
 /* ====================Registrasi Akhir====================*/
 
+/* ====================Konfirmasi Pembayaran====================*/
+.box-pembayaran{
+    width: 60%;
+    outline: none;
+    box-sizing: border-box;
+    padding: 5px;
+    border: 3px solid #323232;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) ;
+    -webkit-transform: translateX(-50%) translateY(-50%) ;
+    -moz-transform: translateX(-50%) translateY(-50%) ;
+    -ms-transform: translateX(-50%) translateY(-50%) ;
+    -o-transform: translateX(-50%) translateY(-50%) ;
+}
+.box-pembayaran h2{
+    text-align: center;
+    color: black;
+    font-family: lato;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.box-pembayaran .ket-pembayaran{
+    font-size: 3vmin;
+    color: black;
+    margin-bottom: 20px;
+}
+.box-pembayaran .serach-box{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    height: 40px;
+    position: relative;
+}
+.box-pembayaran .serach-box input{
+    height: 100%;
+    text-align: center;
+    color: black;
+    text-transform: none;
+    margin: 0;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+}
+.box-pembayaran .serach-box .ket-serch{
+    height: 100%;
+    text-align: center;
+    font-size: 2vmin;
+    color: white;
+    line-height: 35px;
+    background-color: #323232;
+    font-family: lato;
+    overflow: hidden;
+}
+.box-pembayaran .serach-box button{
+    color: white;
+    outline: none;
+    font-family: lato;
+    font-size: 2vmin;
+    overflow: hidden;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+}
+.bg-popup, #poppembayaran{
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    
+    background-color: rgba(50, 50, 50, 0.7);
+    overflow: hidden;
+}
+#poppembayaran:target{
+    width: 100%;
+    height: 100%;
+}
+.popup-pembayaran{
+    width: 50%;
+    height: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    z-index: 2;
+    padding: 10px;
+    overflow: auto;
+}
+.keterangan-popup{
+    color: black;
+    font-family: lato;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.popup-pembayaran .ket{
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    line-height: 25px;
+    padding: 5px;
+    border: 1px solid rgba(50, 50, 50, 1);
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: black;
+    font-family: lato;
+    background-color: #F0F1EC;
+
+}
+.popup-pembayaran .input label{
+    font-family: lato;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 0;
+    color: black;
+}
+.popup-pembayaran .input table{
+    width: 100%;
+    color: black;
+    margin-bottom: 10px;
+}
+.popup-pembayaran .input table tr th{
+    font-size: 12px;
+    font-family: lato;
+    text-align: left;
+    background-color: #F0F1EC;
+}
+.popup-pembayaran .input table tr td{
+    font-size: 12px;
+    font-family: lato;
+    text-align: left;
+    background-color: #F0F1EC;
+}
+.input-boxpopup, .input-boxpopup2{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
+.input-boxpopup2{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.popup-pembayaran .input input{
+    margin: 0;
+    margin-top: 7px;
+    width: 100%;
+    color: black;
+}
+.popup-pembayaran .input .upload-box{
+    height: 40px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+.popup-pembayaran .input .upload-box input{
+    height: 100%;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    margin: 0;
+}
+.popup-pembayaran p{
+    color: black;
+}
+.submit-pembayran{
+    float: right;
+}
+
+.submit-pembayran button{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+button a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    margin: 0;
+/* ====================Konfirmasi Pembayaran Akhir====================*/
 
 
 /* ====================footer====================*/
+
 footer{
     position: relative;
     background-color: #323232;
@@ -947,11 +1141,13 @@ footer{
     align-items: center;
     justify-content: center;
 }
+
 footer .copyright{
     position: relative;
     width: 100%;
     text-align: center;
 }
+
 footer .copyright h4, footer{
     text-align: center;
     font-family: lato;
@@ -1178,7 +1374,12 @@ footer .copyright h4, footer{
     }
     
 /* ====================Registrasi Akhir====================*/
-   
+.box-pembayaran{
+    width: 95%;
+}
+.popup-pembayaran{
+    width: 95%;
+}
 }
 
 
