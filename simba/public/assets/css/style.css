@@ -2998,6 +2998,9 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
 }
 .popup .content{
   display: block;
+  width: 100%;
+  padding: 5px;
+  background-color: saddlebrown;
 }
 .popup .closee{
   display: flex;
