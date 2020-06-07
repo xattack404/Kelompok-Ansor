@@ -225,30 +225,32 @@
 
     <script src="{{ asset('assets_frontend/js/style.js') }}"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('select[name="kategori_id"]').on('change', function() {
-                var kategoriID = $(this).val();
-                if (kategoriID) {
-                    $.ajax({
-                        url: "{{ url('ajax') }}/" + kategoriID,
-                        type: "GET",
-                        dataType: "json",
-                        success: function(data) {
-                            $('select[name="subkat"]').empty();
-                            $.each(data, function(key, value) {
-                                $('select[name="subkat"]').append('<option value="' + value.id + '">' + value.nama_subkat + '</option>');
-                            });
-                        }
-                    });
-                } else {
-                    $('select[name="subkat"]').empty();
-                }
-            });
-        });
+        // $(document).ready(function() {
+        //     $('select[name="kategori_id"]').on('change', function() {
+        //         var kategoriID = $(this).val();
+        //         if (kategoriID) {
+        //             $.ajax({
+        //                 url: "{{ url('ajax') }}/" + kategoriID,
+        //                 type: "GET",
+        //                 dataType: "json",
+        //                 success: function(data) {
+        //                     $('select[name="subkat"]').empty();
+        //                     $.each(data, function(key, value) {
+        //                         $('select[name="subkat"]').append('<option value="' + value.id + '">' + value.nama_subkat + '</option>');
+        //                     });
+        //                 }
+        //             });
+        //         } else {
+        //             $('select[name="subkat"]').empty();
+        //         }
+        //     });
+        // });
 
         $(document).ready(function() {
-            $('select[name="kategori_id"]').on('change', function() {
+            $( document ).on( "change", 'select[name*="kategori_usia_id"]', function() {
                 var kategoriID = $(this).val();
+                var id = $(this).attr('id');
+                id = id.split("_");
                 if (kategoriID) {
                     $.ajax({
                         url: "{{ url('ajaxkat') }}/" + kategoriID,
@@ -257,7 +259,7 @@
                         success: function(data) {
                             $('input[name="harga"]').empty();
                             $.each(data, function(key, value) {
-                                $('input[name="harga"]').val('' + value.harga + '');
+                                $('input[id="harga_'+id[3]+'"]').val('' + value.harga + '');
                             });
                         }
                     });
