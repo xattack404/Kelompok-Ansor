@@ -19,7 +19,7 @@
                         </div>
                         <div class="form-group">
                             <a href="{{ route('manejemenatlet.index') }}" class="pull-right">
-                            <button type="button" class="btn btn-info">Semua Data</button>
+                                <button type="button" class="btn btn-info">Semua Data</button>
                             </a>
                         </div>
                     </form>
@@ -73,7 +73,24 @@
 
 <div class="popup" id="popup">
     <div class="content">
-            isi di sini
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Nama </th>
+                    <th scope="col">Email</th>
+                    <th scope="col">No Telpon</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>{{ $manejemenatlet->nama }}</td>
+                    <td>{{ $manejemenatlet->email }}</td>
+                    <td>{{ $manejemenatlet->no_hp }}</td>
+                    <td>
+            </tbody>
+        </table>
     </div>
     <a href="#index" class="closee">close</a>
 </div>

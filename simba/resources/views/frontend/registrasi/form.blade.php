@@ -81,9 +81,7 @@
                         success: function(data) {
                             $('input[name="harga"]').empty();
                             $.each(data, function(key, value) {
-
                                 $('input[name="harga"]').val('' + value.harga + '');
-
                             });
                         }
                     });
