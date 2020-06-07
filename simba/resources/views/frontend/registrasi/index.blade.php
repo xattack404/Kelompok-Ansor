@@ -280,11 +280,12 @@
 
                     }
                 });
-                $('select[name="grandtotal"]').val(sum.toFixed(2));
+                $('input[name="grandtotal"]').val(sum.toFixed(2));
+
+                $('select[name*="harga"]').keydown(function() {
+                    grand_total();
+                });
             }
-            $('select[name*="harga"]').keydown(function() {
-                grand_total();
-            });
         });
 
         $('input[name="jumlahanggota"]').keyup('change', function() {
