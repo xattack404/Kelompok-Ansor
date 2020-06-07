@@ -79,7 +79,7 @@
             <input class="bayar" type="checkbox" name="bayar" id="bayar" style="display: none">
             <!------------ konfirmasi ------------>
             <div class="box-keterangan" id="konfirmasi">
-                <div class="judul-keterangan"><label for="bayar">ringkasan total pembayaran</label></div>
+                <div class="judul-keterangan"><label onclick="grand_total()" for="bayar">ringkasan total pembayaran</label></div>
                 <div class="keterangan-konten">
                     <table border="1" cellpadding="5" cellspacing="0">
                         <tr>
@@ -281,11 +281,11 @@
                     }
                 });
                 $('input[name="grandtotal"]').val(sum.toFixed(2));
-
-                $('select[name*="harga"]').keydown(function() {
-                    grand_total();
-                });
             }
+            $('select[name*="harga"]').keyup(function() {
+                grand_total();
+            });
+
         });
 
         $('input[name="jumlahanggota"]').keyup('change', function() {
