@@ -95,7 +95,7 @@
                         <tr>
                             <td>Total keseluruhan</td>
                             <td>Harga</td>
-                            <td>Rp. 913000</td>
+                            <td><input type="text" name="grandtotal" id="grandtotal"></td>
                         </tr>
                     </table>
 
@@ -247,7 +247,7 @@
         // });
 
         $(document).ready(function() {
-            $( document ).on( "change", 'select[name*="kategori_usia_id"]', function() {
+            $(document).on("change", 'select[name*="kategori_usia_id"]', function() {
                 var kategoriID = $(this).val();
                 var id = $(this).attr('id');
                 id = id.split("_");
@@ -259,13 +259,31 @@
                         success: function(data) {
                             $('input[name="harga"]').empty();
                             $.each(data, function(key, value) {
-                                $('input[id="harga_'+id[3]+'"]').val('' + value.harga + '');
+                                $('input[id="harga_' + id[3] + '"]').val('' + value.harga + '');
                             });
                         }
                     });
                 } else {
                     $('select[name="subkat"]').empty();
                 }
+            });
+        });
+
+        //Hitung Grand Total
+        $(document).ready(function() {
+            var grand_total = function() {
+                var sum = 0;
+                $('select[name*="harga"]').each(function() {
+                    var num = $(this).val();
+                    if (num != 0) {
+                        sum = +parseFloat(num);
+
+                    }
+                });
+                $('select[name="grandtotal"]').val(sum.toFixed(2));
+            }
+            $('select[name*="harga"]').keydown(function() {
+                grand_total();
             });
         });
 
