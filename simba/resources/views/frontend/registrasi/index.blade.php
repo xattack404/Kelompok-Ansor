@@ -270,23 +270,22 @@
         });
 
         //Hitung Grand Total
-        $(document).ready(function() {
-            var grand_total = function() {
-                var sum = 0;
-                $('select[name*="harga"]').each(function() {
-                    var num = $(this).val();
-                    if (num != 0) {
-                        sum = +parseFloat(num);
 
-                    }
-                });
-                $('input[name="grandtotal"]').val(sum.toFixed(2));
-            }
+        function grand_total() {
+            var sum = 0;
+            $('select[name*="harga"]').each(function() {
+                var num = $(this).val();
+                if (num != 0) {
+                    sum = +parseFloat(num);
+
+                }
+            });
+            $('input[name="grandtotal"]').val(sum.toFixed(2));
+
             $('select[name*="harga"]').keyup(function() {
                 grand_total();
             });
-
-        });
+        };
 
         $('input[name="jumlahanggota"]').keyup('change', function() {
             var jumlah = $(this).val();
