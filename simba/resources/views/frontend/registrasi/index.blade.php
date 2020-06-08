@@ -16,8 +16,8 @@
     <div class="all-boxregister">
 
         <!-- ====== form registrasi komunitas====== -->
-        <form class="box-registrasi2" action="{{ route('frontend.registrasi.store2') }}" id="registrasikomunitas">
-            <?php ?>
+        <form class="box-registrasi2" action="{{ route('frontend.registrasi.store2') }}" id="registrasikomunitas" method="POST" enctype="multipart/form-data">
+            @csrf
             <div class="box">
                 <div class="keterangan">
                     <h1>Penanggung Jawab</h1>
