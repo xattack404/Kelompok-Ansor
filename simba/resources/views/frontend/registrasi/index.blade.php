@@ -247,7 +247,7 @@
         // });
 
         $(document).ready(function() {
-            $( document ).on( "change", 'select[name*="kategori_usia_id"]', function() {
+            $(document).on("change", 'select[name*="kategori_usia_id"]', function() {
                 var kategoriID = $(this).val();
                 var id = $(this).attr('id');
                 id = id.split("_");
@@ -259,7 +259,7 @@
                         success: function(data) {
                             $('input[name="harga"]').empty();
                             $.each(data, function(key, value) {
-                                $('input[id="harga_'+id[3]+'"]').val('' + value.harga + '');
+                                $('input[id="harga_' + id[3] + '"]').val('' + value.harga + '');
                             });
                         }
                     });
@@ -269,6 +269,7 @@
             });
         });
 
+        // new calculate grand total
         function calculate_total_bayar()
             {
                 $('input[name="total_bayar"]').empty();
@@ -284,6 +285,25 @@
                 $('#total_bayar').val(harga);
                 $('#grand_total').val( harga + parseInt($('input[name="unique_code"]').val()) );
             }
+
+        //Hitung Grand Total
+        $(document).ready(function() {
+            var grand_total = function() {
+                var sum = 0;
+                $('select[name*="harga"]').each(function() {
+                    var num = $(this).val();
+                    if (num != 0) {
+                        sum = +parseFloat(num);
+
+                    }
+                });
+                $('input[name="grandtotal"]').val(sum.toFixed(2));
+            }
+            $('select[name*="harga"]').keyup(function() {
+                grand_total();
+            });
+
+        });
 
         $('input[name="jumlahanggota"]').keyup('change', function() {
             var jumlah = $(this).val();

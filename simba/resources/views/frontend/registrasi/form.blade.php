@@ -48,7 +48,7 @@
     </div>
     <div class="input">
         <label for="email">email</label>
-        <input type="email" name="email[]" id="email" placeholder="masukan email aktif" required>
+        <input type="email" name="email[]" id="email" placeholder="masukan email araktif" required>
     </div>
     <div class="input">
         <label for="telp">no telepon</label>
@@ -71,36 +71,35 @@
     <script src="{{ asset('assets_frontend/js/style.js') }}"></script>
     @endfor
     <script type="text/javascript">
-        function getHarga()
-        {
+        function getHarga() {
             $('select[name="kategori_usia_id"]').each(function() {
-                alert($(this).val()); 
+                alert($(this).val());
             });
             alert('test');
             var kategoriID = that;
-                if (kategoriID) {
-                    $.ajax({
-                        url: "{{ url('ajax') }}/" + kategoriID,
-                        type: "GET",
-                        dataType: "json",
-                        success: function(data) {
-                            $('select[name="subkat"]').empty();
-                            $.each(data, function(key, value) {
-                                $('select[name="subkat"]').append('<option value="' + value.id + '">' + value.nama_subkat + '</option>');
-                            });
-                        }
-                    });
-                } else {
-                    $('select[name="subkat"]').empty();
-                }   
+            if (kategoriID) {
+                $.ajax({
+                    url: "{{ url('ajax') }}/" + kategoriID,
+                    type: "GET",
+                    dataType: "json",
+                    success: function(data) {
+                        $('select[name="subkat"]').empty();
+                        $.each(data, function(key, value) {
+                            $('select[name="subkat"]').append('<option value="' + value.id + '">' + value.nama_subkat + '</option>');
+                        });
+                    }
+                });
+            } else {
+                $('select[name="subkat"]').empty();
+            }
         }
         // $( document ).on( "change", 'select[name*="kategori_usia_id"]', function() {
-             // alert($(this).val());
-             // console.log($(this).attr('id'));
-            // $('select[name="kategori_usia_id[]"]').map( function(key){
-            //     console.log(key+':'+$(this).attr('id'));
+        // alert($(this).val());
+        // console.log($(this).attr('id'));
+        // $('select[name="kategori_usia_id[]"]').map( function(key){
+        //     console.log(key+':'+$(this).attr('id'));
 
-                // $('input[name="myText"]')[0].id
-            // })
+        // $('input[name="myText"]')[0].id
+        // })
         // });
     </script>
