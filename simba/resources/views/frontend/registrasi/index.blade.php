@@ -79,7 +79,7 @@
             <input class="bayar" type="checkbox" name="bayar" id="bayar" style="display: none">
             <!------------ konfirmasi ------------>
             <div class="box-keterangan" id="konfirmasi">
-                <div class="judul-keterangan"><label onclick="grand_total()" for="bayar">ringkasan total pembayaran</label></div>
+                <div class="judul-keterangan"><label for="bayar" onclick="calculate_total_bayar()">ringkasan total pembayaran</label></div>
                 <div class="keterangan-konten">
                     <table border="1" cellpadding="5" cellspacing="0">
                         <tr>
@@ -90,18 +90,18 @@
                         <tr>
                             <td>kode unik simulasi</td>
                             <td>Harga</td>
-                            <td>Rp. 913000</td>
+                            <td><input type="number" name="unique_code" id="unique_code" class="form-control bg-white text-white" style="color: #fff" disabled="true" value="101"></td>
                         </tr>
                         <tr>
                             <td>Total keseluruhan</td>
                             <td>Harga</td>
-                            <td><input type="text" name="grandtotal" id="grandtotal"></td>
+                            <td><input type="number" name="total_bayar" id="total_bayar" class="form-control bg-white text-white" style="color: #fff" disabled="true"></td>
                         </tr>
                     </table>
 
                     <h2>total yang harus di bayar</h2>
                     <div class="total">
-                        <h3>Rp. 913000</h3>
+                        <h3><input type="number" name="grand_total" id="grand_total" class="form-control bg-white" disabled="true"></h3>
                     </div>
 
                     <div class="ikut-serta">
@@ -268,6 +268,23 @@
                 }
             });
         });
+
+        // new calculate grand total
+        function calculate_total_bayar()
+            {
+                $('input[name="total_bayar"]').empty();
+                var harga = 0;
+                $('input[name="harga[]"]').map( function(key){
+                    // var id = $(this).attr('id');
+                    // id = id.split("_");
+                    // var harga = $('input[id="harga_'+id[3]+'"]').val();
+                    harga += parseInt($(this).val());
+                    console.log(harga);
+                    // $('input[name="myText"]')[0].id
+                })
+                $('#total_bayar').val(harga);
+                $('#grand_total').val( harga + parseInt($('input[name="unique_code"]').val()) );
+            }
 
         //Hitung Grand Total
 
