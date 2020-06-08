@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Atlet;
+use App\Komunitas;
 use App\Kategori;
 use App\Subkategori;
 use App\AtletAktif;
@@ -64,8 +65,7 @@ class RegistrasiController extends Controller
         ]);
 
         $data = AtletAktif::create([
-            'nik_id' => $request->nik_id,
-            'koordinasi_id' => 1
+            'nik_id' => $request->nik_id
         ]);
         $getId = Pembayaran::create([
             'total_bayar' => $request->harga
@@ -89,7 +89,67 @@ class RegistrasiController extends Controller
 
         return redirect()->route('frontend.registrasi.index')->with('succes', 'Registrasi Berhasil.');
     }
+    public function store2(Request $request)
+    {
 
+        $data = $request->all();
+        $lastid = Pembayaran::create([
+            'total_bayar' => $request->grand_total
+        ]);
+        //Input data koordinator Komunitas
+        $komunitas = Komunitas::create([
+            'nama_komunitas'      => $request->nama_komunitas,
+            'nama_koordinator'    => $request->nama_koordinator,
+            'tgl_lahir'           => $request->tgl_lahir,
+            'jenis_kelamin'       => $request->jenis_kelamin,
+            'alamat'              => $request->alamat,
+            'kecamatan'           => $request->kec,
+            'kabupaten_kota'      => $request->kabkot,
+            'provinsi'            => $request->prov,
+            'warga_negara'        => $request->warga_negara,
+            'email'               => $request->email,
+            'no_hp'               => $request->no_hp
+        ]);
+        if (count($request->nik_id) > 0) {
+            foreach ($request->nik_id as $item => $v)
+                $getNikId = Atlet::create([array(
+                    'nik_id'            => $request->nik_id[$item],
+                    'nama'              => $request->nama[$item],
+                    'tgl_lahir'         => $request->tgl_lahir[$item],
+                    'jenis_kelamin'     => $request->jenis_kelamin[$item],
+                    'alamat'            => $request->alamat[$item],
+                    'kecamatan'         => $request->kec[$item],
+                    'kabupaten_kota'    => $request->kabkot[$item],
+                    'provinsi'          => $request->prov[$item],
+                    'warga_negara'      => $request->warga_negara[$item],
+                    'email'             => $request->email[$item],
+                    'no_hp'             => $request->no_hp[$item]
+                )]);
+
+            $dataId = AtletAktif::create([array(
+                'koordinator_id' => $komunitas->id,
+                'nik_id' => $getNikId->nik_id[$item]
+            )]);
+            DetailPembayaran::create([array(
+                'no_invoice'     => $lastid->id,
+                'atlet_aktif_id' => $dataId->id,
+                'kategori'       => $request->kategori_id[$item],
+                'harga'          => $request->total_bayar
+            )]);
+
+            //membuat kode pendaftaran unik
+            $kode_pendaftaran = 'REG-' . $request->nik_id . '-' . date('Ymdhis');
+            Pendaftaran::create([
+                'kode_pendaftaran'       => $kode_pendaftaran,
+                'koordinator_id'         => $komunitas->id,
+                'nik_id'                 => $getNikId->nik_id[$item],
+                'koordinasi_id'          => 2,
+                'pendaftaran_status_id'  => 1
+
+            ]);
+        }
+        return redirect()->route('frontend.registrasi.index')->with('succes', 'Registrasi Berhasil.');
+    }
     /**
      * Display the specified resource.
      *

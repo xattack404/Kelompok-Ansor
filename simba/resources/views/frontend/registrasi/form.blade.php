@@ -8,11 +8,11 @@
     </div>
     <div class="input">
         <label for="namaanggota">Nama Anggota</label>
-        <input type="text" id="namaanggota" name="namaanggota[]" placeholder="masukan nama anggota komunitas">
+        <input type="text" id="namaanggota" name="nama[]" placeholder="masukan nama anggota komunitas">
     </div>
     <div class="input">
-        <label for="namakom">Tanggal lahir</label>
-        <input type="date" id="namakom">
+        <label for="tgl_lahir">Tanggal lahir</label>
+        <input type="date" name="tgl_lahir" id="tgl_lahir">
     </div>
     <div class="input">
         <label for="">jenis kelamin</label>

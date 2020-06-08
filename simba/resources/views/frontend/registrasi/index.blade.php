@@ -16,110 +16,119 @@
     <div class="all-boxregister">
 
         <!-- ====== form registrasi komunitas====== -->
-        <form class="box-registrasi2" action="" id="registrasikomunitas">
+        <form class="box-registrasi2" action="{{ route('frontend.registrasi.store2') }}" id="registrasikomunitas">
             <?php ?>
             <div class="box">
                 <div class="keterangan">
                     <h1>Penanggung Jawab</h1>
                 </div>
                 <div class="input">
-                    <label for="namapen">Nama penanggung jawab</label>
-                    <input type="text" id="nama_koordinator" name="nama_koordinator" placeholder="masukan nama penanggung jawab">
+                    <div class="input">
+                        <label for="namapen">Nama penanggung jawab</label>
+                        <input type="text" id="nama_koordinator" name="nama_koordinator" placeholder="masukan nama penanggung jawab">
+                    </div>
+                    <div class="input">
+                        <label for="tglhr">tanggal lahir</label>
+                        <input type="date" name="tgl_lahir" id="tglhr" required>
+                    </div>
+                    <div class="input">
+                        <label for="jkel">jenis kelamin</label>
+                        <select name="jenis_kelamin" id="jkel" required>
+                            <option value="">--pilih--</option>
+                            <option value="L">laki-laki</option>
+                            <option value="P">wanita</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <label for="namakom">nama komunitas</label>
+                        <input type="text" id="nama_komunitas" name="nama_komunitas" placeholder="masukan nama komunitas anda">
+                    </div>
+                    <div class="input">
+                        <label for="jumlahanggota">jummlah anggota</label>
+                        <input value="" type="number" id="jumlahanggota" name="jumlahanggota" placeholder="masukan jumlah anggota komunitas">
+                    </div>
+                    <div class="input">
+                        <label for="">Status kewarganegaraan</label>
+                        <select name="warga_negara" id="">
+                            <option value="">--pilih--</option>
+                            <option value="">Warga negara indonesia</option>
+                            <option value="">Warga negara asing</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <label for="">provinsi</label>
+                        <input type="text" name="prov" id="prov" placeholder="masukan nama Provinsi" required>
+                    </div>
+                    <div class="input">
+                        <label for="">Kabupaten_kota</label>
+                        <input type="text" name="kabkot" id="kabkot" placeholder="masukan nama Kabupaten/Kota" required>
+                    </div>
+                    <div class="input">
+                        <label for="">kecamatan</label>
+                        <input type="text" name="kec" id="kec" placeholder="masukan nama Kecamatan" required>
+                    </div>
+                    <div class="input">
+                        <label for="">alamat</label>
+                        <textarea name="alamat" id="alamat" placeholder="Max 50 karakter" required style="height: 80px"></textarea>
+                    </div>
+                    <div class="input">
+                        <label for="">Email</label>
+                        <input type="text" name="email" id="email" placeholder="Masukan Email Aktif" required>
+                    </div>
+                    <div class="input">
+                        <label for="">No Telp</label>
+                        <input type="text" name="no_hp" id="no_hp" placeholder="Masukan No Telp Aktif" required>
+                    </div>
                 </div>
-                <div class="input">
-                    <label for="tglhr">tanggal lahir</label>
-                    <input type="date" name="tgl_lahir" id="tglhr" required>
+                <div id="form">
                 </div>
-                <div class="input">
-                    <label for="jkel">jenis kelamin</label>
-                    <select name="jenis_kelamin" id="jkel" required>
-                        <option value="">--pilih--</option>
-                        <option value="L">laki-laki</option>
-                        <option value="P">wanita</option>
-                    </select>
-                </div>
-                <div class="input">
-                    <label for="namakom">nama komunitas</label>
-                    <input type="text" id="nama_komunitas" name="nama_komunitas" placeholder="masukan nama komunitas anda">
-                </div>
-                <div class="input">
-                    <label for="jumlahanggota">jummlah anggota</label>
-                    <input value="" type="number" id="jumlahanggota" name="jumlahanggota" placeholder="masukan jumlah anggota komunitas">
-                </div>
-                <div class="input">
-                    <label for="">Status kewarganegaraan</label>
-                    <select name="" id="">
-                        <option value="">--pilih--</option>
-                        <option value="">Warga negara indonesia</option>
-                        <option value="">Warga negara asing</option>
-                    </select>
-                </div>
-                <div class="input">
-                    <label for="">provinsi</label>
-                    <input type="text" name="prov" id="prov" placeholder="masukan nama Provinsi" required>
-                </div>
-                <div class="input">
-                    <label for="">Kabupaten_kota</label>
-                    <input type="text" name="kabkot" id="kabkot" placeholder="masukan nama Kabupaten/Kota" required>
-                </div>
-                <div class="input">
-                    <label for="">kecamatan</label>
-                    <input type="text" name="kec" id="kec" placeholder="masukan nama Kecamatan" required>
-                </div>
-                <div class="input">
-                    <label for="">alamat</label>
-                    <textarea name="alamat" id="alamat" placeholder="Max 50 karakter" required style="height: 80px"></textarea>
-                </div>
-            </div>
-            <div id="form">
-            </div>
-            <!-- <div class="box-btn" >
+                <!-- <div class="box-btn" >
                 <a href=""><button type="button" class="red">selanjutnya</button></a>
             </div> -->
-            <input class="bayar" type="checkbox" name="bayar" id="bayar" style="display: none">
-            <!------------ konfirmasi ------------>
-            <div class="box-keterangan" id="konfirmasi">
-                <div class="judul-keterangan"><label for="bayar" onclick="calculate_total_bayar()">ringkasan total pembayaran</label></div>
-                <div class="keterangan-konten">
-                    <table border="1" cellpadding="5" cellspacing="0">
-                        <tr>
-                            <th>Ringkasan</th>
-                            <th>Harga</th>
-                            <th>Jumlah</th>
-                        </tr>
-                        <tr>
-                            <td>kode unik simulasi</td>
-                            <td>Harga</td>
-                            <td><input type="number" name="unique_code" id="unique_code" class="form-control bg-white text-white" style="color: #fff" disabled="true" value="101"></td>
-                        </tr>
-                        <tr>
-                            <td>Total keseluruhan</td>
-                            <td>Harga</td>
-                            <td><input type="number" name="total_bayar" id="total_bayar" class="form-control bg-white text-white" style="color: #fff" disabled="true"></td>
-                        </tr>
-                    </table>
+                <input class="bayar" type="checkbox" name="bayar" id="bayar" style="display: none">
+                <!------------ konfirmasi ------------>
+                <div class="box-keterangan" id="konfirmasi">
+                    <div class="judul-keterangan"><label for="bayar" onclick="calculate_total_bayar()">ringkasan total pembayaran</label></div>
+                    <div class="keterangan-konten">
+                        <table border="1" cellpadding="5" cellspacing="0">
+                            <tr>
+                                <th>Ringkasan</th>
+                                <th>Harga</th>
+                                <th>Jumlah</th>
+                            </tr>
+                            <tr>
+                                <td>kode unik simulasi</td>
+                                <td>Harga</td>
+                                <td><input type="text" name="unique_code" id="unique_code" class="form-control bg-white text-white" style="color: #fff" disabled="true" value="101"></td>
+                            </tr>
+                            <tr>
+                                <td>Total keseluruhan</td>
+                                <td>Harga</td>
+                                <td><input type="text" name="total_bayar" id="total_bayar" class="form-control bg-white text-white" style="color: #fff" disabled="true"></td>
+                            </tr>
+                        </table>
 
-                    <h2>total yang harus di bayar</h2>
-                    <div class="total">
-                        <h3><input type="number" name="grand_total" id="grand_total" class="form-control bg-white" disabled="true"></h3>
-                    </div>
-
-                    <div class="ikut-serta">
-                        <h1>konfirmasi</h1>
-                        <p>Dengan menekan tombol Konfirmasi Pemesanan dibawah ini saya menyatakan bahwa semua data yang saya berikan dalam formulir ini adalah benar dan saya setuju untuk mematuhi semua peraturan dan ketentuan yang ditetapkan oleh penyelenggara. Selanjutnya, saya menyatakan bahwa saya dalam keadaan sehat dan membebaskan penyelenggara dan pihak lain yang terlibat dalam penyelenggaraan kegiatan IT SPORT Online dari segala tanggung jawab atas segala cedera, kehilangan, atau kerusakan pada diri saya atau harta benda saya dalam hubungannya dengan kegiatan tersebut. Saat saya mengikuti kegiatan ini, maka saya telah menyetujui deklarasi ini</p>
-                        <div class="persetujuan">
-                            <label for="">* Saya setuju dengan pernyataan di atas</label>
-                            <select name="" id="">
-                                <option value="">--pilih--</option>
-                                <option value="">IYA</option>
-                                <option value="">TIDAK</option>
-                            </select>
+                        <h2>total yang harus di bayar</h2>
+                        <div class="total">
+                            <h3><input type="text" name="grand_total" id="grand_total" class="form-control bg-white" disabled="true"></h3>
                         </div>
-                        <button type="submit">konfirmasi</button>
+
+                        <div class="ikut-serta">
+                            <h1>konfirmasi</h1>
+                            <p>Dengan menekan tombol Konfirmasi Pemesanan dibawah ini saya menyatakan bahwa semua data yang saya berikan dalam formulir ini adalah benar dan saya setuju untuk mematuhi semua peraturan dan ketentuan yang ditetapkan oleh penyelenggara. Selanjutnya, saya menyatakan bahwa saya dalam keadaan sehat dan membebaskan penyelenggara dan pihak lain yang terlibat dalam penyelenggaraan kegiatan IT SPORT Online dari segala tanggung jawab atas segala cedera, kehilangan, atau kerusakan pada diri saya atau harta benda saya dalam hubungannya dengan kegiatan tersebut. Saat saya mengikuti kegiatan ini, maka saya telah menyetujui deklarasi ini</p>
+                            <div class="persetujuan">
+                                <label for="">* Saya setuju dengan pernyataan di atas</label>
+                                <select name="" id="">
+                                    <option value="">--pilih--</option>
+                                    <option value="">IYA</option>
+                                    <option value="">TIDAK</option>
+                                </select>
+                            </div>
+                            <button type="submit">konfirmasi</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!------------ konfirmasi akhir ------------>
+                <!------------ konfirmasi akhir ------------>
         </form>
         <!-- ====== form registrasi komunitas akhir ====== -->
 
@@ -270,39 +279,20 @@
         });
 
         // new calculate grand total
-        function calculate_total_bayar()
-            {
-                $('input[name="total_bayar"]').empty();
-                var harga = 0;
-                $('input[name="harga[]"]').map( function(key){
-                    // var id = $(this).attr('id');
-                    // id = id.split("_");
-                    // var harga = $('input[id="harga_'+id[3]+'"]').val();
-                    harga += parseInt($(this).val());
-                    console.log(harga);
-                    // $('input[name="myText"]')[0].id
-                })
-                $('#total_bayar').val(harga);
-                $('#grand_total').val( harga + parseInt($('input[name="unique_code"]').val()) );
-            }
-
-        //Hitung Grand Total
-
-        function grand_total() {
-            var sum = 0;
-            $('select[name*="harga"]').each(function() {
-                var num = $(this).val();
-                if (num != 0) {
-                    sum = +parseFloat(num);
-
-                }
-            });
-            $('input[name="grandtotal"]').val(sum.toFixed(2));
-
-            $('select[name*="harga"]').keyup(function() {
-                grand_total();
-            });
-        };
+        function calculate_total_bayar() {
+            $('input[name="total_bayar"]').empty();
+            var harga = 0;
+            $('input[name="harga[]"]').map(function(key) {
+                // var id = $(this).attr('id');
+                // id = id.split("_");
+                // var harga = $('input[id="harga_'+id[3]+'"]').val();
+                harga += parseInt($(this).val());
+                console.log(harga);
+                // $('input[name="myText"]')[0].id
+            })
+            $('#total_bayar').val(harga);
+            $('#grand_total').val(harga + parseInt($('input[name="unique_code"]').val()));
+        }
 
         $('input[name="jumlahanggota"]').keyup('change', function() {
             var jumlah = $(this).val();
