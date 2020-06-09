@@ -258,6 +258,8 @@
                 if (kategoriID) {
                     $.ajax({
                         url: "{{ url('ajaxkat') }}/" + kategoriID,
+                        type: "GET",
+                        dataType: "json",
                         success: function(data) {
                             $('input[name="harga"]').empty();
                             $.each(data, function(key, value) {
