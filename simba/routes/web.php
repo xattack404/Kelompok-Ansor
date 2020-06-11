@@ -69,3 +69,6 @@ Route::get('panel/manejemenlogin/delete/{id}', ['as' => 'manejemenlogin.delete',
 //Route Untuk Manejeme Atlet
 Route::get('panel/manejemenatlet', ['as' => 'manejemenatlet.index', 'uses' => 'ManejemenAtletController@index']);
 Route::get('panel/manejemenatlet/delete/{id}', ['as' => 'manejemenatlet.delete', 'uses' => 'ManejemenAtletController@delete']);
+
+//Route Untuk Pembayaran
+Route::get('panel/pembayaran', ['as' => 'pembayaran.index', 'uses' => 'PembayaranController@index']);

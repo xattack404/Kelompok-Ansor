@@ -253,7 +253,7 @@
         });
 
         $(document).ready(function() {
-            $('select[name="kategori_id"]').keyup('change', function() {
+            $('select[name="kategori_id"]').on('change', function() {
                 var kategoriID = $(this).val();
                 if (kategoriID) {
                     $.ajax({
@@ -270,7 +270,6 @@
                 } else {
                     $('select[name="harga"]').empty();
                 }
-
             });
         });
 
