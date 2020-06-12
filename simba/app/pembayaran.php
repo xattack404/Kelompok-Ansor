@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\DetailPembayaran;
 
 class Pembayaran extends Model
 {
@@ -13,4 +14,9 @@ class Pembayaran extends Model
   ];
 
   public $timestamps = false;
+
+  public function detailPembayaran()
+  {
+    return $this->hasMany(DetailPembayaran::class, 'no_invoice', 'no_invoice');
+  }
 }

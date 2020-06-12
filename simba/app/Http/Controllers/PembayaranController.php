@@ -8,6 +8,7 @@ use App\Atlet;
 use App\AtletAktif;
 use App\Komunitas;
 use App\Pendaftaran;
+use App\PendaftaranStatus;
 use Illuminate\Http\Request;
 
 class PembayaranController extends Controller
@@ -19,9 +20,9 @@ class PembayaranController extends Controller
      */
     public function index()
     {
-        $data['pembayaran'] = Pembayaran::all();
+        $data['pembayaran'] = Pembayaran::paginate(10);
         $data['pendaftaran'] = Pendaftaran::paginate(10);
-        return view('pembayaran.index', compact('data[pembayaran]', 'data[pendaftaran]'));
+        return view('pembayaran.index', compact('data'));
     }
 
     /**

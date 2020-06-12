@@ -26,26 +26,44 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th scope="col"><b>NO INVOICE</b></th>
-                                <th scope="col"><b>KODE PENDAFTARAN</b> </th>
-                                <th scope="col">Nama </th>
-                                <th scope="col">Koordinasi</th>
-                                <th scope="col">Total Biaya</th>
-                                <th scope="col">Pendaftaran Status</th>
+                                <th scope="col"><b>Nomor Invoice</b></th>
+                                <th scope="col"><b>Jumlah Bayar</b> </th>
+                                <th scope="col">Nama Komunitas </th>
+                                <th scope="col">Koordinator</th>
+                                <th scope="col">Nama Atlet</th>
                                 <th scope="col">Bukti Pembayaran</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse($data as $pembayaran)
+                            @forelse($data['pembayaran'] as $pembayaran)
+                            @php
+                                $komunitas = '-';
+                                $koordinator = '-';
+                                $atlet = '-';
+                                // if($pembayaran->no_invoice == 11) dd($pembayaran->detailPembayaran()->count());
+                                if( $pembayaran->detailPembayaran()->count() > 1){
+                                    $komunitas = $pembayaran->detailPembayaran[0]->atletAktif->koordinator->nama_komunitas;
+                                    $koordinator = $pembayaran->detailPembayaran[0]->atletAktif->koordinator->nama_koordinator;
+                                }else{
+                                    if( $pembayaran->detailPembayaran()->count() != 0) {
+                                        $atlet = $pembayaran->detailPembayaran[0]->atletAktif->atlet->nama;
+                                    }
+                                }   
+                            @endphp
                             <tr>
-                                <td>{{ $pembayaran['pembayaran']->no_invoice }}</td>
-                                <td>{{ $pembayaran['pendaftaran']->kode_pendaftaran }}</td>
-                                <td>{{ $pembayaran['pendaftaran']->relasiAtlet->nama }}</td>
-                                <td>{{ $pembayaran['pendaftaran']->relasiKoordinasi->value }}</td>
-                                <td>{{ $pembayaran['pembayaran']->total_bayar }}</td>
-                                <td>{{ $pembayaran['pendaftaran']->relasiPendaftaranStatus->value }}</td>
-                                <td><img src="{{ asset('image/'. $pembayaran['pembayaran']->bukti_pembayaran) }}" width='75' height='75'></td>
+                                <td>{{ $pembayaran->no_invoice }}</td>
+                                <td>Rp.{{ number_format($pembayaran->total_bayar,0, ',' , '.') }}</td>
+                                <td>{{ $komunitas }}</td>
+                                <td>{{ $koordinator }}</td>
+                                <td>{{ $atlet }}</td>
+                                <td>
+                                    @if( $pembayaran->bukti_pembayaran != '')
+                                    <img src="{{ asset('image/'. $pembayaran->bukti_pembayaran) }}" width='75' height='75'>
+                                    @else
+                                    -
+                                    @endif
+                                </td>
                                 <td>
                                     <a href="#">
                                         <button type="button" class="btn btn-sm btn-info">Edit</button>
@@ -67,7 +85,7 @@
                 </div>
                 <div class="card-footer text-right">
                     <nav class="d-inline-block">
-                        {!! $data->appends(request()->except('page'))->render() !!}
+                        {!! $data['pembayaran']->appends(request()->except('page'))->render() !!}
                     </nav>
                 </div>
             </div>

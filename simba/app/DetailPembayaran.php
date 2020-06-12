@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\AtletAktif;
 
 class DetailPembayaran extends Model
 {
@@ -15,4 +16,9 @@ class DetailPembayaran extends Model
   ];
 
   public $timestamps = false;
+
+  public function atletAktif()
+  {
+    return $this->belongsTo(AtletAktif::class, 'atlet_aktif_id');
+  }
 }
