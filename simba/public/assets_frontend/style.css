@@ -1059,7 +1059,7 @@ ul li:hover #dropdown{
 
 /* ====================Konfirmasi Pembayaran====================*/
 .box-pembayaran{
-    width: 60%;
+    width: 50%;
     outline: none;
     box-sizing: border-box;
     padding: 5px;
@@ -1128,10 +1128,9 @@ ul li:hover #dropdown{
 .bg-popup, #poppembayaran{
     position: absolute;
     width: 0%;
-    height: 0%;
-    
+    height: 0%;   
     background-color: rgba(50, 50, 50, 0.7);
-    overflow: hidden;
+    overflow: auto;
 }
 #poppembayaran:target{
     width: 100%;
@@ -1144,11 +1143,11 @@ ul li:hover #dropdown{
     top: 50%;
     left: 50%;
     background-color: white;
-    transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-43%);
+    -webkit-transform: translateX(-50%) translateY(-43%);
+    -moz-transform: translateX(-50%) translateY(-43%);
+    -ms-transform: translateX(-50%) translateY(-43%);
+    -o-transform: translateX(-50%) translateY(-43%);
     z-index: 2;
     padding: 10px;
     overflow: auto;
@@ -1462,16 +1461,52 @@ footer .copyright h4, footer{
         font-size: 13px;
         color: #9DA0A7;
     }
+    
+    #menu, .menu{
+        position: relative;
+        display: block;
+        align-items: none;
+        width: 100%;
+        height: max-content;
+        bottom: 100%;
+        padding-bottom: 20px;
+        background-color: #323232;
+        z-index: 9999999;
+        transition: .3s ease-in;
+        -webkit-transition: .3s ease-in;
+        -moz-transition: .3s ease-in;
+        -ms-transition: .3s ease-in;
+        -o-transition: .3s ease-in;
+        transform: none;
+        top: -20em;
+        right: 0;
+        bottom:0px;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+}
     .menu ul{
         width: 100%;
-        display: flex;        
+        display: block;        
         align-items: center;
         justify-content: center;
     }
     .menu ul li{    
         font-size: 12px;
-        margin-left: 10px;
-        display: inline-block;
+        margin-left: 0;
+        margin: 0;
+        display: block;
+        float: none;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .menu ul .close{
+        height: 70px;
+        position: absolute;
+        left: 10px;
+        display: block;
+        top: -5px;
     }
     /* ====================Akhir MENU====================*/
     /* ====================Jumbotron====================*/
