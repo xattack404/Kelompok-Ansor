@@ -22,7 +22,7 @@
             <div class="ket-serch">
                 Input No Invoice
             </div>
-            <input type="search" name="" id="">
+            <input type="search" name="no_invoice" id="">
             <button type="button">
                <a href="#poppembayaran"> Cari </a>
             </button>
