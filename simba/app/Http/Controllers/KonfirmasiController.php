@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Pembayaran;
 use Illuminate\Http\Request;
 
 class KonfirmasiController extends Controller
@@ -45,7 +45,10 @@ class KonfirmasiController extends Controller
      */
     public function show($id)
     {
-        //
+        $inv = Pembayaran::where('no_invoice', $id)
+            ->get();
+
+        return json_encode($inv);
     }
 
     /**
