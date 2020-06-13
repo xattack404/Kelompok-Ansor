@@ -14,7 +14,7 @@
 <!-- konten-->
 <form class="box-lomba">
     <div class="info-lomba">    
-        <h1>Lomba tidak Tersedia</h1>    
+
     </div>
     <div class="img">
         <img src="{{ asset('image/'. $data['cabang_olahraga']->foto) }}" alt="">    
@@ -27,7 +27,6 @@
         <p><label for="">KETERANGAN : <br> <br></label>
         {{ $data['cabang_olahraga']->deskripsi }}
         </p>
-        
         <a href="{{ route('frontend.registrasi.index')}}"><button type="button">Registrasi</button></a>
     </div>
 </form>

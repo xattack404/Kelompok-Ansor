@@ -22,6 +22,7 @@
                 <li><a class="page-scroll" href="#konten">Event</a></li>
                 <li><a class="page-scroll" href="#">Atlet Aktif</a></li>
                 <li><a class="page-scroll" href="#">More Info</a></li>
+                <li><a class="page-scroll" href="{{ route('frontend.konfirmasi.index')}}">Konfirmasi Pembayaran</a></li>
                 <li><a class="page-scroll" href="{{ route('frontend.registrasi.index')}}">Registrasi</a></li>
         </ul>               
     </div>
