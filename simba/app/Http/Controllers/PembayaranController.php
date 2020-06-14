@@ -3,9 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Pembayaran;
+use App\DetailPembayaran;
+use App\Atlet;
+use App\AtletAktif;
+use App\Komunitas;
+use App\Pendaftaran;
+use App\PendaftaranStatus;
 use Illuminate\Http\Request;
 
-class KonfirmasiController extends Controller
+class PembayaranController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +20,9 @@ class KonfirmasiController extends Controller
      */
     public function index()
     {
-        return view('frontend.konfirmasi.index');
+        $data['pembayaran'] = Pembayaran::paginate(10);
+        $data['pendaftaran'] = Pendaftaran::paginate(10);
+        return view('pembayaran.index', compact('data'));
     }
 
     /**
@@ -22,11 +30,9 @@ class KonfirmasiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function form($no_invoice)
+    public function create()
     {
-        $data = Pembayaran::where('no_invoice', $no_invoice)->first();
-
-        return view('frontend.konfirmasi.form', compact('data'));
+        //
     }
 
     /**
@@ -35,7 +41,7 @@ class KonfirmasiController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $no_invoice)
+    public function store(Request $request)
     {
         //
     }
@@ -48,10 +54,7 @@ class KonfirmasiController extends Controller
      */
     public function show($id)
     {
-        $inv = Pembayaran::where('no_invoice', $id)
-            ->get();
-
-        return json_encode($inv);
+        //
     }
 
     /**

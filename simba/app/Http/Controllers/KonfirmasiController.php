@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Pembayaran;
 use Illuminate\Http\Request;
 
@@ -21,9 +22,11 @@ class KonfirmasiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function form($no_invoice)
     {
-        //
+        $data = Pembayaran::where('no_invoice', $no_invoice)->first();
+
+        return view('frontend.konfirmasi.form', compact('data'));
     }
 
     /**
@@ -32,7 +35,7 @@ class KonfirmasiController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $no_invoice)
     {
         //
     }

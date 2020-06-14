@@ -50,7 +50,7 @@
                 <td>{{ $detail->atletAktif->atlet->tgl_lahir }}</td>
                 <td>{{ $detail->atletAktif->atlet->jenis_kelamin }}</td>
                 <td>reguler</td>
-                <td>tapais</td>
+                <td></td>
             </tr>
             @endforeach
         </table>

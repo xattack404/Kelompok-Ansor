@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\AtletAktif;
+use App\Kategori;
 
 class DetailPembayaran extends Model
 {
@@ -20,5 +21,9 @@ class DetailPembayaran extends Model
   public function atletAktif()
   {
     return $this->belongsTo(AtletAktif::class, 'atlet_aktif_id');
+  }
+  public function kategori()
+  {
+    return $this->belongsTo(Kategori::class, 'kategori');
   }
 }
