@@ -22,7 +22,8 @@ class DetailPembayaran extends Model
   {
     return $this->belongsTo(AtletAktif::class, 'atlet_aktif_id');
   }
-  public function kategori()
+
+  public function kategoriRelasi()
   {
     return $this->belongsTo(Kategori::class, 'kategori');
   }

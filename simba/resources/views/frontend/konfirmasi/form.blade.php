@@ -6,6 +6,7 @@
     @php
     $koordinator = $data->detailPembayaran[0]->atletAktif->koordinator;
     @endphp
+    @if( ! empty($koordinator))
     <div class="input">
         <label for="">nama lengkap</label>
         <div class="ket"> {{ $koordinator->nama_koordinator }}</div>
@@ -34,7 +35,7 @@
             <div class="ket"> {{ $data->detailPembayaran()->count() }}</div>
         </div>
     </div>
-
+    @endif
     <div class="input">
         <table border="1" cellpadding="5" cellspacing="0">
             <tr>
@@ -50,7 +51,7 @@
                 <td>{{ $detail->atletAktif->atlet->tgl_lahir }}</td>
                 <td>{{ $detail->atletAktif->atlet->jenis_kelamin }}</td>
                 <td>reguler</td>
-                <td></td>
+                <td>{{ $detail->kategoriRelasi->nama_kategori }}</td>
             </tr>
             @endforeach
         </table>
