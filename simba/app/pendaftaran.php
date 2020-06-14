@@ -38,7 +38,7 @@ class Pendaftaran extends Model
     return $this->belongsTo(Koordinasi::class, 'koordinasi_id');
   }
 
-  public function relasiPendaftaranStatus()
+  public function status()
   {
 
     return $this->belongsTo(PendaftaranStatus::class, 'pendaftaran_status_id');

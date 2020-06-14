@@ -54,6 +54,7 @@
                 <td>{{ $detail->kategoriRelasi->nama_kategori }}</td>
             </tr>
             @endforeach
+
         </table>
     </div>
 
