@@ -3,20 +3,20 @@
         <h1>Identitas Anggota #<?= $i; ?></h1>
     </div>
     <div class="input">
-        <label for="nik">NIK Anggots</label>
+        <label for="nik">NIK Anggota</label>
         <input type="number" name="anggota_nik_id[]" id="nik_id" placeholder="masukan NIK" required>
     </div>
     <div class="input">
         <label for="namaanggota">Nama Anggota</label>
-        <input type="text" id="namaanggota" name="anggota_namaanggota[]" placeholder="masukan nama anggota komunitas">
+        <input type="text" id="namaanggota" name="anggota_namaanggota[]" placeholder="masukan nama anggota komunitas" required>
     </div>
     <div class="input">
         <label for="namakom">Tanggal lahir</label>
-        <input type="date" id="namakom" name="anggota_tanggal_lahir[]">
+        <input type="date" id="namakom" name="anggota_tanggal_lahir[]" required>
     </div>
     <div class="input">
         <label for="">jenis kelamin</label>
-        <select name="anggota_jenis_kelamin[]" id="">
+        <select name="anggota_jenis_kelamin[]" id="" required>
             <option value="">--pilih--</option>
             <option value="L">laki - laki</option>
             <option value="P">perempuan</option>
@@ -24,7 +24,7 @@
     </div>
     <div class="input">
         <label for="">Status kewarganegaraan</label>
-        <select name="anggota_warga_negara[]" id="">
+        <select name="anggota_warga_negara[]" id="" required>
             <option value="">--pilih--</option>
             <option value="WNI">Warga negara indonesia</option>
             <option value="WNA">Warga negara asing</option>

@@ -37,7 +37,16 @@ class KonfirmasiController extends Controller
      */
     public function store(Request $request, $no_invoice)
     {
-        //
+        $fileName = 'buktibyr-' . date('Ymdhis') . '.' . $request->foto->getClientOriginalExtension();
+        $request->foto->move('bukti_bayar/', $fileName);
+        Pembayaran::whereNoInvoice($no_invoice)
+            ->update([
+                'nama_bank' => $request->nama_bank,
+                'no_rekening' => $request->no_rekening,
+                'nama_pemilik' => $request->nama_pemilik,
+                'bukti_pembayaran' => $fileName
+            ]);
+        return redirect()->route('frontend.konfirmasi.index')->with('succes', ' Berhasil Disimpan.');;
     }
 
     /**

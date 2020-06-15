@@ -1,4 +1,5 @@
 <form class="popup-pembayaran" action="{{ route('frontend.konfirmasi.submit', ['no_invoice' => $data->no_invoice]) }}" enctype="multipart/form-data" method="POST">
+    <input type="hidden" name="_method" value="PUT">
     @csrf
     <div class="keterangan-popup">
         Konfirmasi pembayaran No Invoice <span>{{ $data->no_invoice}}</span>
@@ -67,7 +68,7 @@
 
         <div class="input">
             <label for="">No Rekening</label>
-            <input type="text" name="no_rek" id="no_rek" placeholder="Masukan Nomor Rekening" required>
+            <input type="text" name="no_rekening" id="no_rekening" placeholder="Masukan Nomor Rekening" required>
         </div>
 
         <div class="input">
@@ -85,7 +86,7 @@
         <div class="input">
             <label for="">upload bukti pembayaran</label>
             <div class="upload-box">
-                <input type="file" name="" id="upload">
+                <input type="file" name="foto" id="foto">
             </div>
         </div>
     </div>

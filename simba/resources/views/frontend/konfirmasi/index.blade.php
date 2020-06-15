@@ -13,6 +13,7 @@
 
 <body>
     @include('layouts.frontendnavbar')
+    @include('layouts.partials.alert')
     <!-- konten-->
     <!-- /* ====================Konfirmasi Pembayaran====================*/ -->
     <div class="box-pembayaran" id="box-pemby">

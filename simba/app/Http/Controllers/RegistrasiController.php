@@ -81,6 +81,7 @@ class RegistrasiController extends Controller
                 'koordinasi_id'          => 1,
                 'pendaftaran_status_id'  => 1
             ]);
+            return redirect()->route('frontend.registrasi.index')->with('succes', 'Registrasi Berhasil.');
         } else {
 
             // simpan data komunitas
