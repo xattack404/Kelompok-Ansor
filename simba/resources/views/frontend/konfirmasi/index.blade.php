@@ -27,7 +27,7 @@
             </div>
             <input type="search" name="no_invoice" id="no_invoice">
             <button type="button" class="btn btn-success button">
-                <a href="#poppembayaran" onclick="loadInvoice()"> Cari </a>
+                <a href="#bayar" onclick="loadInvoice()"> Cari </a>
             </button>
         </form>
     </div>
@@ -35,8 +35,41 @@
 
 
     <!-- ====== pop up ======= -->
-    <div class="bg-popup" id="poppembayaran">
-        <form class="popup-pembayaran" action="" id="">
+    <form action="" class="popup-tambah" id="tambah">
+        <div class="no-atlit">Nomor Lomba Atlit <span>12435</span></div>
+
+        <div class="aksi-popup">
+            <button type="submit" style="background-color: #2980b9;">Tambah Lomba</button>
+            <button type="submit" style="background-color: #4edc82;">Simpan Perubahan</button>
+            <a href="#bayar" style="background-color: #e74c3c;">Kembali</a>
+        </div>
+
+        <div class="tabel-tambah">
+            <table border="0" cellpadding="5" cellspacing="0">
+                <tr>
+                    <th style="min-width: 100px;">Nama Atlit</th>
+                    <th style="min-width: 100px;">Tanggal Lahir</th>
+                    <th style="min-width: 80px;">Jenis Kelamin</th>
+                    <th style="min-width: 100px;">Kelas</th>
+                    <th style="min-width: 100px;">Kategori</th>
+                    <th style="min-width: 100px;">No Lomba</th>
+                </tr>
+                <tr>
+                    <td>inemmmama</td>
+                    <td>28 Desember 1999</td>
+                    <td>laki-laki</td>
+                    <td>kelas 4 sd</td>
+                    <td>veteran</td>
+                    <td><select name="" id="">
+                        <option value="">--Pilih--</option>
+                        <option value="">400m</option>
+                    </select></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    <!-- ================================ -->
+    <form class="popup-pembayaran" action="" id="bayar">
             <div class="keterangan-popup">
                 Konfirmasi pembayaran No Invoice <span>1234567889</span>
             </div>
@@ -73,18 +106,18 @@
             <div class="input">
                 <table border="1" cellpadding="5" cellspacing="0">
                     <tr>
-                        <th>Nama Atlit</th>
-                        <th>Tanggal Lahir</th>
-                        <th>Jenis Kelamin</th>
-                        <th>Kelas</th>
-                        <th>Kategori</th>
+                        <th style="min-width: 100px;">Nama Atlit</th>
+                        <th style="min-width: 100px;">Tanggal Lahir</th>
+                        <th style="min-width: 80px;">Jenis Kelamin</th>
+                        <th style="min-width: 100px;">Kelas</th>
+                        <th style="min-width: 200px;">Kategori</th>
                     </tr>
                     <tr>
                         <td>agoes klepon</td>
                         <td>45 mei 1890</td>
                         <td>lakek</td>
                         <td>reguler</td>
-                        <td>tapais</td>
+                        <td style="padding-right: 110px;">tapais <div class="tambah-nolomba"><a href="#tambah">tambah no lomba</a></div></td>
                     </tr>
                 </table>
             </div>
@@ -137,11 +170,10 @@
                 <a href="#box-pemby"><button type="button">keluar</button></a>
                 <button type="submit" class=".blue">Simpan Perubahan</button>
             </div>
-        </form>
-    </div>
+    </form>
     <!-- ====== pop up akhir ======= -->
 
-    </form>
+    <div class="bg-popup" id="poppembayaran"></div>
     <!-- Akhir konten-->
 
 
