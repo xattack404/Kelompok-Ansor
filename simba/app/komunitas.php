@@ -22,4 +22,8 @@ class Komunitas extends Model
   ];
 
   public $timestamps = true;
+  public function pendaftaran()
+  {
+    return $this->hasOne(Pendaftaran::class, 'koordinator_id', 'id');
+  }
 }

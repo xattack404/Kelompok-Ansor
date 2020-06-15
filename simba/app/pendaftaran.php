@@ -40,7 +40,6 @@ class Pendaftaran extends Model
 
   public function status()
   {
-
     return $this->belongsTo(PendaftaranStatus::class, 'pendaftaran_status_id');
   }
 }

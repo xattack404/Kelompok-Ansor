@@ -99,7 +99,13 @@
 
     <div class="input">
         <label for="">Status Pembayaran</label>
-        <div class="ket">{{ $data->detailPembayaran->atletAktif->atlet->pendaftaran->status->value }}</div>
+        <div class="ket">
+            @if( empty($koordinator))
+            {{ $data->detailPembayaran[0]->atletAktif->atlet->pendaftaran->status->value }}
+            @else
+            {{ $koordinator->pendaftaran->status->value }}
+            @endif
+        </div>
     </div>
 
     <div class="submit-pembayran">
