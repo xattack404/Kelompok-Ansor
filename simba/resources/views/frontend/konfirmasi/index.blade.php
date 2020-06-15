@@ -27,7 +27,7 @@
             </div>
             <input type="search" name="no_invoice" id="no_invoice">
             <button type="button" class="btn btn-success button">
-                <a href="#bayar" onclick="loadInvoice()"> Cari </a>
+                <a href="#poppembayaran" onclick="loadInvoice()"> Cari </a>
             </button>
         </form>
     </div>
@@ -61,15 +61,16 @@
                     <td>kelas 4 sd</td>
                     <td>veteran</td>
                     <td><select name="" id="">
-                        <option value="">--Pilih--</option>
-                        <option value="">400m</option>
-                    </select></td>
+                            <option value="">--Pilih--</option>
+                            <option value="">400m</option>
+                        </select></td>
                 </tr>
             </table>
         </div>
     </form>
     <!-- ================================ -->
-    <form class="popup-pembayaran" action="" id="bayar">
+    <div class="bg-popup" id="poppembayaran">
+        <form class="popup-pembayaran" action="" id="bayar">
             <div class="keterangan-popup">
                 Konfirmasi pembayaran No Invoice <span>1234567889</span>
             </div>
@@ -117,7 +118,8 @@
                         <td>45 mei 1890</td>
                         <td>lakek</td>
                         <td>reguler</td>
-                        <td style="padding-right: 110px;">tapais <div class="tambah-nolomba"><a href="#tambah">tambah no lomba</a></div></td>
+                        <td style="padding-right: 110px;">tapais <div class="tambah-nolomba"><a href="#tambah">tambah no lomba</a></div>
+                        </td>
                     </tr>
                 </table>
             </div>
@@ -170,10 +172,10 @@
                 <a href="#box-pemby"><button type="button">keluar</button></a>
                 <button type="submit" class=".blue">Simpan Perubahan</button>
             </div>
-    </form>
-    <!-- ====== pop up akhir ======= -->
+        </form>
+        <!-- ====== pop up akhir ======= -->
 
-    <div class="bg-popup" id="poppembayaran"></div>
+    </div>
     <!-- Akhir konten-->
 
 
