@@ -91,17 +91,18 @@
             <div class="input-boxpopup2">
                 <div class="input">
                     <label for="">Nama Bank</label>
-                    <div class="ket"> BNI</div>
+                    <input type="text" name="nama_bank" id="nama_bank" placeholder="Masukan Nama Bank" required>
+
                 </div>
 
                 <div class="input">
                     <label for="">No Rekening</label>
-                    <div class="ket"> 123456789</div>
+                    <input type="text" name="no_rek" id="no_rek" placeholder="Masukan Nomor Rekening" required>
                 </div>
 
                 <div class="input">
-                    <label for="">Nama Rekening</label>
-                    <div class="ket"> Tahajjudin Fajri </div>
+                    <label for="">Nama Pemilik Rekening</label>
+                    <input type="text" name="nama_pemilik" id="nama_pemilik" placeholder="Masukan Nama Pemilik Rekening" required>
                 </div>
             </div>
 

@@ -24,6 +24,6 @@ class Atlet extends Model
   public $timestamps = true;
   public function pendaftaran()
   {
-    return $this->belongsTo(Pendaftaran::class, 'nik_id', 'koordinator_id');
+    return $this->belongsTo(Pendaftaran::class, 'nik_id');
   }
 }
