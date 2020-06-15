@@ -1125,7 +1125,7 @@ ul li:hover #dropdown{
     -ms-border-radius: 0px;
     -o-border-radius: 0px;
 }
-.bg-popup, #poppembayaran{
+.bg-popup, #poppembayarann{
     display: none;
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
@@ -1134,7 +1134,7 @@ ul li:hover #dropdown{
     bottom: 0;
     left: 0;
 }
-.popup-pembayaran, #bayar{
+.popup-pembayarann, #bayar{
     display: none;
     width: 50%;
     position: absolute;
@@ -1344,7 +1344,7 @@ button a{
 #tambah:target~#bayar{
     display: none;
 }
-#bayar:target~#poppembayaran, #tambah:target~#poppembayaran{
+#bayar:target~#poppembayarann, #tambah:target~#poppembayarann{
     display: block;
 }
 /* ====================Konfirmasi Pembayaran Akhir====================*/

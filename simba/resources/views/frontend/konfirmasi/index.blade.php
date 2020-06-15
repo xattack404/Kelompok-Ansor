@@ -27,7 +27,7 @@
             </div>
             <input type="search" name="no_invoice" id="no_invoice">
             <button type="button" class="btn btn-success button">
-                <a href="#poppembayaran" onclick="loadInvoice()"> Cari </a>
+                <a href="#bayar" onclick="loadInvoice()"> Cari </a>
             </button>
         </form>
     </div>
@@ -69,7 +69,7 @@
         </div>
     </form>
     <!-- ================================ -->
-    <div class="bg-popup" id="poppembayaran">
+    <div class="" id="poppembayaran">
         <form class="popup-pembayaran" action="" id="bayar">
             <div class="keterangan-popup">
                 Konfirmasi pembayaran No Invoice <span>1234567889</span>
@@ -177,7 +177,7 @@
 
     </div>
     <!-- Akhir konten-->
-
+    <div class="bg-popup" id="poppembayarann"></div>
 
     <footer>
         <div class="copyright">
