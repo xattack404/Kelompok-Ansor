@@ -186,6 +186,7 @@
         </div>
     </footer>
 
+
     <script src="{{ asset('assets_frontend/js/style.js') }}"></script>
     <script type="text/javascript">
         $(document).ready(function() {
