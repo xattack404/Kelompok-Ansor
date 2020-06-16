@@ -34,42 +34,45 @@
 
 
     <!-- ====== pop up ======= -->
-    <form action="" class="popup-tambah" id="tambah">
-        <div class="no-atlit">Nomor Lomba Atlit Aktif (ID: <span>123)</span></div>
+    <div id="popuptambah">
+        <form action="" class="popup-tambah" id="tambah">
+            <div class="no-atlit">Nomor Lomba Atlit Aktif (ID: <span>123)</span></div>
 
-        <div class="aksi-popup">
-            <button type="submit" style="background-color: #90e98b;">Tambah Lomba</button>
-            <button type="submit" style="background-color: #2980b9;">Simpan Perubahan</button>
-            <a href="#poppembayaran" style="background-color: #e74c3c;">Kembali</a>
-        </div>
+            <div class="aksi-popup">
+                <button type="submit" style="background-color: #90e98b;">Tambah Lomba</button>
+                <button type="submit" style="background-color: #2980b9;">Simpan Perubahan</button>
+                <a href="#poppembayaran" style="background-color: #e74c3c;">Kembali</a>
+            </div>
 
-        <div class="tabel-tambah">
-            <table border="0" cellpadding="5" cellspacing="0">
-                <tr>
-                    <th style="min-width: 100px;">Nama Atlit</th>
-                    <th style="min-width: 100px;">Tanggal Lahir</th>
-                    <th style="min-width: 80px;">Jenis Kelamin</th>
-                    <th style="min-width: 100px;">Kelas</th>
-                    <th style="min-width: 100px;">Kategori</th>
-                    <th style="min-width: 100px;">Pilih Lomba</th>
-                </tr>
-                <tr>
-                    <td>inemmmama</td>
-                    <td>28 Desember 1999</td>
-                    <td>laki-laki</td>
-                    <td>kelas 4 sd</td>
-                    <td>veteran</td>
-                    <td>
-                        <select name="" id="">
-                            <option value="">--Pilih--</option>
-                            <option value="">400m</option>
-                        </select>
-                        <a href="#" style="background-color: #e74c3c; color:white;">X</a>
-                    <td>
-                </tr>
-            </table>
-        </div>
-    </form>
+            <div class="tabel-tambah">
+                <table border="0" cellpadding="5" cellspacing="0">
+                    <tr>
+                        <th style="min-width: 100px;">Nama Atlit</th>
+                        <th style="min-width: 100px;">Tanggal Lahir</th>
+                        <th style="min-width: 80px;">Jenis Kelamin</th>
+                        <th style="min-width: 100px;">Kelas</th>
+                        <th style="min-width: 100px;">Kategori</th>
+                        <th style="min-width: 100px;">Pilih Lomba</th>
+                    </tr>
+                    <tr>
+                        <td>inemmmama</td>
+                        <td>28 Desember 1999</td>
+                        <td>laki-laki</td>
+                        <td>kelas 4 sd</td>
+                        <td>veteran</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">--Pilih--</option>
+                                <option value="">400m</option>
+                            </select>
+                            <a href="#" style="background-color: #e74c3c; color:white;">X</a>
+                        <td>
+                    </tr>
+                </table>
+            </div>
+        </form>       
+        <div class="bg-popup" id="poppembayarann"></div>
+    </div>
     <!-- =================================================================== -->
     <div class="bg-popup" id="poppembayaran">
         <form class="popup-pembayaran" action="" id="">
@@ -177,7 +180,6 @@
         </form>
     </div>
     <!-- ====== pop up akhir ======= -->
-    <div class="bg-popup" id="poppembayarann"></div>
     </form>
     <!-- Akhir konten-->
 
