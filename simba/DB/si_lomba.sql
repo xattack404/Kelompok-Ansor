@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2020 at 06:26 AM
+-- Generation Time: Jun 15, 2020 at 04:14 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.1.32
 
@@ -50,8 +50,13 @@ CREATE TABLE `atlet` (
 
 INSERT INTO `atlet` (`nik_id`, `nama`, `tgl_lahir`, `jenis_kelamin`, `alamat`, `kecamatan`, `kabupaten_kota`, `provinsi`, `warga_negara`, `email`, `no_hp`, `created_at`, `updated_at`) VALUES
 ('12', 'Tahajjudi Fajri', '2020-06-04', 'L', 'dd', 'Paiton', 'Prob', 'Jatim', 'WNI', 'andi@gmail.com', '3213123153453', '2020-05-31 04:53:54', '2020-05-31 04:53:54'),
+('1212', 'aa', '2020-06-09', 'L', 'aa', 'aa', 'aa', 'aa', 'WNI', 'a@a.com', '222', '2020-06-09 11:02:46', '2020-06-09 11:02:46'),
 ('3243', 'adi irawan', '2020-05-20', 'L', 'af', 'Paiton', 'Prob', 'Jatim', 'WNI', 'lindadewilinda@gmail.com', '122', '2020-05-31 04:56:34', '2020-05-31 04:56:34'),
-('3513120608980001', 'Lambang Arinanda Hadi', '2020-05-14', 'L', 'h', 'Paiton', 'Probolinggo', 'Jawa Timur', 'WNI', 'dr.naba.upptn@gmail.com', '3213123153453', '2020-05-31 03:56:26', '2020-05-31 03:56:26');
+('33', 'ss', '2020-06-11', 'P', 'ss', 'ss', 'ss', 'ss', 'WNI', 's@s.com', '2332', '2020-06-09 11:02:47', '2020-06-09 11:02:47'),
+('3513120608980001', 'Lambang Arinanda Hadi', '2020-05-14', 'L', 'h', 'Paiton', 'Probolinggo', 'Jawa Timur', 'WNI', 'dr.naba.upptn@gmail.com', '3213123153453', '2020-05-31 03:56:26', '2020-05-31 03:56:26'),
+('3544545', 'ridwan', '2020-06-01', 'L', 'paiton', 'paiton', 'prob', 'jatim', 'WNI', 'a@a.com', '222', '2020-06-15 00:02:54', '2020-06-15 00:02:54'),
+('56563225677', 'regita', '2020-06-03', 'P', 'jupit', 'mars', 'mars', 'mars', 'WNI', 'c@a.com', '42267777755', '2020-06-15 00:02:54', '2020-06-15 00:02:54'),
+('56767755', 'fandik', '2020-06-02', 'L', 'taoh', 'jateng', 'indo', 'jabar', 'WNI', 's@s.com', '7777555', '2020-06-15 00:02:54', '2020-06-15 00:02:54');
 
 -- --------------------------------------------------------
 
@@ -72,7 +77,12 @@ CREATE TABLE `atlet_aktif` (
 INSERT INTO `atlet_aktif` (`id`, `koordinator_id`, `nik_id`) VALUES
 (8, NULL, '3513120608980001'),
 (9, NULL, '12'),
-(10, NULL, '3243');
+(10, NULL, '3243'),
+(12, 1, '1212'),
+(13, 1, '33'),
+(16, 4, '3544545'),
+(17, 4, '56767755'),
+(18, 4, '56563225677');
 
 -- --------------------------------------------------------
 
@@ -135,7 +145,12 @@ CREATE TABLE `detail_pembayaran` (
 INSERT INTO `detail_pembayaran` (`id`, `no_invoice`, `atlet_aktif_id`, `kategori`, `harga`) VALUES
 (6, 6, 8, 1, '50000'),
 (7, 7, 9, 5, '10000'),
-(8, 8, 10, 1, '50000');
+(8, 8, 10, 1, '50000'),
+(10, 10, 12, 1, '50000'),
+(11, 10, 13, 5, '10000'),
+(14, 13, 16, 1, '50000'),
+(15, 13, 17, 1, '50000'),
+(16, 13, 18, 5, '10000');
 
 -- --------------------------------------------------------
 
@@ -188,11 +203,21 @@ CREATE TABLE `komunitas` (
   `kabupaten_kota` varchar(20) NOT NULL,
   `provinsi` varchar(20) NOT NULL,
   `warga_negara` enum('WNI','WNA') NOT NULL,
-  `email` varchar(20) NOT NULL,
+  `email` varchar(35) NOT NULL,
   `no_hp` varchar(15) NOT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `komunitas`
+--
+
+INSERT INTO `komunitas` (`id`, `nama_komunitas`, `nama_koordinator`, `tgl_lahir`, `jenis_kelamin`, `alamat`, `kecamatan`, `kabupaten_kota`, `provinsi`, `warga_negara`, `email`, `no_hp`, `created_at`, `updated_at`) VALUES
+(1, 'Reinforce', 'Lambang Arinanda', '2020-06-09', 'L', 'Sumberanyar', 'Paiton', 'Probolinggo', 'Jawa Timur', 'WNI', 'dr.naba.upptn@gmail.com', '082331833848', '2020-06-09 11:02:46', '2020-06-09 11:02:46'),
+(2, 'ronika', 'rahmat', '2020-06-08', 'L', 'sumberanyar', 'Paiton', 'Probolinggo', 'Jatim', 'WNI', 'oyong_hudae@yahoo.com', '3333233232333', '2020-06-15 00:01:46', '2020-06-15 00:01:46'),
+(3, 'ronika', 'rahmat', '2020-06-08', 'L', 'sumberanyar', 'Paiton', 'Probolinggo', 'Jatim', 'WNI', 'oyong_hudae@yahoo.com', '3333233232333', '2020-06-15 00:02:28', '2020-06-15 00:02:28'),
+(4, 'ronika', 'rahmat', '2020-06-08', 'L', 'sumberanyar', 'Paiton', 'Probolinggo', 'Jatim', 'WNI', 'oyong_hudae@yahoo.com', '3333233232333', '2020-06-15 00:02:53', '2020-06-15 00:02:53');
 
 -- --------------------------------------------------------
 
@@ -241,6 +266,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 CREATE TABLE `pembayaran` (
   `no_invoice` int(5) NOT NULL,
   `total_bayar` varchar(10) NOT NULL,
+  `nama_bank` varchar(20) DEFAULT NULL,
+  `no_rekening` varchar(20) DEFAULT NULL,
+  `nama_pemilik` varchar(40) DEFAULT NULL,
   `bukti_pembayaran` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -248,11 +276,13 @@ CREATE TABLE `pembayaran` (
 -- Dumping data for table `pembayaran`
 --
 
-INSERT INTO `pembayaran` (`no_invoice`, `total_bayar`, `bukti_pembayaran`) VALUES
-(6, '50000', NULL),
-(7, '10000', NULL),
-(8, '50000', NULL),
-(9, '50000', NULL);
+INSERT INTO `pembayaran` (`no_invoice`, `total_bayar`, `nama_bank`, `no_rekening`, `nama_pemilik`, `bukti_pembayaran`) VALUES
+(6, '50000', NULL, NULL, NULL, NULL),
+(7, '10000', NULL, NULL, NULL, NULL),
+(8, '50000', NULL, NULL, NULL, NULL),
+(9, '50000', NULL, NULL, NULL, NULL),
+(10, '60101', 'bni', '123', 'rahmat', 'buktibyr-20200615075640.jpg'),
+(13, '110101', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -276,7 +306,12 @@ CREATE TABLE `pendaftaran` (
 INSERT INTO `pendaftaran` (`id`, `kode_pendaftaran`, `koordinator_id`, `nik_id`, `koordinasi_id`, `pendaftaran_status_id`) VALUES
 (3, 'REG-3513120608980001-20200531105626', NULL, '3513120608980001', 1, 1),
 (4, 'REG-12-20200531115355', NULL, '12', 1, 1),
-(5, 'REG-3243-20200531115634', NULL, '3243', 1, 1);
+(5, 'REG-3243-20200531115634', NULL, '3243', 1, 1),
+(7, 'REG-20200609060246', 1, '1212', 2, 1),
+(8, 'REG-20200609060246', 1, '33', 2, 1),
+(11, 'REG-20200615070254', 4, '3544545', 2, 1),
+(12, 'REG-20200615070254', 4, '56767755', 2, 1),
+(13, 'REG-20200615070254', 4, '56563225677', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -286,7 +321,7 @@ INSERT INTO `pendaftaran` (`id`, `kode_pendaftaran`, `koordinator_id`, `nik_id`,
 
 CREATE TABLE `pendaftaran_status` (
   `id` int(5) NOT NULL,
-  `value` enum('Pending','Proses','Dibayar','') NOT NULL
+  `value` enum('Pending','Proses','Di Verifikasi') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -296,7 +331,7 @@ CREATE TABLE `pendaftaran_status` (
 INSERT INTO `pendaftaran_status` (`id`, `value`) VALUES
 (1, 'Pending'),
 (2, 'Proses'),
-(3, 'Dibayar');
+(3, '');
 
 -- --------------------------------------------------------
 
@@ -316,7 +351,7 @@ CREATE TABLE `sub_kategori` (
 
 INSERT INTO `sub_kategori` (`id`, `kategori_id`, `nama_subkat`) VALUES
 (1, 5, 'Sprint 100m'),
-(4, 1, 'Sprint 200m');
+(4, 1, 'Sprint 200mm');
 
 -- --------------------------------------------------------
 
@@ -459,7 +494,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `atlet_aktif`
 --
 ALTER TABLE `atlet_aktif`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `cabang_olahraga`
@@ -477,7 +512,7 @@ ALTER TABLE `detail_event`
 -- AUTO_INCREMENT for table `detail_pembayaran`
 --
 ALTER TABLE `detail_pembayaran`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `informasi`
@@ -495,7 +530,7 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `komunitas`
 --
 ALTER TABLE `komunitas`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `koordinasi`
@@ -513,13 +548,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `pembayaran`
 --
 ALTER TABLE `pembayaran`
-  MODIFY `no_invoice` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `no_invoice` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `pendaftaran`
 --
 ALTER TABLE `pendaftaran`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `pendaftaran_status`
