@@ -52,7 +52,9 @@
                 <td>{{ $detail->atletAktif->atlet->tgl_lahir }}</td>
                 <td>{{ $detail->atletAktif->atlet->jenis_kelamin }}</td>
                 <td>reguler</td>
-                <td style="padding-right: 110px;">{{ $detail->kategoriRelasi->nama_kategori }} <div class="tambah-nolomba"><a href="#tambah">tambah no lomba</a></div></td>
+                <td style="padding-right: 110px;">{{ $detail->kategoriRelasi->nama_kategori }}
+                    <div class="tambah-nolomba"><a href="#tambah">Tambah Lomba</a></div>
+                </td>
             </tr>
             @endforeach
 

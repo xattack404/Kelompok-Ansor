@@ -35,7 +35,7 @@
 
     <!-- ====== pop up ======= -->
     <form action="" class="popup-tambah" id="tambah">
-        <div class="no-atlit">Nomor Lomba Atlit <span>12435</span></div>
+        <div class="no-atlit">Nomor Lomba Atlit Aktif (ID: <span>123)</span></div>
 
         <div class="aksi-popup">
             <button type="submit" style="background-color: #90e98b;">Tambah Lomba</button>
@@ -51,7 +51,7 @@
                     <th style="min-width: 80px;">Jenis Kelamin</th>
                     <th style="min-width: 100px;">Kelas</th>
                     <th style="min-width: 100px;">Kategori</th>
-                    <th style="min-width: 100px;">No Lomba</th>
+                    <th style="min-width: 100px;">Pilih Lomba</th>
                 </tr>
                 <tr>
                     <td>inemmmama</td>
@@ -60,9 +60,10 @@
                     <td>kelas 4 sd</td>
                     <td>veteran</td>
                     <td><select name="" id="">
-                        <option value="">--Pilih--</option>
-                        <option value="">400m</option>
-                    </select></td>
+                            <option value="">--Pilih--</option>
+                            <option value="">400m</option>
+                        </select></td>
+                    <td><a href="#"><button type="button" style="background-color: #e74c3c; color:white;">Hapus</button></a></td>
                 </tr>
             </table>
         </div>
@@ -117,7 +118,8 @@
                         <td>45 mei 1890</td>
                         <td>lakek</td>
                         <td>reguler</td>
-                        <td style="padding-right: 110px;">tapais <div class="tambah-nolomba"><a href="#tambah">tambah no lomba</a></div></td>
+                        <td style="padding-right: 110px;">tapais <div class="tambah-nolomba"><a href="#tambah">tambah no lomba</a></div>
+                        </td>
                     </tr>
                 </table>
             </div>
