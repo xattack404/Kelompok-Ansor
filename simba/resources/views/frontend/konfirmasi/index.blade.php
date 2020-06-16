@@ -59,11 +59,13 @@
                     <td>laki-laki</td>
                     <td>kelas 4 sd</td>
                     <td>veteran</td>
-                    <td><select name="" id="">
+                    <td>
+                        <select name="" id="">
                             <option value="">--Pilih--</option>
                             <option value="">400m</option>
-                        </select></td>
-                    <td><a href="#"><button type="button" style="background-color: #e74c3c; color:white;">Hapus</button></a></td>
+                        </select>
+                        <a href="#" style="background-color: #e74c3c; color:white;">X</a>
+                    <td>
                 </tr>
             </table>
         </div>
