@@ -1346,7 +1346,7 @@ button a{
     -o-border-radius: 0;
     text-align: center;
 }
-.popup-tambah .tabel-tambah table tr td a{
+.popup-tambah .tabel-tambah table tr td button{
     display: inline-block;
     outline: none;
     font-size: 14px;
@@ -1358,6 +1358,11 @@ button a{
     padding: 0;
     border: none;
     box-sizing: border-box;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
 }
 #bayar:target{
     display: block;

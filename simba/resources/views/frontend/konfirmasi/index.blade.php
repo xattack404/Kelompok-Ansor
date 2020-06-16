@@ -65,7 +65,7 @@
                                 <option value="">--Pilih--</option>
                                 <option value="">400m</option>
                             </select>
-                            <a href="#" style="background-color: #e74c3c; color:white;">X</a>
+                            <button href="#" style="background-color: #e74c3c; color:white;">X</button>
                         <td>
                     </tr>
                 </table>
