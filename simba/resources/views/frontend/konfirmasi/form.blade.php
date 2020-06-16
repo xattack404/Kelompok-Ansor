@@ -40,11 +40,11 @@
     <div class="input">
         <table border="1" cellpadding="5" cellspacing="0">
             <tr>
-                <th>Nama Atlit</th>
-                <th>Tanggal Lahir</th>
-                <th>Jenis Kelamin</th>
-                <th>Kelas</th>
-                <th>Kategori</th>
+                <th style="min-width: 100px;">Nama Atlit</th>
+                <th style="min-width: 100px;">Tanggal Lahir</th>
+                <th style="min-width: 80px;">Jenis Kelamin</th>
+                <th style="min-width: 100px;">Kelas</th>
+                <th style="min-width: 200px;">Kategori</th>
             </tr>
             @foreach($data->detailPembayaran as $detail)
             <tr>
@@ -52,14 +52,14 @@
                 <td>{{ $detail->atletAktif->atlet->tgl_lahir }}</td>
                 <td>{{ $detail->atletAktif->atlet->jenis_kelamin }}</td>
                 <td>reguler</td>
-                <td>{{ $detail->kategoriRelasi->nama_kategori }}</td>
+                <td style="padding-right: 110px;">{{ $detail->kategoriRelasi->nama_kategori }} <div class="tambah-nolomba"><a href="#tambah">tambah no lomba</a></div></td>
             </tr>
             @endforeach
 
         </table>
     </div>
 
-    <div class="input-boxpopup2">
+    <div class="input-boxpopup">
         <div class="input">
             <label for="">Nama Bank</label>
             <input type="text" name="nama_bank" id="nama_bank" placeholder="Masukan Nama Bank" required>
@@ -110,7 +110,7 @@
     </div>
 
     <div class="submit-pembayran">
-        <a href="#box-pemby"><button type="button">keluar</button></a>
-        <button type="submit" class=".blue">Simpan Perubahan</button>
+        <a href="#box-pemby"><button type="button" style="background-color: #e74c3c; color:white;">keluar</button></a>
+        <button type="submit" class="" style="background-color: #2980b9; color:white;">Simpan Perubahan</button>
     </div>
 </form>
