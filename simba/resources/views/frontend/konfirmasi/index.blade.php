@@ -72,35 +72,35 @@
     <div class="bg-popup" id="poppembayaran">
         <form class="popup-pembayaran" action="" id="">
             <div class="keterangan-popup">
-                Konfirmasi pembayaran No Invoice <span>1234567889</span>
+                Konfirmasi pembayaran No Invoice <span>?</span>
             </div>
 
             <div class="input">
                 <label for="">nama lengkap</label>
-                <div class="ket"> Tahajjudin</div>
+                <div class="ket"> - </div>
             </div>
 
             <div class="input-boxpopup">
                 <div class="input">
                     <label for="">No Telepon</label>
-                    <div class="ket"> 082330044949</div>
+                    <div class="ket"> -</div>
                 </div>
 
                 <div class="input">
                     <label for="">Email</label>
-                    <div class="ket"> tapai@gmail.com</div>
+                    <div class="ket"> -</div>
                 </div>
             </div>
 
             <div class="input-boxpopup">
                 <div class="input">
                     <label for="">Nama Komunitas</label>
-                    <div class="ket"> deng guring</div>
+                    <div class="ket"> -</div>
                 </div>
 
                 <div class="input">
                     <label for="">Jumlah Atlit</label>
-                    <div class="ket"> 5</div>
+                    <div class="ket"> 0</div>
                 </div>
             </div>
 
@@ -114,11 +114,11 @@
                         <th style="min-width: 200px;">Kategori</th>
                     </tr>
                     <tr>
-                        <td>agoes klepon</td>
-                        <td>45 mei 1890</td>
-                        <td>lakek</td>
-                        <td>reguler</td>
-                        <td style="padding-right: 110px;">tapais <div class="tambah-nolomba"><a href="#tambah">tambah no lomba</a></div>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td style="padding-right: 110px;">- <div class="tambah-nolomba"><a href="#tambah">tambah no lomba</a></div>
                         </td>
                     </tr>
                 </table>
@@ -145,7 +145,7 @@
             <div class="input-boxpopup">
                 <div class="input">
                     <label for="">Total yang harus dibayar</label>
-                    <div class="ket"> 1000000</div>
+                    <div class="ket"> 0 </div>
                 </div>
 
                 <div class="input">
