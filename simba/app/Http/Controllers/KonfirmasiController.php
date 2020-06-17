@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Pembayaran;
-use App\Cabangolahraga;
+use App\Subkategori;
 use Illuminate\Http\Request;
 
 class KonfirmasiController extends Controller
@@ -15,7 +15,7 @@ class KonfirmasiController extends Controller
      */
     public function index()
     {
-        $data['cabang_olahraga'] = Cabangolahraga::all();
+        $data['sub_kategori'] = Subkategori::all();
         return view('frontend.konfirmasi.index', compact('data'));
     }
 
@@ -34,8 +34,7 @@ class KonfirmasiController extends Controller
     public function form2($no_invoice)
     {
         $data['pembayaran'] = Pembayaran::where('no_invoice', $no_invoice)->first();
-        $data['cabang_olahraga'] = Cabangolahraga::all();
-
+        $data['sub_kategori'] = Subkategori::all();
         return view('frontend.konfirmasi.form2', compact('data'));
     }
     /**

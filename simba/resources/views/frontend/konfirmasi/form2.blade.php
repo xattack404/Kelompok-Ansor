@@ -29,8 +29,8 @@
                 <td>
                     <select name="lomba" id="lomba">
                         <option value="">--pilih--</option>
-                        @foreach($data['cabang_olahraga'] as $lomba)
-                        <option value="{{ $lomba->id }}">{{ $lomba->nama_or }}</option>
+                        @foreach($data['sub_kategori'] as $subkat)
+                        <option value="{{ $subkat->id }}">{{ $subkat->nama_subkat }}</option>
                         @endforeach
                     </select>
                     <button href="#" style="background-color: #e74c3c; color:white;">X</button>
