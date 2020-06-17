@@ -71,7 +71,6 @@
                 </table>
             </div>
         </form>
-        <div class="bg-popup" id="poppembayarann"></div>
     </div>
     <!-- =================================================================== -->
     <div class="bg-popup" id="poppembayaran">
@@ -123,7 +122,7 @@
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
-                        <td style="padding-right: 110px;">- <div class="tambah-nolomba"><a href="#tambah">tambah no lomba</a></div>
+                        <td style="padding-right: 110px;">- <div class="tambah-nolomba"><a href="#popuptambah">tambah no lomba</a></div>
                         </td>
                     </tr>
                 </table>

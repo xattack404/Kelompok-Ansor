@@ -1128,7 +1128,7 @@ ul li:hover #dropdown{
     -ms-border-radius: 0px;
     -o-border-radius: 0px;
 }
-.bg-popup, #poppembayaran{
+.bg-popup, #poppembayaran, #popuptambah{
     display: none;
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
@@ -1280,7 +1280,7 @@ button a{
     color: white;
 }
 .popup-tambah, #tambah{
-    display: none;
+    display: block;
     width: 50%;
     position: absolute;
     top: 25%;
@@ -1364,14 +1364,11 @@ button a{
     -ms-border-radius: 0;
     -o-border-radius: 0;
 }
+#popuptambah:target{
+    display: block;
+}
 #bayar:target{
     display: block;
-}
-#tambah:target{
-    display: block;
-}
-#tambah:target~#bayar{
-    display: none;
 }
 #tambah:target~#poppembayarann{
     display: block;
