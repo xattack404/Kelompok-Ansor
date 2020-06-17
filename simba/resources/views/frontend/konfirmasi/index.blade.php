@@ -61,16 +61,16 @@
                         <td>kelas 4 sd</td>
                         <td>veteran</td>
                         <td>
-                            <select name="" id="">
-                                <option value="">--Pilih--</option>
-                                <option value="">400m</option>
+                            <select name="lomba" id="lomba">
+                                <option value="">--pilih--</option>
+                                <option value=""> </option>
                             </select>
                             <button href="#" style="background-color: #e74c3c; color:white;">X</button>
                         <td>
                     </tr>
                 </table>
             </div>
-        </form>       
+        </form>
         <div class="bg-popup" id="poppembayarann"></div>
     </div>
     <!-- =================================================================== -->
@@ -221,6 +221,17 @@
                 type: "GET",
                 success: function(data) {
                     $('#poppembayaran').html(data);
+                }
+            });
+        }
+
+        function loadLomba() {
+            var no_invoice = $('#no_invoice').val();
+            $.ajax({
+                url: "{{ url('konfirmasi/form2') }}/" + no_invoice,
+                type: "GET",
+                success: function(data) {
+                    $('#popuptambah').html(data);
                 }
             });
         }

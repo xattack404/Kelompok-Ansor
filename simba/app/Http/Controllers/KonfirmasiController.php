@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Pembayaran;
+use App\Cabangolahraga;
 use Illuminate\Http\Request;
 
 class KonfirmasiController extends Controller
@@ -14,7 +15,8 @@ class KonfirmasiController extends Controller
      */
     public function index()
     {
-        return view('frontend.konfirmasi.index');
+        $data['cabang_olahraga'] = Cabangolahraga::all();
+        return view('frontend.konfirmasi.index', compact('data'));
     }
 
     /**
@@ -29,6 +31,13 @@ class KonfirmasiController extends Controller
         return view('frontend.konfirmasi.form', compact('data'));
     }
 
+    public function form2($no_invoice)
+    {
+        $data['pembayaran'] = Pembayaran::where('no_invoice', $no_invoice)->first();
+        $data['cabang_olahraga'] = Cabangolahraga::all();
+
+        return view('frontend.konfirmasi.form2', compact('data'));
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -57,10 +66,10 @@ class KonfirmasiController extends Controller
      */
     public function show($id)
     {
-        $inv = Pembayaran::where('no_invoice', $id)
-            ->get();
+        // $inv = Pembayaran::where('no_invoice', $id)
+        //     ->get();
 
-        return json_encode($inv);
+        // return json_encode($inv);
     }
 
     /**
