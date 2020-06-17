@@ -224,10 +224,9 @@
             });
         }
 
-        function loadLomba() {
-            var no_invoice = $('#no_invoice').val();
+        function loadLomba(nik_id) {
             $.ajax({
-                url: "{{ url('konfirmasi/form2') }}/" + no_invoice,
+                url: "{{ url('konfirmasi/form2') }}/" + nik_id,
                 type: "GET",
                 success: function(data) {
                     $('#popuptambah').html(data);

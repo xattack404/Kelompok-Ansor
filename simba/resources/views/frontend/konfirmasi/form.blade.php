@@ -53,9 +53,10 @@
                 <td>{{ $detail->atletAktif->atlet->jenis_kelamin }}</td>
                 <td>reguler</td>
                 <td style="padding-right: 110px;">{{ $detail->kategoriRelasi->nama_kategori }}
-                    <div class="tambah-nolomba"><a href="#popuptambah" onclick="loadLomba()">Tambah Lomba</a></div>
+                    <div class="tambah-nolomba"><a href="#popuptambah" onclick="loadLomba('{{ $detail->atletAktif->atlet->nik_id }}')">Tambah Lomba</a></div>
                 </td>
             </tr>
+            @php
             @endforeach
 
         </table>

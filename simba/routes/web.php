@@ -20,7 +20,7 @@ Route::get('registrasi/index', ['as' => 'frontend.registrasi.index', 'uses' => '
 Route::get('konfirmasi/index', ['as' => 'frontend.konfirmasi.index', 'uses' => 'KonfirmasiController@index']);
 Route::get('konfirmasi/form/{no_invoice}', ['as' => 'frontend.konfirmasi.form', 'uses' => 'KonfirmasiController@form']);
 Route::put('konfirmasi/submit/{no_invoice}', ['as' => 'frontend.konfirmasi.submit', 'uses' => 'KonfirmasiController@store']);
-Route::get('konfirmasi/form2/{no_invoice}', ['as' => 'frontend.konfirmasi.form', 'uses' => 'KonfirmasiController@form2']);
+Route::get('konfirmasi/form2/{nik_id}', ['as' => 'frontend.konfirmasi.form', 'uses' => 'KonfirmasiController@form2']);
 Route::post('registrasi/simpan', ['as' => 'frontend.registrasi.store', 'uses' => 'RegistrasiController@store']);
 Route::post('registrasikomunitas/simpan', ['as' => 'frontend.registrasi.store2', 'uses' => 'RegistrasiController@store2']);
 Route::get('form/{jumlah}', ['as' => 'frontend.registrasi.form', 'uses' => 'RegistrasiController@form']);

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Pembayaran;
+use App\Atlet;
 use App\Subkategori;
 use Illuminate\Http\Request;
 
@@ -31,9 +32,9 @@ class KonfirmasiController extends Controller
         return view('frontend.konfirmasi.form', compact('data'));
     }
 
-    public function form2($no_invoice)
+    public function form2($nik_id)
     {
-        $data['pembayaran'] = Pembayaran::where('no_invoice', $no_invoice)->first();
+        $data['atlet'] = Atlet::where('nik_id', $nik_id)->first();
         $data['sub_kategori'] = Subkategori::all();
         return view('frontend.konfirmasi.form2', compact('data'));
     }

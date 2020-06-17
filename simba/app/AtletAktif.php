@@ -26,4 +26,9 @@ class AtletAktif extends Model
   {
     return $this->belongsTo(Atlet::class, 'nik_id', 'nik_id');
   }
+
+  public function detailPembayaran()
+  {
+    return $this->hasMany(DetailPembayaran::class, 'atlet_aktif_id', 'id');
+  }
 }

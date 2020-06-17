@@ -1,6 +1,6 @@
 <form action="" class="popup-tambah" id="tambah">
     @csrf
-    <div class="no-atlit">Nomor Lomba Atlit Aktif (ID: <span>{{ $data['pembayaran']->detailPembayaran[0]->atletAktif->atlet->nik_id}})</span></div>
+    <div class="no-atlit">Nomor Lomba Atlit Aktif (ID: <span>{{ $data['atlet']->nik_id}})</span></div>
     <div class="aksi-popup">
         <button type="submit" style="background-color: #90e98b;">Tambah Lomba</button>
         <button type="submit" style="background-color: #2980b9;">Simpan Perubahan</button>
@@ -18,14 +18,14 @@
                 <th style="min-width: 100px;">Pilih Lomba</th>
             </tr>
             @php
-            $detail =$data['pembayaran']->detailPembayaran[0];
+            $atlet = $data['atlet'];
             @endphp
             <tr>
-                <td>{{ $detail->atletAktif->atlet->nama }}</td>
-                <td>{{ $detail->atletAktif->atlet->tgl_lahir }}</td>
-                <td>{{ $detail->atletAktif->atlet->jenis_kelamin }}</td>
+                <td>{{ $atlet->nama }}</td>
+                <td>{{ $atlet->tgl_lahir }}</td>
+                <td>{{ $atlet->jenis_kelamin }}</td>
                 <td>kelas </td>
-                <td>{{ $detail->kategoriRelasi->nama_kategori }}</td>
+                <td></td>
                 <td>
                     <select name="lomba" id="lomba">
                         <option value="">--pilih--</option>
