@@ -64,6 +64,7 @@ class KonfirmasiController extends Controller
     {
 
         foreach ($request->lomba as $key => $value) {
+            // dd($request->all());
             DetailEvent::create([
                 'atlet_aktif_id' => $id,
                 'sub_kategori_id' => $request->lomba[$key]

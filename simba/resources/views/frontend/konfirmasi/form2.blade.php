@@ -39,23 +39,22 @@
             </tr>
         </table>
     </div>
-
-    <table border="0" cellpadding="5" cellspacing="0" id="" style="display: none;">
-        <tr id="trlomba">
-            <td>{{ $atlet->nama }}</td>
-            <td>{{ $atlet->tgl_lahir }}</td>
-            <td>{{ $atlet->jenis_kelamin }}</td>
-            <td>kelas </td>
-            <td>{{ $atlet->atletAktif->detailPembayaran->kategoriRelasi->nama_kategori }}</td>
-            <td>
-                <select name="lomba[]" id="lomba">
-                    <option value="">--pilih--</option>
-                    @foreach($data['sub_kategori'] as $subkat)
-                    <option value="{{ $subkat->id }}">{{ $subkat->nama_subkat }}</option>
-                    @endforeach
-                </select>
-                <button type="button" onclick="deleteRow(this)" style="background-color: #e74c3c; color:white;">X</button>
-            <td>
-        </tr>
-    </table>
 </form>
+<table border="0" cellpadding="5" cellspacing="0" id="" style="display: none;">
+    <tr id="trlomba">
+        <td>{{ $atlet->nama }}</td>
+        <td>{{ $atlet->tgl_lahir }}</td>
+        <td>{{ $atlet->jenis_kelamin }}</td>
+        <td>kelas </td>
+        <td>{{ $atlet->atletAktif->detailPembayaran->kategoriRelasi->nama_kategori }}</td>
+        <td>
+            <select name="lomba[]" id="lomba">
+                <option value="">--pilih--</option>
+                @foreach($data['sub_kategori'] as $subkat)
+                <option value="{{ $subkat->id }}">{{ $subkat->nama_subkat }}</option>
+                @endforeach
+            </select>
+            <button type="button" onclick="deleteRow(this)" style="background-color: #e74c3c; color:white;">X</button>
+        <td>
+    </tr>
+</table>
