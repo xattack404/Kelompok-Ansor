@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Pembayaran;
 use App\Atlet;
 use App\Subkategori;
+use App\DetailEvent;
+
 use Illuminate\Http\Request;
 
 class KonfirmasiController extends Controller
@@ -58,6 +60,17 @@ class KonfirmasiController extends Controller
         return redirect()->route('frontend.konfirmasi.index')->with('succes', ' Berhasil Disimpan.');;
     }
 
+    public function store2(Request $request, $id)
+    {
+
+        foreach ($request->lomba as $key => $value) {
+            DetailEvent::create([
+                'atlet_aktif_id' => $id,
+                'sub_kategori_id' => $request->lomba[$key]
+            ]);
+        }
+        return redirect()->route('frontend.konfirmasi.index')->with('succes', 'Registrasi Berhasil.');
+    }
     /**
      * Display the specified resource.
      *
