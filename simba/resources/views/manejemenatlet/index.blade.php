@@ -31,7 +31,7 @@
                                 <th scope="col">Nama </th>
                                 <th scope="col">Email</th>
                                 <th scope="col">No Telpon</th>
-                                <th scope="col">Action</th>
+                                <th scope="col" style="width: 250px;">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -42,10 +42,16 @@
                                 <td>{{ $manejemenatlet->no_hp }}</td>
                                 <td>
                                     <a href="#popup">
-                                        <button type="button" class="btn btn-sm btn-success">Detail</button>
+                                        <button type="button" class="btn btn-sm btn-primary">Detail</button>
+                                    </a>
+                                    <a href="#popup">
+                                        <button type="button" class="btn btn-sm btn-warning">Proses</button>
+                                    </a>
+                                    <a href="#popup">
+                                        <button type="button" class="btn btn-sm btn-success">Verifikasi</button>
                                     </a>
                                     <a href="{{ route('manejemenatlet.delete', ['nik_id' => $manejemenatlet->nik_id]) }}" onclick="return confirm('Delete data?');">
-                                        <button type="button" class="btn btn-sm btn-danger">Hapus</button>
+                                        <button type="button" class="btn btn-sm btn-danger">Tolak</button>
                                     </a>
                                 </td>
                             </tr>

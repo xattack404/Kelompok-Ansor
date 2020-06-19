@@ -3025,3 +3025,12 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
   border-radius: 5px;
   float: right;
 }
+
+.perbesar:hover{
+  position: absolute;
+  transform: scale(5);
+  -webkit-transform: scale(5);
+  -moz-transform: scale(5);
+  -ms-transform: scale(5);
+  -o-transform: scale(5);
+}

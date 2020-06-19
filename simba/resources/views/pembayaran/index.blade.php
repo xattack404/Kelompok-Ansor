@@ -59,7 +59,7 @@
                                 <td>{{ $atlet }}</td>
                                 <td>
                                     @if( $pembayaran->bukti_pembayaran != '')
-                                    <img src="{{ asset('image/'. $pembayaran->bukti_pembayaran) }}" width='75' height='75'>
+                                    <img src="{{ asset('image/'. $pembayaran->bukti_pembayaran) }}" width='75' height='75' class="perbesar">
                                     @else
                                     -
                                     @endif
