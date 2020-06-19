@@ -29,6 +29,6 @@ class AtletAktif extends Model
 
   public function detailPembayaran()
   {
-    return $this->hasMany(DetailPembayaran::class, 'atlet_aktif_id', 'id');
+    return $this->hasOne(DetailPembayaran::class, 'atlet_aktif_id', 'id');
   }
 }

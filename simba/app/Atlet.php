@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\AtletAktif;
+use App\Pendaftaran;
 
 class Atlet extends Model
 {
@@ -22,8 +24,13 @@ class Atlet extends Model
   ];
 
   public $timestamps = true;
+
   public function pendaftaran()
   {
     return $this->belongsTo(Pendaftaran::class, 'nik_id', 'nik_id');
+  }
+  public function atletAktif()
+  {
+    return $this->belongsTo(AtletAktif::class, 'nik_id', 'nik_id');
   }
 }

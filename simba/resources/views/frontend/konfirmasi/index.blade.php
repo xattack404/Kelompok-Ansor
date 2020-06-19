@@ -233,5 +233,14 @@
                 }
             });
         }
+
+        function addRow() {
+            $('#table_lomba').append("<tr>" + $('#trlomba').html() + "</tr>");
+        }
+
+        function deleteRow(r) {
+            var i = r.parentNode.parentNode.rowIndex;
+            document.getElementById("table_lomba").deleteRow(i);
+        }
     </script>
 </body>
