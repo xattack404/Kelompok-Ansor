@@ -38,18 +38,18 @@
                         <tbody>
                             @forelse($data['pembayaran'] as $pembayaran)
                             @php
-                                $komunitas = '-';
-                                $koordinator = '-';
-                                $atlet = '-';
-                                // if($pembayaran->no_invoice == 11) dd($pembayaran->detailPembayaran()->count());
-                                if( $pembayaran->detailPembayaran()->count() > 1){
-                                    $komunitas = $pembayaran->detailPembayaran[0]->atletAktif->koordinator->nama_komunitas;
-                                    $koordinator = $pembayaran->detailPembayaran[0]->atletAktif->koordinator->nama_koordinator;
-                                }else{
-                                    if( $pembayaran->detailPembayaran()->count() != 0) {
-                                        $atlet = $pembayaran->detailPembayaran[0]->atletAktif->atlet->nama;
-                                    }
-                                }   
+                            $komunitas = '-';
+                            $koordinator = '-';
+                            $atlet = '-';
+                            // if($pembayaran->no_invoice == 11) dd($pembayaran->detailPembayaran()->count());
+                            if( $pembayaran->detailPembayaran()->count() > 1){
+                            $komunitas = $pembayaran->detailPembayaran[0]->atletAktif->koordinator->nama_komunitas;
+                            $koordinator = $pembayaran->detailPembayaran[0]->atletAktif->koordinator->nama_koordinator;
+                            }else{
+                            if( $pembayaran->detailPembayaran()->count() != 0) {
+                            $atlet = $pembayaran->detailPembayaran[0]->atletAktif->atlet->nama;
+                            }
+                            }
                             @endphp
                             <tr>
                                 <td>{{ $pembayaran->no_invoice }}</td>
@@ -59,7 +59,7 @@
                                 <td>{{ $atlet }}</td>
                                 <td>
                                     @if( $pembayaran->bukti_pembayaran != '')
-                                    <img src="{{ asset('image/'. $pembayaran->bukti_pembayaran) }}" width='75' height='75' class="perbesar">
+                                    <img src="{{ asset('bukti_bayar/'. $pembayaran->bukti_pembayaran) }}" width='75' height='75' class="perbesar">
                                     @else
                                     -
                                     @endif
