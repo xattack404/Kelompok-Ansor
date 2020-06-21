@@ -1,5 +1,7 @@
-<form action="{{ route('frontend.konfirmasi.save', ['id' => $data['atlet']->atletAktif->id]) }}" class="popup-tambah" id="tambah" enctype="multipart/form-data" method="POST">
+<form action="" class="popup-tambah" id="tambah" enctype="multipart/form-data" method="PUT">
     <input type="hidden" name="_method" value="PUT">
+    <input type="hidden" id="id" value="{{ $data['atlet']->atletAktif->id }}">
+
     @csrf
     <div class="no-atlit">Nomor Lomba Atlit Aktif (ID: <span>{{ $data['atlet']->atletAktif->id}})</span></div>
     <div class="aksi-popup">
