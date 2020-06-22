@@ -1,4 +1,4 @@
-<form action="" class="popup-tambah" id="tambah" enctype="multipart/form-data" method="PUT">
+<form action="" class="popup-tambah" id="tambah" method="post">
     <input type="hidden" name="_method" value="PUT">
     <input type="hidden" id="id" value="{{ $data['atlet']->atletAktif->id }}">
 
@@ -6,8 +6,8 @@
     <div class="no-atlit">Nomor Lomba Atlit Aktif (ID: <span>{{ $data['atlet']->atletAktif->id}})</span></div>
     <div class="aksi-popup">
         <button type="button" style="background-color: #90e98b;" onclick="addRow()">Tambah Lomba</button>
-        <button type="submit" style="background-color: #2980b9;">Simpan Perubahan</button>
-        <a href="#poppembayaran" style="background-color: #e74c3c;">Kembali</a>
+        <button type="button" onclick="saveData()" style="background-color: #2980b9;">Simpan Perubahan</button>
+        <a href="#poppembayaran" id="buttonback" style="background-color: #e74c3c;">Kembali</a>
     </div>
 
     <div class="tabel-tambah">

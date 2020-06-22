@@ -62,15 +62,28 @@ class KonfirmasiController extends Controller
 
     public function store2(Request $request, $id)
     {
-
-        foreach ($request->lomba as $key => $value) {
-            // dd($request->all());
-            DetailEvent::create([
-                'atlet_aktif_id' => $id,
-                'sub_kategori_id' => $request->lomba[$key]
-            ]);
+        $data = DetailEvent::find($id);
+        if ($data->atlet_aktif_id == $id) {
+            foreach ($request->lomba as $key => $value) {
+                // dd($request->all());
+                DetailEvent::WhereAtletAktifId($id)->update([
+                    'atlet_aktif_id' => $id,
+                    'sub_kategori_id' => $request->lomba[$key]
+                ]);
+            }
+            return 'success';
+            return redirect()->route('frontend.konfirmasi.index')->with('succes', 'Registrasi Berhasil.');
+        } else {
+            foreach ($request->lomba as $key => $value) {
+                // dd($request->all());
+                DetailEvent::create([
+                    'atlet_aktif_id' => $id,
+                    'sub_kategori_id' => $request->lomba[$key]
+                ]);
+            }
+            return 'success';
+            return redirect()->route('frontend.konfirmasi.index')->with('succes', 'Registrasi Berhasil.');
         }
-        return redirect()->route('frontend.konfirmasi.index')->with('succes', 'Registrasi Berhasil.');
     }
     /**
      * Display the specified resource.

@@ -243,27 +243,23 @@
             document.getElementById("table_lomba").deleteRow(i);
         }
 
-
-        $(document).ready(function() {
-            $('#tambah').on('submit', function(r) {
-                r.preventDefault();
-                var id = $('#id').val();
-
-                $.ajax({
-                    url: "{{ url('konfirmasi/save') }}/" + id,
-                    type: "PUT",
-                    data: $('#tambah').serialize(),
-                    success: function(response) {
-                        console.log(response)
-                        $('#popuptambah').modal('show')
-                        alert("Data Disimpan!")
-                    },
-                    error: function(error) {
-                        console.error();
-
-                    }
-                });
+        function saveData() {
+            var id = $('#id').val();
+            // alert("{{ url('konfirmasi/save') }}/" + id);
+            console.log($('#tambah').serialize());
+            $.ajax({
+                url: "{{ url('konfirmasi/save') }}/" + id,
+                type: "PUT",
+                data: $('#tambah').serialize(),
+                success: function(response) {
+                    alert("Data Disimpan!");
+                    $('#buttonback').click();
+                },
+                error: function(error) {
+                    alert("Gagal menyimpan data");
+                    console.error();
+                }
             });
-        });
+        }
     </script>
 </body>

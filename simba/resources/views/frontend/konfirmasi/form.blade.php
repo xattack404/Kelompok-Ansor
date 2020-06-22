@@ -56,7 +56,6 @@
                     <div class="tambah-nolomba"><a href="#popuptambah" onclick="loadLomba('{{ $detail->atletAktif->atlet->nik_id }}')">Tambah Lomba</a></div>
                 </td>
             </tr>
-            @php
             @endforeach
 
         </table>
