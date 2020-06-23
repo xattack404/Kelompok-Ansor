@@ -62,28 +62,28 @@ class KonfirmasiController extends Controller
 
     public function store2(Request $request, $id)
     {
-        $data = DetailEvent::where('atlet_aktif_id', $id)->first();
-        if ($data->sub_kategori_id == $request->lomba) {
-            foreach ($request->lomba as $key => $value) {
-                // dd($request->all());
-                DetailEvent::whereAtletAktifId($id)->update([
-                    'atlet_aktif_id' => $id,
-                    'sub_kategori_id' => $request->lomba[$key]
-                ]);
-            }
-            return 'success';
-            return redirect()->route('frontend.konfirmasi.index')->with('succes', 'Registrasi Berhasil.');
-        } else {
-            foreach ($request->lomba as $key => $value) {
-                // dd($request->all());
-                DetailEvent::create([
-                    'atlet_aktif_id' => $id,
-                    'sub_kategori_id' => $request->lomba[$key]
-                ]);
-            }
-            return 'success';
-            return redirect()->route('frontend.konfirmasi.index')->with('succes', 'Registrasi Berhasil.');
+        // $data = DetailEvent::where('atlet_aktif_id', $id)->first();
+        // if ($data->sub_kategori_id == $request->lomba) {
+        //     foreach ($request->lomba as $key => $value) {
+        //         // dd($request->all());
+        //         DetailEvent::whereAtletAktifId($id)->update([
+        //             'atlet_aktif_id' => $id,
+        //             'sub_kategori_id' => $request->lomba[$key]
+        //         ]);
+        //     }
+        //     return 'success';
+        //     return redirect()->route('frontend.konfirmasi.index')->with('succes', 'Registrasi Berhasil.');
+        // } else {
+        foreach ($request->lomba as $key => $value) {
+            // dd($request->all());
+            DetailEvent::create([
+                'atlet_aktif_id' => $id,
+                'sub_kategori_id' => $request->lomba[$key]
+            ]);
         }
+        return 'success';
+        return redirect()->route('frontend.konfirmasi.index')->with('succes', 'Registrasi Berhasil.');
+        // }
     }
     /**
      * Display the specified resource.

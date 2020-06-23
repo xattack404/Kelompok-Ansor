@@ -30,6 +30,32 @@ class PembayaranController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function prosesInvoice($nik_id)
+    {
+        Pendaftaran::where('nik_id', $nik_id)
+            ->update([
+                'pendaftaran_status_id' => 2
+            ]);
+        return redirect()->route('pembayaran.index');
+    }
+
+    public function verifikasiInvoice($nik_id)
+    {
+        Pendaftaran::where('nik_id', $nik_id)
+            ->update([
+                'pendaftaran_status_id' => 3
+            ]);
+        return redirect()->route('pembayaran.index');
+    }
+
+    public function tolakInvoice($nik_id)
+    {
+        Pendaftaran::where('nik_id', $nik_id)
+            ->update([
+                'pendaftaran_status_id' => 4
+            ]);
+        return redirect()->route('pembayaran.index');
+    }
     public function create()
     {
         //

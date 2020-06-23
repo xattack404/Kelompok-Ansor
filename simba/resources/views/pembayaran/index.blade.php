@@ -3,7 +3,7 @@
 <section class="section">
 
     <div class="section-header">
-        <h1>Cabang Olahraga</h1>
+        <h1>Manejemen Pembayaran</h1>
     </div>
 
     <div class="section-body">
@@ -32,6 +32,7 @@
                                 <th scope="col">Koordinator</th>
                                 <th scope="col">Nama Atlet</th>
                                 <th scope="col">Bukti Pembayaran</th>
+                                <th scope="col">Status </th>
                                 <th scope="col" style="width: 300px;">Action</th>
                             </tr>
                         </thead>
@@ -48,6 +49,8 @@
                             }else{
                             if( $pembayaran->detailPembayaran()->count() != 0) {
                             $atlet = $pembayaran->detailPembayaran[0]->atletAktif->atlet->nama;
+                            $status = $pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->status->value;
+                            $get = $pembayaran->detailPembayaran[0]->atletAktif->atlet->nik_id;
                             }
                             }
                             @endphp
@@ -64,17 +67,19 @@
                                     -
                                     @endif
                                 </td>
+                                <td>{{ $status }}</td>
+
                                 <td>
-                                    <a href="#popup">
+                                    <a href="">
                                         <button type="button" class="btn btn-sm btn-primary">Detail</button>
                                     </a>
-                                    <a href="#popup">
+                                    <a href="{{ route('pembayaran.proses', ['nik_id' => $get]) }}" onclick="return confirm('Yakin Akan Proses Pembayaran?');">
                                         <button type="button" class="btn btn-sm btn-warning">Proses</button>
                                     </a>
-                                    <a href="#popup">
+                                    <a href="{{ route('pembayaran.verifikasi', ['nik_id' => $get]) }}" onclick="return confirm('Silahkan cek kembali bukti pembayaran, apakah sudah benar?');">
                                         <button type="button" class="btn btn-sm btn-success">Verifikasi</button>
                                     </a>
-                                    <a href="">
+                                    <a href="{{ route('pembayaran.tolak', ['nik_id' => $get]) }}" onclick="return confirm('Yakin Akan Tolak Pembayaran?');">
                                         <button type="button" class="btn btn-sm btn-danger">Tolak</button>
                                     </a>
                                 </td>

@@ -77,3 +77,6 @@ Route::get('panel/manejemenatlet/delete/{id}', ['as' => 'manejemenatlet.delete',
 
 //Route Untuk Pembayaran
 Route::get('panel/pembayaran', ['as' => 'pembayaran.index', 'uses' => 'PembayaranController@index']);
+Route::get('panel/pembayaran/proses/{nik_id}', ['as' => 'pembayaran.proses', 'uses' => 'PembayaranController@prosesInvoice']);
+Route::get('panel/pembayaran/verifikasi/{nik_id}', ['as' => 'pembayaran.verifikasi', 'uses' => 'PembayaranController@verifikasiInvoice']);
+Route::get('panel/pembayaran/tolak/{nik_id}', ['as' => 'pembayaran.tolak', 'uses' => 'PembayaranController@tolakInvoice']);
