@@ -32,7 +32,7 @@
                                 <th scope="col">Koordinator</th>
                                 <th scope="col">Nama Atlet</th>
                                 <th scope="col">Bukti Pembayaran</th>
-                                <th scope="col">Action</th>
+                                <th scope="col" style="width: 300px;">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -65,11 +65,17 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="#">
-                                        <button type="button" class="btn btn-sm btn-info">Edit</button>
+                                    <a href="#popup">
+                                        <button type="button" class="btn btn-sm btn-primary">Detail</button>
                                     </a>
-                                    <a href="#" onclick="return confirm('Delete data?');">
-                                        <button type="button" class="btn btn-sm btn-danger">Hapus</button>
+                                    <a href="#popup">
+                                        <button type="button" class="btn btn-sm btn-warning">Proses</button>
+                                    </a>
+                                    <a href="#popup">
+                                        <button type="button" class="btn btn-sm btn-success">Verifikasi</button>
+                                    </a>
+                                    <a href="">
+                                        <button type="button" class="btn btn-sm btn-danger">Tolak</button>
                                     </a>
                                 </td>
                             </tr>
