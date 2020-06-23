@@ -66,7 +66,7 @@ class KonfirmasiController extends Controller
         if ($data->atlet_aktif_id == $id) {
             foreach ($request->lomba as $key => $value) {
                 // dd($request->all());
-                DetailEvent::WhereAtletAktifId($id)->update([
+                DetailEvent::WhereAtlet_Aktif_Id($id)->update([
                     'atlet_aktif_id' => $id,
                     'sub_kategori_id' => $request->lomba[$key]
                 ]);

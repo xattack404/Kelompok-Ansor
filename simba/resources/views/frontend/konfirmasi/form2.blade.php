@@ -1,4 +1,4 @@
-<form action="" class="popup-tambah" id="tambah" method="post">
+<form action="" class="popup-tambah" id="tambah" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="_method" value="PUT">
     <input type="hidden" id="id" value="{{ $data['atlet']->atletAktif->id }}">
 
