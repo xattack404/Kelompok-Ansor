@@ -62,11 +62,11 @@ class KonfirmasiController extends Controller
 
     public function store2(Request $request, $id)
     {
-        $data = DetailEvent::find($id);
-        if ($data->atlet_aktif_id == $id) {
+        $data = DetailEvent::where('atlet_aktif_id', $id)->first();
+        if ($data->sub_kategori_id == $request->lomba) {
             foreach ($request->lomba as $key => $value) {
                 // dd($request->all());
-                DetailEvent::WhereAtlet_Aktif_Id($id)->update([
+                DetailEvent::whereAtletAktifId($id)->update([
                     'atlet_aktif_id' => $id,
                     'sub_kategori_id' => $request->lomba[$key]
                 ]);
