@@ -81,6 +81,8 @@
                     <textarea name="alamat" id="alamat" placeholder="Max 50 karakter" required style="height: 80px"></textarea>
                 </div>
             </div>
+            <div id="form">
+            </div>
             <!-- <div class="box-btn" >
                 <a href=""><button type="button" class="red">selanjutnya</button></a>
             </div> -->
