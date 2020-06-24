@@ -762,7 +762,7 @@ ul li:hover #dropdown{
     box-sizing: border-box;
     padding: 0;
 }
-.box-registrasi, #registrasi{
+.box-registrasi{
     position: relative;
     width: 100%;
     min-height: 10em;
@@ -815,6 +815,8 @@ ul li:hover #dropdown{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding: 5px;
+
 }
 .box .keterangan{
     margin-top: 15px;
