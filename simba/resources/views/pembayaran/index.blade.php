@@ -51,6 +51,7 @@
                             $atlet = $pembayaran->detailPembayaran[0]->atletAktif->atlet->nama;
                             $status = $pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->status->value;
                             $get = $pembayaran->detailPembayaran[0]->atletAktif->atlet->nik_id;
+                            $validasi = $pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->pendaftaran_status_id;
                             }
                             }
                             @endphp
@@ -73,15 +74,23 @@
                                     <a href="">
                                         <button type="button" class="btn btn-sm btn-primary">Detail</button>
                                     </a>
+                                    @if($validasi == 1)
                                     <a href="{{ route('pembayaran.proses', ['nik_id' => $get]) }}" onclick="return confirm('Yakin Akan Proses Pembayaran?');">
                                         <button type="button" class="btn btn-sm btn-warning">Proses</button>
+                                        @endif
+
+                                        @if($validasi == 2)
                                     </a>
                                     <a href="{{ route('pembayaran.verifikasi', ['nik_id' => $get]) }}" onclick="return confirm('Silahkan cek kembali bukti pembayaran, apakah sudah benar?');">
                                         <button type="button" class="btn btn-sm btn-success">Verifikasi</button>
+                                        @endif
+
+                                        @if($validasi == 1)
                                     </a>
                                     <a href="{{ route('pembayaran.tolak', ['nik_id' => $get]) }}" onclick="return confirm('Yakin Akan Tolak Pembayaran?');">
                                         <button type="button" class="btn btn-sm btn-danger">Tolak</button>
                                     </a>
+                                    @endif
                                 </td>
                             </tr>
                             @empty

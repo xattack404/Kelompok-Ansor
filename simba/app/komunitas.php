@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use app\Pendaftaran;
 
 class Komunitas extends Model
 {
@@ -22,6 +23,7 @@ class Komunitas extends Model
   ];
 
   public $timestamps = true;
+
   public function pendaftaran()
   {
     return $this->hasOne(Pendaftaran::class, 'koordinator_id', 'id');

@@ -75,6 +75,10 @@ Route::get('panel/manejemenlogin/delete/{id}', ['as' => 'manejemenlogin.delete',
 Route::get('panel/manejemenatlet', ['as' => 'manejemenatlet.index', 'uses' => 'ManejemenAtletController@index']);
 Route::get('panel/manejemenatlet/delete/{id}', ['as' => 'manejemenatlet.delete', 'uses' => 'ManejemenAtletController@delete']);
 
+//Route Untuk Manejemen Komunitas
+Route::get('panel/manejemenkomunitas', ['as' => 'manejemenkomunitas.index', 'uses' => 'ManejemenKomunitasController@index']);
+Route::get('panel/manejemenkomunitas/delete/{id}', ['as' => 'manejemenkomunitas.delete', 'uses' => 'ManejemenKomunitasController@delete']);
+
 //Route Untuk Pembayaran
 Route::get('panel/pembayaran', ['as' => 'pembayaran.index', 'uses' => 'PembayaranController@index']);
 Route::get('panel/pembayaran/proses/{nik_id}', ['as' => 'pembayaran.proses', 'uses' => 'PembayaranController@prosesInvoice']);

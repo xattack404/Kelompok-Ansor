@@ -10,6 +10,17 @@
       <li class="menu-header">Dashboard</li>
       <li class="">
         <a href="#" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+      <li class="menu-header">Pendaftaran</li>
+      <li class="">
+        <a class="nav-link" href="{{ route('manejemenatlet.index') }}"><i class="fas fa-user"></i> <span>Manejemen Atlet</span></a>
+      </li>
+      <li class="">
+        <a class="nav-link" href="{{ route('manejemenkomunitas.index') }}"><i class="fas fa-users"></i> <span>Manejemen Komunitas</span></a>
+      </li>
+      <li class="menu-header">Transaksi</li>
+      <li class="">
+        <a class="nav-link" href="{{ route('pembayaran.index') }}"><i class="fas fa-money-check-alt"></i> <span>Manejemen Pembayaran</span></a>
+      </li>
       <li class="menu-header">Data Master</li>
       <li class="">
         <a class="nav-link" href="{{ route('kategori.index') }}"><i class="fas fa-chevron-circle-right"></i> <span>Kategori</span></a>
@@ -25,17 +36,6 @@
       </li>
       <li class="">
         <a class="nav-link" href="{{ route('infoweb.index') }}"><i class="fas fa-info-circle"></i> <span>Informasi Web</span></a>
-      </li>
-      <li class="menu-header">Transaksi</li>
-      <li class="">
-        <a class="nav-link" href="{{ route('pembayaran.index') }}"><i class="fas fa-money-check-alt"></i> <span>Manejemen Pembayaran</span></a>
-      </li>
-      <li class="menu-header">Pendaftaran</li>
-      <li class="">
-        <a class="nav-link" href="{{ route('manejemenatlet.index') }}"><i class="fas fa-user"></i> <span>Manejemen Atlet</span></a>
-      </li>
-      <li class="">
-        <a class="nav-link" href="#"><i class="fas fa-users"></i> <span>Manejemen Komunitas</span></a>
       </li>
       </li>
     </ul>

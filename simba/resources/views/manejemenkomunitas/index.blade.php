@@ -18,7 +18,7 @@
                             <button type="submit" class="btn btn-primary">Search</button>
                         </div>
                         <div class="form-group">
-                            <a href="{{ route('manejemenatlet.index') }}" class="pull-right">
+                            <a href="{{ route('manejemenkomunitas.index') }}" class="pull-right">
                                 <button type="button" class="btn btn-info">Semua Data</button>
                             </a>
                         </div>
@@ -28,23 +28,25 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th scope="col">Nama </th>
+                                <th scope="col">Nama Komunitas</th>
+                                <th scope="col">Nama Koordinator</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">No Telpon</th>
                                 <th scope="col" style="width: 250px;">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse($data as $manejemenatlet)
+                            @forelse($data as $manejemenkomunitas)
                             <tr>
-                                <td>{{ $manejemenatlet->nama }}</td>
-                                <td>{{ $manejemenatlet->email }}</td>
-                                <td>{{ $manejemenatlet->no_hp }}</td>
+                                <td>{{ $manejemenkomunitas->nama_komunitas }}</td>
+                                <td>{{ $manejemenkomunitas->nama_koordinator }}</td>
+                                <td>{{ $manejemenkomunitas->email }}</td>
+                                <td>{{ $manejemenkomunitas->no_hp }}</td>
                                 <td>
                                     <a href="#popup">
                                         <button type="button" class="btn btn-sm btn-primary">Detail</button>
                                     </a>
-                                    <a href="{{ route('manejemenatlet.delete', ['nik_id' => $manejemenatlet->nik_id]) }}" onclick="return confirm('Hapus data?');">
+                                    <a href="{{ route('manejemenkomunitas.delete', ['id' => $manejemenkomunitas->id]) }}" onclick="return confirm('Delete data?');">
                                         <button type="button" class="btn btn-sm btn-danger">Hapus</button>
                                     </a>
                                 </td>
@@ -85,9 +87,10 @@
             <tbody>
 
                 <tr>
-                    <td>{{ $manejemenatlet->nama }}</td>
-                    <td>{{ $manejemenatlet->email }}</td>
-                    <td>{{ $manejemenatlet->no_hp }}</td>
+                    <td>{{ $manejemenkomunitas->nama_komunitas }}</td>
+                    <td>{{ $manejemenkomunitas->nama_koordinator }}</td>
+                    <td>{{ $manejemenkomunitas->email }}</td>
+                    <td>{{ $manejemenkomunitas->no_hp }}</td>
                     <td>
             </tbody>
         </table>
