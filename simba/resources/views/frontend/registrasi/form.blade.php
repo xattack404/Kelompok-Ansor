@@ -1,9 +1,9 @@
-@for ($i = 1; $i <= $jumlah; $i++) 
-<div class="box-registrasi"> 
-    <div class="box">
-        <div class="keterangan">
+@for ($i = 1; $i <= $jumlah; $i++)
+<div class="bungkus"> 
+    <div class="keterangan">
             <h1>Identitas Anggota #<?= $i; ?></h1>
-        </div>
+    </div>
+    <div class="box">
         <div class="input">
             <label for="nik">NIK Anggota</label>
             <input type="number" name="anggota_nik_id[]" id="nik_id" placeholder="masukan NIK" required>

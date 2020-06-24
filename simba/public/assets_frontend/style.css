@@ -762,7 +762,7 @@ ul li:hover #dropdown{
     box-sizing: border-box;
     padding: 0;
 }
-.box-registrasi{
+.box-registrasi, .box-registrasi2{
     position: relative;
     width: 100%;
     min-height: 10em;
@@ -780,7 +780,25 @@ ul li:hover #dropdown{
     margin: 0;
     animation: grid .3s;
     -webkit-animation: grid .3s;
-    padding-bottom: 30px;
+    padding-bottom: 4px;
+}
+.box-registrasi2{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    grid-template-columns: none;
+    box-sizing: border-box;
+    padding-bottom: 25px;
+}
+.bungkus{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    box-sizing: border-box;
+    border-bottom: 3px solid #323232;
+    padding-top: 50px;
 }
 #registrasikomunitas{
     display: none;
@@ -816,14 +834,17 @@ ul li:hover #dropdown{
     align-items: center;
     flex-wrap: wrap;
     padding: 5px;
+    box-sizing: border-box;
 
 }
-.box .keterangan{
+.bungkus .keterangan{
     margin-top: 15px;
     margin-bottom: 5px;
     width: 100%;
+    position: absolute;
+    top: 0;
 }
-.box .keterangan h1{
+.bungkus .keterangan h1{
     font-size: 22px;
     font-family: lato;
 }
@@ -1519,7 +1540,7 @@ footer .copyright h4, footer{
     .all-boxregister{       
         width: 70%;
     }
-    .box-registrasi, #registrasi{        
+    .box-registrasi, .box-registrasi2{        
         display: flex;
         flex-wrap: wrap;
         grid-template-columns:none;
@@ -1527,6 +1548,15 @@ footer .copyright h4, footer{
         justify-content: center;       
         animation: flex .3s;
         -webkit-animation: flex .3s;
+    }
+    .bungkus{
+        width: 100%;
+        display: block;
+        grid-template-columns: none;
+        grid-gap: 0;
+    }
+    .bungkus .box{
+        width: 100%;
     }
 /* ====================Regidtrasi Akhir====================*/
 }
@@ -1656,7 +1686,7 @@ footer .copyright h4, footer{
     /* ====================Lomba AKhir====================*/
     
 /* ====================Registrasi====================*/
-    .box-registrasi{
+    .box-registrasi, .box-registrasi2{
         width: 90%;
         
     }
