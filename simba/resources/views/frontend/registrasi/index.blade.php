@@ -106,7 +106,9 @@
                         <tr>
                             <td>kode unik simulasi</td>
                             <td>Harga</td>
-                            <td><input type="number" name="unique_code" id="unique_code" class="form-control bg-white text-white" style="color: #fff" readonly="true" value="101"></td>
+                            <td>
+                                <input type="number" name="unique_code" id="unique_code" class="" style="" readonly="true" value="101">
+                            </td>
                         </tr>
                         <tr>
                             <td>Total keseluruhan</td>

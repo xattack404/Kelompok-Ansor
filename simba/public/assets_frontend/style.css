@@ -844,6 +844,9 @@ ul li:hover #dropdown{
     position: absolute;
     top: 0;
 }
+.bungkus:nth-child(even) .box{
+    margin-top: 10px;
+}
 .bungkus .keterangan h1{
     font-size: 22px;
     font-family: lato;
@@ -992,10 +995,13 @@ ul li:hover #dropdown{
     box-sizing: border-box;
 }
 .keterangan-konten table{
-    width: 95%;
+    width: 90%;
     box-sizing: border-box;
     margin: auto;
     margin-top: 10px;
+}
+.keterangan-konten table tr th{
+    font-size: 2vmin;
 }
 .keterangan-konten h2{
     text-align: center;
@@ -1690,7 +1696,12 @@ footer .copyright h4, footer{
         width: 90%;
         
     }
-    
+    .keterangan-konten table{
+        width: 100%;
+        box-sizing: border-box;
+        margin: auto;
+        margin-top: 10px;
+    }
 /* ====================Registrasi Akhir====================*/
 .popup-pembayaran, .popup-tambah, .box-pembayaran{
     width: 95%;
