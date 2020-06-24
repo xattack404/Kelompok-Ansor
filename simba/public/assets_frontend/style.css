@@ -778,28 +778,12 @@ ul li:hover #dropdown{
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     margin: 0;
-    overflow: hidden;
     animation: grid .3s;
     -webkit-animation: grid .3s;
+    padding-bottom: 30px;
 }
-.box-registrasi2, #registrasikomunitas{
-    position: relative;
-    width: 100%;
-    min-height: 10em;
-    padding: 5px;
+#registrasikomunitas{
     display: none;
-    flex-wrap: wrap;
-    justify-content: center;
-    left: 50%;
-    padding-bottom: 60px;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    box-sizing: border-box; 
-    animation: flex .3s;
-    -webkit-animation: flex .3s;
 }
 @keyframes flex{
     0%{
@@ -919,19 +903,6 @@ ul li:hover #dropdown{
     -o-border-radius: 8px;
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0);
-}
-.box-registrasi2 .box{
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #323232;
-    margin-bottom: 20px;
-}
-.box-registrasi2 .box:nth-child(1){
-    margin-bottom: 75px;
-}
-.box-registrasi2 .box .input{
-    width: 350px;
-    padding: 5px;
 }
 .box-btn{
     width: 200%;

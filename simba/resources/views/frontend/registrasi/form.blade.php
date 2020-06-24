@@ -1,4 +1,5 @@
-@for ($i = 1; $i <= $jumlah; $i++) <div class="box">
+@for ($i = 1; $i <= $jumlah; $i++) 
+<div class="box">
     <div class="keterangan">
         <h1>Identitas Anggota #<?= $i; ?></h1>
     </div>
@@ -23,6 +24,29 @@
         </select>
     </div>
     <div class="input">
+        <label for="email">email</label>
+        <input type="email" name="anggota_email[]" id="email" placeholder="masukan email araktif" required>
+    </div>
+    <div class="input">
+        <label for="telp">no telepon</label>
+        <input type="tel" name="anggota_no_hp[]" id="telp" placeholder="masukan no teleopn aktif" required>
+    </div>
+    <div class="input">
+        <label>Nama Kategori</label>
+        <select id="kategori_usia_id_{{$i}}" name="anggota_kategori_usia_id[]" class="form-control" data-live-search="true" required>
+            <option value="">--pilih--</option>
+            @foreach($data['kategori'] as $kategori)
+            <option value="{{ $kategori->id }}">{{ $kategori->nama_kategori }}</option>
+            @endforeach
+        </select>
+    </div>
+    <div class="input">
+        <label for="">Biaya Daftar</label>
+        <input type="text" name="anggota_harga[]" id="harga_{{ $i }}" readonly>
+    </div>
+</div>
+<div class="box">
+    <div class="input">
         <label for="">Status kewarganegaraan</label>
         <select name="anggota_warga_negara[]" id="" required>
             <option value="">--pilih--</option>
@@ -46,28 +70,7 @@
         <label for="">alamat</label>
         <textarea name="anggota_alamat[]" id="alamat" placeholder="Max 50 karakter" required style="height: 200px"></textarea>
     </div>
-    <div class="input">
-        <label for="email">email</label>
-        <input type="email" name="anggota_email[]" id="email" placeholder="masukan email araktif" required>
-    </div>
-    <div class="input">
-        <label for="telp">no telepon</label>
-        <input type="tel" name="anggota_no_hp[]" id="telp" placeholder="masukan no teleopn aktif" required>
-    </div>
-    <div class="input">
-        <label>Nama Kategori</label>
-        <select id="kategori_usia_id_{{$i}}" name="anggota_kategori_usia_id[]" class="form-control" data-live-search="true" required>
-            <option value="">--pilih--</option>
-            @foreach($data['kategori'] as $kategori)
-            <option value="{{ $kategori->id }}">{{ $kategori->nama_kategori }}</option>
-            @endforeach
-        </select>
-    </div>
-    <div class="input">
-        <label for="">Biaya Daftar</label>
-        <input type="text" name="anggota_harga[]" id="harga_{{ $i }}" readonly>
-    </div>
-    </div>
+</div>
     <script src="{{ asset('assets_frontend/js/style.js') }}"></script>
     @endfor
     <script type="text/javascript">

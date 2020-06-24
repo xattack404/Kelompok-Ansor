@@ -16,12 +16,12 @@
     <div class="all-boxregister">
 
         <!-- ====== form registrasi komunitas====== -->
-        <form class="box-registrasi2" action="{{ route('frontend.registrasi.store') }}" id="registrasikomunitas" method="POST">
+        <form class="box-registrasi" action="{{ route('frontend.registrasi.store') }}" id="registrasikomunitas" method="POST">
             @csrf
             <div class="box">
-                <div class="keterangan">
+                <!-- <div class="keterangan">
                     <h1>Penanggung Jawab</h1>
-                </div>
+                </div> -->
                 <div class="input">
                     <label for="namapen">Nama penanggung jawab</label>
                     <input type="text" id="nama_koordinator" name="nama_koordinator" placeholder="masukan nama penanggung jawab">
@@ -50,6 +50,8 @@
                     <label for="namakom">nama komunitas</label>
                     <input type="text" id="nama_komunitas" name="nama_komunitas" placeholder="masukan nama komunitas anda">
                 </div>
+            </div>
+            <div class="box">
                 <div class="input">
                     <label for="jumlahanggota">jummlah anggota</label>
                     <input value="" type="number" id="jumlahanggota" name="jumlahanggota" placeholder="masukan jumlah anggota komunitas">
@@ -78,8 +80,6 @@
                     <label for="">alamat</label>
                     <textarea name="alamat" id="alamat" placeholder="Max 50 karakter" required style="height: 80px"></textarea>
                 </div>
-            </div>
-            <div id="form">
             </div>
             <!-- <div class="box-btn" >
                 <a href=""><button type="button" class="red">selanjutnya</button></a>
