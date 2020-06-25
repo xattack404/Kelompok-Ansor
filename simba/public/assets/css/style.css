@@ -3025,7 +3025,7 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
   border-radius: 5px;
   float: right;
 }
-
+/* 
 .perbesar:hover{
   position: absolute;
   top: 80%;
@@ -3035,4 +3035,134 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
   -moz-transform: scale(9) translateX(-50%) translateY(-50%);
   -ms-transform: scale(9) translateX(-50%) translateY(-50%);
   -o-transform: scale(9) translateX(-50%) translateY(-50%);
+} */
+
+.popup-pembayaran{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99999999999999;
+  display: none;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+.popup-pembayaran .close{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  top: 0;
+}
+.popup-pembayaran .close a{
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+.popup-pembayaran .detail-pembayaran, .gambar{
+  width: 90%;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  overflow: auto;
+}
+.keterangan-popup{
+  color: black;
+  font-family: lato;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.group-input, .input-boxpopup{
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.group-input table{
+    color: black;
+    margin-bottom: 10px;
+    width: 100%;
+    border: none;
+}
+.group-input table tr th{
+    font-size: 12px;
+    font-family: lato;
+    text-align: left;
+    background-color: rgb(127, 179, 231);
+    color: white;
+}
+.group-input table tr td{
+    font-size: 12px;
+    font-family: lato;
+    text-align: left;
+    background-color: #F0F1EC;
+    overflow-x: auto;
+    position: relative;
+    height: 20px;
+    border: none;
+    padding: 5px;
+}
+.group-input table tr:nth-child(even) td{
+  background-color: #f7f7f7;
+}
+
+.tambah-nolomba{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  background-color: rgb(112, 226, 148);
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 1px;
+  right: 2px;
+}
+.tambah-nolomba a{
+  text-align: center;
+  color: white;
+}
+.total-pembayaran{
+  width: 100%;
+  padding: 5px;
+}
+.total-pembayaran h2, .total-pembayaran h1{
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+.input-boxpopup{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+.input-boxpopup input{
+  width: 100%;
+  color: #323232;
+}
+.input-boxpopup .input label{
+  color:#323232 ;
+  font-family: lato;
+  font-size: 15px;
+}
+.input-boxpopup .input .keterangan{
+  width: 50%;
+  min-height: 30px;
+  border-bottom: 2px solid black;
+  font-size: 18px;
+}
+.gambar{overflow: auto;}
+.gambar img{
+  width: 100%;
+}
+#detailpembayaran:target, #perbesargambar:target{
+  display: flex;
 }

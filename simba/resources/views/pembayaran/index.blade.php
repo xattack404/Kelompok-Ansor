@@ -6,7 +6,7 @@
         <h1>Manejemen Pembayaran</h1>
     </div>
 
-    <div class="section-body">
+    <div class="section-body" id="manajemenpembayaran">
         <div class="col-12 col-md-12 col-lg-12">
             <div class="card">
                 <div class="card-header">
@@ -62,6 +62,7 @@
                                 <td>{{ $koordinator }}</td>
                                 <td>{{ $atlet }}</td>
                                 <td>
+                                     
                                     @if( $pembayaran->bukti_pembayaran != '')
                                     <img src="{{ asset('bukti_bayar/'. $pembayaran->bukti_pembayaran) }}" width='75' height='75' class="perbesar">
                                     @else
@@ -71,7 +72,7 @@
                                 <td>{{ $status }}</td>
 
                                 <td>
-                                    <a href="">
+                                    <a href="#detailpembayaran">
                                         <button type="button" class="btn btn-sm btn-primary">Detail</button>
                                     </a>
                                     @if($validasi == 1)
@@ -108,6 +109,86 @@
                         {!! $data['pembayaran']->appends(request()->except('page'))->render() !!}
                     </nav>
                 </div>
+                <!-- ======================popup pembayaran dan perbesar gambar========================= -->
+                <!-- ===popup detail pembayaran=== -->
+                <form class="popup-pembayaran" id="detailpembayaran">
+                    <div title="keluar" class="close bg-danger">
+                        <a href="">X</a>
+                    </div>
+                    <div class="detail-pembayaran">
+                        <div class="keterangan-pembayaran">
+                            Konfirmasi pembayaran No Pendaftaran<span>?</span>
+                        </div>
+                        <div class="group-input">
+                            <table border="1" cellpadding="5" cellspacing="0">
+                                <tr>
+                                    <th >Nama Atlit</th>
+                                    <th >Tanggal Lahir</th>
+                                    <th >Jenis Kelamin</th>
+                                    <th >Kategori</th>
+                                    <th >Biaya Pendaftaran</th>
+                                </tr>
+                                <tr>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td style="padding-right: 110px;">- <div class="tambah-nolomba"><a href="#popuptambah">tambah no lomba</a></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td style="padding-right: 110px;">- <div class="tambah-nolomba"><a href="#popuptambah">tambah no lomba</a></div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td style="padding-right: 110px;">- <div class="tambah-nolomba"><a href="#popuptambah">tambah no lomba</a></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="group-input">
+                            <div class="total-pembayaran bg-danger">
+                                <h1>GRAND TOTAL</h1>
+                                <h2>1.000.000</h2>
+                            </div>
+                        </div>
+                        <div class="input-boxpopup">
+                            <div class="input">
+                                <label for="">Nama Bank</label>
+                                <div class="keterangan">Bank BRI</div>
+                            </div>
+
+                            <div class="input">
+                                <label for="">No Rekening</label>
+                                <div class="keterangan">123456789</div>
+                            </div>
+
+                            <div class="input">
+                                <label for="">Nama Pemilik Rekening</label>
+                                <div class="keterangan">aselole</div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!-- ===popup gambar=== -->
+                <form action="" class="popup-pembayaran" id="perbesargambar">
+                    <div title="keluar" class="close bg-danger">
+                        <a href="">X</a>
+                    </div>
+                    <div class="gambar">
+                        <img src="" alt="">
+                    </div>
+                </form>
+                <!-- ======================popup pembayaran dan perbesar gambar akhir========================= -->
             </div>
         </div>
     </div>
