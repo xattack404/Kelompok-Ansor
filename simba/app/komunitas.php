@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use app\Pendaftaran;
+use App\Pendaftaran;
 
 class Komunitas extends Model
 {

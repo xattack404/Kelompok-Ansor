@@ -10,12 +10,9 @@
       <li class="menu-header">Dashboard</li>
       <li class="">
         <a href="#" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
-      <li class="menu-header">Pendaftaran</li>
+      <li class="menu-header">Data Pendaftaran</li>
       <li class="">
-        <a class="nav-link" href="{{ route('manejemenatlet.index') }}"><i class="fas fa-user"></i> <span>Manejemen Atlet</span></a>
-      </li>
-      <li class="">
-        <a class="nav-link" href="{{ route('manejemenkomunitas.index') }}"><i class="fas fa-users"></i> <span>Manejemen Komunitas</span></a>
+        <a class="nav-link" href="{{ route('pendaftaran.index') }}"><i class="fa fa-table" aria-hidden="true"></i> <span>Data Pendaftaran</span></a>
       </li>
       <li class="menu-header">Transaksi</li>
       <li class="">
@@ -30,6 +27,12 @@
       </li>
       <li class="">
         <a class="nav-link" href="{{ route('cabangolahraga.index') }}"><i class="fas fa-running"></i> <span>Cabang Olahraga</span></a>
+      </li>
+      <li class="">
+        <a class="nav-link" href="{{ route('manejemenatlet.index') }}"><i class="fas fa-user"></i> <span>Manejemen Atlet</span></a>
+      </li>
+      <li class="">
+        <a class="nav-link" href="{{ route('manejemenkomunitas.index') }}"><i class="fas fa-users"></i> <span>Manejemen Komunitas</span></a>
       </li>
       <li class="">
         <a class="nav-link" href="{{ route('manejemenlogin.index') }}"><i class="fas fa-users-cog"></i> <span>Manejemen Login</span></a>

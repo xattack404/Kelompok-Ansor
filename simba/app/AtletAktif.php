@@ -5,7 +5,6 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\Komunitas;
 use App\Atlet;
-use App\Pendaftaran;
 
 class AtletAktif extends Model
 {
