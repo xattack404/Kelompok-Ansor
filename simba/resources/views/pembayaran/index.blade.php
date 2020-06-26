@@ -154,24 +154,26 @@
                                     <td>-</td>
                                     <td>-</td>
                                     <td>-</td>
-                                    <td><div class="images"><img src="" alt="" class="perbesar"></div></td>
+                                    <td>
+                                        <div class="images"><img src="" alt="" class="perbesar"></div>
+                                    </td>
                                 </tr>
                             </table>
                         </div>
                     </div>
                 </form>
-            <!-- ===popup gambar=== -->
-            <form action="" class="popup-pembayaran" id="perbesargambar">
-                <div title="keluar" class="close bg-danger">
-                    <a href="">X</a>
-                </div>
-                <div class="gambar">
-                    <img src="" alt="">
-                </div>
-            </form>
-            <!-- ======================popup pembayaran dan perbesar gambar akhir========================= -->
+                <!-- ===popup gambar=== -->
+                <form action="" class="popup-pembayaran" id="perbesargambar">
+                    <div title="keluar" class="close bg-danger">
+                        <a href="">X</a>
+                    </div>
+                    <div class="gambar">
+                        <img src="" alt="">
+                    </div>
+                </form>
+                <!-- ======================popup pembayaran dan perbesar gambar akhir========================= -->
+            </div>
         </div>
-    </div>
     </div>
 
 </section>
