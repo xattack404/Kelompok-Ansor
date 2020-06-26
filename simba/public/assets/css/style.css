@@ -3025,17 +3025,14 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
   border-radius: 5px;
   float: right;
 }
-/* 
+
 .perbesar:hover{
-  position: absolute;
-  top: 80%;
-  left: 75%;
-  transform: scale(9) translateX(-50%) translateY(-50%);
-  -webkit-transform: scale(9) translateX(-50%) translateY(-50%);
-  -moz-transform: scale(9) translateX(-50%) translateY(-50%);
-  -ms-transform: scale(9) translateX(-50%) translateY(-50%);
-  -o-transform: scale(9) translateX(-50%) translateY(-50%);
-} */
+  transform: scale(5);
+  -webkit-transform: scale(5);
+  -moz-transform: scale(5);
+  -ms-transform: scale(5);
+  -o-transform: scale(5);
+}
 
 .popup-pembayaran{
   position: absolute;
@@ -3081,7 +3078,6 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
   margin-bottom: 10px;
   padding: 5px;
   box-sizing: border-box;
-  overflow: auto;
 }
 .group-input table{
     color: black;
@@ -3102,10 +3098,17 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
     text-align: left;
     background-color: #F0F1EC;
     overflow-x: auto;
-    position: relative;
     height: 20px;
     border: none;
     padding: 5px;
+}
+.group-input table tr td img, .group-input table tr td .images{
+  width: 100px;
+  height: 100px;
+  background-color: rgb(194, 194, 194);
+}
+.group-input table tr td .images{
+  position: relative;
 }
 .group-input table tr:nth-child(even) td{
   background-color: #f7f7f7;

@@ -132,54 +132,34 @@
                                     <td>-</td>
                                     <td>-</td>
                                     <td>-</td>
-                                    <td style="padding-right: 110px;">- /div>
-                                    </td>
+                                    <td>-</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="group-input">
+                            <div class="total-pembayaran bg-danger">
+                                <h1>GRAND TOTAL</h1>
+                                <h2>1.000.000</h2>
+                            </div>
+                        </div>
+                        <div class="group-input">
+                            <table border="1" cellpadding="5" cellspacing="0">
+                                <tr>
+                                    <th>Nama Bank</th>
+                                    <th>No Rekening</th>
+                                    <th>Nama Pemilik</th>
+                                    <th>Bukti Pembayaran</th>
                                 </tr>
                                 <tr>
                                     <td>-</td>
                                     <td>-</td>
                                     <td>-</td>
-                                    <td>-</td>
-                                    <div style="padding-right: 110px;">-
-                                    </div>
-                                    </td>
+                                    <td><div class="images"><img src="" alt="" class="perbesar"></div></td>
                                 </tr>
-
-                                <tr>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td style="padding-right: 110px;">-
-                        </div>
-                        </td>
-                        </tr>
-                        </table>
-                    </div>
-                    <div class="group-input">
-                        <div class="total-pembayaran bg-danger">
-                            <h1>GRAND TOTAL</h1>
-                            <h2>1.000.000</h2>
+                            </table>
                         </div>
                     </div>
-                    <div class="input-boxpopup">
-                        <div class="input">
-                            <label for="">Nama Bank</label>
-                            <div class="keterangan">Bank BRI</div>
-                        </div>
-
-                        <div class="input">
-                            <label for="">No Rekening</label>
-                            <div class="keterangan">123456789</div>
-                        </div>
-
-                        <div class="input">
-                            <label for="">Nama Pemilik Rekening</label>
-                            <div class="keterangan">aselole</div>
-                        </div>
-                    </div>
-            </div>
-            </form>
+                </form>
             <!-- ===popup gambar=== -->
             <form action="" class="popup-pembayaran" id="perbesargambar">
                 <div title="keluar" class="close bg-danger">
