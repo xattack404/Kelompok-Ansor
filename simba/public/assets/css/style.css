@@ -3125,8 +3125,11 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
   right: 2px;
 }
 .tambah-nolomba a{
+  display: block;
   text-align: center;
   color: white;
+  width: 100%;
+  height: 100%;
 }
 .total-pembayaran{
   width: 100%;
