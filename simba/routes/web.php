@@ -84,6 +84,7 @@ Route::get('panel/pembayaran', ['as' => 'pembayaran.index', 'uses' => 'Pembayara
 Route::get('panel/pembayaran/proses/{nik_id}', ['as' => 'pembayaran.proses', 'uses' => 'PembayaranController@prosesInvoice']);
 Route::get('panel/pembayaran/verifikasi/{nik_id}', ['as' => 'pembayaran.verifikasi', 'uses' => 'PembayaranController@verifikasiInvoice']);
 Route::get('panel/pembayaran/tolak/{nik_id}', ['as' => 'pembayaran.tolak', 'uses' => 'PembayaranController@tolakInvoice']);
+Route::get('panel/pembayaran/detail/{no_invoice}', ['as' => 'pembayaran.detail', 'uses' => 'PembayaranController@pembayaranDetail']);
 
 //Route Untuk Data Pendaftaran
 Route::get('panel/pendaftaran', ['as' => 'pendaftaran.index', 'uses' => 'PendaftaranController@index']);

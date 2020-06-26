@@ -56,6 +56,13 @@ class PembayaranController extends Controller
             ]);
         return redirect()->route('pembayaran.index');
     }
+
+    public function pembayaranDetail($no_invoice)
+    {
+        $data = Pembayaran::where('no_invoice', $no_invoice)->get();
+        return view('pembayaran.detail', compact('data'));
+    }
+
     public function create()
     {
         //

@@ -61,7 +61,7 @@
                                 <td>{{ $komunitas }}</td>
                                 <td>{{ $koordinator }}</td>
                                 <td>{{ $atlet }}</td>
-                                <td>     
+                                <td>
                                     @if( $pembayaran->bukti_pembayaran != '')
                                     <img src="{{ asset('bukti_bayar/'. $pembayaran->bukti_pembayaran) }}" width='75' height='75' class="perbesar">
                                     @else
@@ -72,7 +72,7 @@
 
                                 <td>
                                     <a href="#detailpembayaran">
-                                        <button type="button" class="btn btn-sm btn-primary">Detail</button>
+                                        <button type="button" class="btn btn-sm btn-primary" onclick="loadInvoice('{{ $pembayaran->no_invoice }}')">Detail</button>
                                     </a>
                                     @if($validasi == 1)
                                     <a href="{{ route('pembayaran.proses', ['nik_id' => $get]) }}" onclick="return confirm('Yakin Akan Proses Pembayaran?');">
@@ -121,18 +121,18 @@
                         <div class="group-input">
                             <table border="1" cellpadding="5" cellspacing="0">
                                 <tr>
-                                    <th >Nama Atlit</th>
-                                    <th >Tanggal Lahir</th>
-                                    <th >Jenis Kelamin</th>
-                                    <th >Kategori</th>
-                                    <th >Biaya Pendaftaran</th>
+                                    <th>Nama Atlit</th>
+                                    <th>Tanggal Lahir</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>Kategori</th>
+                                    <th>Biaya Pendaftaran</th>
                                 </tr>
                                 <tr>
                                     <td>-</td>
                                     <td>-</td>
                                     <td>-</td>
                                     <td>-</td>
-                                    <td style="padding-right: 110px;">- <div class="tambah-nolomba"><a href="#popuptambah">tambah no lomba</a></div>
+                                    <td style="padding-right: 110px;">- /div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -140,57 +140,91 @@
                                     <td>-</td>
                                     <td>-</td>
                                     <td>-</td>
-                                    <td style="padding-right: 110px;">- <div class="tambah-nolomba"><a href="#popuptambah">tambah no lomba</a></div>
+                                    <div style="padding-right: 110px;">-
+                                    </div>
                                     </td>
                                 </tr>
-                                
-                                <tr>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td style="padding-right: 110px;">- <div class="tambah-nolomba"><a href="#popuptambah">tambah no lomba</a></div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="group-input">
-                            <div class="total-pembayaran bg-danger">
-                                <h1>GRAND TOTAL</h1>
-                                <h2>1.000.000</h2>
-                            </div>
-                        </div>
-                        <div class="input-boxpopup">
-                            <div class="input">
-                                <label for="">Nama Bank</label>
-                                <div class="keterangan">Bank BRI</div>
-                            </div>
 
-                            <div class="input">
-                                <label for="">No Rekening</label>
-                                <div class="keterangan">123456789</div>
-                            </div>
-
-                            <div class="input">
-                                <label for="">Nama Pemilik Rekening</label>
-                                <div class="keterangan">aselole</div>
-                            </div>
+                                <tr>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td style="padding-right: 110px;">-
+                        </div>
+                        </td>
+                        </tr>
+                        </table>
+                    </div>
+                    <div class="group-input">
+                        <div class="total-pembayaran bg-danger">
+                            <h1>GRAND TOTAL</h1>
+                            <h2>1.000.000</h2>
                         </div>
                     </div>
-                </form>
-                <!-- ===popup gambar=== -->
-                <form action="" class="popup-pembayaran" id="perbesargambar">
-                    <div title="keluar" class="close bg-danger">
-                        <a href="">X</a>
+                    <div class="input-boxpopup">
+                        <div class="input">
+                            <label for="">Nama Bank</label>
+                            <div class="keterangan">Bank BRI</div>
+                        </div>
+
+                        <div class="input">
+                            <label for="">No Rekening</label>
+                            <div class="keterangan">123456789</div>
+                        </div>
+
+                        <div class="input">
+                            <label for="">Nama Pemilik Rekening</label>
+                            <div class="keterangan">aselole</div>
+                        </div>
                     </div>
-                    <div class="gambar">
-                        <img src="" alt="">
-                    </div>
-                </form>
-                <!-- ======================popup pembayaran dan perbesar gambar akhir========================= -->
             </div>
+            </form>
+            <!-- ===popup gambar=== -->
+            <form action="" class="popup-pembayaran" id="perbesargambar">
+                <div title="keluar" class="close bg-danger">
+                    <a href="">X</a>
+                </div>
+                <div class="gambar">
+                    <img src="" alt="">
+                </div>
+            </form>
+            <!-- ======================popup pembayaran dan perbesar gambar akhir========================= -->
         </div>
+    </div>
     </div>
 
 </section>
 @endsection()
+
+<script src="{{ asset('assets_frontend/js/style.js') }}"></script>
+<script type="text/javascript">
+    function loadInvoice(no_invoice) {
+        $.ajax({
+            url: "{{ url('panel/pembayaran/detail') }}/" + no_invoice,
+            type: "GET",
+            success: function(data) {
+                $('#detailpembayaran').html(data);
+            }
+        });
+    }
+    // function saveData() {
+    //     var id = $('#id').val();
+    //     // alert("{{ url('konfirmasi/save') }}/" + id);
+    //     console.log($('#tambah').serialize());
+    //     $.ajax({
+    //         url: "{{ url('konfirmasi/save') }}/" + id,
+    //         type: "PUT",
+    //         data: $('#tambah').serialize(),
+    //         success: function(response) {
+    //             alert("Data Disimpan!");
+    //             $('#buttonback').click();
+    //         },
+    //         error: function(error) {
+    //             alert("Gagal menyimpan data");
+    //             console.error();
+    //         }
+    //     });
+    // }
+</script>
+</body>

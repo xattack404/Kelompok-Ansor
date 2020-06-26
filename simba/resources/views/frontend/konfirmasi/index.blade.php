@@ -192,27 +192,6 @@
 
     <script src="{{ asset('assets_frontend/js/style.js') }}"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('select[name="no_invoice"]').on('click', '.', function() {
-                var kategoriID = $(this).val();
-                if (kategoriID) {
-                    $.ajax({
-                        url: "{{ url('ajaxkat') }}/" + kategoriID,
-                        type: "GET",
-                        dataType: "json",
-                        success: function(data) {
-                            $('input[name="harga"]').empty();
-                            $.each(data, function(key, value) {
-                                $('input[name="harga"]').val('' + value.harga + '');
-                            });
-                        }
-                    });
-                } else {
-                    $('select[name="harga"]').empty();
-                }
-            });
-        });
-
         function loadInvoice() {
             var no_invoice = $('#no_invoice').val();
             $.ajax({
