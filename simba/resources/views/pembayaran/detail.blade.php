@@ -1,14 +1,13 @@
-@forelse($data as $pembayaran)
 <div title="keluar" class="close bg-danger">
     <a href="">X</a>
 </div>
 <div class="detail-pembayaran">
     <div class="keterangan-pembayaran">
-        Konfirmasi No Invoice Pembayaran<span># {{ $pembayaran->no_invoice }}</span>
+        Konfirmasi No Invoice Pembayaran<span># {{ $data[0]->no_invoice }}</span>
     </div>
     <div class="group-input">
         @php
-        $koordinator = $pembayaran->detailPembayaran[0]->atletAktif->koordinator;
+        $koordinator = $data[0]->detailPembayaran->atletAktif->koordinator;
         @endphp
         @if( ! empty($koordinator))
         <table border="1" cellpadding="5" cellspacing="0">
@@ -35,33 +34,22 @@
                     <th>Kategori</th>
                     <th>Biaya Pendaftaran</th>
                 </tr>
-
-                @php
-                $atlet = $pembayaran->detailPembayaran[0]->atletAktif->atlet;
-                $kat = $pembayaran->detailPembayaran[0]->kategoriRelasi->nama_kategori;
-                $biaya = $pembayaran->detailPembayaran[0]->harga;
-                @endphp
+                @foreach($data[0]->detailPembayaran as $DetailPembayaran)
                 <tr>
-                    <td>{{ $atlet->nama }}</td>
-                    <td>{{ $atlet->tgl_lahir }}</td>
-                    <td>{{ $atlet->jenis_kelamin }}</td>
-                    <td>{{ $kat }}</td>
-                    <td> Rp.{{ number_format($biaya,0, ',' , '.') }}</td>
+                    <td>{{ $DetailPembayaran->atletAktif->atlet->nama }}</td>
+                    <td>{{ $DetailPembayaran->atletAktif->atlet->tgl_lahir }}</td>
+                    <td>{{ $DetailPembayaran->atletAktif->atlet->jenis_kelamin }}</td>
+                    <td>{{ $DetailPembayaran->kategoriRelasi->nama_kategori }}</td>
+                    <td> Rp.{{ number_format($DetailPembayaran->harga,0, ',' , '.') }}</td>
                 </tr>
-                @empty
-                <tr>
-                    <td colspan="3">
-                        <center>Data kosong</center>
-                    </td>
-                </tr>
-                @endforelse
+                @endforeach
                 </tbody>
             </table>
     </div>
     <div class="group-input">
         <div class="total-pembayaran bg-danger">
             <h1>GRAND TOTAL</h1>
-            <h2>Rp.{{ number_format($pembayaran->total_bayar,0, ',' , '.') }}</h2>
+            <h2>Rp.{{ number_format($data[0]->total_bayar,0, ',' , '.') }}</h2>
         </div>
         <table border="1" cellpadding="5" cellspacing="0">
             <tr>
