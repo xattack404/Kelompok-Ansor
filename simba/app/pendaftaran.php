@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Komunitas;
+use App\Atlet;
 use App\Koordinasi;
 use App\PendaftaranStatus;
 
@@ -29,7 +30,7 @@ class Pendaftaran extends Model
   public function relasiAtlet()
   {
 
-    return $this->belongsTo(Atlet::class, 'nik_id');
+    return $this->belongsTo(Atlet::class, 'nik_id', 'nik_id');
   }
 
   public function relasikoordinasi()

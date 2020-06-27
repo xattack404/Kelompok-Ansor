@@ -7,7 +7,8 @@
     </div>
     <div class="group-input">
         @php
-        $koordinator = $data[0]->detailPembayaran->atletAktif->koordinator;
+        $koordinator = $data[0]->detailPembayaran[0]->atletAktif->koordinator;
+        $pembayaran = $data[0];
         @endphp
         @if( ! empty($koordinator))
         <table border="1" cellpadding="5" cellspacing="0">

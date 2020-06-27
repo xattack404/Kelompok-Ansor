@@ -29,13 +29,26 @@
                         <thead>
                             <tr>
                                 <th scope="col">Kode Pendaftaran </th>
+                                <th scope="col">Nama Koordinator </th>
+                                <th scope="col">Nama Atlet </th>
                                 <th scope="col" style="width: 250px;">Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             @forelse($data as $pendaftaran)
+                            @php
+                            $koordinator = '-';
+                            $atlet = '-';
+                            if( $pendaftaran->koordinator_id != 0){
+                            $koordinator = $pendaftaran->relasiKomunitas->nama_koordinator;
+                            }else{
+                            $atlet = $pendaftaran->relasiAtlet->nama;
+                            }
+                            @endphp
                             <tr>
                                 <td>{{ $pendaftaran->kode_pendaftaran }}</td>
+                                <td>{{ $koordinator }}</td>
+                                <td>{{ $atlet }}</td>
                                 <td>
                                     <a href="#popup">
                                         <button type="button" class="btn btn-sm btn-primary">Detail</button>
