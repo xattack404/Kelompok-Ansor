@@ -3035,9 +3035,11 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
 }
 
 .popup-pembayaran{
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 99999999999999;
   display: none;
@@ -3062,7 +3064,7 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
   text-decoration: none;
 }
 .popup-pembayaran .detail-pembayaran, .gambar{
-  width: 90%;
+  width: 70%;
   background-color: rgb(255, 255, 255);
   padding: 10px;
   overflow: auto;
@@ -3171,4 +3173,10 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
 }
 #detailpembayaran:target, #perbesargambar:target{
   display: flex;
+}
+
+@media (max-width: 600px){
+  .detail-pembayaran{
+    width: 100%;
+  }
 }

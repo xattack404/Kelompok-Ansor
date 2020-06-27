@@ -108,7 +108,12 @@
                         {!! $data['pembayaran']->appends(request()->except('page'))->render() !!}
                     </nav>
                 </div>
-                <!-- ======================popup pembayaran dan perbesar gambar========================= -->
+            </div>
+        </div>
+    </div>
+
+</section>
+            <!-- ======================popup pembayaran dan perbesar gambar========================= -->
                 <!-- ===popup detail pembayaran=== -->
                 <form class="popup-pembayaran" id="detailpembayaran">
                     <div title="keluar" class="close bg-danger">
@@ -171,12 +176,7 @@
                         <img src="" alt="">
                     </div>
                 </form>
-                <!-- ======================popup pembayaran dan perbesar gambar akhir========================= -->
-            </div>
-        </div>
-    </div>
-
-</section>
+            <!-- ======================popup pembayaran dan perbesar gambar akhir========================= -->
 @endsection()
 
 <script src="{{ asset('assets_frontend/js/style.js') }}"></script>

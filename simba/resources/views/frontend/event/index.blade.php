@@ -16,7 +16,7 @@
     <div class="judul-konten2">
         <h1>Semua Lomba</h1>
     </div>
-    <div class="katalog2">
+    <div class="katalog">
 
     <?php for ($i = 0; $i < 20; $i++){ ?>
             <div class="item-katalog">
@@ -29,8 +29,8 @@
             </div>
     <?php } ?>
             
+    </div>
 </div>
-
  <!-- top -->
  <top id="top">
     <a href="#konten2" class="page-scroll">
