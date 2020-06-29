@@ -88,3 +88,4 @@ Route::get('panel/pembayaran/detail/{no_invoice}', ['as' => 'pembayaran.detail',
 
 //Route Untuk Data Pendaftaran
 Route::get('panel/pendaftaran', ['as' => 'pendaftaran.index', 'uses' => 'PendaftaranController@index']);
+Route::get('panel/pendaftaran/detail/{kode_pendaftaran}', ['as' => 'pendaftaran.detail', 'uses' => 'PendaftaranController@pendaftaranDetail']);

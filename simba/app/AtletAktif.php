@@ -5,6 +5,8 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\Komunitas;
 use App\Atlet;
+use App\DetailEvent;
+
 
 class AtletAktif extends Model
 {
@@ -29,5 +31,9 @@ class AtletAktif extends Model
   public function detailPembayaran()
   {
     return $this->hasOne(DetailPembayaran::class, 'atlet_aktif_id', 'id');
+  }
+  public function event()
+  {
+    return $this->belongsTo(DetailEvent::class, 'atlet_aktif_id', 'id');
   }
 }

@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\Komunitas;
 use App\Atlet;
+use App\AtletAktif;
 use App\Koordinasi;
 use App\PendaftaranStatus;
 
@@ -32,11 +33,10 @@ class Pendaftaran extends Model
 
     return $this->belongsTo(Atlet::class, 'nik_id', 'nik_id');
   }
-
-  public function relasikoordinasi()
+  public function atletAktif()
   {
 
-    return $this->belongsTo(Koordinasi::class, 'koordinasi_id');
+    return $this->hasMany(AtletAktif::class, 'nik_id', 'nik_id');
   }
 
   public function status()

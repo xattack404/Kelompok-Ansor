@@ -18,6 +18,12 @@ class PendaftaranController extends Controller
         return view('pendaftaran.index', compact('data'));
     }
 
+    public function pendaftaranDetail($kode_pendaftaran)
+    {
+        $data = Pendaftaran::where('kode_pendaftaran', $kode_pendaftaran)->get();
+        return view('pendaftaran.detail', compact('data'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
