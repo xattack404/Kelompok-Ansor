@@ -50,7 +50,7 @@
                 <th>Kategori</th>
                 <th>Lomba</th>
             </tr>
-            @foreach( $data[0]->atletAktif as $getData)
+            @foreach( $data[0]->atletAktif[0] as $getData)
             <tr>
                 <td>{{ $getData->atlet->nama }}</td>
                 <td>{{ $getData->atlet->tgl_lahir }}</td>
