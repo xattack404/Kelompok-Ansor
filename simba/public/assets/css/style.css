@@ -3104,6 +3104,11 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
     border: none;
     padding: 5px;
 }
+.group-input table tr td select{
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
 .group-input table tr td img, .group-input table tr td .images{
   width: 100px;
   height: 100px;
@@ -3171,7 +3176,7 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
 .gambar img{
   width: 100%;
 }
-#detailpembayaran:target, #perbesargambar:target{
+#detailpembayaran:target, #perbesargambar:target, #pendaftaran:target{
   display: flex;
 }
 
