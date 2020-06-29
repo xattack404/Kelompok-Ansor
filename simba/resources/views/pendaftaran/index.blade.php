@@ -119,11 +119,10 @@
                                     <td>L</td>
                                     <td>berenang</td>
                                     <td>
-                                        <select name="" id="">
-                                        <option value="">--pilih--</option>
-                                        <option value="">lari</option>
-                                        <option value="">berenang</option>
-                                        </select>
+                                        <ul>
+                                            <li>berenag</li>
+                                            <li>lari</li>
+                                        </ul>
                                     </td>
                                 </tr>
                             </table>
