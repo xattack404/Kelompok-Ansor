@@ -11,7 +11,7 @@
     <script src="{{ asset('assets_frontend/js/jquery-3.4.1.min.js') }}"></script>
 </head>
 
-<body>
+<body class="">
     @include('layouts.frontendnavbar')
     <!-- konten-->
     <!-- /* ====================Konfirmasi Pembayaran====================*/ -->
@@ -242,3 +242,9 @@
         }
     </script>
 </body>
+
+<script>
+    $(document).ready(function(){      
+        $('.eventt').hide();
+    });
+  </script>

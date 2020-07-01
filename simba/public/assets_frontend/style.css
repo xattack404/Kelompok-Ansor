@@ -92,6 +92,7 @@ table th{
 body{
     color: #666666;
     background-color: #F0F1EC;
+    font-family: lato;
 }
 .simba3{    
     background: url(../assets_frontend/IMG/simba5.png) center no-repeat;
@@ -164,7 +165,7 @@ input, select{
 select{
     -webkit-appearance: button;
 }
-input:focus, select:focus{
+input:focus, select:focus, textarea:focus{
     text-transform: capitalize;
     border: 1px solid #DD5B4E;
     text-transform: none;
@@ -173,7 +174,11 @@ input::placeholder, textarea::placeholder{
     color:#323232;
     font-size: 12px;
     text-align: left;
-    text-transform: none;
+    text-transform: capitalize;
+}
+.kapital{
+    
+    text-transform: capitalize;
 }
 .neomorpishm{
     box-shadow:  5px 5px 10px #c0c1bd, 
@@ -1003,6 +1008,18 @@ ul li:hover #dropdown{
 .keterangan-konten table tr th{
     font-size: 2vmin;
 }
+.keterangan-konten table tr td input, .total input{
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    color: white;
+}
+.total input{
+    height: 100%;
+    border: none;
+    text-align: center;
+    font-size: 4vmin;
+}
 .keterangan-konten h2{
     text-align: center;
     font-family: lato;
@@ -1066,7 +1083,7 @@ ul li:hover #dropdown{
     outline: none;
     box-sizing: border-box;
     padding: 5px;
-    border: 3px solid #323232;
+    border: 3px solid #e74c3c;
     position: absolute;
     top: 50%;
     left: 50%;

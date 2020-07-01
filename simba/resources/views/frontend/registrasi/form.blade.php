@@ -10,7 +10,7 @@
         </div>
         <div class="input">
             <label for="namaanggota">Nama Anggota</label>
-            <input type="text" id="namaanggota" name="anggota_namaanggota[]" placeholder="masukan nama anggota komunitas" required>
+            <input type="text" id="namaanggota" name="anggota_namaanggota[]" placeholder="masukan nama anggota komunitas" required class="kapital">
         </div>
         <div class="input">
             <label for="namakom">Tanggal lahir</label>
@@ -19,7 +19,7 @@
         <div class="input">
             <label for="">jenis kelamin</label>
             <select name="anggota_jenis_kelamin[]" id="" required>
-                <option value="">--pilih--</option>
+                <option value="">--PILIH--</option>
                 <option value="L">laki - laki</option>
                 <option value="P">perempuan</option>
             </select>
@@ -50,22 +50,22 @@
         <div class="input">
             <label for="">Status kewarganegaraan</label>
             <select name="anggota_warga_negara[]" id="" required>
-                <option value="">--pilih--</option>
-                <option value="WNI">Warga negara indonesia</option>
-                <option value="WNA">Warga negara asing</option>
+                <option value="">--PILIH--</option>
+                <option value="WNI">Warga Negara Indonesia</option>
+                <option value="WNA">Warga Negara Asing</option>
             </select>
         </div>
         <div class="input">
             <label for="">provinsi</label>
-            <input type="text" name="anggota_prov[]" id="prov" placeholder="masukan nama Provinsi" required>
+            <input type="text" name="anggota_prov[]" id="prov" placeholder="masukan nama Provinsi" required class="kapital">
         </div>
         <div class="input">
             <label for="">Kabupaten_kota</label>
-            <input type="text" name="anggota_kabkot[]" id="kabkot" placeholder="masukan nama Kabupaten/Kota" required>
+            <input type="text" name="anggota_kabkot[]" id="kabkot" placeholder="masukan nama Kabupaten/Kota" required class="kapital">
         </div>
         <div class="input">
             <label for="">kecamatan</label>
-            <input type="text" name="anggota_kec[]" id="kec" placeholder="masukan nama Kecamatan" required>
+            <input type="text" name="anggota_kec[]" id="kec" placeholder="masukan nama Kecamatan" required class="kapital">
         </div>
         <div class="input">
             <label for="">alamat</label>

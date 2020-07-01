@@ -28,7 +28,7 @@
                     </div> -->
                     <div class="input">
                         <label for="namapen">Nama penanggung jawab</label>
-                        <input type="text" id="nama_koordinator" name="nama_koordinator" placeholder="masukan nama penanggung jawab">
+                        <input type="text" id="nama_koordinator" name="nama_koordinator" placeholder="masukan nama penanggung jawab" class="kapital">
                     </div>
                     <div class="input">
                         <label for="tglhr">tanggal lahir</label>
@@ -45,9 +45,9 @@
                     <div class="input">
                         <label for="jkel">jenis kelamin</label>
                         <select name="jenis_kelamin" id="jkel" required>
-                            <option value="">--pilih--</option>
+                            <option value="">--PILIH--</option>
                             <option value="L">laki-laki</option>
-                            <option value="P">wanita</option>
+                            <option value="P">perempuan</option>
                         </select>
                     </div>
                     <div class="input">
@@ -64,21 +64,21 @@
                         <label for="">Status kewarganegaraan</label>
                         <select name="warga_negara" id="">
                             <option value="">--pilih--</option>
-                            <option value="WNI">Warga negara indonesia</option>
-                            <option value="WNA">Warga negara asing</option>
+                            <option value="WNI">Warga Negara Indonesia</option>
+                            <option value="WNA">Warga Negara Asing</option>
                         </select>
                     </div>
                     <div class="input">
                         <label for="">provinsi</label>
-                        <input type="text" name="prov" id="prov" placeholder="masukan nama Provinsi" required>
+                        <input type="text" name="prov" id="prov" placeholder="masukan nama Provinsi" required class="kapital">
                     </div>
                     <div class="input">
                         <label for="">Kabupaten_kota</label>
-                        <input type="text" name="kabkot" id="kabkot" placeholder="masukan nama Kabupaten/Kota" required>
+                        <input type="text" name="kabkot" id="kabkot" placeholder="masukan nama Kabupaten/Kota" required class="kapital">
                     </div>
                     <div class="input">
                         <label for="">kecamatan</label>
-                        <input type="text" name="kec" id="kec" placeholder="masukan nama Kecamatan" required>
+                        <input type="text" name="kec" id="kec" placeholder="masukan nama Kecamatan" required class="kapital">
                     </div>
                     <div class="input">
                         <label for="">alamat</label>
@@ -107,19 +107,19 @@
                             <td>kode unik simulasi</td>
                             <td>Harga</td>
                             <td>
-                                <input type="number" name="unique_code" id="unique_code" class="" style="" readonly="true" value="101">
+                                <input type="" name="unique_code" id="unique_code" class="" style="" readonly="true" value="101">
                             </td>
                         </tr>
                         <tr>
                             <td>Total keseluruhan</td>
                             <td>Harga</td>
-                            <td><input type="number" name="total_bayar" id="total_bayar" class="form-control bg-white text-white" style="color: #fff" readonly="true"></td>
+                            <td><input type="" name="total_bayar" id="total_bayar" class="" style="color: #fff" readonly="true"></td>
                         </tr>
                     </table>
 
                     <h2>total yang harus di bayar</h2>
                     <div class="total">
-                        <h3><input type="number" name="grand_total" id="grand_total" class="form-control bg-white" readonly="true"></h3>
+                        <input type="" name="grand_total" id="grand_total" class="" readonly="true">
                     </div>
 
                     <div class="ikut-serta">
@@ -150,7 +150,7 @@
                 </div>
                 <div class="input">
                     <label for="nama">nama</label>
-                    <input type="text" name="nama" id="nama" placeholder="masukan nama anda" required>
+                    <input type="text" name="nama" id="nama" placeholder="masukan nama anda" required class="kapital">
                 </div>
                 <div class="input">
                     <label for="email">email</label>
@@ -163,9 +163,9 @@
                 <div class="input">
                     <label for="jkel">jenis kelamin</label>
                     <select name="jenis_kelamin" id="jkel" required>
-                        <option value="">--pilih--</option>
+                        <option value="">--PILIH--</option>
                         <option value="L">laki-laki</option>
-                        <option value="P">wanita</option>
+                        <option value="P">perempuan</option>
                     </select>
                 </div>
                 <div class="input">
@@ -196,22 +196,22 @@
                 <div class="input">
                     <label for="">Status kewarganegaraan</label>
                     <select name="warga_negara" id="">
-                        <option value="">--pilih--</option>
-                        <option value="WNI">Warga negara indonesia</option>
-                        <option value="WNA">Warga negara asing</option>
+                        <option value="">--PILIH--</option>
+                        <option value="WNI">Warga Negara Indonesia</option>
+                        <option value="WNA">Warga Negara Asing</option>
                     </select>
                 </div>
                 <div class="input">
                     <label for="">provinsi</label>
-                    <input type="text" name="prov" id="prov" placeholder="masukan nama Provinsi" required>
+                    <input type="text" name="prov" id="prov" placeholder="masukan nama Provinsi" required class="kapital">
                 </div>
                 <div class="input">
                     <label for="">Kabupaten_kota</label>
-                    <input type="text" name="kabkot" id="kabkot" placeholder="masukan nama Kabupaten/Kota" required>
+                    <input type="text" name="kabkot" id="kabkot" placeholder="masukan nama Kabupaten/Kota" required class="kapital">
                 </div>
                 <div class="input">
                     <label for="">kecamatan</label>
-                    <input type="text" name="kec" id="kec" placeholder="masukan nama Kecamatan" required>
+                    <input type="text" name="kec" id="kec" placeholder="masukan nama Kecamatan" required class="kapital">
                 </div>
                 <div class="input">
                     <label for="">alamat</label>
@@ -339,4 +339,9 @@
 
 </body>
 
+<script>
+    $(document).ready(function(){      
+        $('.eventt').hide();
+    });
+  </script>
 </html>
