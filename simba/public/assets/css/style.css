@@ -3019,7 +3019,7 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
 }
 .gambar img{
   width: 100%;
-  height: 100%;
+  height: auto;
   image-resolution: 50%;
 }
 .keterangan-popup{
