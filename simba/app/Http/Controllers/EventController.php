@@ -14,8 +14,8 @@ class EventController extends Controller
      */
     public function index()
     {
-        return view('frontend/event.index');
-
+        $data = Cabangolahraga::all();
+        return view('frontend/event.index', compact('data'));
     }
 
     /**
@@ -47,8 +47,8 @@ class EventController extends Controller
      */
     public function show($url)
     {
-        $data['cabang_olahraga'] = Cabangolahraga::where('url',$url)->first();
-        return view('frontend.event.detailevent',compact ('data'));
+        $data['cabang_olahraga'] = Cabangolahraga::where('url', $url)->first();
+        return view('frontend.event.detailevent', compact('data'));
     }
 
     /**

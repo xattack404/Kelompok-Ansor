@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" id="home">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +10,25 @@
     <!-- jquery -->
     <script src="{{ asset('assets_frontend/js/jquery-3.4.1.min.js') }}"></script>
 </head>
-<body>
-@include('layouts.frontendnavbar')
-<!-- Jumbotron -->
-<div class="jumbotron">
-    <div class="jumbotron-content">
-        <h1>SELAMAT DATANG DI <br> SISTEM INFORMASI LOMBA</h1>
-        <p>asah kemampuanmu dengan mengikuti lomba dan jadilah juara</p>
-    </div>
-</div>
-<!-- Akhir Jumbotron -->
 
-<!-- Konten -->
-<div class="content" id="konten">
-    <div class="judul-konten">
-        <h1>last event</h1>
-        <p>semua lomba terbaru hari ini</p>
+<body>
+    @include('layouts.frontendnavbar')
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+        <div class="jumbotron-content">
+            <h1>SELAMAT DATANG DI <br> SISTEM INFORMASI LOMBA</h1>
+            <p>asah kemampuanmu dengan mengikuti lomba dan jadilah juara</p>
+        </div>
     </div>
-    <div class="katalog">
+    <!-- Akhir Jumbotron -->
+
+    <!-- Konten -->
+    <div class="content" id="konten">
+        <div class="judul-konten">
+            <h1>last event</h1>
+            <p>semua lomba terbaru hari ini</p>
+        </div>
+        <div class="katalog">
             @forelse($data as $event)
             <div class="item-katalog">
                 <div class="item">
@@ -35,44 +37,45 @@
                         <label for="">{{ $event->nama_or }}</label>
                     </a>
                 </div>
-               </div>
-               @empty
-    <h2> Belum Ada Event </h2>
+            </div>
+            @empty
+            <h2> Belum Ada Event </h2>
+        </div>
+        @endforelse
+        <div class="more">
+            <a href="{{ route('frontend.event.index') }}">
+                More event <br> <i class="fas fa-ellipsis-h"></i>
+            </a>
+        </div>
+
     </div>
-    @endforelse
-    <div class="more">
-        <a href="{{ route('frontend.event.index') }}">
-            More event <br> <i class="fas fa-ellipsis-h"></i>
+    <!-- Akhir Konten -->
+
+    <!-- Button Kontak -->
+    <div class="kontak">
+        <a href="">Contact</a>
+    </div>
+    <!-- Button kontak akhir -->
+
+
+    <!-- top -->
+    <top id="top">
+        <a href="#home" class="page-scroll">
+            <i class="fas fa-arrow-up"></i>
         </a>
-    </div>
-    
-</div>
-<!-- Akhir Konten -->
-
-<!-- Button Kontak -->
-<div class="kontak">
-    <a href="">Contact</a>
-</div>
-<!-- Button kontak akhir -->
-
-
- <!-- top -->
- <top id="top">
-    <a href="#home" class="page-scroll">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-</top>
+    </top>
     <script type="text/javascript">
-        window.addEventListener("scroll", function(){
+        window.addEventListener("scroll", function() {
             var top = document.querySelector("top");
             top.classList.toggle("totop", window.scrollY > 0);
         })
     </script>
- <!-- top akhir -->
+    <!-- top akhir -->
 
- @include('layouts.frontendfooter')
+    @include('layouts.frontendfooter')
 
 
-<script src="{{ asset('assets_frontend/js/style.js') }}"></script>
+    <script src="{{ asset('assets_frontend/js/style.js') }}"></script>
 </body>
+
 </html>
