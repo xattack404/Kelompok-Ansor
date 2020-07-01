@@ -54,5 +54,9 @@
 
     <script src="{{ asset('assets_frontend/js/style.js') }}"></script>
 </body>
-
+<script>
+    $(document).ready(function(){      
+        $('.eventt').hide();
+    });
+  </script>
 </html>
