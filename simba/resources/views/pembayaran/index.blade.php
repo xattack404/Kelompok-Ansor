@@ -50,6 +50,7 @@
                             }else{
                             if( $pembayaran->detailPembayaran()->count() != 0) {
                             $atlet = $pembayaran->detailPembayaran[0]->atletAktif->atlet->nama;
+                            $kode = $pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->kode_pendaftaran;
                             }
                             }
                             @endphp
