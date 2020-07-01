@@ -19,7 +19,7 @@
     <div class="img">
         <img src="{{ asset('image/'. $data['cabang_olahraga']->foto) }}" alt="">    
     </div>
-    <div class="konten-lomba">
+    <div class="konten-lomba ">
         <h3>{{ $data['cabang_olahraga']->nama_or }}</h3>
         <p><label for="">KATEGORI :</label> {{ $data['cabang_olahraga']->relasiKategori->nama_kategori }}</p>
         <p><label for="">TANGGAL :</label> {{ $data['cabang_olahraga']->tanggal_pelaksanaan }}</p>

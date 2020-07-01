@@ -793,7 +793,7 @@ ul li:hover #dropdown{
     padding: 5px;
     grid-template-columns: none;
     box-sizing: border-box;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
 }
 .bungkus{
     position: relative;
@@ -1449,6 +1449,9 @@ footer .copyright h4, footer{
     text-align: center;
     font-family: lato;
 
+}
+#border{
+    border-bottom: none;
 }
 /* ====================footer AKHIR====================*/
 

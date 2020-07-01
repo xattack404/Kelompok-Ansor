@@ -14,11 +14,11 @@
 <body>
     @include('layouts.frontendnavbar')
 
-    <div class="content" id="konten2">
+    <div class="content " id="konten2">
         <div class="judul-konten2">
             <h1>Semua Lomba</h1>
         </div>
-        <div class="katalog">
+        <div class="katalog" id="border">
 
             @forelse($data as $event)
             <div class="item-katalog">
