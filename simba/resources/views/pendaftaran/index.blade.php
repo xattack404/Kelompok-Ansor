@@ -81,6 +81,7 @@
 </section>
 <form class="popup-pembayaran" id="detailpembayaran">
     <div title="keluar" class="close bg-danger">
+        <a href="">X</a>
     </div>
     <div class="detail-pembayaran">
         <div class="keterangan-pembayaran">
