@@ -63,7 +63,7 @@
                                 <td>{{ $atlet }}</td>
                                 <td>
                                     @if( $pembayaran->bukti_pembayaran != '')
-                                    <a href="#perbesargambar"><img src="{{ asset('bukti_bayar/'. $pembayaran->bukti_pembayaran) }}" width='75' height='75' class=""></a>
+                                    <a href="#perbesargambar"><img src="{{ asset('bukti_bayar/'. $pembayaran->bukti_pembayaran) }}" onclick="loadImage('{{ $pembayaran->no_invoice }}')" width='75' height='75' class=""></a>
                                     @else
                                     -
                                     @endif
@@ -190,23 +190,15 @@
             }
         });
     }
-    // function saveData() {
-    //     var id = $('#id').val();
-    //     // alert("{{ url('konfirmasi/save') }}/" + id);
-    //     console.log($('#tambah').serialize());
-    //     $.ajax({
-    //         url: "{{ url('konfirmasi/save') }}/" + id,
-    //         type: "PUT",
-    //         data: $('#tambah').serialize(),
-    //         success: function(response) {
-    //             alert("Data Disimpan!");
-    //             $('#buttonback').click();
-    //         },
-    //         error: function(error) {
-    //             alert("Gagal menyimpan data");
-    //             console.error();
-    //         }
-    //     });
-    // }
+
+    function loadImage(no_invoice) {
+        $.ajax({
+            url: "{{ url('panel/pembayaran/popgambar') }}/" + no_invoice,
+            type: "GET",
+            success: function(data) {
+                $('#perbesargambar').html(data);
+            }
+        });
+    }
 </script>
 </body>
