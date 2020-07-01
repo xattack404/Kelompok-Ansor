@@ -64,7 +64,9 @@
                 <td>{{ $getData->detailPembayaran->kategoriRelasi->nama_kategori }}</td>
                 <td>
                     <ul>
-                        <li>{{ $getData->event[0]->lomba[0]->nama_subkat }}</li>
+                        @foreach($data[0]->atletAktif[0]->event as $event)
+                        <li>{{ $event->lomba[0]->nama_subkat }}</li>
+                        @endforeach
                     </ul>
                 </td>
             </tr>
