@@ -2969,62 +2969,6 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
     -webkit-transform: scale(1.2, 1.2);
     opacity: 0.0; } }
 /* ========= styel sendiri ============ */
-.popup,#popup{
-  position: fixed;
-  left: 50%;
-  top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #191d21;
-  font-family: lato;
-  width: 0%;
-  height: 0%;
-  padding: 0px;
-  overflow: hidden;
-  font-size: 18px;
-  background-color: white;
-  border: 2px solid #6777ef;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  z-index: 99999999999999;
-  transition: .3s;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  -ms-transition: .3s;
-  -o-transition: .3s;
-}
-#popup:target{
-  width: 70%;
-  height: auto;
-  padding: 10px;
-}
-.popup .content{
-  display: block;
-  width: 100%;
-  padding: 5px;
-}
-.popup .closee{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  outline: none;
-  text-decoration: none;
-  width: 50px;
-  height: 30px;
-  box-sizing: border-box;
-  border: 1px solid skyblue;
-  border-radius: 5px;
-  float: right;
-}
 
 .perbesar:hover{
   transform: scale(5);
@@ -3185,7 +3129,7 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
 .gambar img{
   width: 100%;
 }
-#detailpembayaran:target, #perbesargambar:target, #pendaftaran:target{
+#detailpembayaran:target, #perbesargambar:target, #pendaftaran:target, #popup:target{
   display: flex;
 }
 

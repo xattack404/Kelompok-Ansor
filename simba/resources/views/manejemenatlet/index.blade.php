@@ -71,26 +71,54 @@
 </section>
 @endsection()
 
-<div class="popup" id="popup">
-    <div class="content">
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th scope="col">Nama </th>
-                    <th scope="col">Email</th>
-                    <th scope="col">No Telpon</th>
-                    <th scope="col">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-
-                <tr>
-                    <td>{{ $manejemenatlet->nama }}</td>
-                    <td>{{ $manejemenatlet->email }}</td>
-                    <td>{{ $manejemenatlet->no_hp }}</td>
-                    <td>
-            </tbody>
-        </table>
+<form class="popup-pembayaran" id="popup">
+    <div title="keluar" class="close bg-danger">
+        <a href="">X</a>
     </div>
-    <a href="#index" class="closee">close</a>
-</div>
+    <div class="detail-pembayaran">
+        <div class="keterangan-pembayaran">
+            No Pendaftaran<span>?</span>
+        </div>
+        <div class="group-input">
+            <table border="1" cellpadding="5" cellspacing="0">
+                <tr>
+                    <th>Nama Komunitas</th>
+                    <th>Nama Koordinator</th>
+                    <th>No telepon</th>
+                    <th>Email</th>
+                    <th>jumlah atlit</th>
+                </tr>
+                <tr>
+                    <td>Komunitas aseek</td>
+                    <td>Nanda Cihuy</td>
+                    <td>0987654432</td>
+                    <td>Nanda@rockmail.com</td>
+                    <td>1</td>
+                </tr>
+            </table>
+        </div>
+        <div class="group-input">
+            <table border="1" cellpadding="5" cellspacing="0">
+                <tr>
+                    <th>Nama Atlit</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Kategori</th>
+                    <th>Lomba</th>
+                </tr>
+                <tr>
+                    <td>Tahaj</td>
+                    <td>26feb2781</td>
+                    <td>L</td>
+                    <td>berenang</td>
+                    <td>
+                        <ul>
+                            <li>berenag</li>
+                            <li>lari</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</form>

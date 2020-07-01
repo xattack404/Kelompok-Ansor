@@ -23,7 +23,7 @@
                 <!-- <li><a class="page-scroll" href="#">Atlet Aktif</a></li> -->
                 <li><a class="page-scroll" href="{{ route('frontend.konfirmasi.index')}}">Konfirmasi Pembayaran</a></li>
                 <li><a class="page-scroll" href="{{ route('frontend.registrasi.index')}}">Registrasi</a></li>              
-                <li><a class="page-scroll" href="{{ route('frontend.konfirmasi.index')}}">Informasi</a></li>
+                <li><a class="page-scroll" href="">Informasi</a></li>
         </ul>               
     </div>
     <div class="menu-toggle">
