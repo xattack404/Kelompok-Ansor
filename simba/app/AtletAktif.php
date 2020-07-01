@@ -34,6 +34,6 @@ class AtletAktif extends Model
   }
   public function event()
   {
-    return $this->belongsTo(DetailEvent::class, 'atlet_aktif_id', 'id');
+    return $this->hasMany(DetailEvent::class, 'atlet_aktif_id', 'id');
   }
 }

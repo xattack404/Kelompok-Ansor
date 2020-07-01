@@ -2,7 +2,7 @@
 </div>
 <div class="detail-pembayaran">
     <div class="keterangan-pembayaran">
-        No Pendaftaran<span>( {{ $data[0]->no_pendaftaran }} )</span>
+        No Pendaftaran <span> ( {{ $data[0]->kode_pendaftaran }} )</span>
     </div>
     <div class="group-input">
         @php
@@ -50,22 +50,25 @@
                 <th>Kategori</th>
                 <th>Lomba</th>
             </tr>
-            @foreach( $data[0]->atletAktif[0] as $getData)
+            @foreach( $data as $atletAktif)
+            @foreach( $atletAktif->atletAktif as $getData)
             <tr>
+                <td>{{ $getData->atlet->nik_id }}</td>
                 <td>{{ $getData->atlet->nama }}</td>
                 <td>{{ $getData->atlet->tgl_lahir }}</td>
                 <td>{{ $getData->atlet->jenis_kelamin }}</td>
-                <td>{{ $getData->atlet->alamat }}, {{ $koordinator->kecamatan }}, {{ $koordinator->kabupaten_kota }}, {{ $koordinator->provinsi }}</td>
+                <td>{{ $getData->atlet->alamat }}, {{ $getData->atlet->kecamatan }}, {{ $getData->atlet->kabupaten_kota }}, {{ $getData->atlet->provinsi }}</td>
                 <td>{{ $getData->atlet->warga_negara }}</td>
                 <td>{{ $getData->atlet->no_hp }}</td>
                 <td>{{ $getData->atlet->email }}</td>
-                <td>{{ $getData->detailPembayaran[0]->kategoriRelasi[0]->nama_kategori }}</td>
+                <td>{{ $getData->detailPembayaran->kategoriRelasi->nama_kategori }}</td>
                 <td>
                     <ul>
-                        <li>{{ $getData->event->sub_kategori_id }}</li>
+                        <li>{{ $getData->event[0]->lomba[0]->nama_subkat }}</li>
                     </ul>
                 </td>
             </tr>
+            @endforeach
             @endforeach
         </table>
     </div>

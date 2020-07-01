@@ -58,6 +58,7 @@
                                     </a>
                                 </td>
                             </tr>
+
                             @empty
                             <tr>
                                 <td colspan="3">

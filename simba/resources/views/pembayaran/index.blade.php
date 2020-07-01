@@ -27,7 +27,8 @@
                         <thead>
                             <tr>
                                 <th scope="col"><b>Nomor Invoice</b></th>
-                                <th scope="col"><b>Jumlah Bayar</b> </th>
+                                <th scope="col"><b>Kode Pendaftaran</b></th>
+                                <th scope="col">Jumlah Bayar </th>
                                 <th scope="col">Nama Komunitas </th>
                                 <th scope="col">Koordinator</th>
                                 <th scope="col">Nama Atlet</th>
@@ -50,13 +51,14 @@
                             if( $pembayaran->detailPembayaran()->count() != 0) {
                             $atlet = $pembayaran->detailPembayaran[0]->atletAktif->atlet->nama;
                             $status = $pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->status->value;
-                            $get = $pembayaran->detailPembayaran[0]->atletAktif->atlet->nik_id;
                             $validasi = $pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->pendaftaran_status_id;
+                            $kode = $pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->kode_pendaftaran;
                             }
                             }
                             @endphp
                             <tr>
                                 <td>{{ $pembayaran->no_invoice }}</td>
+                                <td>{{ $kode }}</td>
                                 <td>Rp.{{ number_format($pembayaran->total_bayar,0, ',' , '.') }}</td>
                                 <td>{{ $komunitas }}</td>
                                 <td>{{ $koordinator }}</td>
@@ -68,26 +70,26 @@
                                     -
                                     @endif
                                 </td>
-                                <td>{{ $status }}</td>
+                                <td>{{ $pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->status->value }}</td>
 
                                 <td>
                                     <a href="#detailpembayaran">
                                         <button type="button" class="btn btn-sm btn-primary" onclick="loadInvoice('{{ $pembayaran->no_invoice }}')">Detail</button>
                                     </a>
-                                    @if($validasi == 1)
-                                    <a href="{{ route('pembayaran.proses', ['nik_id' => $get]) }}" onclick="return confirm('Yakin Akan Proses Pembayaran?');">
+                                    @if($pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->pendaftaran_status_id == 1)
+                                    <a href="{{ route('pembayaran.proses', ['kode' => $pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->kode_pendaftaran]) }}" onclick="return confirm('Yakin Akan Proses Pembayaran?');">
                                         <button type="button" class="btn btn-sm btn-warning">Proses</button>
                                         @endif
 
-                                        @if($validasi == 2)
+                                        @if($pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->pendaftaran_status_id == 2)
                                     </a>
-                                    <a href="{{ route('pembayaran.verifikasi', ['nik_id' => $get]) }}" onclick="return confirm('Silahkan cek kembali bukti pembayaran, apakah sudah benar?');">
+                                    <a href="{{ route('pembayaran.verifikasi', ['kode' => $pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->kode_pendaftaran]) }}" onclick="return confirm('Silahkan cek kembali bukti pembayaran, apakah sudah benar?');">
                                         <button type="button" class="btn btn-sm btn-success">Verifikasi</button>
                                         @endif
 
-                                        @if($validasi == 1)
+                                        @if($pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->pendaftaran_status_id == 1)
                                     </a>
-                                    <a href="{{ route('pembayaran.tolak', ['nik_id' => $get]) }}" onclick="return confirm('Yakin Akan Tolak Pembayaran?');">
+                                    <a href="{{ route('pembayaran.tolak', ['kode' => $pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->kode_pendaftaran]) }}" onclick="return confirm('Yakin Akan Tolak Pembayaran?');">
                                         <button type="button" class="btn btn-sm btn-danger">Tolak</button>
                                     </a>
                                     @endif
@@ -113,70 +115,70 @@
     </div>
 
 </section>
-            <!-- ======================popup pembayaran dan perbesar gambar========================= -->
-                <!-- ===popup detail pembayaran=== -->
-                <form class="popup-pembayaran" id="detailpembayaran">
-                    <div title="keluar" class="close bg-danger">
-                        <a href="">X</a>
-                    </div>
-                    <div class="detail-pembayaran">
-                        <div class="keterangan-pembayaran">
-                            Konfirmasi pembayaran No Pendaftaran<span>?</span>
-                        </div>
-                        <div class="group-input">
-                            <table border="1" cellpadding="5" cellspacing="0">
-                                <tr>
-                                    <th>Nama Atlit</th>
-                                    <th>Tanggal Lahir</th>
-                                    <th>Jenis Kelamin</th>
-                                    <th>Kategori</th>
-                                    <th>Biaya Pendaftaran</th>
-                                </tr>
-                                <tr>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="group-input">
-                            <div class="total-pembayaran bg-danger">
-                                <h1>GRAND TOTAL</h1>
-                                <h2>1.000.000</h2>
-                            </div>
-                        </div>
-                        <div class="group-input">
-                            <table border="1" cellpadding="5" cellspacing="0">
-                                <tr>
-                                    <th>Nama Bank</th>
-                                    <th>No Rekening</th>
-                                    <th>Nama Pemilik</th>
-                                    <th>Bukti Pembayaran</th>
-                                </tr>
-                                <tr>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>
-                                        <div class="images"><img src="" alt="" class="perbesar"></div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </form>
-                <!-- ===popup gambar=== -->
-                <form action="" class="popup-pembayaran" id="perbesargambar">
-                    <div title="keluar" class="close bg-danger">
-                        <a href="">X</a>
-                    </div>
-                    <div class="gambar">
-                        <img src="" alt="">
-                    </div>
-                </form>
-            <!-- ======================popup pembayaran dan perbesar gambar akhir========================= -->
+<!-- ======================popup pembayaran dan perbesar gambar========================= -->
+<!-- ===popup detail pembayaran=== -->
+<form class="popup-pembayaran" id="detailpembayaran">
+    <div title="keluar" class="close bg-danger">
+        <a href="">X</a>
+    </div>
+    <div class="detail-pembayaran">
+        <div class="keterangan-pembayaran">
+            Konfirmasi pembayaran No Pendaftaran<span>?</span>
+        </div>
+        <div class="group-input">
+            <table border="1" cellpadding="5" cellspacing="0">
+                <tr>
+                    <th>Nama Atlit</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Kategori</th>
+                    <th>Biaya Pendaftaran</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </div>
+        <div class="group-input">
+            <div class="total-pembayaran bg-danger">
+                <h1>GRAND TOTAL</h1>
+                <h2>1.000.000</h2>
+            </div>
+        </div>
+        <div class="group-input">
+            <table border="1" cellpadding="5" cellspacing="0">
+                <tr>
+                    <th>Nama Bank</th>
+                    <th>No Rekening</th>
+                    <th>Nama Pemilik</th>
+                    <th>Bukti Pembayaran</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>
+                        <div class="images"><img src="" alt="" class="perbesar"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</form>
+<!-- ===popup gambar=== -->
+<form action="" class="popup-pembayaran" id="perbesargambar">
+    <div title="keluar" class="close bg-danger">
+        <a href="">X</a>
+    </div>
+    <div class="gambar">
+        <img src="" alt="">
+    </div>
+</form>
+<!-- ======================popup pembayaran dan perbesar gambar akhir========================= -->
 @endsection()
 
 <script src="{{ asset('assets_frontend/js/style.js') }}"></script>
