@@ -50,9 +50,6 @@
                             }else{
                             if( $pembayaran->detailPembayaran()->count() != 0) {
                             $atlet = $pembayaran->detailPembayaran[0]->atletAktif->atlet->nama;
-                            $status = $pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->status->value;
-                            $validasi = $pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->pendaftaran_status_id;
-                            $kode = $pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->kode_pendaftaran;
                             }
                             }
                             @endphp
