@@ -1264,6 +1264,7 @@ button a{
     height: 100%;
     outline: none;
     margin: 0;
+    color: white;
 }
 .tambah-nolomba{
     position: absolute;
