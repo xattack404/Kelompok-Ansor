@@ -3069,6 +3069,15 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
   padding: 10px;
   overflow: auto;
 }
+.gambar{
+  min-height: 10vh;
+  background-color: black
+}
+.gambar img{
+  width: 100%;
+  height: 100%;
+  image-resolution: 50%;
+}
 .keterangan-popup{
   color: black;
   font-family: lato;
