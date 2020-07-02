@@ -46,7 +46,7 @@
                 <th>No telepon</th>
                 <th>Email</th>
             </tr>
-            @foreach( $data[0]->atletAktif[0] as $getData)
+            @foreach( $data[0]->atletAktif as $getData)
             <tr>
                 <td>{{ $getData->atlet->nik_id }}</td>
                 <td>{{ $getData->atlet->nama }}</td>
