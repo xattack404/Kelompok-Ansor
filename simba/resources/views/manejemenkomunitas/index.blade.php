@@ -3,7 +3,7 @@
 <section class="section">
 
     <div class="section-header">
-        <h1>Manejemen Data Atlet</h1>
+        <h1>Manejemen Data Komunitas</h1>
     </div>
 
     <div class="section-body" id="index">
