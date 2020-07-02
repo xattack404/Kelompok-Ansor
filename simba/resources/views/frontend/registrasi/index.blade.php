@@ -283,7 +283,13 @@
             });
         });
 
+        function validateForm() {
 
+            var z = document.forms["myForm"]["num"].value;
+            if (!z.match(/^\d+/)) {
+                alert("Please only enter numeric characters only for your Age! (Allowed input:0-9)")
+            }
+        }
         // new calculate grand total
         function calculate_total_bayar() {
             $('input[name="total_bayar"]').empty();
@@ -340,8 +346,9 @@
 </body>
 
 <script>
-    $(document).ready(function(){      
+    $(document).ready(function() {
         $('.eventt').hide();
     });
-  </script>
+</script>
+
 </html>

@@ -90,6 +90,12 @@
                                         <button type="button" class="btn btn-sm btn-danger">Tolak</button>
                                     </a>
                                     @endif
+                                    @if($pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->pendaftaran_status_id == 4)
+                                    </a>
+                                    <a href="{{ route('pembayaran.hapus', ['no_invoice' => $pembayaran->no_invoice]) }}" onclick="return confirm('Hapus Data?');">
+                                        <button type="button" class="btn btn-sm btn-danger">Hapus</button>
+                                    </a>
+                                    @endif
                                 </td>
                             </tr>
                             @empty
