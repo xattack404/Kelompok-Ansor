@@ -124,7 +124,7 @@
 
                     <div class="ikut-serta">
                         <h1>konfirmasi</h1>
-                        <p>Dengan menekan tombol Konfirmasi Pemesanan dibawah ini saya menyatakan bahwa semua data yang saya berikan dalam formulir ini adalah benar dan saya setuju untuk mematuhi semua peraturan dan ketentuan yang ditetapkan oleh penyelenggara. Selanjutnya, saya menyatakan bahwa saya dalam keadaan sehat dan membebaskan penyelenggara dan pihak lain yang terlibat dalam penyelenggaraan kegiatan IT SPORT Online dari segala tanggung jawab atas segala cedera, kehilangan, atau kerusakan pada diri saya atau harta benda saya dalam hubungannya dengan kegiatan tersebut. Saat saya mengikuti kegiatan ini, maka saya telah menyetujui deklarasi ini</p>
+                        <p>Dengan menekan tombol Konfirmasi Pemesanan dibawah ini saya menyatakan bahwa semua data yang saya berikan dalam formulir ini adalah benar dan saya setuju untuk mematuhi semua peraturan dan ketentuan yang ditetapkan oleh penyelenggara. Selanjutnya, saya menyatakan bahwa saya dalam keadaan sehat dan membebaskan penyelenggara dan pihak lain yang terlibat dalam penyelenggaraan kegiatan SIMBA dari segala tanggung jawab atas segala cedera, kehilangan, atau kerusakan pada diri saya atau harta benda saya dalam hubungannya dengan kegiatan tersebut. Saat saya mengikuti kegiatan ini, maka saya telah menyetujui deklarasi ini</p>
                         <div class="persetujuan">
                             <label for="">* Saya setuju dengan pernyataan di atas</label>
                             <select name="" id="">
@@ -229,7 +229,7 @@
         <!-- ====== button registrasi===== -->
         <div class="box2">
             @include('layouts.partials.alert')
-            <a href="#registrasi">registrasi</a>
+            <a href="#registrasi">atlet</a>
             <a href="#registrasikomunitas">komunitas</a>
         </div>
         <!-- ====== button registrasi===== -->
