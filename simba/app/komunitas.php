@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Pendaftaran;
+use App\AtletAktif;
 
 class Komunitas extends Model
 {
@@ -27,5 +28,10 @@ class Komunitas extends Model
   public function pendaftaran()
   {
     return $this->hasOne(Pendaftaran::class, 'koordinator_id', 'id');
+  }
+
+  public function atletAktif()
+  {
+    return $this->hasMany(AtletAktif::class, 'koordinator_id', 'id');
   }
 }

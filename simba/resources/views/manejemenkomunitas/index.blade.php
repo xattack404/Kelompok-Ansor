@@ -43,7 +43,7 @@
                                 <td>{{ $manejemenkomunitas->email }}</td>
                                 <td>{{ $manejemenkomunitas->no_hp }}</td>
                                 <td>
-                                    <a href="#popup">
+                                    <a href="#popup" onclick="loadData('{{ $manejemenkomunitas->id }}')">
                                         <button type="button" class="btn btn-sm btn-primary">Detail</button>
                                     </a>
                                     <a href="{{ route('manejemenkomunitas.delete', ['id' => $manejemenkomunitas->id]) }}" onclick="return confirm('Delete data?');">
@@ -124,4 +124,15 @@
         </div>
     </div>
 </form>
-
+<script src="{{ asset('assets_frontend/js/style.js') }}"></script>
+<script type="text/javascript">
+    function loadData(id) {
+        $.ajax({
+            url: "{{ url('panel/manejemenkomunitas/detail') }}/" + id,
+            type: "GET",
+            success: function(data) {
+                $('#popup').html(data);
+            }
+        });
+    }
+</script>

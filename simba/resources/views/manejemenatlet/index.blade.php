@@ -41,7 +41,7 @@
                                 <td>{{ $manejemenatlet->email }}</td>
                                 <td>{{ $manejemenatlet->no_hp }}</td>
                                 <td>
-                                    <a href="#popup">
+                                    <a href="#popup" onclick="loadData('{{  $manejemenatlet->nik_id }}')">
                                         <button type="button" class="btn btn-sm btn-primary">Detail</button>
                                     </a>
                                     <a href="{{ route('manejemenatlet.delete', ['nik_id' => $manejemenatlet->nik_id]) }}" onclick="return confirm('Hapus data?');">
@@ -122,3 +122,15 @@
         </div>
     </div>
 </form>
+<script src="{{ asset('assets_frontend/js/style.js') }}"></script>
+<script type="text/javascript">
+    function loadData(nik_id) {
+        $.ajax({
+            url: "{{ url('panel/manejemenatlet/detail') }}/" + nik_id,
+            type: "GET",
+            success: function(data) {
+                $('#popup').html(data);
+            }
+        });
+    }
+</script>

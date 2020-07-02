@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Komunitas;
+use App\AtletAktif;
 
 class ManejemenKomunitasController extends Controller
 {
@@ -47,7 +48,8 @@ class ManejemenKomunitasController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Komunitas::where('id', $id)->get();
+        return view('manejemenkomunitas.detail', compact('data'));
     }
 
     /**

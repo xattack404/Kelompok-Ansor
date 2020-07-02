@@ -45,9 +45,10 @@ class ManejemenAtletController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($nik_id)
     {
-        //
+        $data = Atlet::where('nik_id', $nik_id)->get();
+        return view('manejemenatlet.detail', compact('data'));
     }
 
     /**
