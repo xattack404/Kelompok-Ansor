@@ -36,6 +36,7 @@
                   <th scope="col">Deskripsi</th>
                   <th scope="col">Kategori</th>
                   <th scope="col">Tanggal</th>
+                  <th style="width: 100px;">Panduan Lomba</th>
                   <th scope="col">Foto</th>
                   <th scope="col">Action</th>
                 </tr>
@@ -48,6 +49,7 @@
                   <td>{{ $cabangolahraga->deskripsi }}</td>
                   <td>{{ $cabangolahraga->relasiKategori->nama_kategori }}</td>
                   <td>{{ $cabangolahraga->tanggal_pelaksanaan }}</td>
+                  <td><input type="file" style="width: 100px;"></td>
                   <td><img src="{{ asset('image/'. $cabangolahraga->foto) }}" width='75' height='75'></td>
                   <td>
                   <a href="{{ route('cabangolahraga.edit', ['id' => $cabangolahraga->id]) }}">
