@@ -181,11 +181,11 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="input">
+                <!-- <div class="input">
                     <label for="title">Kelas</label>
                     <select name="subkat" class="">
                     </select>
-                </div>
+                </div> -->
             </div>
 
             <div class="box">
