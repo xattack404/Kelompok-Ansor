@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Infoweb;
+
 use Illuminate\Http\Request;
 
-class InfowebController extends Controller
+class InformasiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,7 @@ class InfowebController extends Controller
      */
     public function index()
     {
-        $data = Infoweb::paginate('10');
-
-        return view('infoweb.index');
+        return view('frontend.informasi.index');
     }
 
     /**

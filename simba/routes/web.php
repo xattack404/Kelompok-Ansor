@@ -14,6 +14,7 @@
 //Route Front End
 Route::get('/', ['as' => 'frontend.home.index', 'uses' => 'FrontendController@index']);
 Route::get('event/index', ['as' => 'frontend.event.index', 'uses' => 'EventController@index']);
+Route::get('informasi/index', ['as' => 'frontend.informasi.index', 'uses' => 'informasiController@index']);
 Route::get('ajax/{id}', ['as' => 'frontend.registrasi.ajax', 'uses' => 'RegistrasiController@show']);
 Route::get('ajaxkat/{id}', ['as' => 'frontend.registrasi.ajax', 'uses' => 'RegistrasiController@showkat']);
 Route::get('registrasi/index', ['as' => 'frontend.registrasi.index', 'uses' => 'RegistrasiController@index']);
