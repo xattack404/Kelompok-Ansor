@@ -740,7 +740,6 @@ ul li:hover #dropdown{
     position: relative;
     float: right;
 }
-
 .box-lomba .konten-lomba{
     position: relative;
     padding: 10px;
@@ -755,6 +754,26 @@ ul li:hover #dropdown{
     font-size: 18px;
     font-family: lato;
     color: #323232;
+}
+.box-lomba .konten-lomba p a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 5px;
+    border: 2px solid rgb(255, 255, 255);
+    width: auto;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: rgb(38, 107, 243);
+    color: white;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+.box-lomba .konten-lomba p a:hover{
+    background-color: rgb(97, 97, 240);
 }
 .box-lomba .konten-lomba button{
     position: relative;
@@ -874,7 +893,6 @@ ul li:hover #dropdown{
 }
 .box2 a{
     display: inline-block;
-    max-width: 120px;
     padding: 10px;
     height: 30px;
     line-height: 30px;
@@ -885,17 +903,18 @@ ul li:hover #dropdown{
     font-size: 12px;
     font-family: lato;
     border: 2px solid #323232;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
     margin: 10px;
     transition: .3s;
     -webkit-transition: .3s;
     -moz-transition: .3s;
     -ms-transition: .3s;
     -o-transition: .3s;
+    min-width: 80px;
 }
 .box2 a:nth-child(1){
     background-color: #323232;    
@@ -1435,7 +1454,90 @@ button a{
 }
 
 /* ====================Alert Akhir====================*/
-
+.tim-dev{
+    margin: auto;
+    width: 80%;
+    margin-top: 90px;
+    cursor: pointer;
+}
+.tim-dev h1{
+    font-family: lato;
+}
+.container-informasi{
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    min-height: 100vh;
+    display: flex;
+    align-items: unset;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container-informasi .foto{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    overflow: hidden;
+    margin: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background: url(../assets_frontend/IMG/tahaj.jpg) center no-repeat;
+    background-size: auto 250px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+.container-informasi .foto:hover{
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+.container-informasi .foto:nth-child(2){
+    background: url(../assets_frontend/IMG/abang.jpeg) center no-repeat;
+    background-size: auto 250px; 
+}
+.container-informasi .foto:nth-child(3){
+    background: url(../assets_frontend/IMG/uus.jpeg) center no-repeat;
+    background-size: auto 250px; 
+}
+.container-informasi .foto:nth-child(4){
+    background: url(../assets_frontend/IMG/farhan.jpeg) center no-repeat;   
+    background-size: auto 250px; 
+}
+.container-informasi .foto:nth-child(5){
+    background: url(../assets_frontend/IMG/ansor.jpeg) center no-repeat;  
+    background-size: auto 250px; 
+}
+.container-informasi .foto .keterangan{
+    width: 100%;
+    padding: 5px;
+    position: absolute;
+    bottom: -60px;
+    background-color: #F0F1EC;
+    border-top:5px solid #DD5B4E;
+    box-sizing: border-box;
+    transition: .3s ease-in;
+    -webkit-transition: .3s ease-in;
+    -moz-transition: .3s ease-in;
+    -ms-transition: .3s ease-in;
+    -o-transition: .3s ease-in;
+}
+.container-informasi .foto:hover .keterangan{
+    bottom: 0;
+}
+.container-informasi .foto .keterangan span{
+    font-size: 20px;
+    display: block;
+    color: #323232;
+    text-transform: capitalize;
+}
 
 /* ====================footer====================*/
 

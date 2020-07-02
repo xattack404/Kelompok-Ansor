@@ -17,7 +17,7 @@
 
     </div>
     <div class="img">
-        <img src="{{ asset('image/'. $data['cabang_olahraga']->foto) }}" alt="">    
+        <img src="{{ asset('image/'. $data['cabang_olahraga']->foto) }}" alt="">   
     </div>
     <div class="konten-lomba ">
         <h3>{{ $data['cabang_olahraga']->nama_or }}</h3>
@@ -27,6 +27,7 @@
         <p><label for="">KETERANGAN : <br> <br></label>
         {{ $data['cabang_olahraga']->deskripsi }}
         </p>
+        <p><a href="" download="nama panduan lomba">download panduan lomba</a> </p>
         <a href="{{ route('frontend.registrasi.index')}}"><button type="button">Registrasi</button></a>
     </div>
 </form>

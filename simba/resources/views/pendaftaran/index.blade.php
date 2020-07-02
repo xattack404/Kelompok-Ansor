@@ -53,9 +53,6 @@
                                     <a href="#detailpembayaran">
                                         <button type="button" class="btn btn-sm btn-primary" onclick="loadData('{{ $pendaftaran->kode_pendaftaran }}')">Detail</button>
                                     </a>
-                                    <a href="#}" onclick="return confirm('Hapus data?');">
-                                        <button type="button" class="btn btn-sm btn-danger">Hapus</button>
-                                    </a>
                                 </td>
                             </tr>
 
