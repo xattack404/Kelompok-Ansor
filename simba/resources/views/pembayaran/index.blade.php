@@ -50,13 +50,12 @@
                             }else{
                             if( $pembayaran->detailPembayaran()->count() != 0) {
                             $atlet = $pembayaran->detailPembayaran[0]->atletAktif->atlet->nama;
-                            $kode = $pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->kode_pendaftaran;
                             }
                             }
                             @endphp
                             <tr>
                                 <td>{{ $pembayaran->no_invoice }}</td>
-                                <td>{{ $kode }}</td>
+                                <td>{{ $pembayaran->detailPembayaran[0]->atletAktif->atlet->pendaftaran->kode_pendaftaran }}</td>
                                 <td>Rp.{{ number_format($pembayaran->total_bayar,0, ',' , '.') }}</td>
                                 <td>{{ $komunitas }}</td>
                                 <td>{{ $koordinator }}</td>
