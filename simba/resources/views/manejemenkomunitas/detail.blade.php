@@ -3,7 +3,7 @@
 </div>
 <div class="detail-pembayaran">
     <div class="keterangan-pembayaran">
-        Komunitas ID<span>( )</span>
+        Komunitas ID<span>( {{ $data[0]->id }} )</span>
     </div>
     <div class="group-input">
         <table border="1" cellpadding="5" cellspacing="0">
