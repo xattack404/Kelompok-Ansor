@@ -18,7 +18,7 @@
         android:id="@+id/formlogo"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:src="@drawable/logopolije"
+
         android:scaleType="fitCenter"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="10dp"
@@ -159,19 +159,6 @@
             <AutoCompleteTextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:hint="Pilih Fakultas"
-                android:paddingStart="23dp"
-                android:background="@drawable/rounded_white"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:textSize="14sp"
-                android:id="@+id/editTextFakultas"
-                android:layout_marginBottom="20dp"
-                android:paddingLeft="23dp" />
-
-            <AutoCompleteTextView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
                 android:hint="Pilih No Telepon"
                 android:paddingStart="23dp"
                 android:background="@drawable/rounded_white"
@@ -215,7 +202,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Aplikasi ini masih tahap uji, dibuat oleh kelompok 1 TIF Bondowoso"
+        android:text="Selamat Datang Di Sistem Informasi Lomba"
         android:textColor="@color/white"
         android:layout_below="@id/scrollView"
         android:layout_marginTop="25dp"
